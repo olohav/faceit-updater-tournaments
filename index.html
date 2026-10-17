@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>КиберРадар — турниры по CS2, Valorant, Dota 2 и MLBB в России</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;600;800&display=swap">
+
+<!-- ======================= БЛОК 2: CSS ======================= -->
+<style>
+:root{
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f2f4f9;--panel:#fff;--ink:#141a2b;--mute:#5b6479;--line:#dde2ee;--acc:#2f4bff;--acc-ink:#fff;
+  --live:#d8264a;--chk:#b86e00;--soon:#1f6fb2;color-scheme:light;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html.dark,:root[data-theme="dark"]{
+  --bg:#0c1019;--panel:#151b29;--ink:#e8ecf6;--mute:#93a0bb;--line:#26304a;--acc:#8a98ff;--acc-ink:#0c1019;
+  --live:#ff5c7c;--chk:#ffb347;--soon:#6cb8ff;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Manrope,system-ui,Arial,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--panel);z-index:10}
+h1,h2,h3{font-family:Unbounded,Manrope,sans-serif;line-height:1.2;margin:0 0 .6em}
+h1{font-size:clamp(1.5rem,4vw,2.3rem)}h2{font-size:1.2rem}
+a{color:var(--acc)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--panel);border-bottom:1px solid var(--line)}
+.bar{max-width:1100px;margin:auto;padding:.7rem 1rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.logo{font:700 1.05rem Unbounded,sans-serif;color:var(--ink);text-decoration:none;margin-right:auto}
+nav{display:flex;gap:.3rem}
+nav a{padding:.45rem .8rem;border-radius:8px;color:var(--mute);text-decoration:none;font-weight:600}
+nav a.on{background:var(--acc);color:var(--acc-ink)}
+button,input,select,textarea{font:inherit;color:inherit}
+.btn{background:var(--acc);color:var(--acc-ink);border:0;border-radius:10px;padding:.65rem 1.1rem;font-weight:800;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+main{max-width:1100px;margin:auto;padding:1.5rem 1rem 3rem}
+.lead{color:var(--mute);max-width:60ch;margin:0 0 1.5rem}
+.layout{display:grid;grid-template-columns:290px 1fr;gap:1.5rem;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.1rem}
+.filters{position:sticky;top:calc(env(safe-area-inset-top,0px) + 4.2rem)}
+.filters fieldset{border:0;padding:0;margin:0 0 1.1rem}
+.filters legend{font-weight:800;margin-bottom:.4rem}
+.chk{display:flex;gap:.5rem;align-items:center;padding:.15rem 0;cursor:pointer}
+input[type=search],input[type=text],input[type=email],textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.65rem .8rem}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.range-val{color:var(--mute);font-size:.9rem}
+.list{display:grid;gap:.8rem}
+.t-row{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:14px;padding:1rem 1.1rem}
+.t-row:hover{border-color:var(--acc)}
+.t-row h3{font-size:1rem;margin:0}
+.meta{color:var(--mute);font-size:.92rem}
+.prize{font:700 1.05rem Unbounded,sans-serif;text-align:right}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.3rem}
+.tag{font-size:.8rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:.1rem .6rem}
+.st{font-weight:800;font-size:.85rem;border-radius:999px;padding:.15rem .7rem;color:#fff;display:inline-block}
+.st.live{background:var(--live)}.st.checkin{background:var(--chk)}.st.soon{background:var(--soon)}
+.st.live::before{content:"";display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:#fff;margin-right:.4rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem;margin:1rem 0}
+.grid2 div b{display:block;color:var(--mute);font-size:.82rem;font-weight:600}
+.cols{display:grid;grid-template-columns:1.4fr 1fr;gap:1.5rem;align-items:start}
+.field{margin-bottom:.9rem}.field label{display:block;font-weight:700;margin-bottom:.25rem}
+.field.bad input,.field.bad textarea{border-color:var(--live)}
+.err{color:var(--live);font-size:.85rem;min-height:1.1em}
+.empty{padding:2rem;text-align:center;color:var(--mute)}
+footer{max-width:1100px;margin:auto;padding:0 1rem 2rem;color:var(--mute);font-size:.88rem}
+#toasts{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));display:grid;gap:.6rem;z-index:50;max-width:min(92vw,360px)}
+.toast{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--soon);border-radius:12px;padding:.8rem 1rem;box-shadow:0 10px 30px rgba(0,0,0,.25);animation:in .25s ease}
+.toast.ok{border-left-color:#1fa971}.toast.fail{border-left-color:var(--live)}
+.toast b{display:block}
+@keyframes in{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem;margin-bottom:1rem}
+.kpi b{display:block;font:700 1.35rem Unbounded,sans-serif}.kpi span{color:var(--mute);font-size:.88rem}
+.an{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1rem}
+.br{display:grid;grid-template-columns:minmax(80px,9rem) 1fr auto;gap:.6rem;align-items:center;margin:.4rem 0;font-size:.9rem}
+.br .tr{background:var(--bg);border-radius:99px}.br i{display:block;height:.7rem;border-radius:99px;background:var(--acc);min-width:3px}
+.br b{font-weight:700;text-align:right}
+@media (prefers-reduced-motion:reduce){.toast{animation:none}}
+@media (max-width:820px){.layout,.cols{grid-template-columns:1fr}.filters{position:static}}
+</style>
+</head>
+
+<!-- ======================= БЛОК 1: HTML ======================= -->
+<body>
+<header>
+  <div class="bar">
+    <a class="logo" href="#/">КиберРадар</a>
+    <nav aria-label="Разделы">
+      <a href="#/" data-nav="home">Поиск турниров</a>
+      <a href="#/analytics" data-nav="analytics">Аналитика</a>
+      <a href="#/about" data-nav="about">О проекте</a>
+      <a href="#/contacts" data-nav="contacts">Обратная связь</a>
+    </nav>
+    <button class="btn ghost" id="themeBtn" type="button" aria-label="Переключить тему">Тёмная тема</button>
+  </div>
+</header>
+<main id="app"></main>
+<footer id="foot"></footer>
+<div id="toasts" role="status" aria-live="polite"></div>
+
+<!-- ======================= БЛОК 3: JavaScript ======================= -->
+<script>
+"use strict";
+let DATA_UPDATED = "2026-10-17";     // дата последнего снимка данных (обновляется из data/faceit.json)
+const FACEIT_JSON = "data/faceit.json"; // файл, который автоматически обновляет scripts/sync-faceit.mjs
+let REMOTE = [];                     // турниры, загруженные с FACEIT автоматически
+const USD_RUB = 75;                  // примерный курс для единой шкалы призовых
+const DAY = 864e5;
+/* Платформы для фильтра и аналитики. Турнир с own:true (проводится самой платформой: FACEIT, FASTCUP, VK Play и т.д.) в списки не попадает;
+   kind:"qualifier" помечает квалификацию к конкретному турниру, platform — где она проходит. */
+const PLATFORMS = ["FACEIT", "FASTCUP", "VK Play", "Cybermos", "Сайт организатора", "Не указана"];
+
+/* Данные о турнирах. Пополняются из поиска; даты в формате ГГГГ-ММ-ДД.
+   prize/fee: {v: число, c: "USD" | "RUB"}; fee: null — взнос не указан. */
+const TOURNAMENTS = [
+  { id:"cis9", name:"WINLINE MPKBK CIS LAN Season 9", disc:"CS2", format:"LAN", city:"Москва",
+    start:"2026-10-20", end:"2026-10-23", prize:{v:50000,c:"USD"}, fee:null, op:"MPKBK × WINLINE", teams:16,
+    desc:"Ранговый LAN-турнир серии CIS LAN: заключительный из четырёх перед отсечкой рейтинга VRS (2 ноября) и PGL Major Singapore 2026. 16 команд, приглашения по рейтингу VRS.",
+    fee_note:"Открытой оплаты нет: места распределяются по VRS-приоритету и приглашениям.",
+    contact:"Анонсы и заявки — через личный Telegram-канал организатора Андрея «MPKBK» Ермакова.",
+    site:"https://www.hltv.org/events/9426/winline-mpkbk-cis-lan-season-9", siteName:"Страница на HLTV",
+    social:[{t:"Страница турнира на Cybersport.ru",u:"https://www.cybersport.ru/tournaments/cs2/cis-lan-9"},{t:"Telegram: личный канал Андрея MPKBK Ермакова — анонсы и открытие регистрации"}] },
+  { id:"predator", name:"Predator League Open Cup", disc:"Valorant", format:"Online", city:"Вся Россия",
+    start:"2026-10-25", end:"2026-11-15", prize:{v:500000,c:"RUB"}, fee:null, op:"Acer Predator League", teams:null,
+    desc:"Первый в России турнир серии Predator League по VALORANT. Участвовать может любой желающий, кроме профессиональных игроков. Регистрация на 1-ю квалификацию до 24.10, на 2-ю до 30.10. Квалификации: 25 и 31 октября. Групповой этап: 7–8 ноября. Плей-офф: 13–15 ноября.",
+    platform:"Сайт организатора", fee_note:"Размер взноса в анонсе не указан — уточняйте на сайте Predator League.",
+    contact:"Регистрация и вопросы — на сайте Predator League (Acer).",
+    site:"https://trashbox.ru/link/2026-09-29-uchastvovat-v-turnire-po-valorant-ot-predator-league-smogut-tolko-neprofessional", siteName:"Анонс турнира",
+    social:[] },
+  ...[["CS2","cs2"],["Valorant","val"],["Dota 2","dota"],["MLBB","mlbb"]].map(([d,k])=>({
+    id:"cm-"+k, name:"Московский Киберспорт — еженедельный турнир ("+d+")", disc:d, format:"Online", city:"Вся Россия",
+    start:"2026-10-17", end:"2026-12-31", prize:{v:20000,c:"RUB"}, fee:{v:0,c:"RUB"}, op:"ФКС Москвы · Московский Киберспорт", teams:null,
+    desc:"Серия онлайн-турниров 5×5 на платформе Cybermos: в течение 2026 года проходит не менее 140 соревнований по нескольким дисциплинам. Призы по последним анонсам: 12 000 ₽ за 1-е место и 8 000 ₽ за 2-е. Регистрация закрывается в день турнира в 17:55 МСК. Точные даты ближайшего этапа смотрите на сайте.",
+    fee_note:"Участие бесплатно: вступительных взносов нет.",
+    contact:"Регистрация и поддержка — на платформе Cybermos.",
+    platform:"Cybermos", site:"https://cybermos.ru", siteName:"Cybermos.ru", social:[{t:"ВКонтакте: страница «Московского Киберспорта»"},{t:"Telegram: канал CYBERMOS"},{t:"Discord: матчи проходят на серверах, доступ после регистрации"}] })),
+  /* Студенческие лиги: сезон 2026/27 анонсирован не полностью, поэтому даты не заданы (tba). */
+  ...[["vksl","CS2","cs2"],["vksl","Dota 2","dota"],["mskl","Valorant","val"],["mskl","MLBB","mlbb"]].map(([i,d,k])=>{ const v = i==="vksl"; return {
+    id:"st-"+i+"-"+k, name:(v?"Всероссийская киберспортивная студенческая лига (ВКСЛ)":"Московская студенческая киберспортивная лига (МСКЛ)")+", "+d,
+    disc:d, format:v?"Online/LAN":"Online", city:v?"Россия, через региональные отделения ФКС":"Студенты вузов и ссузов всей России",
+    tba:true, student:true, prize:null, fee:null, op:v?"ФКС России · НСЛКС":"ФКС Москвы · МСКЛ", teams:null,
+    desc:v?"Ежегодная лига для студентов вузов и ссузов 16–25 лет: региональный, зональный и финальный этапы (финал — LAN). Команда формируется из студентов одного учебного заведения. Даты нового сезона на момент проверки не объявлены; в сезоне IX призовой фонд лиги составлял 3 000 000 ₽.":"Открыто для студентов вузов и ссузов со всей России. В 16-м сезоне (февраль 2026) заявки принимались по почте, игры стартовали 14 февраля. Даты следующего сезона на момент проверки не объявлены.",
+    fee_note:"Размер взноса в анонсах не указан.",
+    contact:v?"Заявка — через региональное отделение ФКС России; региональный департамент: region@resf.ru.":"Заявки в 16-м сезоне принимались на mscl@fcs.msk.ru.",
+    site:v?"https://xn--80afcqo8ahi.xn--p1ai/":"https://fcs.msk.ru/", siteName:v?"Сайт ВКСЛ":"Сайт ФКС Москвы",
+    social:[{t:v?"ВКонтакте, Telegram и Одноклассники ФКС России":"ВКонтакте и Telegram «Московского Киберспорта»"}] }; }),
+  /* FACEIT: турниры и квалификации сторонних организаторов. Турниры самой платформы (own:true) и с начислением FACEIT Points (fp:true) не включаются. */
+  { id:"cct11", name:"CCT Europe 2026 Contenders #11", disc:"CS2", format:"Online", city:"Европа, онлайн",
+    start:"2026-11-19", end:"2026-11-27", prize:{v:2500,c:"USD"}, fee:null, op:"CCT (Champion of Champions Tour)", teams:16, platform:"FACEIT",
+    desc:"Онлайн-турнир серии CCT Europe (Valve Tier 2): 16 команд, double elimination, все матчи Bo3. Часть мест разыгрывается в открытых квалификациях на FACEIT.",
+    fee_note:"Взнос в источниках не указан.", contact:"Регистрация и регламент — на странице квалификации на FACEIT.",
+    site:"https://liquipedia.net/counterstrike/CCT/2026/Europe/Contenders_11", siteName:"Страница турнира на Liquipedia", social:[] },
+  { id:"cct11-oq1", name:"CCT 2026 Contenders Europe 11 — Open Qualifier 1", kind:"qualifier", disc:"CS2", format:"Online", city:"Европа, онлайн",
+    tba:true, prize:null, fee:null, op:"CCT (Champion of Champions Tour)", teams:null, platform:"FACEIT",
+    desc:"Открытая квалификация к турниру CCT Europe 2026 Contenders #11 (19–27 ноября 2026, призовой фонд $2 500). Даты самой квалификации найти не удалось — смотрите страницу на FACEIT.",
+    fee_note:"Взнос в источниках не указан.", contact:"Регистрация команды — на странице квалификации на FACEIT.",
+    site:"https://www.faceit.com/ru/championship/caf0ec12-d4a6-4d35-8916-f2f3122b4c37/CCT%202026%20Contenders%20Europe%2011%20-%20Open%20Qualifier%201", siteName:"Квалификация на FACEIT", social:[] },
+  { id:"ls-nl3-oq2", name:"LIGA STAVOK NARODNAYA LIGA TOUR III OPEN QUALIFICATION 2", disc:"CS2", format:"Online", city:"Россия, онлайн",
+    tba:true, prize:{v:1000000,c:"RUB"}, fee:null, op:"Лига Ставок · Народная лига", teams:null, platform:"FACEIT",
+    desc:"Открытая квалификация Народной лиги Лиги Ставок по CS2 с призовым фондом 1 000 000 ₽ (по данным со страницы FACEIT). Даты и условия автоматически получить не удалось — откройте список турниров на FACEIT.",
+    fee_note:"Взнос не указан.", contact:"Регистрация — на странице турнира на FACEIT.",
+    site:"https://www.faceit.com/ru/cs2/tournaments?gameMode=5v5&joinable=joinableOnly", siteName:"Список турниров CS2 на FACEIT", social:[] },
+  /* По скриншоту FACEIT: две открытые квалификации к CCT Contenders Europe 12, 5v5, 128 мест. */
+  ...[1, 2].map(n => ({ id:"cct12-oq" + n, name:"CCT 2026 Contenders Europe 12 - Open Qualifier " + n, kind:"qualifier", disc:"CS2", format:"Online", city:"Европа / онлайн",
+    start:"2026-12-0" + (4 + n), end:"2026-12-0" + (4 + n), prize:null, fee:null, op:"CCT (Champion of Champions Tour)", teams:128, platform:"FACEIT",
+    desc:"Открытая квалификация к CCT Europe 2026 Contenders #12 на FACEIT, формат 5v5. Старт в 17:00 по МСК. Всего 128 мест, на момент скриншота заявок 0. Призовой фонд на странице не указан.",
+    fee_note:"Взнос не указан.", contact:"Регистрация команды — на странице квалификации на FACEIT.",
+    site:"https://www.faceit.com/ru/cs2/tournaments?gameMode=5v5&joinable=joinableOnly", siteName:"Список турниров CS2 на FACEIT", social:[] }))
+];
+
+/* ---------- Вспомогательные функции ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const parseDate = (d, endOfDay) => new Date(d + (endOfDay ? "T23:59:59" : "T00:00:00"));
+const toRub = m => m ? m.v * (m.c === "USD" ? USD_RUB : 1) : 0;
+const fmt = n => n.toLocaleString("ru-RU");
+const money = m => !m ? "не указан" : m.v === 0 ? "бесплатно" : (m.c === "USD" ? "$" + fmt(m.v) : fmt(m.v) + " ₽");
+const dates = t => t.tba ? "Даты не объявлены или не найдены" : parseDate(t.start).toLocaleDateString("ru-RU",{day:"numeric",month:"long"}) + " — " + parseDate(t.end).toLocaleDateString("ru-RU",{day:"numeric",month:"long",year:"numeric"});
+
+/* Статус по дате: идёт / чек-ин (за 3 дня до старта) / скоро. null — турнир окончен или дальше 365 дней. */
+function statusOf(t, now = new Date()) {
+  if (t.tba) return { k:"soon", l:"Даты уточняются" };   // сезон анонсирован, дат ещё нет
+  const s = parseDate(t.start), e = parseDate(t.end, true);
+  if (e < now || s - now > 365 * DAY) return null;
+  if (s <= now) return { k:"live", l:"Турнир идёт" };
+  if (s - now <= 3 * DAY) return { k:"checkin", l:"Чек-ин" };
+  return { k:"soon", l:"Скоро: " + Math.ceil((s - now) / DAY) + " дн." };
+}
+
+/* Актуальные турниры: завершённые автоматически исчезают из списков. */
+/* Склейка ручных данных и автозагрузки: ручные записи FACEIT, дублирующие автоматические (тот же UUID в ссылке), отбрасываются. */
+const allTournaments = () => {
+  const uuid = u => ((u || "").match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i) || [""])[0].toLowerCase();
+  const auto = new Set(REMOTE.map(t => uuid(t.site)).filter(Boolean));
+  return [...TOURNAMENTS.filter(t => !auto.has(uuid(t.site))), ...REMOTE];
+};
+const activeList = () => allTournaments().map(t => ({ team:"5x5", platform:"Не указана", ...t, kind: t.kind || (/qualif|квалиф/i.test(t.name) ? "qualifier" : "main"), st: statusOf(t) })).filter(t => t.st && !t.own && !t.fp)
+  .sort((a, b) => (a.tba ? 9e15 : +parseDate(a.start)) - (b.tba ? 9e15 : +parseDate(b.start)));
+
+/* Показывает всплывающее уведомление вместо alert/перезагрузки. */
+function toast(title, text, type = "ok") {
+  const el = document.createElement("div");
+  el.className = "toast " + type;
+  el.innerHTML = "<b></b><span></span>";
+  el.firstChild.textContent = title; el.lastChild.textContent = text;
+  $("#toasts").append(el);
+  setTimeout(() => el.remove(), 4500);
+}
+
+/* Проверка email: что-то@домен.зона без пробелов. */
+const validEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+
+/* Подключает валидацию к форме; при успехе вызывает onOk и очищает форму без перезагрузки. */
+function bindForm(form, onOk) {
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    let ok = true;
+    $$(".field", form).forEach(f => {
+      const i = $("input,textarea", f), v = i.value.trim();
+      let msg = "";
+      if (!v) msg = "Заполните поле";
+      else if (i.type === "email" && !validEmail(v)) msg = "Введите корректный email, например name@mail.ru";
+      f.classList.toggle("bad", !!msg); $(".err", f).textContent = msg;
+      if (msg) ok = false;
+    });
+    if (!ok) return toast("Форма не отправлена", "Проверьте выделенные поля.", "fail");
+    onOk(Object.fromEntries(new FormData(form)));
+    form.reset();
+  });
+}
+
+/* Генерирует HTML поля формы. */
+const field = (name, label, type = "text", area = false) =>
+  `<div class="field"><label for="${name}">${label}</label>${area ? `<textarea id="${name}" name="${name}" rows="4"></textarea>` : `<input id="${name}" name="${name}" type="${type}" autocomplete="off">`}<div class="err"></div></div>`;
+
+/* Карточка-строка турнира в списке. */
+const row = t => `<a class="t-row" href="#/t/${t.id}">
+  <div><h3>${t.name}</h3>
+  <div class="meta">${dates(t)} · ${t.city}</div>
+  <div class="tags"><span class="st ${t.st.k}">${t.st.l}</span><span class="tag">${t.disc}</span><span class="tag">${t.team}</span><span class="tag">${t.format}</span>${t.student ? `<span class="tag">Студенческая лига</span>` : ""}${t.kind === "qualifier" ? `<span class="tag">Квалификация</span>` : ""}<span class="tag">${t.op}</span></div></div>
+  <div><div class="prize">${money(t.prize)}</div>${t.prize && t.prize.c === "USD" ? `<div class="meta" style="text-align:right">≈ ${fmt(toRub(t.prize))} ₽</div>` : ""}<div class="meta" style="text-align:right">взнос: ${money(t.fee)}</div></div></a>`;
+
+/* ---------- Страница 1: поиск и фильтры ---------- */
+function pageHome() {
+  const all = activeList();
+  const discs = ["CS2", "Valorant", "Dota 2", "MLBB"];
+  const ops = [...new Set(all.map(t => t.op))];
+  const f = { q:"", d:new Set(), o:new Set(), m:new Set(), p:new Set(), stu:false, qual:false, prize:0, fee:0 };
+
+  $("#app").innerHTML = `<h1>Турниры по киберспорту в России</h1>
+  <p class="lead">CS2, Valorant, Dota 2 и MLBB: LAN и онлайн, форматы 1x1, 2x2, 5x5 и студенческие лиги. Завершённые турниры скрываются автоматически.</p>
+  <div class="layout"><aside class="card filters" aria-label="Фильтры">
+    <fieldset><legend>Поиск</legend><input type="search" id="q" placeholder="Турнир или оператор"></fieldset>
+    <fieldset><legend>Дисциплина</legend>${discs.map(d => `<label class="chk"><input type="checkbox" data-d="${d}"> ${d === "MLBB" ? "MLBB (Mobile Legends: Bang Bang)" : d}</label>`).join("")}</fieldset>
+    <fieldset><legend>Формат матчей</legend>${["1x1", "2x2", "5x5"].map(m => `<label class="chk"><input type="checkbox" data-m="${m}"> ${m}</label>`).join("")}</fieldset>
+    <fieldset><legend>Тип</legend><label class="chk"><input type="checkbox" id="stu"> Только студенческие лиги</label><label class="chk"><input type="checkbox" id="qual"> Только квалификации</label></fieldset>
+    <fieldset><legend>Призовой фонд</legend><input type="range" id="prize" min="0" step="10000"><div class="range-val" id="prizeV"></div></fieldset>
+    <fieldset><legend>Взнос за участие</legend><input type="range" id="fee" min="0" step="500"><div class="range-val" id="feeV"></div></fieldset>
+    <fieldset><legend>Платформа</legend>${PLATFORMS.map(p => `<label class="chk"><input type="checkbox" data-p="${p}"> ${p} (${all.filter(t => t.platform === p).length})</label>`).join("")}</fieldset>
+    <fieldset><legend>Турнирный оператор</legend>${ops.map(o => `<label class="chk"><input type="checkbox" data-o="${o}"> ${o}</label>`).join("")}</fieldset>
+    <button class="btn ghost" type="button" id="reset">Сбросить</button>
+  </aside><section><div class="meta" id="count" style="margin-bottom:.6rem"></div><div class="list" id="list"></div></section></div>`;
+
+  /* Пересчитывает максимумы ползунков по выбранным дисциплинам. */
+  function bounds(reset) {
+    const base = all.filter(t => !f.d.size || f.d.has(t.disc));
+    const mp = Math.max(0, ...base.map(t => toRub(t.prize))), mf = Math.max(0, ...base.map(t => toRub(t.fee)));
+    const p = $("#prize"), s = $("#fee");
+    p.max = mp; s.max = mf; s.disabled = mf === 0;
+    if (reset) { p.value = mp; s.value = mf; }
+    f.prize = +p.value; f.fee = +s.value;
+    $("#prizeV").textContent = "от 0 до " + fmt(f.prize) + " ₽ (макс. " + fmt(mp) + " ₽)";
+    $("#feeV").textContent = mf === 0 ? "платных турниров нет: все бесплатные или взнос не указан" : "от 0 до " + fmt(f.fee) + " ₽ (макс. " + fmt(mf) + " ₽)";
+  }
+  /* Применяет фильтры и перерисовывает список. */
+  function draw() {
+    const q = f.q.toLowerCase();
+    const res = all.filter(t => (!q || (t.name + " " + t.op).toLowerCase().includes(q)) && (!f.d.size || f.d.has(t.disc)) &&
+      (!f.o.size || f.o.has(t.op)) && (!f.m.size || f.m.has(t.team)) && (!f.p.size || f.p.has(t.platform)) && (!f.stu || t.student) && (!f.qual || t.kind === "qualifier") && toRub(t.prize) <= f.prize && (!t.fee || toRub(t.fee) <= f.fee));
+    $("#count").textContent = "Найдено: " + res.length + " из " + all.length;
+    $("#list").innerHTML = res.length ? res.map(row).join("") : `<div class="card empty">Ничего не найдено. Расширьте фильтры или сбросьте их.</div>`;
+  }
+  $("#q").oninput = e => { f.q = e.target.value; draw(); };
+  $$("[data-d]").forEach(c => c.onchange = () => { c.checked ? f.d.add(c.dataset.d) : f.d.delete(c.dataset.d); bounds(true); draw(); });
+  $$("[data-o]").forEach(c => c.onchange = () => { c.checked ? f.o.add(c.dataset.o) : f.o.delete(c.dataset.o); draw(); });
+  $$("[data-m]").forEach(c => c.onchange = () => { c.checked ? f.m.add(c.dataset.m) : f.m.delete(c.dataset.m); draw(); });
+  $$("[data-p]").forEach(c => c.onchange = () => { c.checked ? f.p.add(c.dataset.p) : f.p.delete(c.dataset.p); draw(); });
+  $("#stu").onchange = e => { f.stu = e.target.checked; draw(); };
+  $("#qual").onchange = e => { f.qual = e.target.checked; draw(); };
+  $("#prize").oninput = $("#fee").oninput = () => { bounds(false); draw(); };
+  $("#reset").onclick = pageHome;
+  bounds(true); draw();
+}
+
+/* ---------- Страница 2: подробности турнира ---------- */
+function pageTournament(id) {
+  const t = activeList().find(x => x.id === id);
+  if (!t) { $("#app").innerHTML = `<div class="card empty">Турнир не найден или уже завершён. <a href="#/">К списку турниров</a></div>`; return; }
+  document.title = t.name + " — КиберРадар";
+  const links = [t.site && `<a href="${t.site}" target="_blank" rel="noopener">${t.siteName}</a>`, ...t.social.map(s => s.u ? `<a href="${s.u}" target="_blank" rel="noopener">${s.t}</a>` : s.t)].filter(Boolean);
+  $("#app").innerHTML = `<p><a href="#/">← Все турниры</a></p>
+  <span class="st ${t.st.k}">${t.st.l}</span><h1 style="margin-top:.6rem">${t.name}</h1>
+  <div class="cols"><div>
+    <div class="card"><div class="grid2">
+      <div><b>Дисциплина</b>${t.disc}</div><div><b>Формат матчей</b>${t.team}</div><div><b>Площадка</b>${t.format}</div><div><b>Платформа</b>${t.platform}</div><div><b>Тип</b>${t.kind === "qualifier" ? "Квалификация" : "Турнир"}</div><div><b>Даты</b>${dates(t)}</div>
+      <div><b>Место</b>${t.city}</div><div><b>Призовой фонд</b>${money(t.prize)}${t.prize && t.prize.c === "USD" ? " ≈ " + fmt(toRub(t.prize)) + " ₽" : ""}</div><div><b>Взнос</b>${money(t.fee)}</div>
+      <div><b>Оператор</b>${t.op}</div><div><b>Команд</b>${t.teams || "не указано"}</div></div>
+      <p>${t.desc}</p><p class="meta">${t.fee_note}</p></div>
+    <div class="card" style="margin-top:1rem"><h2>Контакты и ссылки</h2><p>${t.contact}</p>
+      <p>${links.length ? links.join("<br>") : "Сайт турнира не найден."}</p></div>
+  </div><div class="card"><h2>Заявка на участие</h2>
+    <form id="reg" novalidate>${field("team", "Название команды")}${field("nick", "Ник капитана")}${field("email", "Email капитана", "email")}${field("tg", "Telegram для связи")}
+    <button class="btn" type="submit">Отправить заявку</button></form>
+    <p class="meta">Форма демонстрационная: данные никуда не передаются. Официальная регистрация — на сайте оператора.</p></div></div>`;
+  bindForm($("#reg"), d => toast("Заявка сформирована", "Команда «" + d.team + "» — " + t.name + ". Подтверждение придёт на " + d.email + "."));
+}
+
+/* ---------- Страница: аналитика по актуальным турнирам ---------- */
+function pageAnalytics() {
+  const all = activeList(), dated = all.filter(t => !t.tba), now = new Date();
+  const known = all.filter(t => t.prize), sum = known.reduce((s, t) => s + toRub(t.prize), 0);
+  /* Считает турниры по ключу, сортирует по убыванию. */
+  const groupBy = (arr, fn) => { const m = new Map(); arr.forEach(t => m.set(fn(t), (m.get(fn(t)) || 0) + 1)); return [...m].sort((a, b) => b[1] - a[1]); };
+  /* Рисует горизонтальные столбики из строк [подпись, значение, текст справа]. */
+  const bars = rows => { const mx = Math.max(1, ...rows.map(r => r[1])); return rows.map(([l, v, x]) => `<div class="br"><span>${l}</span><div class="tr"><i style="width:${v / mx * 100}%"></i></div><b>${x ?? v}</b></div>`).join(""); };
+  const card = (h, body, note = "") => `<div class="card"><h2>${h}</h2>${body}${note ? `<p class="meta">${note}</p>` : ""}</div>`;
+  const kpi = (v, l) => `<div class="card kpi"><b>${v}</b><span>${l}</span></div>`;
+  const discs = ["CS2", "Valorant", "Dota 2", "MLBB"].map(d => { const a = all.filter(t => t.disc === d); return [d, a.length, a.length + " · " + fmt(a.reduce((s, t) => s + toRub(t.prize), 0)) + " ₽"]; });
+  const plats = PLATFORMS.map(p => [p, all.filter(t => t.platform === p).length]);
+  const teams = ["1x1", "2x2", "5x5"].map(m => [m, all.filter(t => t.team === m).length]);
+  const months = [...Array(12)].map((_, i) => { const s = new Date(now.getFullYear(), now.getMonth() + i, 1), e = new Date(s.getFullYear(), s.getMonth() + 1, 0, 23, 59, 59); return [s.toLocaleDateString("ru-RU", { month:"short", year:"2-digit" }), dated.filter(t => parseDate(t.start) <= e && parseDate(t.end, 1) >= s).length]; });
+  const buckets = [["не указан", t => !t.prize], ["до 50 тыс. ₽", t => t.prize && toRub(t.prize) < 5e4], ["50–500 тыс. ₽", t => t.prize && toRub(t.prize) >= 5e4 && toRub(t.prize) < 5e5], ["от 500 тыс. ₽", t => t.prize && toRub(t.prize) >= 5e5]].map(([l, fn]) => [l, all.filter(fn).length]);
+  $("#app").innerHTML = `<h1>Аналитика</h1><p class="lead">Сводка по актуальным турнирам из списка. Турниры самих игровых платформ не учитываются — только квалификации и турниры сторонних организаторов.</p>
+  <div class="kpis">${kpi(all.length, "турниров в списке")}${kpi(fmt(sum) + " ₽", "суммарный известный призовой фонд")}${kpi(known.length ? fmt(Math.round(sum / known.length)) + " ₽" : "—", "средний призовой фонд")}${kpi(all.filter(t => t.fee && t.fee.v === 0).length, "с бесплатным участием")}${kpi(all.filter(t => t.student).length, "студенческих лиг")}${kpi(all.filter(t => t.kind === "qualifier").length, "квалификаций")}${kpi(all.length - dated.length, "с неназванными датами")}</div>
+  <div class="an">${card("Дисциплины: турниров · призовой фонд", bars(discs))}${card("Платформы", bars(plats), "FACEIT: турниры подгружаются автоматически из FACEIT Data API (раз в час). По FASTCUP данных нет.")}${card("Загрузка по месяцам", bars(months), "Сколько турниров идёт в месяце, без турниров с неназванными датами.")}${card("Призовой фонд", bars(buckets))}${card("Формат матчей", bars(teams))}${card("Площадка", bars(groupBy(all, t => t.format)))}${card("Операторы", bars(groupBy(all, t => t.op)))}</div>`;
+}
+
+/* ---------- Страница 3: о проекте ---------- */
+function pageAbout() {
+  $("#app").innerHTML = `<h1>О проекте</h1><div class="card"><p>КиберРадар собирает анонсы турниров по CS2, Valorant, Dota 2 и MLBB, которые проходят в России или открыты для российских команд, на ближайшие 365 дней.</p>
+  <p>Статусы считаются по датам: «Чек-ин» — за три дня до старта, «Турнир идёт» — между первым и последним днём. После финала турнир пропадает из списков при следующем открытии страницы.</p>
+  <p>Источники: анонсы организаторов и новостные порталы, а также сообщества организаторов во ВКонтакте и Telegram. Ссылки на соцсети указаны только там, где они подтверждены; страницы в Instagram найти не удалось.</p>
+  <p>Правило отбора: турниры, которые проводят сами игровые платформы (FACEIT, FASTCUP, VK Play и др.), в список не попадают. Учитываются только квалификации к конкретным турнирам и турниры сторонних организаторов, помеченные платформой, на которой они проходят.</p>
+  <p>Турниры FACEIT подгружаются автоматически через официальный FACEIT Data API и обновляются раз в час. Турниры, за победу в которых начисляются FACEIT Points, не учитываются.</p>
+  <p>Данные — снимок на ${parseDate(DATA_UPDATED).toLocaleDateString("ru-RU")}. Остальные источники пока вносятся вручную. Призовые в разных валютах приводятся к рублям по примерному курсу ${USD_RUB} ₽/$.</p></div>`;
+}
+
+/* ---------- Страница 4: обратная связь ---------- */
+function pageContacts() {
+  $("#app").innerHTML = `<h1>Обратная связь</h1><p class="lead">Знаете турнир, которого нет в списке? Напишите нам.</p>
+  <div class="card" style="max-width:520px"><form id="fb" novalidate>${field("name", "Ваше имя")}${field("email", "Email", "email")}${field("msg", "Сообщение", "text", true)}
+  <button class="btn" type="submit">Отправить</button></form></div>`;
+  bindForm($("#fb"), d => toast("Сообщение отправлено", "Спасибо, " + d.name + "! Ответим на " + d.email + "."));
+}
+
+/* ---------- Роутер и тема ---------- */
+/* Выбирает страницу по хэшу адреса (#/, #/t/id, #/about, #/contacts). */
+function route() {
+  const h = location.hash.replace("#", "") || "/";
+  document.title = "КиберРадар — турниры по CS2, Valorant, Dota 2 и MLBB в России";
+  const m = h.match(/^\/t\/(.+)$/);
+  const page = m ? "home" : h === "/analytics" ? "analytics" : h === "/about" ? "about" : h === "/contacts" ? "contacts" : "home";
+  $$("[data-nav]").forEach(a => a.classList.toggle("on", a.dataset.nav === page));
+  if (m) pageTournament(m[1]); else ({ home:pageHome, analytics:pageAnalytics, about:pageAbout, contacts:pageContacts })[page]();
+  $("#foot").textContent = "Данные на " + parseDate(DATA_UPDATED).toLocaleDateString("ru-RU") + ". Проверяйте актуальность на сайтах организаторов.";
+  scrollTo(0, 0);
+}
+
+/* Переключает тёмную/светлую тему добавлением/удалением CSS-класса dark на <html>. */
+function setTheme(dark) {
+  document.documentElement.classList.toggle("dark", dark);
+  $("#themeBtn").textContent = dark ? "Светлая тема" : "Тёмная тема";
+  try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch (e) {}
+}
+let saved = null;
+try { saved = localStorage.getItem("theme"); } catch (e) {}
+setTheme(saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
+$("#themeBtn").onclick = () => setTheme(!document.documentElement.classList.contains("dark"));
+addEventListener("hashchange", route);
+
+/* Загружает data/faceit.json. Если файла нет или он повреждён — сайт работает на ручных данных. */
+async function loadRemote() {
+  try {
+    const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 5000);
+    const res = await fetch(FACEIT_JSON + "?t=" + Date.now(), { signal: ctl.signal, cache: "no-store" });
+    clearTimeout(timer);
+    if (!res.ok) throw new Error(res.status);
+    const j = await res.json();
+    if (Array.isArray(j.tournaments)) REMOTE = j.tournaments;
+    if (j.updatedAt) DATA_UPDATED = j.updatedAt.slice(0, 10);
+  } catch (e) { console.warn("FACEIT-данные недоступны, используются ручные:", e); }
+}
+loadRemote().finally(route);
+</script>
+</body>
+</html>
