@@ -16,23 +16,37 @@ const CONFIG = {
   types: ["upcoming", "ongoing"],
   // Регион FACEIT. Россия входит в EU. Пустая строка = без фильтра по региону.
   region: "EU",
-  // Максимум чемпионатов на игру и статус (защита от бесконечной пагинации).
-  maxPerQuery: 300,
-  // Не включать турниры самой платформы (по id организатора). FACEIT-овский id организатора
-  // узнайте через FACEIT_DEBUG=1 и впишите сюда.
-  excludeOrganizerIds: [],
-  // Не включать по названию (турниры с FACEIT Points, собственные лиги платформы и т.п.).
-  excludeNameRegex: /faceit points|\bFP\b|^FACEIT (league|cup|premium)|\bhub\b/i,
-  // Явно включать (даже если сработает фильтр стран) — по подстроке в названии.
+  // Максимум чемпионатов на игру и статус (защита от бесконечной пагинации). Список идёт по возрастанию даты старта.
+  maxPerQuery: 2000,
+  // Не показывать турниры, стартующие позже чем через N дней (и прекращать листать список, дойдя до них).
+  horizonDays: 150,
+  // Минимум мест: отсекает тестовые и «дуэльные» турниры на 2–6 слотов.
+  minSlots: 8,
+  // Не включать организаторов по id (если знаете точный id — узнать можно через FACEIT_DEBUG=1).
+  excludeOrganizerIds: ["faceit"],   // у турниров самой платформы organizer_id равен "faceit"
+  // Регионы FACEIT, которые подходят (Россия входит в EU). Фильтр по полю region у самого турнира: параметр region в запросе API игнорирует. Пустой список = любые.
+  allowedRegions: ["EU"],
+  // Не включать турниры, где призы выдаются в FACEIT Points (поле prizes[].faceit_points).
+  excludeFaceitPoints: true,
+  // Организаторы-платформы: по имени организатора (турниры самого FACEIT не нужны).
+  excludeOrganizerRegex: /^faceit$/i,
+  // Не включать по названию: дуэли и мини-форматы (1v1, 2v2, wingman, aim, awp...), тесты, ежедневные кубки, FACEIT Points.
+  excludeNameRegex: /\b(1v1|1x1|1vs1|1on1|2v2|2x2|3v3|duo|solo|wingman|aim|awp|pistol|duel|arena|showdown|daily|late night|test|тест)\b|faceit points|\bFP\b|\bhub\b/i,
+  // Дополнительный поиск по названию (метод /search/championships): ловит нужные турниры, которых нет в первых страницах общего списка.
+  // Если метод недоступен ключу — скрипт просто пропустит этот шаг.
+  // Сколько результатов брать на один поисковый запрос.
+  searchMaxPerQuery: 100,
+  searchTerms: ["open qualifier", "qualifier", "квалификация", "CCT", "XPrime", "liga stavok", "лига ставок", "betboom", "winline", "russia", "россия", "снг", "cis"],
+  // Серии, которые остаются в списке, даже если у турнира пока нет даты старта.
   alwaysIncludeRegex: /liga stavok|лига ставок|народная лига|\bCCT\b|russia|россия|\bCIS\b|СНГ/i,
-  // Если у турнира указан список разрешённых стран и в нём нет RU — пропускаем.
+  // Пропускать турниры, куда нельзя участвовать из России (whitelist_geo_countries без RU или blacklist_geo_countries с RU).
   requireRussiaIfCountryLimited: true,
   // Сколько запросов деталей чемпионата выполнять параллельно (бережём лимиты API).
   concurrency: 3,
 };
 /* ============================================= */
 
-const API = "https://open.faceit.com/api/data/v4";
+const API = "https://open.faceit.com/data/v4";
 const KEY = process.env.FACEIT_API_KEY;
 const DEBUG = !!process.env.FACEIT_DEBUG;
 const OUT = resolve(dirname(fileURLToPath(import.meta.url)), "../data/faceit.json");
@@ -43,6 +57,7 @@ if (!KEY) {
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+let notFoundQueries = 0, totalQueries = 0;
 
 async function api(path, params = {}, attempt = 0) {
   const url = new URL(API + path);
@@ -55,21 +70,53 @@ async function api(path, params = {}, attempt = 0) {
     await sleep(1500 * (attempt + 1));
     return api(path, params, attempt + 1);
   }
-  if (!res.ok) throw new Error(`FACEIT ${res.status} на ${url.pathname}: ${(await res.text()).slice(0, 200)}`);
+  if (!res.ok) {
+    const err = new Error(`FACEIT ${res.status} на ${url.pathname}${url.search}: ${(await res.text()).slice(0, 300) || "(пустой ответ)"}`);
+    err.status = res.status;
+    throw err;
+  }
   return res.json();
 }
 
-async function listChampionships(game, type) {
+async function pagedFetch(path, base, tag, max = CONFIG.maxPerQuery) {
   const out = [];
-  const limit = 10; // максимум, который отдаёт этот метод
-  for (let offset = 0; offset < CONFIG.maxPerQuery; offset += limit) {
-    const page = await api("/championships", { game, type, region: CONFIG.region, offset, limit });
+  const limit = 10; // максимум, который отдают эти методы
+  const horizon = addDays(ymd(Date.now()), CONFIG.horizonDays);
+  for (let offset = 0; offset < max; offset += limit) {
+    let page;
+    try {
+      page = await api(path, { ...base, region: CONFIG.region, offset, limit });
+    } catch (e) {
+      if (e.status !== 404) throw e;
+      try {
+        page = await api(path, { ...base, offset, limit });
+      } catch (e2) {
+        if (e2.status !== 404) throw e2;
+        if (offset === 0) { notFoundQueries++; console.warn(`${tag}: 404 — ${e2.message}`); }
+        break;
+      }
+    }
     const items = page.items || [];
     out.push(...items);
     if (items.length < limit) break;
-    await sleep(150);
+    // Список отсортирован по дате старта: если вся страница уже за горизонтом — дальше листать незачем.
+    const starts = items.map(c => ymd(c.championship_start)).filter(Boolean);
+    if (starts.length === items.length && starts.every(d => d > horizon)) break;
+    await sleep(120);
   }
   return out;
+}
+
+async function listChampionships(game, type) {
+  totalQueries++;
+  const items = await pagedFetch("/championships", { game, type }, `${game}/${type}`);
+  if (type === "ongoing") for (const it of items) it._ongoing = true;
+  return items;
+}
+
+async function searchChampionships(game, type, name) {
+  try { return await pagedFetch("/search/championships", { name, game, type }, `поиск «${name}»`); }
+  catch (e) { console.warn(`Поиск «${name}» пропущен: ${e.message}`); return []; }
 }
 
 /* Дата YYYY-MM-DD по Москве из миллисекунд/секунд/ISO. */
@@ -93,20 +140,22 @@ async function organizerName(id, fallback) {
   return orgCache.get(id);
 }
 
-function countryLimit(c) {
+/* Ограничения по странам из join_checks (названия полей подтверждены реальным ответом FACEIT). */
+function allowedForRussia(c) {
   const jc = c.join_checks || {};
-  const list = jc.allowed_team_countries || jc.allowed_countries || c.allowed_team_countries || [];
-  return Array.isArray(list) ? list.map(x => String(x).toUpperCase()) : [];
+  const up = a => (Array.isArray(a) ? a : []).map(x => String(x).toUpperCase());
+  const wl = up(jc.whitelist_geo_countries), bl = up(jc.blacklist_geo_countries);
+  if (wl.length && !wl.includes("RU")) return false;   // разрешены только другие страны
+  if (bl.includes("RU")) return false;                 // Россия в списке запрещённых
+  return true;
 }
 
 function keep(c) {
-  const name = c.name || "";
   if (CONFIG.excludeOrganizerIds.includes(c.organizer_id)) return false;
-  if (CONFIG.excludeNameRegex.test(name)) return false;
-  if (CONFIG.requireRussiaIfCountryLimited) {
-    const lim = countryLimit(c);
-    if (lim.length && !lim.includes("RU") && !CONFIG.alwaysIncludeRegex.test(name)) return false;
-  }
+  if (CONFIG.excludeNameRegex.test(c.name || "")) return false;
+  if (!regionOk(c)) return false;
+  if (CONFIG.excludeFaceitPoints && hasFaceitPoints(c)) return false;
+  if (CONFIG.requireRussiaIfCountryLimited && !allowedForRussia(c)) return false;
   return true;
 }
 
@@ -117,7 +166,7 @@ async function toSite(c, discName) {
   const tba = !start;
   if (!tba && (!end || end < start)) end = start;
   // Идущий турнир без даты окончания: держим в списке, пока API отдаёт его как ongoing.
-  if (!tba && c.status === "ongoing" && end < today) end = addDays(today, 7);
+  if (!tba && isRunning(c) && end < today) end = addDays(today, 7);
 
   const name = c.name || "Без названия";
   const isQual = /qualif|квалиф/i.test(name);
@@ -163,19 +212,108 @@ async function pool(items, n, fn) {
   return res;
 }
 
+const hasFaceitPoints = c => Array.isArray(c.prizes) && c.prizes.some(p => Number(p && p.faceit_points) > 0);
+const isRunning = c => !!c._ongoing || /^(ongoing|started|running|live)$/i.test(c.status || "");
+const regionOk = c => !CONFIG.allowedRegions.length || !c.region || CONFIG.allowedRegions.includes(String(c.region).toUpperCase());
+
+/* Дешёвая предварительная фильтрация по данным списка — до запроса деталей. */
+async function prefilter(c) {
+  const today = ymd(Date.now());
+  const horizon = addDays(today, CONFIG.horizonDays);
+  const start = ymd(c.championship_start), end = ymd(c.championship_end) || start;
+  if (!isRunning(c)) {
+    if (start && start < today) return false;     // «предстоящий», но старт давно прошёл — заброшенный
+    if (end && end < today) return false;
+  }
+  if (start && start > horizon) return false;
+  if (!start && !isRunning(c) && !CONFIG.alwaysIncludeRegex.test(c.name || "")) return false; // без даты старта — заброшенные, кроме нужных серий
+  if (!regionOk(c)) return false;
+  if (CONFIG.excludeFaceitPoints && hasFaceitPoints(c)) return false;
+  if (CONFIG.requireRussiaIfCountryLimited && !allowedForRussia(c)) return false;
+  if (c.slots && Number(c.slots) < CONFIG.minSlots) return false;
+  if (CONFIG.excludeNameRegex.test(c.name || "")) return false;
+  if (CONFIG.excludeOrganizerIds.includes(c.organizer_id)) return false;
+  const org = await organizerName(c.organizer_id, c.organizer_name);
+  if (CONFIG.excludeOrganizerRegex.test(org)) return false;
+  return true;
+}
+
 async function main() {
   const byId = new Map();
+  const add = (items, discName) => { for (const c of items) if (c.championship_id && !byId.has(c.championship_id)) byId.set(c.championship_id, { c, discName }); };
+
   for (const [game, discName] of Object.entries(CONFIG.games)) {
     for (const type of CONFIG.types) {
       const items = await listChampionships(game, type);
       console.log(`${game}/${type}: ${items.length}`);
       if (DEBUG && items[0]) console.log("RAW:", JSON.stringify(items[0], null, 2));
-      for (const c of items) byId.set(c.championship_id, { c, discName });
+      add(items, discName);
     }
   }
+  if (totalQueries > 0 && notFoundQueries === totalQueries) {
+    throw new Error("FACEIT вернул 404 на все запросы списка — вероятно, неверный адрес API или у ключа нет доступа. Запустите с FACEIT_DEBUG=1 и сверьте с https://docs.faceit.com/");
+  }
 
-  // Детали каждого чемпионата (join_checks, описание), затем фильтры.
-  const detailed = await pool([...byId.values()], CONFIG.concurrency, async ({ c, discName }) => {
+  // Поиск по ключевым словам (необязательный шаг). У результатов поиска может быть другая форма записи
+  // (например, competition_id вместо championship_id) и неполные данные, поэтому для новых находок берём детали.
+  const idOf = c => c.championship_id || c.competition_id || c.id;
+  const found = new Map();
+  let termNo = 0;
+  for (const term of CONFIG.searchTerms) {
+    console.log(`Поиск ${++termNo}/${CONFIG.searchTerms.length}: «${term}»...`);
+    for (const [game, discName] of Object.entries(CONFIG.games)) {
+      for (const type of CONFIG.types) {
+        const items = await searchChampionships(game, type, term);
+        if (DEBUG && items[0] && !found.size) console.log("RAW search item:", JSON.stringify(items[0], null, 2));
+        let fresh = 0;
+        for (const it of items) {
+          const id = idOf(it);
+          if (!id || byId.has(id) || found.has(id)) continue;
+          found.set(id, { it, id, discName });
+          fresh++;
+        }
+        if (items.length) console.log(`  «${term}» ${game}/${type}: найдено ${items.length}, новых ${fresh}`);
+      }
+    }
+  }
+  if (found.size) {
+    console.log(`Загружаю детали ${found.size} найденных поиском турниров...`);
+    await pool([...found.values()], CONFIG.concurrency, async ({ it, id, discName }) => {
+      try {
+        const det = await api("/championships/" + id);
+        byId.set(id, { c: { ...it, ...det, championship_id: id }, discName });
+      } catch (e) { console.warn("Поиск: без деталей", id, e.message); }
+    });
+  }
+
+  // Отладка: сохраняем «сырые» детали одного турнира FACEIT и одного стороннего — чтобы найти поле про FACEIT Points.
+  if (DEBUG) {
+    const sample = {};
+    for (const { c } of byId.values()) {
+      const org = await organizerName(c.organizer_id, c.organizer_name);
+      const key = /^faceit$/i.test(org) ? "faceit_own" : "third_party";
+      if (sample[key]) continue;
+      try { sample[key] = { list_item: c, details: await api("/championships/" + c.championship_id) }; } catch (e) { sample[key] = { error: e.message }; }
+      if (sample.faceit_own && sample.third_party) break;
+    }
+    const f = resolve(dirname(OUT), "raw-sample.json");
+    await mkdir(dirname(f), { recursive: true });
+    await writeFile(f, JSON.stringify(sample, null, 2));
+    console.log("Отладочный образец записан:", f);
+  }
+
+  // Предварительные фильтры -> детали только для оставшихся -> финальные фильтры.
+  const pre = [];
+  console.log("Проверяю организаторов и применяю фильтры (это может занять пару минут)...");
+  let n = 0;
+  for (const e of byId.values()) {
+    if (await prefilter(e.c)) pre.push(e);
+    if (++n % 100 === 0) console.log(`  проверено ${n} из ${byId.size}`);
+  }
+  console.log(`Всего получено: ${byId.size}, после предварительных фильтров: ${pre.length}`);
+
+  console.log(`Загружаю детали ${pre.length} турниров...`);
+  const detailed = await pool(pre, CONFIG.concurrency, async ({ c, discName }) => {
     try { c = { ...c, ...(await api("/championships/" + c.championship_id)) }; } catch (e) { console.warn("Без деталей:", c.championship_id, e.message); }
     return { c, discName };
   });
@@ -184,7 +322,7 @@ async function main() {
   const tournaments = [];
   for (const { c, discName } of kept) tournaments.push(await toSite(c, discName));
   tournaments.sort((a, b) => (a.start || "9999").localeCompare(b.start || "9999"));
-  console.log(`Всего получено: ${byId.size}, после фильтров: ${tournaments.length}`);
+  console.log(`После финальных фильтров: ${tournaments.length}`);
 
   // Если содержимое не изменилось — файл не трогаем (чтобы не плодить коммиты).
   let prev = null;
