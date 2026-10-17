@@ -1,0 +1,35 @@
+name: Sync FACEIT tournaments
+
+on:
+  schedule:
+    - cron: "17 * * * *"      # каждый час, на 17-й минуте
+  workflow_dispatch:           # ручной запуск кнопкой "Run workflow"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-faceit
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Загрузка турниров с FACEIT
+        env:
+          FACEIT_API_KEY: ${{ secrets.FACEIT_API_KEY }}
+        run: node scripts/sync-faceit.mjs
+      - name: Коммит, если данные изменились
+        run: |
+          if [ -n "$(git status --porcelain data/faceit.json)" ]; then
+            git config user.name "faceit-sync-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git add data/faceit.json
+            git commit -m "Обновление турниров FACEIT"
+            git push
+          fi
