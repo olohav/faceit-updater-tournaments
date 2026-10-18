@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>КиберРадар — турниры по CS2, Valorant, Dota 2 и MLBB в России</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;600;800&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 
 <!-- ======================= БЛОК 2: CSS ======================= -->
 <style>
@@ -87,8 +88,29 @@ footer{max-width:1100px;margin:auto;padding:0 1rem 2rem;color:var(--mute);font-s
 .br{display:grid;grid-template-columns:minmax(80px,9rem) 1fr auto;gap:.6rem;align-items:center;margin:.4rem 0;font-size:.9rem}
 .br .tr{background:var(--bg);border-radius:99px}.br i{display:block;height:.7rem;border-radius:99px;background:var(--acc);min-width:3px}
 .br b{font-weight:700;text-align:right}
+input[type=password],input[type=url],input[type=number],input[type=date],input[type=time],select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.6rem .75rem}
+.auth{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}.who{font-size:.88rem;color:var(--mute);max-width:14rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.badge{display:inline-block;font:800 .72rem Manrope,sans-serif;border-radius:999px;padding:.12rem .6rem;border:1px solid var(--line);color:var(--mute)}.badge.admin{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.tabs{display:flex;gap:.4rem;margin-bottom:1rem}.tabs button{flex:1}.tabs .btn:not(.ghost){cursor:default}
+.box{max-width:440px;margin:auto}
+.hero{background:linear-gradient(135deg,var(--acc),#6a3dff);color:#fff;border-radius:18px;padding:2rem 1.5rem;margin-bottom:1.2rem}
+.hero h1{margin:0 0 .5rem;color:#fff}.hero p{margin:0;max-width:62ch;opacity:.93}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-bottom:1rem}
+.about-grid .card h3{font-size:1rem;margin-bottom:.4rem}.about-grid .card p{margin:0;color:var(--mute);font-size:.95rem}
+.steps{counter-reset:s;display:grid;gap:.7rem;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;align-items:start}
+.steps li::before{content:counter(s);background:var(--acc);color:var(--acc-ink);border-radius:50%;width:2.2rem;height:2.2rem;display:grid;place-items:center;font:800 .95rem Unbounded,sans-serif}
+.steps b{display:block}
+.sect{margin-bottom:1rem}.sect h2{margin-bottom:.7rem}
+.adm{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.8rem}.adm .wide{grid-column:1/-1}
+.adm .field{margin:0}.adm .chk{margin-top:1.5rem}
+.arow{display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;padding:.7rem 0;border-top:1px solid var(--line)}
+.arow:first-child{border-top:0}.arow .meta b{color:var(--ink)}.arow.exp{opacity:.6}
+.arow .acts{display:flex;gap:.4rem;align-items:center}.arow .btn{padding:.4rem .8rem;font-size:.85rem}
+.btn.danger{background:var(--live);color:#fff}
+.note{background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:.8rem 1rem;color:var(--mute);font-size:.92rem}
 @media (prefers-reduced-motion:reduce){.toast{animation:none}}
-@media (max-width:820px){.layout,.cols{grid-template-columns:1fr}.filters{position:static}}
+@media (max-width:820px){.layout,.cols{grid-template-columns:1fr}.filters{position:static}.auth{width:100%}}
 </style>
 </head>
 
@@ -102,7 +124,9 @@ footer{max-width:1100px;margin:auto;padding:0 1rem 2rem;color:var(--mute);font-s
       <a href="#/analytics" data-nav="analytics">Аналитика</a>
       <a href="#/about" data-nav="about">О проекте</a>
       <a href="#/contacts" data-nav="contacts">Обратная связь</a>
+      <a href="#/admin" data-nav="admin" id="navAdmin" hidden>Админ-панель</a>
     </nav>
+    <div class="auth" id="auth"></div>
     <button class="btn ghost" id="themeBtn" type="button" aria-label="Переключить тему">Тёмная тема</button>
   </div>
 </header>
@@ -116,6 +140,31 @@ footer{max-width:1100px;margin:auto;padding:0 1rem 2rem;color:var(--mute);font-s
 let DATA_UPDATED = "2026-10-17";     // дата последнего снимка данных (обновляется из data/faceit.json)
 const FACEIT_JSON = "data/faceit.json"; // файл, который автоматически обновляет scripts/sync-faceit.mjs
 let REMOTE = [];                     // турниры, загруженные с FACEIT автоматически
+let MANUAL = [];                     // турниры, добавленные администратором вручную (хранятся в Supabase)
+
+/* ---- Подключение сервисов: заполняется один раз, инструкция в README ---- */
+const SUPABASE_URL = "";             // например https://abcd1234.supabase.co
+const SUPABASE_ANON_KEY = "";        // публичный ключ anon (НЕ service_role!)
+const FEEDBACK_ENDPOINT = "";        // адрес формы Formspree, например https://formspree.io/f/abcdwxyz
+
+/* Экранирование: данные из FACEIT и базы попадают в HTML, поэтому спецсимволы обезвреживаются. */
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+const safeUrl = u => (/^https?:\/\//i.test(u || "") ? esc(u) : "");
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+const money0 = m => (m && isFinite(+m.v) && m.v !== "" && m.v !== null ? { v: +m.v, c: m.c === "USD" ? "USD" : "RUB" } : null);
+/* Приводит запись из внешнего источника к безопасному виду; негодные записи отбрасывает (null). */
+function clean(t) {
+  if (!t || typeof t !== "object" || !t.id || !t.name) return null;
+  if (!t.tba && !(DATE_RE.test(t.start) && DATE_RE.test(t.end))) return null;
+  const o = { ...t };
+  for (const k of ["id", "name", "disc", "format", "city", "op", "desc", "fee_note", "contact", "siteName", "platform", "team", "startsAt", "regEnd"])
+    if (o[k] != null) o[k] = esc(o[k]);
+  o.site = safeUrl(o.site);
+  o.social = (Array.isArray(o.social) ? o.social : []).map(x => ({ t: esc(x && x.t), u: safeUrl(x && x.u) }));
+  o.prize = money0(o.prize); o.fee = money0(o.fee);
+  o.teams = Number(o.teams) > 0 ? Number(o.teams) : null;
+  return o;
+}
 const USD_RUB = 75;                  // примерный курс для единой шкалы призовых
 const DAY = 864e5;
 /* Платформы для фильтра и аналитики. Турнир с own:true (проводится самой платформой: FACEIT, FASTCUP, VK Play и т.д.) в списки не попадает;
@@ -216,9 +265,10 @@ function statusOf(t, now = new Date()) {
 const allTournaments = () => {
   const uuid = u => ((u || "").match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i) || [""])[0].toLowerCase();
   const auto = new Set(REMOTE.map(t => uuid(t.site)).filter(Boolean));
-  return [...TOURNAMENTS.filter(t => !auto.has(uuid(t.site))), ...REMOTE];
+  const ids = new Set();
+  return [...TOURNAMENTS.filter(t => !auto.has(uuid(t.site))), ...REMOTE, ...MANUAL].filter(t => !ids.has(t.id) && ids.add(t.id));
 };
-const activeList = () => allTournaments().map(t => ({ team:"5x5", platform:"Не указана", ...t, kind: t.kind || (/qualif|квалиф/i.test(t.name) ? "qualifier" : "main"), st: statusOf(t) })).filter(t => t.st && !t.own && !t.fp)
+const activeList = () => allTournaments().map(t => ({ team:"5x5", platform:"Не указана", ru:true, ...t, kind: t.kind || (/qualif|квалиф/i.test(t.name) ? "qualifier" : "main"), st: statusOf(t) })).filter(t => t.st && !t.own && !t.fp)
   .sort((a, b) => (a.tba ? 9e15 : +parseDate(a.start)) - (b.tba ? 9e15 : +parseDate(b.start)));
 
 /* Показывает всплывающее уведомление вместо alert/перезагрузки. */
@@ -248,8 +298,9 @@ function bindForm(form, onOk) {
       if (msg) ok = false;
     });
     if (!ok) return toast("Форма не отправлена", "Проверьте выделенные поля.", "fail");
-    onOk(Object.fromEntries(new FormData(form)));
-    form.reset();
+    const r = onOk(Object.fromEntries(new FormData(form)));
+    if (r && r.then) r.then(ok => { if (ok !== false) form.reset(); });   // при ошибке отправки текст остаётся в форме
+    else form.reset();
   });
 }
 
@@ -271,7 +322,7 @@ function pageHome() {
   const discs = ["CS2", "Dota 2", "Valorant", "MLBB"];              // порядок групп на странице
   const ops = [...new Set(all.map(t => t.op))];
   const SL = { prize: 10000, fee: 100 };                             // ползунки и их шаг, ₽
-  const f = { q:"", d:new Set(), o:new Set(), m:new Set(), p:new Set(), stu:false, qual:false, prize:[0, 0], fee:[0, 0] };
+  const f = { q:"", d:new Set(), o:new Set(), m:new Set(), p:new Set(), stu:false, qual:false, ru:false, prize:[0, 0], fee:[0, 0] };
   const openG = new Set();                                           // раскрытые группы турниров
 
   /* Выпадающий список фильтра: заголовок со счётчиком выбранных и чекбоксы внутри. */
@@ -286,7 +337,7 @@ function pageHome() {
     <fieldset><legend>Поиск</legend><input type="search" id="q" placeholder="Турнир или оператор"></fieldset>
     ${dd("d", "Дисциплина", discs.map(d => chk("d", d, d === "MLBB" ? "MLBB (Mobile Legends: Bang Bang)" : d)).join(""))}
     ${dd("m", "Формат матчей", ["1x1", "2x2", "5x5"].map(m => chk("m", m)).join(""))}
-    ${dd("t", "Тип", `<label class="chk"><input type="checkbox" id="stu"> Только студенческие лиги</label><label class="chk"><input type="checkbox" id="qual"> Только квалификации</label>`)}
+    ${dd("t", "Тип", `<label class="chk"><input type="checkbox" id="stu"> Только студенческие лиги</label><label class="chk"><input type="checkbox" id="qual"> Только квалификации</label><label class="chk"><input type="checkbox" id="ru"> С российским фокусом (русскоязычные и из РФ)</label>`)}
     ${dd("p", "Платформа", PLATFORMS.map(p => chk("p", p, `${p} (${all.filter(t => t.platform === p).length})`)).join(""))}
     ${dd("o", "Турнирный оператор", ops.map(o => chk("o", o)).join(""))}
     ${rng("prize", "Призовой фонд")}${rng("fee", "Взнос за участие")}
@@ -312,7 +363,7 @@ function pageHome() {
     const q = f.q.toLowerCase();
     const res = all.filter(t => (!q || (t.name + " " + t.op).toLowerCase().includes(q)) && (!f.d.size || f.d.has(t.disc)) &&
       (!f.o.size || f.o.has(t.op)) && (!f.m.size || f.m.has(t.team)) && (!f.p.size || f.p.has(t.platform)) && (!f.stu || t.student) &&
-      (!f.qual || t.kind === "qualifier") && inRange(t.prize, f.prize) && (t.fee ? inRange(t.fee, f.fee) : f.fee[0] === 0));
+      (!f.qual || t.kind === "qualifier") && (!f.ru || t.ru) && inRange(t.prize, f.prize) && (t.fee ? inRange(t.fee, f.fee) : f.fee[0] === 0));
     $("#count").textContent = "Найдено: " + res.length + " из " + all.length;
     const order = d => (discs.includes(d) ? discs.indexOf(d) : 99);
     const games = [...new Set(res.map(t => t.disc))].sort((x, y) => order(x) - order(y));
@@ -320,7 +371,7 @@ function pageHome() {
       return `<details class="grp" data-g="${d}"${openG.has(d) || f.q ? " open" : ""}><summary>${d}<b>${g.length}</b></summary><div class="list">${g.map(row).join("")}</div></details>`; }).join("")
       : `<div class="card empty">Ничего не найдено. Расширьте фильтры или сбросьте их.</div>`;
     $$(".grp").forEach(g => g.ontoggle = () => (g.open ? openG.add(g.dataset.g) : openG.delete(g.dataset.g)));
-    $$("[data-c]").forEach(e => { const n = e.dataset.c === "t" ? +f.stu + +f.qual : f[e.dataset.c].size; e.textContent = n ? " · " + n : ""; });
+    $$("[data-c]").forEach(e => { const n = e.dataset.c === "t" ? +f.stu + +f.qual + +f.ru : f[e.dataset.c].size; e.textContent = n ? " · " + n : ""; });
   }
   $("#q").oninput = e => { f.q = e.target.value; draw(); };
   $$("[data-d]").forEach(c => c.onchange = () => { c.checked ? f.d.add(c.dataset.d) : f.d.delete(c.dataset.d); bounds(true); draw(); });
@@ -329,6 +380,7 @@ function pageHome() {
   $$("[data-p]").forEach(c => c.onchange = () => { c.checked ? f.p.add(c.dataset.p) : f.p.delete(c.dataset.p); draw(); });
   $("#stu").onchange = e => { f.stu = e.target.checked; draw(); };
   $("#qual").onchange = e => { f.qual = e.target.checked; draw(); };
+  $("#ru").onchange = e => { f.ru = e.target.checked; draw(); };
   Object.keys(SL).forEach(id => ["min", "max"].forEach(k => $("#" + id + k).oninput = () => { slider(id, false, k); draw(); }));
   $("#reset").onclick = pageHome;
   bounds(true); draw();
@@ -379,31 +431,245 @@ function pageAnalytics() {
 
 /* ---------- Страница 3: о проекте ---------- */
 function pageAbout() {
-  $("#app").innerHTML = `<h1>О проекте</h1><div class="card"><p>КиберРадар собирает анонсы турниров по CS2, Valorant, Dota 2 и MLBB, которые проходят в России или открыты для российских команд, на ближайшие 365 дней.</p>
-  <p>Статусы считаются по датам: «Чек-ин» — за три дня до старта, «Турнир идёт» — между первым и последним днём. После финала турнир пропадает из списков при следующем открытии страницы.</p>
-  <p>Источники: анонсы организаторов и новостные порталы, а также сообщества организаторов во ВКонтакте и Telegram. Ссылки на соцсети указаны только там, где они подтверждены; страницы в Instagram найти не удалось.</p>
-  <p>Правило отбора: турниры, которые проводят сами игровые платформы (FACEIT, FASTCUP, VK Play и др.), в список не попадают. Учитываются только квалификации к конкретным турнирам и турниры сторонних организаторов, помеченные платформой, на которой они проходят.</p>
-  <p>Турниры FACEIT подгружаются автоматически через официальный FACEIT Data API и обновляются раз в час. Турниры, за победу в которых начисляются FACEIT Points, не учитываются.</p>
-  <p>Данные — снимок на ${parseDate(DATA_UPDATED).toLocaleDateString("ru-RU")}. Остальные источники пока вносятся вручную. Призовые в разных валютах приводятся к рублям по примерному курсу ${USD_RUB} ₽/$.</p></div>`;
+  const all = activeList(), by = d => all.filter(t => t.disc === d).length;
+  const stat = (v, l) => `<div class="card kpi"><b>${v}</b><span>${l}</span></div>`;
+  $("#app").innerHTML = `<div class="hero"><h1>О проекте КиберРадар</h1>
+    <p>Единое место, где собраны открытые турниры и квалификации по CS2, Dota 2, Valorant и MLBB, доступные игрокам из России: от клубных кубков до крупных серий.</p></div>
+  <div class="kpis">${stat(all.length, "актуальных турниров сейчас")}${stat(by("CS2"), "по CS2")}${stat(by("Dota 2"), "по Dota 2")}${stat(by("Valorant") + by("MLBB"), "по Valorant и MLBB")}</div>
+  <div class="about-grid">
+    <div class="card"><h3>Всё в одном списке</h3><p>Фильтры по дисциплине, платформе, организатору, формату матчей, призовому фонду и взносу. Отдельный фильтр оставляет только турниры с российским фокусом.</p></div>
+    <div class="card"><h3>Только живые турниры</h3><p>Завершённые и заброшенные турниры скрываются сами. Идущие турниры проверяются по турнирной сетке: если финал сыгран, турнир пропадает.</p></div>
+    <div class="card"><h3>Без FACEIT Points</h3><p>Турниры, где призы выдаются очками FACEIT, не показываются: нужны квалификации и турниры сторонних организаторов с реальными призами.</p></div>
+    <div class="card"><h3>Важные даты</h3><p>Для каждого турнира указаны дата и время старта по Москве (МСК, GMT+3) и срок окончания регистрации, если организатор его назвал.</p></div></div>
+  <div class="card sect"><h2>Как это работает</h2><ol class="steps">
+    <li><div><b>Автоматический сбор</b>Раз в час сервер запрашивает турниры CS2 и Dota 2 у официального FACEIT Data API и отбирает подходящие: без очков FACEIT, без ограничений по странам для России, без дуэлей и тестовых записей.</div></li>
+    <li><div><b>Ручное пополнение</b>Турниры из других источников (Valorant, MLBB, клубные и городские турниры, анонсы в соцсетях) добавляет администратор. У каждой такой записи можно задать дату автоматического удаления.</div></li>
+    <li><div><b>Проверка статуса</b>«Чек-ин» включается за три дня до старта, «Турнир идёт», пока он не закончился. Поэтому список не засоряется прошлыми событиями.</div></li>
+    <li><div><b>Переход к организатору</b>Регистрация проходит на сайте организатора. КиберРадар только помогает найти турнир и вовремя о нём узнать.</div></li></ol></div>
+  <div class="card sect"><h2>Источники и точность данных</h2>
+    <p>Автоматические данные берутся из FACEIT Data API. Остальные записи собираются из анонсов организаторов, новостных порталов и сообществ во ВКонтакте и Telegram. Призовые в разных валютах приводятся к рублям по примерному курсу ${USD_RUB} ₽/$.</p>
+    <p class="note">Данные обновлены ${parseDate(DATA_UPDATED).toLocaleDateString("ru-RU")}. Перед участием проверяйте условия, сроки и взнос на странице организатора: он может изменить их после публикации.</p></div>
+  <div class="card sect"><h2>Не нашли турнир?</h2>
+    <p>Знаете турнир, которого нет в списке, или нашли ошибку? Напишите в <a href="#/contacts">обратную связь</a>: мы проверим информацию и добавим турнир.</p>
+    <p>Есть аккаунт? <a href="#/login">Войдите или зарегистрируйтесь</a>: регистрация бесплатна.</p></div>`;
 }
 
 /* ---------- Страница 4: обратная связь ---------- */
 function pageContacts() {
-  $("#app").innerHTML = `<h1>Обратная связь</h1><p class="lead">Знаете турнир, которого нет в списке? Напишите нам.</p>
-  <div class="card" style="max-width:520px"><form id="fb" novalidate>${field("name", "Ваше имя")}${field("email", "Email", "email")}${field("msg", "Сообщение", "text", true)}
+  $("#app").innerHTML = `<h1>Обратная связь</h1><p class="lead">Знаете турнир, которого нет в списке, или нашли ошибку? Напишите нам: сообщение придёт напрямую разработчику.</p>
+  <div class="card" style="max-width:520px"><form id="fb" novalidate>${field("name", "Ваше имя")}${field("email", "Email для ответа", "email")}${field("msg", "Сообщение", "text", true)}
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
   <button class="btn" type="submit">Отправить</button></form></div>`;
-  bindForm($("#fb"), d => toast("Сообщение отправлено", "Спасибо, " + d.name + "! Ответим на " + d.email + "."));
+  if (AUTH.user) $("#email").value = AUTH.user.email || "";
+  bindForm($("#fb"), async d => {
+    if (!FEEDBACK_ENDPOINT) { toast("Форма пока не подключена", "Администратору нужно указать адрес формы в index.html (см. README).", "fail"); return false; }
+    if (d._gotcha) return true;   // скрытое поле для ботов
+    const btn = $("#fb button"); btn.disabled = true;
+    try {
+      const r = await fetch(FEEDBACK_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ name: d.name, email: d.email, message: d.msg, _subject: "КиберРадар: обратная связь" }) });
+      if (!r.ok) throw new Error(r.status);
+      toast("Сообщение отправлено", "Спасибо, " + d.name + "! Ответим на " + d.email + ".");
+      return true;
+    } catch (e) { toast("Не удалось отправить", "Проверьте интернет и попробуйте ещё раз.", "fail"); return false; }
+    finally { btn.disabled = false; }
+  });
+}
+
+/* ---------- Аккаунты и роли (Supabase) ---------- */
+let SB = null;                                  // клиент Supabase (null, пока сервис не подключён)
+const AUTH = { user: null, role: null, ready: false };   // role: "user" или "admin"
+
+function initSupabase() {
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY || !window.supabase) return false;
+  SB = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  return true;
+}
+/* Роль берётся из таблицы profiles; изменить её может только администратор базы данных. */
+async function loadRole() {
+  AUTH.role = null;
+  if (!SB || !AUTH.user) return;
+  const { data } = await SB.from("profiles").select("role").eq("id", AUTH.user.id).maybeSingle();
+  AUTH.role = data && data.role === "admin" ? "admin" : "user";
+}
+const isAdmin = () => AUTH.role === "admin";
+
+/* Блок «Войти / email · роль · Выйти» в шапке. */
+function renderAuth() {
+  const box = $("#auth");
+  box.innerHTML = AUTH.user
+    ? `<span class="who" title="${esc(AUTH.user.email)}">${esc(AUTH.user.email)}</span><span class="badge ${isAdmin() ? "admin" : ""}">${isAdmin() ? "Администратор" : "Пользователь"}</span><button class="btn ghost" id="logout" type="button">Выйти</button>`
+    : `<a class="btn ghost" href="#/login" style="text-decoration:none">Войти</a>`;
+  $("#navAdmin").hidden = !isAdmin();
+  const lo = $("#logout"); if (lo) lo.onclick = async () => { await SB.auth.signOut(); toast("Вы вышли из аккаунта", ""); location.hash = "#/"; };
+}
+
+const authErr = m => /invalid login|invalid credentials/i.test(m) ? "Неверная почта или пароль." : /already registered|already been registered/i.test(m) ? "Эта почта уже зарегистрирована. Попробуйте войти." : /email not confirmed/i.test(m) ? "Подтвердите почту: письмо со ссылкой уже отправлено." : /rate limit/i.test(m) ? "Слишком много попыток. Подождите немного." : "Не получилось: " + m;
+
+function pageLogin() {
+  if (!SB) { $("#app").innerHTML = `<div class="box card"><h1>Вход</h1><p class="note">Аккаунты пока не подключены: администратору нужно один раз указать данные Supabase в index.html (см. README).</p></div>`; return; }
+  if (!AUTH.ready) { $("#app").innerHTML = `<div class="card empty">Загрузка…</div>`; return; }
+  if (AUTH.user) {
+    $("#app").innerHTML = `<div class="box card"><h1>Ваш аккаунт</h1><p><b>${esc(AUTH.user.email)}</b></p><p><span class="badge ${isAdmin() ? "admin" : ""}">${isAdmin() ? "Администратор" : "Пользователь"}</span></p>
+      ${isAdmin() ? `<p><a class="btn" href="#/admin" style="text-decoration:none;display:inline-block">Открыть админ-панель</a></p>` : `<p class="meta">Обычный аккаунт. Права администратора выдаёт разработчик.</p>`}</div>`;
+    return;
+  }
+  let mode = "in";
+  const draw = () => {
+    $("#app").innerHTML = `<div class="box card"><div class="tabs"><button class="btn ${mode === "in" ? "" : "ghost"}" data-m="in" type="button">Вход</button><button class="btn ${mode === "up" ? "" : "ghost"}" data-m="up" type="button">Регистрация</button></div>
+      <form id="af" novalidate>${field("email", "Email", "email")}${field("password", "Пароль" + (mode === "up" ? " (не короче 8 символов)" : ""), "password")}${mode === "up" ? field("password2", "Повторите пароль", "password") : ""}
+      <button class="btn" type="submit" style="width:100%">${mode === "in" ? "Войти" : "Создать аккаунт"}</button></form>
+      <p class="meta" style="margin-bottom:0">${mode === "up" ? "После регистрации придёт письмо для подтверждения почты." : "Нет аккаунта? Перейдите на вкладку «Регистрация»."}</p></div>`;
+    $$("[data-m]").forEach(b => b.onclick = () => { mode = b.dataset.m; draw(); });
+    bindForm($("#af"), async d => {
+      const email = d.email.trim();
+      if (mode === "up") {
+        if (d.password.length < 8) { toast("Слабый пароль", "Минимум 8 символов.", "fail"); return false; }
+        if (d.password !== d.password2) { toast("Пароли не совпадают", "Повторите пароль внимательнее.", "fail"); return false; }
+        const { data, error } = await SB.auth.signUp({ email, password: d.password });
+        if (error) { toast("Регистрация не удалась", authErr(error.message), "fail"); return false; }
+        if (!data.session) { toast("Почти готово", "Мы отправили письмо на " + email + ". Перейдите по ссылке в нём, затем войдите.", "ok"); mode = "in"; draw(); return false; }
+        toast("Добро пожаловать!", "Аккаунт создан."); return true;
+      }
+      const { error } = await SB.auth.signInWithPassword({ email, password: d.password });
+      if (error) { toast("Не удалось войти", authErr(error.message), "fail"); return false; }
+      toast("С возвращением!", ""); return true;
+    });
+  };
+  draw();
+}
+
+/* ---------- Админ-панель: ручное добавление турниров ---------- */
+const DISCS = ["CS2", "Dota 2", "Valorant", "MLBB"];
+function pageAdmin() {
+  if (!SB) { $("#app").innerHTML = `<div class="box card"><h1>Админ-панель</h1><p class="note">Сервис аккаунтов не подключён (см. README).</p></div>`; return; }
+  if (!AUTH.ready) { $("#app").innerHTML = `<div class="card empty">Проверка доступа…</div>`; return; }
+  if (!AUTH.user) { location.hash = "#/login"; return; }
+  if (!isAdmin()) { $("#app").innerHTML = `<div class="box card"><h1>Нет доступа</h1><p>Эта страница доступна только администратору.</p><a href="#/">На главную</a></div>`; return; }
+
+  const sel = (id, label, opts, wide) => `<div class="field${wide ? " wide" : ""}"><label for="${id}">${label}</label><select id="${id}">${opts.map(([v, t]) => `<option value="${esc(v)}">${esc(t)}</option>`).join("")}</select></div>`;
+  const inp = (id, label, type = "text", ph = "", wide) => `<div class="field${wide ? " wide" : ""}"><label for="${id}">${label}</label><input id="${id}" type="${type}" placeholder="${esc(ph)}" ${type === "number" ? 'min="0" step="any"' : 'autocomplete="off"'}><div class="err"></div></div>`;
+  const cur = [["RUB", "₽"], ["USD", "$"]];
+  $("#app").innerHTML = `<h1>Админ-панель</h1><p class="lead">Добавляйте турниры вручную: например по Valorant и MLBB, клубные и городские турниры. Поле «Удалить после» убирает запись с сайта в выбранную дату.</p>
+  <div class="card sect"><h2 id="ftitle">Новый турнир</h2><form id="tf" novalidate><div class="adm">
+    ${inp("name", "Название *", "text", "", 1)}
+    ${sel("disc", "Дисциплина *", DISCS.map(d => [d, d]))}${sel("kind", "Тип", [["main", "Турнир"], ["qualifier", "Квалификация"]])}
+    ${sel("format", "Площадка", [["Online", "Онлайн"], ["LAN", "LAN (очно)"]])}${inp("city", "Город / место", "text", "Вся Россия")}
+    ${inp("op", "Организатор *")}${sel("platform", "Платформа", PLATFORMS.map(p => [p, p]))}
+    ${sel("team", "Формат матчей", [["5x5", "5x5"], ["2x2", "2x2"], ["1x1", "1x1"]])}${inp("teams", "Количество команд / мест", "number")}
+    <label class="chk wide"><input type="checkbox" id="tba"> Даты пока неизвестны</label>
+    ${inp("start", "Дата старта *", "date")}${inp("end", "Дата окончания *", "date")}${inp("time", "Время старта (МСК)", "time")}
+    ${inp("regDate", "Регистрация до (дата)", "date")}${inp("regTime", "Регистрация до (время, МСК)", "time")}
+    ${inp("prize", "Призовой фонд", "number")}${sel("prizeC", "Валюта призового", cur)}
+    ${inp("fee", "Взнос (0 — бесплатно, пусто — не указан)", "number")}${sel("feeC", "Валюта взноса", cur)}
+    <div class="field wide"><label for="desc">Описание</label><textarea id="desc" rows="4"></textarea></div>
+    ${inp("fee_note", "Пояснение про взнос / условия", "text", "", 1)}${inp("contact", "Контакты и как зарегистрироваться", "text", "", 1)}
+    ${inp("site", "Ссылка на турнир (https://…)", "url", "", 1)}${inp("siteName", "Подпись ссылки", "text", "Страница турнира")}
+    <label class="chk"><input type="checkbox" id="student"> Студенческая лига</label><label class="chk"><input type="checkbox" id="ru" checked> Российский фокус</label>
+    ${inp("expires", "Удалить информацию после (дата)", "date", "", 1)}
+  </div><p class="err" id="ferr" style="margin-top:.8rem"></p>
+  <div style="display:flex;gap:.6rem;margin-top:.4rem"><button class="btn" type="submit" id="fsave">Сохранить турнир</button><button class="btn ghost" type="button" id="fcancel">Очистить форму</button></div></form></div>
+  <div class="card"><h2>Добавленные турниры</h2><div id="alist"><p class="meta">Загрузка…</p></div></div>`;
+
+  const V = id => $("#" + id).value.trim();
+  let editing = null, rows = [];
+  const setErr = m => { $("#ferr").textContent = m || ""; };
+  const mskEnd = d => d + "T23:59:59+03:00";
+
+  const reset = () => { editing = null; $("#tf").reset(); $("#ru").checked = true; $("#ftitle").textContent = "Новый турнир"; $("#fsave").textContent = "Сохранить турнир"; $("#fcancel").textContent = "Очистить форму"; setErr(""); };
+  $("#fcancel").onclick = reset;
+
+  function fill(r) {
+    const d = r.data || {};
+    editing = r.id; $("#ftitle").textContent = "Редактирование"; $("#fsave").textContent = "Сохранить изменения"; $("#fcancel").textContent = "Отменить редактирование";
+    const set = (id, v) => { $("#" + id).value = v ?? ""; };
+    set("name", d.name); set("disc", d.disc); set("kind", d.kind || "main"); set("format", d.format); set("city", d.city); set("op", d.op); set("platform", d.platform);
+    set("team", d.team || "5x5"); set("teams", d.teams); $("#tba").checked = !!d.tba; set("start", d.start); set("end", d.end); set("time", d.startsAt ? d.startsAt.slice(11, 16) : "");
+    set("regDate", d.regEnd ? d.regEnd.slice(0, 10) : ""); set("regTime", d.regEnd && d.regEnd.includes("T") ? d.regEnd.slice(11, 16) : "");
+    set("prize", d.prize ? d.prize.v : ""); set("prizeC", d.prize ? d.prize.c : "RUB"); set("fee", d.fee ? d.fee.v : ""); set("feeC", d.fee ? d.fee.c : "RUB");
+    set("desc", d.desc); set("fee_note", d.fee_note); set("contact", d.contact); set("site", d.site); set("siteName", d.siteName);
+    $("#student").checked = !!d.student; $("#ru").checked = d.ru !== false; set("expires", r.expires_at ? ymdMsk(r.expires_at) : "");
+    scrollTo({ top: 0, behavior: "smooth" });
+  }
+  const ymdMsk = iso => new Date(iso).toLocaleDateString("sv-SE", { timeZone: "Europe/Moscow" });
+
+  /* Собирает данные формы; при ошибке возвращает строку с пояснением. */
+  function collect() {
+    const name = V("name"), op = V("op"), tba = $("#tba").checked;
+    if (!name) return "Укажите название турнира.";
+    if (!op) return "Укажите организатора.";
+    if (!tba) {
+      if (!V("start") || !V("end")) return "Укажите даты старта и окончания или отметьте «Даты пока неизвестны».";
+      if (V("end") < V("start")) return "Дата окончания раньше даты старта.";
+    }
+    if (V("site") && !/^https?:\/\//i.test(V("site"))) return "Ссылка должна начинаться с http:// или https://";
+    const d = { name, disc: V("disc"), kind: V("kind"), format: V("format"), city: V("city") || "Вся Россия", op, platform: V("platform"), team: V("team"),
+      teams: V("teams") ? +V("teams") : null, desc: V("desc") || "Описание не добавлено.", fee_note: V("fee_note") || "Условия участия уточняйте у организатора.",
+      contact: V("contact") || "Регистрация — на странице турнира.", site: V("site") || "", siteName: V("siteName") || "Страница турнира", social: [],
+      student: $("#student").checked, ru: $("#ru").checked,
+      prize: V("prize") !== "" ? { v: +V("prize"), c: V("prizeC") } : null, fee: V("fee") !== "" ? { v: +V("fee"), c: V("feeC") } : null };
+    if (tba) d.tba = true; else { d.start = V("start"); d.end = V("end"); if (V("time")) d.startsAt = `${V("start")}T${V("time")}:00+03:00`; }
+    if (V("regDate")) d.regEnd = V("regTime") ? `${V("regDate")}T${V("regTime")}:00+03:00` : V("regDate");
+    return d;
+  }
+
+  $("#tf").onsubmit = async e => {
+    e.preventDefault();
+    const d = collect();
+    if (typeof d === "string") { setErr(d); return toast("Форма не отправлена", d, "fail"); }
+    setErr("");
+    const row = { data: d, expires_at: V("expires") ? mskEnd(V("expires")) : null };
+    $("#fsave").disabled = true;
+    const q = editing ? SB.from("tournaments").update({ ...row, updated_at: new Date().toISOString() }).eq("id", editing) : SB.from("tournaments").insert(row);
+    const { error } = await q;
+    $("#fsave").disabled = false;
+    if (error) return toast("Не удалось сохранить", error.message, "fail");
+    toast(editing ? "Изменения сохранены" : "Турнир добавлен", d.name);
+    reset(); await loadManual(); await list();
+  };
+
+  async function list() {
+    const { data, error } = await SB.from("tournaments").select("id,data,expires_at").order("created_at", { ascending: false });
+    if (error) { $("#alist").innerHTML = `<p class="err">Не удалось загрузить: ${esc(error.message)}</p>`; return; }
+    rows = data || [];
+    const now = new Date();
+    $("#alist").innerHTML = rows.length ? rows.map(r => { const d = r.data || {}, exp = r.expires_at && new Date(r.expires_at) < now;
+      return `<div class="arow${exp ? " exp" : ""}"><div><b>${esc(d.name)}</b><div class="meta">${esc(d.disc)} · ${d.tba ? "даты неизвестны" : esc(d.start) + " — " + esc(d.end)} · ${esc(d.op)}<br>${r.expires_at ? (exp ? "Срок показа истёк " : "Удалится после ") + ymdMsk(r.expires_at) : "Без даты удаления (скроется после окончания турнира)"}</div></div>
+      <div class="acts"><button class="btn ghost" data-e="${r.id}" type="button">Изменить</button><button class="btn danger" data-x="${r.id}" type="button">Удалить</button></div></div>`; }).join("")
+      : `<p class="meta">Пока ничего не добавлено.</p>`;
+    $$("[data-e]").forEach(b => b.onclick = () => fill(rows.find(r => r.id === b.dataset.e)));
+    $$("[data-x]").forEach(b => b.onclick = async () => {
+      if (!confirm("Удалить турнир безвозвратно?")) return;
+      const { error } = await SB.from("tournaments").delete().eq("id", b.dataset.x);
+      if (error) return toast("Не удалось удалить", error.message, "fail");
+      toast("Турнир удалён", ""); await loadManual(); await list();
+    });
+  }
+  /* Записи с истёкшим сроком показа удаляем из базы при каждом открытии панели. */
+  SB.from("tournaments").delete().lt("expires_at", new Date().toISOString()).then(list, list);
+}
+
+/* Турниры, добавленные администратором: читаются всеми посетителями, просроченные не показываются. */
+async function loadManual() {
+  if (!SB) return;
+  try {
+    const { data, error } = await SB.from("tournaments").select("id,data,expires_at");
+    if (error) throw error;
+    const now = new Date();
+    MANUAL = (data || []).filter(r => !r.expires_at || new Date(r.expires_at) > now).map(r => clean({ ...r.data, id: "m-" + r.id, manual: true })).filter(Boolean);
+  } catch (e) { console.warn("Ручные турниры недоступны:", e.message || e); }
 }
 
 /* ---------- Роутер и тема ---------- */
-/* Выбирает страницу по хэшу адреса (#/, #/t/id, #/about, #/contacts). */
+/* Выбирает страницу по хэшу адреса (#/, #/t/id, #/analytics, #/about, #/contacts, #/login, #/admin). */
 function route() {
   const h = location.hash.replace("#", "") || "/";
   document.title = "КиберРадар — турниры по CS2, Valorant, Dota 2 и MLBB в России";
   const m = h.match(/^\/t\/(.+)$/);
-  const page = m ? "home" : h === "/analytics" ? "analytics" : h === "/about" ? "about" : h === "/contacts" ? "contacts" : "home";
+  const names = { "/analytics":"analytics", "/about":"about", "/contacts":"contacts", "/login":"login", "/admin":"admin" };
+  const page = m ? "home" : names[h] || "home";
   $$("[data-nav]").forEach(a => a.classList.toggle("on", a.dataset.nav === page));
-  if (m) pageTournament(m[1]); else ({ home:pageHome, analytics:pageAnalytics, about:pageAbout, contacts:pageContacts })[page]();
+  if (m) pageTournament(m[1]); else ({ home:pageHome, analytics:pageAnalytics, about:pageAbout, contacts:pageContacts, login:pageLogin, admin:pageAdmin })[page]();
   $("#foot").textContent = "Данные на " + parseDate(DATA_UPDATED).toLocaleDateString("ru-RU") + ". Проверяйте актуальность на сайтах организаторов.";
   scrollTo(0, 0);
 }
@@ -428,11 +694,26 @@ async function loadRemote() {
     clearTimeout(timer);
     if (!res.ok) throw new Error(res.status);
     const j = await res.json();
-    if (Array.isArray(j.tournaments)) REMOTE = j.tournaments;
+    if (Array.isArray(j.tournaments)) REMOTE = j.tournaments.map(clean).filter(Boolean);
     if (j.updatedAt) DATA_UPDATED = j.updatedAt.slice(0, 10);
   } catch (e) { console.warn("FACEIT-данные недоступны, используются ручные:", e); }
 }
-loadRemote().finally(route);
+
+/* Запуск: данные FACEIT и ручные турниры грузятся параллельно; состояние входа подхватывается позже и перерисовывает шапку/страницу. */
+initSupabase();
+renderAuth();
+Promise.all([loadRemote(), loadManual()]).finally(route);
+if (SB) {
+  SB.auth.getSession().then(async ({ data }) => {
+    AUTH.user = data.session ? data.session.user : null; await loadRole(); AUTH.ready = true; renderAuth();
+    if (/^#\/(login|admin)/.test(location.hash)) route();
+  });
+  // Внутри колбэка нельзя напрямую ждать запросы Supabase (взаимная блокировка), поэтому — через setTimeout.
+  SB.auth.onAuthStateChange((_e, session) => setTimeout(async () => {
+    AUTH.user = session ? session.user : null; await loadRole(); AUTH.ready = true; renderAuth();
+    if (/^#\/(login|admin|contacts)/.test(location.hash)) route();
+  }, 0));
+} else AUTH.ready = true;
 </script>
 </body>
 </html>

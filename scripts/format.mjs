@@ -1,7 +1,7 @@
 /* Превращает чемпионат FACEIT в запись для сайта. */
 import { ymd, addDays, startsAt } from "./dates.mjs";
 import { organizerName } from "./api.mjs";
-import { isRunning } from "./filters.mjs";
+import { isRunning, ruSignal } from "./filters.mjs";
 import { parseDescription, parseRegEnd } from "./parse.mjs";
 
 export async function toSite(c, discName) {
@@ -45,6 +45,7 @@ export async function toSite(c, discName) {
     op,
     teams: slots,
     platform: "FACEIT",
+    ru: ruSignal(c, op),   // российская направленность: на сайте есть фильтр «С российским фокусом»
     desc: bits.join(" "),
     fee_note: "Условия участия и взнос — на странице турнира на FACEIT.",
     contact: "Регистрация — на странице турнира на FACEIT.",

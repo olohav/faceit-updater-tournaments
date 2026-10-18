@@ -1,19 +1,45 @@
 /* Запросы к FACEIT Data API: постраничная загрузка, поиск, организаторы. */
 import { CONFIG, API, KEY } from "./config.mjs";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { ymd, addDays } from "./dates.mjs";
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+/* Исправленное параллельное выполнение fn над items с микропаузами */
+export async function pool(items, n, fn) {
+  const res = new Array(items.length);
+  let i = 0;
+  await Promise.all(Array.from({ length: Math.min(n, items.length) }, async () => {
+    while (i < items.length) { 
+      const k = i++; 
+      res[k] = await fn(items[k], k); 
+      // Даем серверу FACEIT «подышать» между запросами в одном потоке
+      await sleep(75); 
+    }
+  }));
+  return res;
+}
 export const stats = { notFound: 0, total: 0 };   // счётчики 404 для проверки адреса API
 
 export async function api(path, params = {}, attempt = 0) {
   const url = new URL(API + path);
   for (const [k, v] of Object.entries(params)) if (v !== "" && v != null) url.searchParams.set(k, v);
+  
+  // Дополнительная защита: если попыток много, делаем паузу дольше
+  if (attempt > 0) {
+    await sleep(2000 * attempt);
+  }
+
   const res = await fetch(url, { headers: { Authorization: "Bearer " + KEY, Accept: "application/json" } });
   if (res.status === 401 || res.status === 403) {
-    throw new Error(`FACEIT ответил ${res.status}: ключ неверный или это не «Server side API key». Создайте ключ типа Server side на https://developers.faceit.com/`);
+    throw new Error(`FACEIT ответил ${res.status}: ключ неверный или это не «Server side API key». Создайте ключ типа Server side на https://faceit.com`);
   }
-  if ((res.status === 429 || res.status >= 500) && attempt < 4) {
-    await sleep(1500 * (attempt + 1));
+  // Обработка 429 ошибки (слишком много запросов) или сбоев сервера (>=500)
+  if ((res.status === 429 || res.status >= 500) && attempt < 6) {
+    console.warn(`[API] Ошибка ${res.status}, повторная попытка ${attempt + 1}...`);
+    await sleep(3000 * (attempt + 1));
     return api(path, params, attempt + 1);
   }
   if (!res.ok) {
@@ -48,7 +74,7 @@ async function pagedFetch(path, base, tag, max = CONFIG.maxPerQuery) {
     // Список отсортирован по дате старта: если вся страница уже за горизонтом — дальше листать незачем.
     const starts = items.map(c => ymd(c.championship_start)).filter(Boolean);
     if (starts.length === items.length && starts.every(d => d > horizon)) break;
-    await sleep(120);
+    await sleep(60); // Чуть увеличили паузу между страницами пагинации
   }
   return out;
 }
@@ -67,6 +93,18 @@ export async function searchChampionships(game, type, name) {
 
 
 const orgCache = new Map();
+const ORG_FILE = resolve(dirname(fileURLToPath(import.meta.url)), "../data/organizers.json");
+let orgDirty = false;
+/* Названия организаторов почти не меняются — храним их в data/organizers.json и не запрашиваем повторно. */
+export async function loadOrgCache() {
+  try { for (const [k, v] of Object.entries(JSON.parse(await readFile(ORG_FILE, "utf8")))) orgCache.set(k, v); } catch {}
+}
+export async function saveOrgCache() {
+  if (!orgDirty) return;
+  await mkdir(dirname(ORG_FILE), { recursive: true });
+  await writeFile(ORG_FILE, JSON.stringify(Object.fromEntries([...orgCache].sort()), null, 1) + "\n");
+}
+
 /* Матчи чемпионата (до matchesMaxPages страниц). При ошибке null: тогда решаем по остальным данным. */
 export async function loadMatches(id) {
   const out = [];
@@ -84,8 +122,8 @@ export async function organizerName(id, fallback) {
   if (fallback) return fallback;
   if (!id) return "Не указан";
   if (!orgCache.has(id)) {
-    try { orgCache.set(id, (await api("/organizers/" + id)).name || "Не указан"); }
-    catch { orgCache.set(id, "Не указан"); }
+    try { orgCache.set(id, (await api("/organizers/" + id)).name || "Не указан"); orgDirty = true; }
+    catch { return "Не указан"; }   // не кэшируем сбой: в следующий раз попробуем снова
   }
   return orgCache.get(id);
 }

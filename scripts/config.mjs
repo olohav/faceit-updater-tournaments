@@ -33,18 +33,31 @@ export const CONFIG = {
   // Организаторы-платформы: по имени организатора (турниры самого FACEIT не нужны).
   excludeOrganizerRegex: /^faceit$/i,
   // Не включать по названию: дуэли и мини-форматы (1v1, 2v2, wingman, aim, awp...), тесты, ежедневные кубки, FACEIT Points.
-  excludeNameRegex: /\b(1v1|1x1|1vs1|1on1|2v2|2x2|3v3|duo|solo|wingman|aim|awp|pistol|duel|arena|showdown|daily|late night|test|тест)\b|faceit points|\bFP\b|\bhub\b/i,
+  excludeNameRegex: /\b(1v1|1x1|1vs1|1on1|2v2|2x2|3v3|duo|solo|wingman|aim|awp|pistol|duel|showdown|daily|late night|test|тест)\b|faceit points|\bFP\b|\bhub\b/i,
   // Дополнительный поиск по названию (метод /search/championships): ловит нужные турниры, которых нет в первых страницах общего списка.
   // Если метод недоступен ключу — скрипт просто пропустит этот шаг.
   // Сколько результатов брать на один поисковый запрос.
-  searchMaxPerQuery: 100,
-  searchTerms: ["open qualifier", "qualifier", "квалификация", "CCT", "XPrime", "liga stavok", "лига ставок", "betboom", "winline", "russia", "россия", "снг", "cis"],
+  searchMaxPerQuery: 60,
+  // Поиск по названию. Ловит турниры, которых нет в первых страницах общего списка: клубные, городские, студенческие, любительские.
+  // Игра задаётся отдельным параметром, поэтому «дота/cs» писать не нужно. Слова можно добавлять и убирать свободно.
+  searchTerms: [
+    // квалификации и крупные серии
+    "open qualifier", "qualifier", "квалификация", "отборочный", "CCT", "XPrime", "liga stavok", "лига ставок", "народная лига", "betboom", "winline", "fonbet", "cybershoke",
+    // Россия и СНГ
+    "russia", "россия", "russian", "рф", "снг", "cis", "рунет",
+    // клубы, арены, города
+    "клуб", "club", "arena", "арена", "cyber", "кибер", "moscow", "москва", "питер", "санкт-петербург", "казань", "екатеринбург", "новосибирск", "краснодар", "ростов", "самара", "уфа", "нижний новгород",
+    // формат любительских и студенческих турниров
+    "кубок", "турнир", "лига", "open cup", "weekend", "amateur", "любительский", "студенческий", "university", "универ", "школьный", "mix", "микс", "5x5", "5v5",
+  ],
   // Серии, которые остаются в списке, даже если у турнира пока нет даты старта.
   alwaysIncludeRegex: /liga stavok|лига ставок|народная лига|\bCCT\b|russia|россия|\bCIS\b|СНГ/i,
+  // Признаки «российского» турнира (поле ru в данных): кириллица в названии/описании/организаторе, RU в whitelist стран, организатор из списка.
+  ruOrganizerRegex: /liga stavok|narodnaya|народн|betboom|winline|fonbet|cybershoke|cct|xprime|gg arena|ggarena|gather|kuban|ural|siberia|moscow|spb|russia|россия/i,
   // Пропускать турниры, куда нельзя участвовать из России (whitelist_geo_countries без RU или blacklist_geo_countries с RU).
   requireRussiaIfCountryLimited: true,
   // Сколько запросов деталей чемпионата выполнять параллельно (бережём лимиты API).
-  concurrency: 3,
+  concurrency: 3,        // параллельных запросов (при ошибках 429 скрипт сам замедляется)
 };
 /* ============================================= */
 

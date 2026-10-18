@@ -28,27 +28,49 @@ const hasFaceitPoints = c => Array.isArray(c.prizes) && c.prizes.some(p => Numbe
 export const isRunning = c => !!c._ongoing || /^(ongoing|started|running|live)$/i.test(c.status || "");
 const regionOk = c => !CONFIG.allowedRegions.length || !c.region || CONFIG.allowedRegions.includes(String(c.region).toUpperCase());
 
-/* Дешёвая предварительная фильтрация по данным списка — до запроса деталей. */
-export async function prefilter(c) {
+/* Счётчики причин отсева: видны в консоли, а в режиме FACEIT_DEBUG=1 попадают в data/filter-report.json. */
+export const dropped = { counts: {}, samples: {} };
+const drop = (why, c) => {
+  dropped.counts[why] = (dropped.counts[why] || 0) + 1;
+  (dropped.samples[why] ||= []).length < 12 && dropped.samples[why].push(`${c.name} [${c.region || "?"}, слотов ${c.slots ?? "?"}]`);
+  return why;
+};
+
+/* Быстрая проверка по данным списка — без сети. Возвращает причину отсева или null. */
+export function reject(c) {
   const today = ymd(Date.now());
   const horizon = addDays(today, CONFIG.horizonDays);
   const start = ymd(c.championship_start) || parseDescription(c.description).date, end = ymd(c.championship_end) || start;
-  if (!isRunning(c)) {
-    if (start && start < today) return false;     // «предстоящий», но старт давно прошёл — заброшенный
-    if (end && end < today) return false;
+  const always = CONFIG.alwaysIncludeRegex.test(c.name || "");
+  const run = isRunning(c);
+  if (/^(finished|cancell?ed|aborted|closed)$/i.test(c.status || "")) return drop("завершён/отменён", c);
+  if (!run) {
+    if (start && start < today) return drop("старт в прошлом", c);
+    if (end && end < today) return drop("окончание в прошлом", c);
   }
-  if (isRunning(c) && start && start < addDays(today, -CONFIG.maxRunningDays) && !CONFIG.alwaysIncludeRegex.test(c.name || "")) return false;
-  if (start && start > horizon) return false;
-  if (!start && !isRunning(c) && !CONFIG.alwaysIncludeRegex.test(c.name || "")) return false; // без даты старта — заброшенные, кроме нужных серий
-  if (!regionOk(c)) return false;
-  if (CONFIG.excludeFaceitPoints && hasFaceitPoints(c)) return false;
-  if (CONFIG.requireRussiaIfCountryLimited && !allowedForRussia(c)) return false;
-  if (c.slots && Number(c.slots) < CONFIG.minSlots) return false;
-  if (CONFIG.excludeNameRegex.test(c.name || "")) return false;
-  if (CONFIG.excludeOrganizerIds.includes(c.organizer_id)) return false;
-  const org = await organizerName(c.organizer_id, c.organizer_name);
-  if (CONFIG.excludeOrganizerRegex.test(org)) return false;
-  return true;
+  if (run && start && start < addDays(today, -CONFIG.maxRunningDays) && !always) return drop("идёт слишком давно", c);
+  if (start && start > horizon) return drop("дальше горизонта", c);
+  if (!start && !run && !always) {
+    // Без даты старта, но регистрация ещё открыта — это живой турнир, который просто не назначил дату.
+    const regOpen = Number(c.subscription_end) > Date.now();
+    if (!regOpen) return drop("нет даты старта", c);
+  }
+  if (!regionOk(c)) return drop("регион " + c.region, c);
+  if (CONFIG.excludeFaceitPoints && hasFaceitPoints(c)) return drop("FACEIT Points", c);
+  if (CONFIG.requireRussiaIfCountryLimited && !allowedForRussia(c)) return drop("ограничение по странам", c);
+  if (c.slots && Number(c.slots) < CONFIG.minSlots) return drop("мало мест", c);
+  if (CONFIG.excludeNameRegex.test(c.name || "")) return drop("название (дуэль/тест/хаб)", c);
+  if (CONFIG.excludeOrganizerIds.includes(c.organizer_id)) return drop("организатор FACEIT", c);
+  return null;
+}
+
+/* Вторая проверка — по имени организатора (нужно знать имя, оно берётся из кэша/API). */
+export const rejectOrg = (c, org) => (CONFIG.excludeOrganizerRegex.test(org) ? drop("организатор FACEIT", c) : null);
+
+/* Признак российской направленности: кириллица, RU в whitelist, известный организатор или серия. */
+export function ruSignal(c, org = "") {
+  const wl = ((c.join_checks || {}).whitelist_geo_countries || []).map(x => String(x).toUpperCase());
+  return wl.includes("RU") || /[а-яё]/i.test(`${c.name} ${c.description} ${org}`) || CONFIG.ruOrganizerRegex.test(`${c.name} ${org}`) || CONFIG.alwaysIncludeRegex.test(c.name || "");
 }
 
 const DONE = /^(finished|cancell?ed|aborted)$/i, LIVE = /^(ongoing|ready|configuring|voting|captain_pick)$/i;

@@ -2,13 +2,13 @@
  * Синхронизация турниров FACEIT -> data/faceit.json
  * Запуск:  FACEIT_API_KEY=ваш_ключ node scripts/sync-faceit.mjs
  * Нужен Node.js 18+ (встроенный fetch). Ключ берётся ТОЛЬКО из переменной окружения.
- * Отладка: FACEIT_DEBUG=1 — печатает «сырой» ответ API, чтобы сверить названия полей.
+ * Отладка: FACEIT_DEBUG=1 — «сырой» ответ API и отчёт об отсеве (data/filter-report.json).
  */
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { CONFIG, KEY, DEBUG, OUT } from "./config.mjs";
-import { stats, api, listChampionships, searchChampionships, organizerName, loadMatches } from "./api.mjs";
-import { keep, prefilter, isRunning, bracketFinished } from "./filters.mjs";
+import { stats, api, pool, listChampionships, searchChampionships, organizerName, loadOrgCache, saveOrgCache, loadMatches } from "./api.mjs";
+import { keep, reject, rejectOrg, isRunning, bracketFinished, dropped } from "./filters.mjs";
 import { toSite } from "./format.mjs";
 
 if (!KEY) {
@@ -16,111 +16,115 @@ if (!KEY) {
   process.exit(1);
 }
 
-async function pool(items, n, fn) {
-  const res = new Array(items.length);
-  let i = 0;
-  await Promise.all(Array.from({ length: n }, async () => {
-    while (i < items.length) { const k = i++; res[k] = await fn(items[k], k); }
-  }));
-  return res;
-}
-
+const t0 = Date.now();
+const lap = label => console.log(`  [${((Date.now() - t0) / 1000).toFixed(0)} с] ${label}`);
+const idOf = c => c.championship_id || c.competition_id || c.id;
 
 async function main() {
+  await loadOrgCache();
   const byId = new Map();
-  const add = (items, discName) => { for (const c of items) if (c.championship_id && !byId.has(c.championship_id)) byId.set(c.championship_id, { c, discName }); };
+  const games = Object.entries(CONFIG.games);
 
-  for (const [game, discName] of Object.entries(CONFIG.games)) {
-    for (const type of CONFIG.types) {
-      const items = await listChampionships(game, type);
-      console.log(`${game}/${type}: ${items.length}`);
-      if (DEBUG && items[0]) console.log("RAW:", JSON.stringify(items[0], null, 2));
-      add(items, discName);
-    }
+  // 1. Общие списки: все пары игра × статус одновременно.
+  const combos = games.flatMap(([game, disc]) => CONFIG.types.map(type => ({ game, disc, type })));
+  const lists = await pool(combos, combos.length, async ({ game, disc, type }) => ({ game, disc, type, items: await listChampionships(game, type) }));
+  for (const { game, disc, type, items } of lists) {
+    console.log(`${game}/${type}: ${items.length}`);
+    if (DEBUG && items[0]) console.log("RAW:", JSON.stringify(items[0], null, 2));
+    for (const c of items) if (c.championship_id && !byId.has(c.championship_id)) byId.set(c.championship_id, { c, discName: disc });
   }
   if (stats.total > 0 && stats.notFound === stats.total) {
-    throw new Error("FACEIT вернул 404 на все запросы списка — вероятно, неверный адрес API или у ключа нет доступа. Запустите с FACEIT_DEBUG=1 и сверьте с https://docs.faceit.com/");
+    throw new Error("FACEIT вернул 404 на все запросы списка — вероятно, неверный адрес API или у ключа нет доступа. Запустите с FACEIT_DEBUG=1.");
   }
+  lap("общие списки загружены");
 
-  // Поиск по ключевым словам (необязательный шаг). У результатов поиска может быть другая форма записи
-  // (например, competition_id вместо championship_id) и неполные данные, поэтому для новых находок берём детали.
-  const idOf = c => c.championship_id || c.competition_id || c.id;
+    // 2. Поиск по ключевым словам — с защитой от зависания и выводом проблемных слов
+  const jobs = CONFIG.searchTerms.flatMap(term => combos.map(k => ({ term, ...k })));
   const found = new Map();
-  let termNo = 0;
-  for (const term of CONFIG.searchTerms) {
-    console.log(`Поиск ${++termNo}/${CONFIG.searchTerms.length}: «${term}»...`);
-    for (const [game, discName] of Object.entries(CONFIG.games)) {
-      for (const type of CONFIG.types) {
-        const items = await searchChampionships(game, type, term);
-        if (DEBUG && items[0] && !found.size) console.log("RAW search item:", JSON.stringify(items[0], null, 2));
-        let fresh = 0;
-        for (const it of items) {
-          const id = idOf(it);
-          if (!id || byId.has(id) || found.has(id)) continue;
-          found.set(id, { it, id, discName });
-          fresh++;
+  let done = 0;
+  
+  await pool(jobs, CONFIG.concurrency, async ({ term, game, disc, type }) => {
+    // Создаем защитный таймаут на 5 секунд для каждого поискового запроса
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error(`Превышено время ожидания для слова "${term}"`)), 5000)
+    );
+
+    try {
+      // Запускаем гонку: либо поиск сработает быстрее 5 секунд, либо сработает таймаут
+      const items = await Promise.race([
+        searchChampionships(game, type, term),
+        timeoutPromise
+      ]);
+
+      if (DEBUG && items[0] && !found.size) console.log("RAW search item:", JSON.stringify(items[0], null, 2));
+      for (const it of items) { 
+        const id = idOf(it); 
+        if (id && !byId.has(id) && !found.has(id)) {
+          found.set(id, { it, id, discName: disc, running: type === "ongoing" }); 
         }
-        if (items.length) console.log(`  «${term}» ${game}/${type}: найдено ${items.length}, новых ${fresh}`);
       }
+    } catch (e) {
+      // Если запрос завис или выдал ошибку, просто пишем об этом в консоль и НЕ ломаем скрипт
+      console.warn(`\n[Внимание] Запрос пропущен (${game}/${type}): ${e.message}`);
     }
-  }
-  if (found.size) {
-    console.log(`Загружаю детали ${found.size} найденных поиском турниров...`);
-    await pool([...found.values()], CONFIG.concurrency, async ({ it, id, discName }) => {
-      try {
-        const det = await api("/championships/" + id);
-        byId.set(id, { c: { ...it, ...det, championship_id: id }, discName });
-      } catch (e) { console.warn("Поиск: без деталей", id, e.message); }
-    });
-  }
-
-  // Отладка: сохраняем «сырые» детали одного турнира FACEIT и одного стороннего — чтобы найти поле про FACEIT Points.
-  if (DEBUG) {
-    const sample = {};
-    for (const { c } of byId.values()) {
-      const org = await organizerName(c.organizer_id, c.organizer_name);
-      const key = /^faceit$/i.test(org) ? "faceit_own" : "third_party";
-      if (sample[key]) continue;
-      try { sample[key] = { list_item: c, details: await api("/championships/" + c.championship_id) }; } catch (e) { sample[key] = { error: e.message }; }
-      if (sample.faceit_own && sample.third_party) break;
+    
+    // Выводим лог чаще (каждые 4 запроса вместо 40), чтобы видеть точный прогресс в конце
+    done++;
+    if (done % 4 === 0 || done > 200) {
+      lap(`поиск: ${done} из ${jobs.length} запросов, новых находок ${found.size}`);
     }
-    const f = resolve(dirname(OUT), "raw-sample.json");
-    await mkdir(dirname(f), { recursive: true });
-    await writeFile(f, JSON.stringify(sample, null, 2));
-    console.log("Отладочный образец записан:", f);
-  }
-
-  // Предварительные фильтры -> детали только для оставшихся -> финальные фильтры.
-  const pre = [];
-  console.log("Проверяю организаторов и применяю фильтры (это может занять пару минут)...");
-  let n = 0;
-  for (const e of byId.values()) {
-    if (await prefilter(e.c)) pre.push(e);
-    if (++n % 100 === 0) console.log(`  проверено ${n} из ${byId.size}`);
-  }
-  console.log(`Всего получено: ${byId.size}, после предварительных фильтров: ${pre.length}`);
-
-  console.log(`Загружаю детали ${pre.length} турниров...`);
-  const detailed = await pool(pre, CONFIG.concurrency, async ({ c, discName }) => {
-    try { c = { ...c, ...(await api("/championships/" + c.championship_id)) }; } catch (e) { console.warn("Без деталей:", c.championship_id, e.message); }
-    return { c, discName };
   });
 
-  // Глубокая проверка идущих турниров по сетке: финал сыгран (или все матчи) -> турнир завершён.
+  // У находок поиска детали нужны, только если в записи нет данных о странах/датах.
+  const needDetails = [...found.values()].filter(({ it }) => !it.join_checks || it.championship_start === undefined);
+  for (const { it, id, discName, running } of found.values()) if (!needDetails.some(x => x.id === id)) byId.set(id, { c: { ...it, championship_id: id, _ongoing: running || undefined }, discName });
+  await pool(needDetails, CONFIG.concurrency, async ({ it, id, discName, running }) => {
+    try { byId.set(id, { c: { ...it, ...(await api("/championships/" + id)), championship_id: id, _ongoing: running || undefined }, discName }); }
+    catch (e) { console.warn("Поиск: без деталей", id, e.message); }
+  });
+  lap(`поиск завершён: новых ${found.size} (деталей запрошено ${needDetails.length})`);
+
+  // 3. Быстрые фильтры без сети.
+  let pre = [...byId.values()].filter(e => !reject(e.c));
+  console.log(`Всего получено: ${byId.size}, после быстрых фильтров: ${pre.length}`);
+
+  // 4. Имена организаторов — только для оставшихся и параллельно (плюс кэш на диске).
+  const orgIds = [...new Set(pre.map(e => e.c.organizer_id).filter(Boolean))];
+  await pool(orgIds, CONFIG.concurrency, id => organizerName(id));
+  const orgOf = async c => organizerName(c.organizer_id, c.organizer_name);
+  const withOrg = [];
+  for (const e of pre) { const org = await orgOf(e.c); if (!rejectOrg(e.c, org)) withOrg.push(e); }
+  pre = withOrg;
+  await saveOrgCache();
+  lap(`организаторы проверены, осталось ${pre.length}`);
+
+  // 5. Детали и сетка — только для идущих турниров (в списке есть почти всё, кроме total_rounds и расписания).
   let finished = 0, shown = false;
-  const checked = await pool(detailed, CONFIG.concurrency, async e => {
-    if (!CONFIG.matchCheck || !isRunning(e.c)) return e;
+  const checked = await pool(pre, CONFIG.concurrency, async e => {
+    if (!isRunning(e.c)) return e;
+    try { e = { ...e, c: { ...e.c, ...(await api("/championships/" + e.c.championship_id)) } }; } catch {}
+    if (!CONFIG.matchCheck) return e;
     const m = await loadMatches(e.c.championship_id);
     if (DEBUG && m && m[0] && !shown) { shown = true; console.log("RAW match:", JSON.stringify(m[0], null, 2)); }
     if (m && bracketFinished(m, Number(e.c.total_rounds) || 0)) { finished++; return { ...e, done: true }; }
     return e;
   });
   console.log(`Завершены по сетке: ${finished}`);
+  lap("идущие турниры проверены");
+
   const kept = checked.filter(e => !e.done && keep(e.c));
   const tournaments = [];
   for (const { c, discName } of kept) tournaments.push(await toSite(c, discName));
-  tournaments.sort((a, b) => (a.startsAt || "9999").localeCompare(b.startsAt || "9999") || a.name.localeCompare(b.name));
-  console.log(`После финальных фильтров: ${tournaments.length}`);
+  tournaments.sort((a, b) => (a.startsAt || a.start || "9999").localeCompare(b.startsAt || b.start || "9999") || a.name.localeCompare(b.name));
+  console.log(`После финальных фильтров: ${tournaments.length}, из них с российским фокусом: ${tournaments.filter(t => t.ru).length}`);
+  console.log("Отсев по причинам:", JSON.stringify(dropped.counts));
+
+  if (DEBUG) {
+    const f = resolve(dirname(OUT), "filter-report.json");
+    await mkdir(dirname(f), { recursive: true });
+    await writeFile(f, JSON.stringify(dropped, null, 2));
+    console.log("Отчёт об отсеве:", f);
+  }
 
   // Если содержимое не изменилось — файл не трогаем (чтобы не плодить коммиты).
   let prev = null;
@@ -132,6 +136,7 @@ async function main() {
   await mkdir(dirname(OUT), { recursive: true });
   await writeFile(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), source: "FACEIT Data API v4", count: tournaments.length, tournaments }, null, 2) + "\n");
   console.log("Записано:", OUT);
+  lap("готово");
 }
 
 main().catch(e => { console.error(e.message); process.exit(1); });
