@@ -1,0 +1,438 @@
+{
+  "third_party": {
+    "list_item": {
+      "id": "d2a42aba-5efc-466f-9fa9-8bb624dd345a",
+      "championship_id": "d2a42aba-5efc-466f-9fa9-8bb624dd345a",
+      "name": "arbitrazh cup",
+      "cover_image": "https://assets.faceit-cdn.net/championships/cover/d2a42aba-5efc-466f-9fa9-8bb624dd345a_1731153321206.jpg",
+      "background_image": "",
+      "avatar": "",
+      "organizer_id": "924a8068-e7a1-4122-a32f-104443ba6e0d",
+      "description": "",
+      "type": "bracket",
+      "status": "adjustment",
+      "game_id": "cs2",
+      "region": "EU",
+      "featured": false,
+      "subscription_start": 1731153000000,
+      "checkin_start": 1730575320000,
+      "checkin_clear": 1731153600000,
+      "subscription_end": 1731155400000,
+      "championship_start": 0,
+      "slots": 2,
+      "current_subscriptions": 1,
+      "join_checks": {
+        "min_skill_level": 1,
+        "max_skill_level": 10,
+        "whitelist_geo_countries": [],
+        "whitelist_geo_countries_min_players": 0,
+        "blacklist_geo_countries": [],
+        "join_policy": "public",
+        "membership_type": "",
+        "allowed_team_types": [
+          "premade",
+          "mix"
+        ]
+      },
+      "anticheat_required": true,
+      "rules_id": "",
+      "substitution_configuration": {
+        "max_substitutes": 0,
+        "max_substitutions": 0
+      },
+      "full": false,
+      "checkin_enabled": false,
+      "total_rounds": 0,
+      "schedule": {},
+      "total_groups": 1,
+      "subscriptions_locked": true,
+      "seeding_strategy": "uniformGroupDistribution",
+      "faceit_url": "https://www.faceit.com/{lang}/championship/d2a42aba-5efc-466f-9fa9-8bb624dd345a/",
+      "prizes": null,
+      "total_prizes": 0,
+      "stream": {
+        "active": false,
+        "platform": "",
+        "source": "",
+        "title": ""
+      }
+    },
+    "details": {
+      "id": "d2a42aba-5efc-466f-9fa9-8bb624dd345a",
+      "championship_id": "d2a42aba-5efc-466f-9fa9-8bb624dd345a",
+      "name": "arbitrazh cup",
+      "cover_image": "https://assets.faceit-cdn.net/championships/cover/d2a42aba-5efc-466f-9fa9-8bb624dd345a_1731153321206.jpg",
+      "background_image": "",
+      "avatar": "",
+      "organizer_id": "924a8068-e7a1-4122-a32f-104443ba6e0d",
+      "description": "",
+      "type": "bracket",
+      "status": "adjustment",
+      "game_id": "cs2",
+      "region": "EU",
+      "featured": false,
+      "subscription_start": 1731153000000,
+      "checkin_start": 1730575320000,
+      "checkin_clear": 1731153600000,
+      "subscription_end": 1731155400000,
+      "championship_start": 0,
+      "slots": 2,
+      "current_subscriptions": 1,
+      "join_checks": {
+        "min_skill_level": 1,
+        "max_skill_level": 10,
+        "whitelist_geo_countries": [],
+        "whitelist_geo_countries_min_players": 0,
+        "blacklist_geo_countries": [],
+        "join_policy": "public",
+        "membership_type": "",
+        "allowed_team_types": [
+          "premade",
+          "mix"
+        ]
+      },
+      "anticheat_required": true,
+      "rules_id": "",
+      "substitution_configuration": {
+        "max_substitutes": 0,
+        "max_substitutions": 0
+      },
+      "full": false,
+      "checkin_enabled": false,
+      "total_rounds": 0,
+      "schedule": {},
+      "total_groups": 1,
+      "subscriptions_locked": true,
+      "seeding_strategy": "uniformGroupDistribution",
+      "faceit_url": "https://www.faceit.com/{lang}/championship/d2a42aba-5efc-466f-9fa9-8bb624dd345a/",
+      "prizes": null,
+      "total_prizes": 0,
+      "stream": {
+        "active": false,
+        "platform": "",
+        "source": "",
+        "title": ""
+      }
+    }
+  },
+  "faceit_own": {
+    "list_item": {
+      "id": "40d0e414-89f6-4aad-8107-532898c4de5b",
+      "championship_id": "40d0e414-89f6-4aad-8107-532898c4de5b",
+      "name": "Premium - AWP Only - Skill 1-5 - PrizePool 8k",
+      "cover_image": "https://assets.faceit-cdn.net/championships/cover/cc06634c-2d4b-430c-a642-8823855cd387_1770837170721.jpg",
+      "background_image": "",
+      "avatar": "",
+      "organizer_id": "faceit",
+      "description": "# Anti-Cheat Download and Reminders\nPlease make sure that you download the Anti-Cheat prior to the event starting. If you have never installed it you will not be able to get on to the server in time! \n\nYou can find the link here --->  [Official FACEIT Anti-Cheat](https://www.faceit.com/en/anti-cheat)\n\nPlease make sure that you fire it up when you check-in so that if there is updates you are good to go when the event starts. ",
+      "type": "bracket",
+      "status": "checkin",
+      "game_id": "cs2",
+      "region": "NA",
+      "featured": true,
+      "subscription_start": 1792112400000,
+      "checkin_start": 1792281300000,
+      "checkin_clear": 1792283100000,
+      "subscription_end": 1792284900000,
+      "championship_start": 1792285200000,
+      "slots": 32,
+      "current_subscriptions": 12,
+      "join_checks": {
+        "min_skill_level": 1,
+        "max_skill_level": 5,
+        "whitelist_geo_countries": [
+          "AI",
+          "AG",
+          "AW",
+          "BS",
+          "BB",
+          "BZ",
+          "BM",
+          "BQ",
+          "BV",
+          "CA",
+          "KY",
+          "CR",
+          "CU",
+          "CW",
+          "DM",
+          "DO",
+          "SV",
+          "FK",
+          "GF",
+          "GL",
+          "GD",
+          "GP",
+          "GT",
+          "HT",
+          "HN",
+          "JM",
+          "MQ",
+          "MX",
+          "MS",
+          "NI",
+          "PA",
+          "PR",
+          "BL",
+          "KN",
+          "LC",
+          "MF",
+          "PM",
+          "VC",
+          "SX",
+          "GS",
+          "SR",
+          "TT",
+          "TC",
+          "US",
+          "VG",
+          "VI"
+        ],
+        "whitelist_geo_countries_min_players": 0,
+        "blacklist_geo_countries": [],
+        "join_policy": "public",
+        "membership_type": "",
+        "allowed_team_types": [
+          "user"
+        ]
+      },
+      "anticheat_required": true,
+      "rules_id": "52154d87-3752-4ff1-811e-bd5eb7d2c230",
+      "substitution_configuration": {
+        "max_substitutes": 0,
+        "max_substitutions": 0
+      },
+      "full": false,
+      "checkin_enabled": true,
+      "total_rounds": 5,
+      "schedule": {
+        "1": {
+          "date": 1792285200000,
+          "status": "waiting"
+        },
+        "2": {
+          "date": 0,
+          "status": "waiting"
+        },
+        "3": {
+          "date": 0,
+          "status": "waiting"
+        },
+        "4": {
+          "date": 0,
+          "status": "waiting"
+        },
+        "5": {
+          "date": 0,
+          "status": "waiting"
+        }
+      },
+      "total_groups": 1,
+      "subscriptions_locked": false,
+      "seeding_strategy": "uniformGroupDistribution",
+      "faceit_url": "https://www.faceit.com/{lang}/championship/40d0e414-89f6-4aad-8107-532898c4de5b/",
+      "prizes": [
+        {
+          "rank": 1,
+          "faceit_points": 1950
+        },
+        {
+          "rank": 2,
+          "faceit_points": 1630
+        },
+        {
+          "rank": 3,
+          "faceit_points": 980
+        },
+        {
+          "rank": 4,
+          "faceit_points": 980
+        },
+        {
+          "rank": 5,
+          "faceit_points": 650
+        },
+        {
+          "rank": 6,
+          "faceit_points": 650
+        },
+        {
+          "rank": 7,
+          "faceit_points": 650
+        },
+        {
+          "rank": 8,
+          "faceit_points": 650
+        }
+      ],
+      "total_prizes": 8140,
+      "stream": {
+        "active": false,
+        "platform": "",
+        "source": "",
+        "title": ""
+      },
+      "screening": {
+        "id": "ac1eaaf9-8094-4e94-ab30-3d52e2f00e10",
+        "enabled": true
+      }
+    },
+    "details": {
+      "id": "40d0e414-89f6-4aad-8107-532898c4de5b",
+      "championship_id": "40d0e414-89f6-4aad-8107-532898c4de5b",
+      "name": "Premium - AWP Only - Skill 1-5 - PrizePool 8k",
+      "cover_image": "https://assets.faceit-cdn.net/championships/cover/cc06634c-2d4b-430c-a642-8823855cd387_1770837170721.jpg",
+      "background_image": "",
+      "avatar": "",
+      "organizer_id": "faceit",
+      "description": "# Anti-Cheat Download and Reminders\nPlease make sure that you download the Anti-Cheat prior to the event starting. If you have never installed it you will not be able to get on to the server in time! \n\nYou can find the link here --->  [Official FACEIT Anti-Cheat](https://www.faceit.com/en/anti-cheat)\n\nPlease make sure that you fire it up when you check-in so that if there is updates you are good to go when the event starts. ",
+      "type": "bracket",
+      "status": "started",
+      "game_id": "cs2",
+      "region": "NA",
+      "featured": true,
+      "subscription_start": 1792112400000,
+      "checkin_start": 1792281300000,
+      "checkin_clear": 1792283100000,
+      "subscription_end": 1792284900000,
+      "championship_start": 1792285200000,
+      "slots": 32,
+      "current_subscriptions": 10,
+      "join_checks": {
+        "min_skill_level": 1,
+        "max_skill_level": 5,
+        "whitelist_geo_countries": [
+          "AI",
+          "AG",
+          "AW",
+          "BS",
+          "BB",
+          "BZ",
+          "BM",
+          "BQ",
+          "BV",
+          "CA",
+          "KY",
+          "CR",
+          "CU",
+          "CW",
+          "DM",
+          "DO",
+          "SV",
+          "FK",
+          "GF",
+          "GL",
+          "GD",
+          "GP",
+          "GT",
+          "HT",
+          "HN",
+          "JM",
+          "MQ",
+          "MX",
+          "MS",
+          "NI",
+          "PA",
+          "PR",
+          "BL",
+          "KN",
+          "LC",
+          "MF",
+          "PM",
+          "VC",
+          "SX",
+          "GS",
+          "SR",
+          "TT",
+          "TC",
+          "US",
+          "VG",
+          "VI"
+        ],
+        "whitelist_geo_countries_min_players": 0,
+        "blacklist_geo_countries": [],
+        "join_policy": "public",
+        "membership_type": "",
+        "allowed_team_types": [
+          "user"
+        ]
+      },
+      "anticheat_required": true,
+      "rules_id": "52154d87-3752-4ff1-811e-bd5eb7d2c230",
+      "substitution_configuration": {
+        "max_substitutes": 0,
+        "max_substitutions": 0
+      },
+      "full": false,
+      "checkin_enabled": true,
+      "total_rounds": 4,
+      "schedule": {
+        "1": {
+          "date": 1792285200000,
+          "status": "created"
+        },
+        "2": {
+          "date": 0,
+          "status": "waiting"
+        },
+        "3": {
+          "date": 0,
+          "status": "waiting"
+        },
+        "4": {
+          "date": 0,
+          "status": "waiting"
+        }
+      },
+      "total_groups": 1,
+      "subscriptions_locked": false,
+      "seeding_strategy": "uniformGroupDistribution",
+      "faceit_url": "https://www.faceit.com/{lang}/championship/40d0e414-89f6-4aad-8107-532898c4de5b/",
+      "prizes": [
+        {
+          "rank": 1,
+          "faceit_points": 1950
+        },
+        {
+          "rank": 2,
+          "faceit_points": 1630
+        },
+        {
+          "rank": 3,
+          "faceit_points": 980
+        },
+        {
+          "rank": 4,
+          "faceit_points": 980
+        },
+        {
+          "rank": 5,
+          "faceit_points": 650
+        },
+        {
+          "rank": 6,
+          "faceit_points": 650
+        },
+        {
+          "rank": 7,
+          "faceit_points": 650
+        },
+        {
+          "rank": 8,
+          "faceit_points": 650
+        }
+      ],
+      "total_prizes": 8140,
+      "stream": {
+        "active": false,
+        "platform": "",
+        "source": "",
+        "title": ""
+      },
+      "screening": {
+        "id": "ac1eaaf9-8094-4e94-ab30-3d52e2f00e10",
+        "enabled": true
+      }
+    }
+  }
+}
