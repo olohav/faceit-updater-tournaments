@@ -46,6 +46,18 @@ input[type=search],input[type=text],input[type=email],textarea{width:100%;backgr
 input[type=range]{width:100%;accent-color:var(--acc)}
 .range-val{color:var(--mute);font-size:.9rem}
 .list{display:grid;gap:.8rem}
+.dd,.grp{border:1px solid var(--line);border-radius:12px}
+.dd{margin-bottom:.6rem;background:var(--bg)}.grp{margin-bottom:.8rem;background:var(--panel)}
+.dd>summary,.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.5rem;padding:.6rem .85rem;font-weight:800}
+.dd>summary::-webkit-details-marker,.grp>summary::-webkit-details-marker{display:none}
+.dd>summary::after,.grp>summary::after{content:"▾";color:var(--mute);margin-left:auto}
+.dd[open]>summary::after,.grp[open]>summary::after{content:"▴"}
+.dd>summary em{font-style:normal;color:var(--acc)}
+.dd-body{padding:0 .85rem .7rem;max-height:15rem;overflow:auto}
+.grp>summary{font:700 1.05rem Unbounded,sans-serif}
+.grp>summary b{background:var(--acc);color:var(--acc-ink);border-radius:999px;padding:.05rem .6rem;font:800 .85rem Manrope,sans-serif}
+.grp>.list{padding:0 .85rem .85rem}
+.rng{display:grid;gap:.3rem}.rng label{display:grid;grid-template-columns:2rem 1fr;align-items:center;gap:.4rem}
 .t-row{display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:14px;padding:1rem 1.1rem}
 .t-row:hover{border-color:var(--acc)}
 .t-row h3{font-size:1rem;margin:0}
@@ -175,7 +187,19 @@ const parseDate = (d, endOfDay) => new Date(d + (endOfDay ? "T23:59:59" : "T00:0
 const toRub = m => m ? m.v * (m.c === "USD" ? USD_RUB : 1) : 0;
 const fmt = n => n.toLocaleString("ru-RU");
 const money = m => !m ? "не указан" : m.v === 0 ? "бесплатно" : (m.c === "USD" ? "$" + fmt(m.v) : fmt(m.v) + " ₽");
-const dates = t => t.tba ? "Даты не объявлены или не найдены" : parseDate(t.start).toLocaleDateString("ru-RU",{day:"numeric",month:"long"}) + " — " + parseDate(t.end).toLocaleDateString("ru-RU",{day:"numeric",month:"long",year:"numeric"});
+const fd = (d, y) => parseDate(d).toLocaleDateString("ru-RU", { day:"numeric", month:"long", ...(y ? { year:"numeric" } : {}) });
+const hm = t => t.startsAt ? ", " + t.startsAt.slice(11, 16) + " МСК" : "";   // время старта по Москве (GMT+3)
+const dates = t => t.tba ? "Даты не объявлены или не найдены"
+  : t.endUnknown ? "с " + fd(t.start, true) + hm(t) + " · окончание не указано"
+  : t.start === t.end ? fd(t.start, true) + hm(t)
+  : fd(t.start, t.start.slice(0, 4) !== t.end.slice(0, 4)) + hm(t) + " — " + fd(t.end, true);
+/* Подпись про регистрацию: «Регистрация до 5 декабря 2026 г., 16:30 МСК» или «Регистрация закрыта». */
+const regLine = t => {
+  if (!t.regEnd) return "";
+  const hasTime = t.regEnd.includes("T"), d = t.regEnd.slice(0, 10);
+  if (new Date(hasTime ? t.regEnd : d + "T23:59:59+03:00") < new Date()) return "Регистрация закрыта";
+  return "Регистрация до " + fd(d, true) + (hasTime ? ", " + t.regEnd.slice(11, 16) + " МСК" : "");
+};
 
 /* Статус по дате: идёт / чек-ин (за 3 дня до старта) / скоро. null — турнир окончен или дальше 365 дней. */
 function statusOf(t, now = new Date()) {
@@ -237,48 +261,66 @@ const field = (name, label, type = "text", area = false) =>
 const row = t => `<a class="t-row" href="#/t/${t.id}">
   <div><h3>${t.name}</h3>
   <div class="meta">${dates(t)} · ${t.city}</div>
+  ${t.regEnd ? `<div class="meta"><b>${regLine(t)}</b></div>` : ""}
   <div class="tags"><span class="st ${t.st.k}">${t.st.l}</span><span class="tag">${t.disc}</span><span class="tag">${t.team}</span><span class="tag">${t.format}</span>${t.student ? `<span class="tag">Студенческая лига</span>` : ""}${t.kind === "qualifier" ? `<span class="tag">Квалификация</span>` : ""}<span class="tag">${t.op}</span></div></div>
   <div><div class="prize">${money(t.prize)}</div>${t.prize && t.prize.c === "USD" ? `<div class="meta" style="text-align:right">≈ ${fmt(toRub(t.prize))} ₽</div>` : ""}<div class="meta" style="text-align:right">взнос: ${money(t.fee)}</div></div></a>`;
 
 /* ---------- Страница 1: поиск и фильтры ---------- */
 function pageHome() {
   const all = activeList();
-  const discs = ["CS2", "Valorant", "Dota 2", "MLBB"];
+  const discs = ["CS2", "Dota 2", "Valorant", "MLBB"];              // порядок групп на странице
   const ops = [...new Set(all.map(t => t.op))];
-  const f = { q:"", d:new Set(), o:new Set(), m:new Set(), p:new Set(), stu:false, qual:false, prize:0, fee:0 };
+  const SL = { prize: 10000, fee: 100 };                             // ползунки и их шаг, ₽
+  const f = { q:"", d:new Set(), o:new Set(), m:new Set(), p:new Set(), stu:false, qual:false, prize:[0, 0], fee:[0, 0] };
+  const openG = new Set();                                           // раскрытые группы турниров
+
+  /* Выпадающий список фильтра: заголовок со счётчиком выбранных и чекбоксы внутри. */
+  const dd = (key, title, body) => `<details class="dd"><summary>${title}<em data-c="${key}"></em></summary><div class="dd-body">${body}</div></details>`;
+  const chk = (attr, v, label = v) => `<label class="chk"><input type="checkbox" data-${attr}="${v}"> ${label}</label>`;
+  /* Отдельные ползунки «от» и «до». */
+  const rng = (id, title) => `<fieldset><legend>${title}</legend><div class="rng"><label>от <input type="range" id="${id}min" min="0" step="${SL[id]}" value="0"></label><label>до <input type="range" id="${id}max" min="0" step="${SL[id]}"></label></div><div class="range-val" id="${id}V"></div></fieldset>`;
 
   $("#app").innerHTML = `<h1>Турниры по киберспорту в России</h1>
-  <p class="lead">CS2, Valorant, Dota 2 и MLBB: LAN и онлайн, форматы 1x1, 2x2, 5x5 и студенческие лиги. Завершённые турниры скрываются автоматически.</p>
+  <p class="lead">CS2, Dota 2, Valorant и MLBB: LAN и онлайн, форматы 1x1, 2x2, 5x5 и студенческие лиги. Завершённые турниры скрываются автоматически.</p>
   <div class="layout"><aside class="card filters" aria-label="Фильтры">
     <fieldset><legend>Поиск</legend><input type="search" id="q" placeholder="Турнир или оператор"></fieldset>
-    <fieldset><legend>Дисциплина</legend>${discs.map(d => `<label class="chk"><input type="checkbox" data-d="${d}"> ${d === "MLBB" ? "MLBB (Mobile Legends: Bang Bang)" : d}</label>`).join("")}</fieldset>
-    <fieldset><legend>Формат матчей</legend>${["1x1", "2x2", "5x5"].map(m => `<label class="chk"><input type="checkbox" data-m="${m}"> ${m}</label>`).join("")}</fieldset>
-    <fieldset><legend>Тип</legend><label class="chk"><input type="checkbox" id="stu"> Только студенческие лиги</label><label class="chk"><input type="checkbox" id="qual"> Только квалификации</label></fieldset>
-    <fieldset><legend>Призовой фонд</legend><input type="range" id="prize" min="0" step="10000"><div class="range-val" id="prizeV"></div></fieldset>
-    <fieldset><legend>Взнос за участие</legend><input type="range" id="fee" min="0" step="500"><div class="range-val" id="feeV"></div></fieldset>
-    <fieldset><legend>Платформа</legend>${PLATFORMS.map(p => `<label class="chk"><input type="checkbox" data-p="${p}"> ${p} (${all.filter(t => t.platform === p).length})</label>`).join("")}</fieldset>
-    <fieldset><legend>Турнирный оператор</legend>${ops.map(o => `<label class="chk"><input type="checkbox" data-o="${o}"> ${o}</label>`).join("")}</fieldset>
+    ${dd("d", "Дисциплина", discs.map(d => chk("d", d, d === "MLBB" ? "MLBB (Mobile Legends: Bang Bang)" : d)).join(""))}
+    ${dd("m", "Формат матчей", ["1x1", "2x2", "5x5"].map(m => chk("m", m)).join(""))}
+    ${dd("t", "Тип", `<label class="chk"><input type="checkbox" id="stu"> Только студенческие лиги</label><label class="chk"><input type="checkbox" id="qual"> Только квалификации</label>`)}
+    ${dd("p", "Платформа", PLATFORMS.map(p => chk("p", p, `${p} (${all.filter(t => t.platform === p).length})`)).join(""))}
+    ${dd("o", "Турнирный оператор", ops.map(o => chk("o", o)).join(""))}
+    ${rng("prize", "Призовой фонд")}${rng("fee", "Взнос за участие")}
     <button class="btn ghost" type="button" id="reset">Сбросить</button>
-  </aside><section><div class="meta" id="count" style="margin-bottom:.6rem"></div><div class="list" id="list"></div></section></div>`;
+  </aside><section><div class="meta" id="count" style="margin-bottom:.6rem"></div><div id="list"></div></section></div>`;
 
-  /* Пересчитывает максимумы ползунков по выбранным дисциплинам. */
-  function bounds(reset) {
+  /* Границы и подписи пары ползунков; `moved` — какой двигали (он не может перескочить соседа). */
+  function slider(id, reset, moved) {
     const base = all.filter(t => !f.d.size || f.d.has(t.disc));
-    const mp = Math.max(0, ...base.map(t => toRub(t.prize))), mf = Math.max(0, ...base.map(t => toRub(t.fee)));
-    const p = $("#prize"), s = $("#fee");
-    p.max = mp; s.max = mf; s.disabled = mf === 0;
-    if (reset) { p.value = mp; s.value = mf; }
-    f.prize = +p.value; f.fee = +s.value;
-    $("#prizeV").textContent = "от 0 до " + fmt(f.prize) + " ₽ (макс. " + fmt(mp) + " ₽)";
-    $("#feeV").textContent = mf === 0 ? "платных турниров нет: все бесплатные или взнос не указан" : "от 0 до " + fmt(f.fee) + " ₽ (макс. " + fmt(mf) + " ₽)";
+    const mx = Math.ceil(Math.max(0, ...base.map(t => toRub(t[id]))) / SL[id]) * SL[id];
+    const lo = $("#" + id + "min"), hi = $("#" + id + "max");
+    lo.max = hi.max = mx; lo.disabled = hi.disabled = mx === 0;
+    if (reset) { lo.value = 0; hi.value = mx; }
+    if (+lo.value > +hi.value) (moved === "min" ? hi : lo).value = (moved === "min" ? lo : hi).value;
+    f[id] = [+lo.value, +hi.value];
+    $("#" + id + "V").textContent = mx === 0 ? "нет данных" : "от " + fmt(f[id][0]) + " до " + fmt(f[id][1]) + " ₽ (макс. " + fmt(mx) + " ₽)";
   }
-  /* Применяет фильтры и перерисовывает список. */
+  const bounds = reset => Object.keys(SL).forEach(id => slider(id, reset));
+  const inRange = (m, [lo, hi]) => { const v = toRub(m); return v >= lo && v <= hi; };
+
+  /* Применяет фильтры и рисует турниры группами по играм (раскрывающиеся списки). */
   function draw() {
     const q = f.q.toLowerCase();
     const res = all.filter(t => (!q || (t.name + " " + t.op).toLowerCase().includes(q)) && (!f.d.size || f.d.has(t.disc)) &&
-      (!f.o.size || f.o.has(t.op)) && (!f.m.size || f.m.has(t.team)) && (!f.p.size || f.p.has(t.platform)) && (!f.stu || t.student) && (!f.qual || t.kind === "qualifier") && toRub(t.prize) <= f.prize && (!t.fee || toRub(t.fee) <= f.fee));
+      (!f.o.size || f.o.has(t.op)) && (!f.m.size || f.m.has(t.team)) && (!f.p.size || f.p.has(t.platform)) && (!f.stu || t.student) &&
+      (!f.qual || t.kind === "qualifier") && inRange(t.prize, f.prize) && (t.fee ? inRange(t.fee, f.fee) : f.fee[0] === 0));
     $("#count").textContent = "Найдено: " + res.length + " из " + all.length;
-    $("#list").innerHTML = res.length ? res.map(row).join("") : `<div class="card empty">Ничего не найдено. Расширьте фильтры или сбросьте их.</div>`;
+    const order = d => (discs.includes(d) ? discs.indexOf(d) : 99);
+    const games = [...new Set(res.map(t => t.disc))].sort((x, y) => order(x) - order(y));
+    $("#list").innerHTML = res.length ? games.map(d => { const g = res.filter(t => t.disc === d);
+      return `<details class="grp" data-g="${d}"${openG.has(d) || f.q ? " open" : ""}><summary>${d}<b>${g.length}</b></summary><div class="list">${g.map(row).join("")}</div></details>`; }).join("")
+      : `<div class="card empty">Ничего не найдено. Расширьте фильтры или сбросьте их.</div>`;
+    $$(".grp").forEach(g => g.ontoggle = () => (g.open ? openG.add(g.dataset.g) : openG.delete(g.dataset.g)));
+    $$("[data-c]").forEach(e => { const n = e.dataset.c === "t" ? +f.stu + +f.qual : f[e.dataset.c].size; e.textContent = n ? " · " + n : ""; });
   }
   $("#q").oninput = e => { f.q = e.target.value; draw(); };
   $$("[data-d]").forEach(c => c.onchange = () => { c.checked ? f.d.add(c.dataset.d) : f.d.delete(c.dataset.d); bounds(true); draw(); });
@@ -287,7 +329,7 @@ function pageHome() {
   $$("[data-p]").forEach(c => c.onchange = () => { c.checked ? f.p.add(c.dataset.p) : f.p.delete(c.dataset.p); draw(); });
   $("#stu").onchange = e => { f.stu = e.target.checked; draw(); };
   $("#qual").onchange = e => { f.qual = e.target.checked; draw(); };
-  $("#prize").oninput = $("#fee").oninput = () => { bounds(false); draw(); };
+  Object.keys(SL).forEach(id => ["min", "max"].forEach(k => $("#" + id + k).oninput = () => { slider(id, false, k); draw(); }));
   $("#reset").onclick = pageHome;
   bounds(true); draw();
 }
@@ -302,7 +344,7 @@ function pageTournament(id) {
   <span class="st ${t.st.k}">${t.st.l}</span><h1 style="margin-top:.6rem">${t.name}</h1>
   <div class="cols"><div>
     <div class="card"><div class="grid2">
-      <div><b>Дисциплина</b>${t.disc}</div><div><b>Формат матчей</b>${t.team}</div><div><b>Площадка</b>${t.format}</div><div><b>Платформа</b>${t.platform}</div><div><b>Тип</b>${t.kind === "qualifier" ? "Квалификация" : "Турнир"}</div><div><b>Даты</b>${dates(t)}</div>
+      <div><b>Дисциплина</b>${t.disc}</div><div><b>Формат матчей</b>${t.team}</div><div><b>Площадка</b>${t.format}</div><div><b>Платформа</b>${t.platform}</div><div><b>Тип</b>${t.kind === "qualifier" ? "Квалификация" : "Турнир"}</div><div><b>Даты</b>${dates(t)}</div>${t.regEnd ? `<div><b>Регистрация</b>${regLine(t).replace("Регистрация ", "")}</div>` : ""}
       <div><b>Место</b>${t.city}</div><div><b>Призовой фонд</b>${money(t.prize)}${t.prize && t.prize.c === "USD" ? " ≈ " + fmt(toRub(t.prize)) + " ₽" : ""}</div><div><b>Взнос</b>${money(t.fee)}</div>
       <div><b>Оператор</b>${t.op}</div><div><b>Команд</b>${t.teams || "не указано"}</div></div>
       <p>${t.desc}</p><p class="meta">${t.fee_note}</p></div>
