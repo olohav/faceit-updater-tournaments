@@ -7,17 +7,12 @@ import { ymd, addDays } from "./dates.mjs";
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-/* Исправленное параллельное выполнение fn над items с микропаузами */
+/* Параллельное выполнение fn над items, не более n одновременно. */
 export async function pool(items, n, fn) {
   const res = new Array(items.length);
   let i = 0;
   await Promise.all(Array.from({ length: Math.min(n, items.length) }, async () => {
-    while (i < items.length) { 
-      const k = i++; 
-      res[k] = await fn(items[k], k); 
-      // Даем серверу FACEIT «подышать» между запросами в одном потоке
-      await sleep(75); 
-    }
+    while (i < items.length) { const k = i++; res[k] = await fn(items[k], k); }
   }));
   return res;
 }
@@ -26,20 +21,12 @@ export const stats = { notFound: 0, total: 0 };   // счётчики 404 для
 export async function api(path, params = {}, attempt = 0) {
   const url = new URL(API + path);
   for (const [k, v] of Object.entries(params)) if (v !== "" && v != null) url.searchParams.set(k, v);
-  
-  // Дополнительная защита: если попыток много, делаем паузу дольше
-  if (attempt > 0) {
-    await sleep(2000 * attempt);
-  }
-
   const res = await fetch(url, { headers: { Authorization: "Bearer " + KEY, Accept: "application/json" } });
   if (res.status === 401 || res.status === 403) {
-    throw new Error(`FACEIT ответил ${res.status}: ключ неверный или это не «Server side API key». Создайте ключ типа Server side на https://faceit.com`);
+    throw new Error(`FACEIT ответил ${res.status}: ключ неверный или это не «Server side API key». Создайте ключ типа Server side на https://developers.faceit.com/`);
   }
-  // Обработка 429 ошибки (слишком много запросов) или сбоев сервера (>=500)
-  if ((res.status === 429 || res.status >= 500) && attempt < 6) {
-    console.warn(`[API] Ошибка ${res.status}, повторная попытка ${attempt + 1}...`);
-    await sleep(3000 * (attempt + 1));
+  if ((res.status === 429 || res.status >= 500) && attempt < 4) {
+    await sleep(1500 * (attempt + 1));
     return api(path, params, attempt + 1);
   }
   if (!res.ok) {
@@ -74,7 +61,7 @@ async function pagedFetch(path, base, tag, max = CONFIG.maxPerQuery) {
     // Список отсортирован по дате старта: если вся страница уже за горизонтом — дальше листать незачем.
     const starts = items.map(c => ymd(c.championship_start)).filter(Boolean);
     if (starts.length === items.length && starts.every(d => d > horizon)) break;
-    await sleep(60); // Чуть увеличили паузу между страницами пагинации
+    await sleep(40);
   }
   return out;
 }

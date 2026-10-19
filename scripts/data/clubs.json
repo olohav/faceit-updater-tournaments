@@ -1,0 +1,4330 @@
+[
+  {
+    "domain": "colizeumarena",
+    "name": "COLIZEUM | Сеть компьютерных клубов",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 149298,
+    "url": "https://vk.com/colizeumarena"
+  },
+  {
+    "domain": "cyberx_community",
+    "name": "CyberX Community | Сеть компьютерных клубов",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 48431,
+    "url": "https://vk.com/cyberx_community"
+  },
+  {
+    "domain": "console_gaming",
+    "name": "Console Gaming Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 14740,
+    "url": "https://vk.com/console_gaming"
+  },
+  {
+    "domain": "cybcentr",
+    "name": "Компьютерный клуб | Центр Киберспорта | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 13816,
+    "url": "https://vk.com/cybcentr"
+  },
+  {
+    "domain": "club151968399",
+    "name": "«Капитан Джек» & «Три Семерки»  – Игровой клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 12383,
+    "url": "https://vk.com/club151968399"
+  },
+  {
+    "domain": "eclipsegaming",
+    "name": "Компьютерный клуб | Eclipse Gaming | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 11855,
+    "url": "https://vk.com/eclipsegaming"
+  },
+  {
+    "domain": "vk_play_arena",
+    "name": "VK Play Арена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 11040,
+    "url": "https://vk.com/vk_play_arena"
+  },
+  {
+    "domain": "1shot",
+    "name": "1shot | Компьютерный клуб | «Ваншот»",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 10482,
+    "url": "https://vk.com/1shot"
+  },
+  {
+    "domain": "gonzocybersport",
+    "name": "GONZO Cybersport | Компьютерный клуб Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 6054,
+    "url": "https://vk.com/gonzocybersport"
+  },
+  {
+    "domain": "yota_arena",
+    "name": "Yota Arena",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 5471,
+    "url": "https://vk.com/yota_arena"
+  },
+  {
+    "domain": "blackstargamingclub",
+    "name": "Black Star Gaming • Сеть компьютерных клубов",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 4345,
+    "url": "https://vk.com/blackstargamingclub"
+  },
+  {
+    "domain": "clubgromkiyvopros",
+    "name": "Игровой клуб ГРОМКИЙ ВОПРОС",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3840,
+    "url": "https://vk.com/clubgromkiyvopros"
+  },
+  {
+    "domain": "gameclub_18",
+    "name": "CS 1.6 | CS16-GAMECLUB.RU",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3833,
+    "url": "https://vk.com/gameclub_18"
+  },
+  {
+    "domain": "xcode_gaming",
+    "name": "XCode Старк l Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3831,
+    "url": "https://vk.com/xcode_gaming"
+  },
+  {
+    "domain": "colizeum_kashirskaya_plaza",
+    "name": "COLIZEUM Каширская Плаза | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3728,
+    "url": "https://vk.com/colizeum_kashirskaya_plaza"
+  },
+  {
+    "domain": "colizeum_butovo",
+    "name": "COLIZEUM Южное Бутово | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3573,
+    "url": "https://vk.com/colizeum_butovo"
+  },
+  {
+    "domain": "colizeum_konkovo",
+    "name": "COLIZEUM Коньково | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3455,
+    "url": "https://vk.com/colizeum_konkovo"
+  },
+  {
+    "domain": "iziplayclub",
+    "name": "iziPlay Киберклуб | м. Бабушкинская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3416,
+    "url": "https://vk.com/iziplayclub"
+  },
+  {
+    "domain": "ravebybuster",
+    "name": "RAVE by BUSTER | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3330,
+    "url": "https://vk.com/ravebybuster"
+  },
+  {
+    "domain": "retro_gaming_club",
+    "name": "Ретро игровой клуб 90-х/2000 | Retro Gaming Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3305,
+    "url": "https://vk.com/retro_gaming_club"
+  },
+  {
+    "domain": "youplay24",
+    "name": "YouPlay - Кибер Клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3222,
+    "url": "https://vk.com/youplay24"
+  },
+  {
+    "domain": "colizeum_olimp",
+    "name": "COLIZEUM Олимп | Компьютерный клуб | Новогиреево",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3192,
+    "url": "https://vk.com/colizeum_olimp"
+  },
+  {
+    "domain": "buff_moscow",
+    "name": "Buff | Компьютерный клуб | Кузьминки",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3079,
+    "url": "https://vk.com/buff_moscow"
+  },
+  {
+    "domain": "colizeum_izmaylovo",
+    "name": "COLIZEUM Измайлово | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3054,
+    "url": "https://vk.com/colizeum_izmaylovo"
+  },
+  {
+    "domain": "colizeum_mariel",
+    "name": "COLIZEUM ТРЦ Мариэль | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3046,
+    "url": "https://vk.com/colizeum_mariel"
+  },
+  {
+    "domain": "colizeum_kvartal",
+    "name": "COLIZEUM KVARTAL | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 3012,
+    "url": "https://vk.com/colizeum_kvartal"
+  },
+  {
+    "domain": "colizeum_solncevskiy",
+    "name": "COLIZEUM Солнцевский  | Кибер Арена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2749,
+    "url": "https://vk.com/colizeum_solncevskiy"
+  },
+  {
+    "domain": "colizeum_sp",
+    "name": "COLIZEUM Сергиев Посад | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2737,
+    "url": "https://vk.com/colizeum_sp"
+  },
+  {
+    "domain": "colizeum_severnoe_butovo",
+    "name": "COLIZEUM Северное Бутово | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2641,
+    "url": "https://vk.com/colizeum_severnoe_butovo"
+  },
+  {
+    "domain": "kingplay_moscow",
+    "name": "King Play - сеть компьютерных клубов | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2614,
+    "url": "https://vk.com/kingplay_moscow"
+  },
+  {
+    "domain": "theflashback",
+    "name": "Flashback | Флэшбэк | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2599,
+    "url": "https://vk.com/theflashback"
+  },
+  {
+    "domain": "gamingclubing",
+    "name": "Gaming Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2553,
+    "url": "https://vk.com/gamingclubing"
+  },
+  {
+    "domain": "colizeum_premium_sukharevskaya",
+    "name": "Компьютерный клуб COLIZEUM PREMIUM Сухаревская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2472,
+    "url": "https://vk.com/colizeum_premium_sukharevskaya"
+  },
+  {
+    "domain": "gamefunclub",
+    "name": "GAMING CLUB",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2451,
+    "url": "https://vk.com/gamefunclub"
+  },
+  {
+    "domain": "colizeum_petrovsko_razumovskaya",
+    "name": "COLIZEUM Петровско-Разумовская|Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2450,
+    "url": "https://vk.com/colizeum_petrovsko_razumovskaya"
+  },
+  {
+    "domain": "iziplaypreobraga",
+    "name": "iZiPlay Киберклуб | м. Преображенская Площадь",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2422,
+    "url": "https://vk.com/iziplaypreobraga"
+  },
+  {
+    "domain": "colizeum_zigzag",
+    "name": "COLIZEUM ТЦ Zig Zag | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2345,
+    "url": "https://vk.com/colizeum_zigzag"
+  },
+  {
+    "domain": "colizeum_aeroport",
+    "name": "COLIZEUM Аэропорт | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2279,
+    "url": "https://vk.com/colizeum_aeroport"
+  },
+  {
+    "domain": "voltage_sokol",
+    "name": "VOLTAGE BLACK - Компьютерный клуб | Сокол",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2223,
+    "url": "https://vk.com/voltage_sokol"
+  },
+  {
+    "domain": "comebackclub",
+    "name": "ComeBack | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2217,
+    "url": "https://vk.com/comebackclub"
+  },
+  {
+    "domain": "ezkantima",
+    "name": "EZ KATKA м. Кантемировская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2158,
+    "url": "https://vk.com/ezkantima"
+  },
+  {
+    "domain": "colizeum_shelepiha",
+    "name": "COLIZEUM Шелепиха | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2137,
+    "url": "https://vk.com/colizeum_shelepiha"
+  },
+  {
+    "domain": "forward.gaming",
+    "name": "FORWARD GAMING — компьютерный клуб Одинцово",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2129,
+    "url": "https://vk.com/forward.gaming"
+  },
+  {
+    "domain": "kiberoom_ryz",
+    "name": "КИБЕРЕЙД | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2124,
+    "url": "https://vk.com/kiberoom_ryz"
+  },
+  {
+    "domain": "darknessclub",
+    "name": "Darkness | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2059,
+    "url": "https://vk.com/darknessclub"
+  },
+  {
+    "domain": "kk_prince_plaza",
+    "name": "COLIZEUM ТЦ Принц Плаза | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 2058,
+    "url": "https://vk.com/kk_prince_plaza"
+  },
+  {
+    "domain": "ezyas",
+    "name": "EZ KATKA м. Ясенево | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1976,
+    "url": "https://vk.com/ezyas"
+  },
+  {
+    "domain": "colizeum_krasnoselskaya",
+    "name": "COLIZEUM Москва Красносельская | Кибер Арена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1957,
+    "url": "https://vk.com/colizeum_krasnoselskaya"
+  },
+  {
+    "domain": "iziplayclubpole",
+    "name": "iziPlay Киберклуб | м. Октябрьское поле",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1948,
+    "url": "https://vk.com/iziplayclubpole"
+  },
+  {
+    "domain": "colizeum_vodnyi",
+    "name": "COLIZEUM ТЦ Водный | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1865,
+    "url": "https://vk.com/colizeum_vodnyi"
+  },
+  {
+    "domain": "venomzhulebino",
+    "name": "Venom Cyber Zone Жулебино | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1834,
+    "url": "https://vk.com/venomzhulebino"
+  },
+  {
+    "domain": "gizmopowered",
+    "name": "Gizmo Программа управления компьютерными клубами",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1827,
+    "url": "https://vk.com/gizmopowered"
+  },
+  {
+    "domain": "highground_csl",
+    "name": "High Ground | Киберспорт Лаунж в Москве",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1791,
+    "url": "https://vk.com/highground_csl"
+  },
+  {
+    "domain": "zloycyberclub",
+    "name": "ZLOY | Cyber Club | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1787,
+    "url": "https://vk.com/zloycyberclub"
+  },
+  {
+    "domain": "colizeum_msk_artamonova",
+    "name": "COLIZEUM Москва Артамонова | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1708,
+    "url": "https://vk.com/colizeum_msk_artamonova"
+  },
+  {
+    "domain": "i.game.kashirka",
+    "name": "I.GAME | Каширка | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1699,
+    "url": "https://vk.com/i.game.kashirka"
+  },
+  {
+    "domain": "cyberx.izmailovo",
+    "name": "Cyberx Измайлово | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1678,
+    "url": "https://vk.com/cyberx.izmailovo"
+  },
+  {
+    "domain": "cyberia_vol",
+    "name": "Компьютерный клуб Cyberia | Волжский | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1642,
+    "url": "https://vk.com/cyberia_vol"
+  },
+  {
+    "domain": "colizeum_losinoostrovskiy",
+    "name": "COLIZEUM Лосиноостровский | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1640,
+    "url": "https://vk.com/colizeum_losinoostrovskiy"
+  },
+  {
+    "domain": "colizeum_yasenevo",
+    "name": "COLIZEUM Ясенево | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1640,
+    "url": "https://vk.com/colizeum_yasenevo"
+  },
+  {
+    "domain": "colizeum_nizhegorodskaya",
+    "name": "COLIZEUM Нижегородская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1598,
+    "url": "https://vk.com/colizeum_nizhegorodskaya"
+  },
+  {
+    "domain": "iziplaybaumanka",
+    "name": "iZiPlay Бауманская | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1593,
+    "url": "https://vk.com/iziplaybaumanka"
+  },
+  {
+    "domain": "tournamentskiberpride",
+    "name": "Турниры КиберПрайд | Сеть компьютерных клубов",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1554,
+    "url": "https://vk.com/tournamentskiberpride"
+  },
+  {
+    "domain": "cybersport_forwardgaming",
+    "name": "FORWARD GAMING | КИБЕРКЛУБ",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1531,
+    "url": "https://vk.com/cybersport_forwardgaming"
+  },
+  {
+    "domain": "colizeum_krylatskoe",
+    "name": "COLIZEUM Крылатское | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1528,
+    "url": "https://vk.com/colizeum_krylatskoe"
+  },
+  {
+    "domain": "colizeum_kommunarka",
+    "name": "COLIZEUM Коммунарка | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1489,
+    "url": "https://vk.com/colizeum_kommunarka"
+  },
+  {
+    "domain": "respawnmoscow",
+    "name": "Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1459,
+    "url": "https://vk.com/respawnmoscow"
+  },
+  {
+    "domain": "colizeum_sokolniki",
+    "name": "COLIZEUM Сокольники l Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1455,
+    "url": "https://vk.com/colizeum_sokolniki"
+  },
+  {
+    "domain": "peka.club",
+    "name": "ЗАКРЫТО Пекарня | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1442,
+    "url": "https://vk.com/peka.club"
+  },
+  {
+    "domain": "cyberxbravo",
+    "name": "CyberX | Москва, ТРЦ Браво | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1421,
+    "url": "https://vk.com/cyberxbravo"
+  },
+  {
+    "domain": "colizeum_shodnenskaya",
+    "name": "COLIZEUM Сходненская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1402,
+    "url": "https://vk.com/colizeum_shodnenskaya"
+  },
+  {
+    "domain": "inspot_klen",
+    "name": "INSPOT ТЦ Клён | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1374,
+    "url": "https://vk.com/inspot_klen"
+  },
+  {
+    "domain": "colizeum_msk_gorchakova",
+    "name": "COLIZEUM Москва Горчакова | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1370,
+    "url": "https://vk.com/colizeum_msk_gorchakova"
+  },
+  {
+    "domain": "cybermax24",
+    "name": "CYBER 2.0 | Компьютерный клуб Северное Бутово",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1368,
+    "url": "https://vk.com/cybermax24"
+  },
+  {
+    "domain": "cyber_sphere_arena",
+    "name": "Cyber Sphere",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1326,
+    "url": "https://vk.com/cyber_sphere_arena"
+  },
+  {
+    "domain": "buff.putilkovo",
+    "name": "BUFFCYBERI Москва| Компьютерный клуб I",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1311,
+    "url": "https://vk.com/buff.putilkovo"
+  },
+  {
+    "domain": "club9579017",
+    "name": "Game Club (Playstation 3, Playstation 2, PSP, XBOX 360, Nintendo Wii)",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1304,
+    "url": "https://vk.com/club9579017"
+  },
+  {
+    "domain": "exiiidgame",
+    "name": "EXIIIDGAMES",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1266,
+    "url": "https://vk.com/exiiidgame"
+  },
+  {
+    "domain": "cyberx.msk.medynskaya",
+    "name": "CyberX | Москва Медынская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1265,
+    "url": "https://vk.com/cyberx.msk.medynskaya"
+  },
+  {
+    "domain": "colizeum_koptevo",
+    "name": "COLIZEUM Коптево | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1253,
+    "url": "https://vk.com/colizeum_koptevo"
+  },
+  {
+    "domain": "kiberpride_zuzino",
+    "name": "КиберПрайд | Зюзино | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1252,
+    "url": "https://vk.com/kiberpride_zuzino"
+  },
+  {
+    "domain": "cyberx_zelenograd",
+    "name": "CyberX | Зеленоград | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1228,
+    "url": "https://vk.com/cyberx_zelenograd"
+  },
+  {
+    "domain": "gamingclubrf",
+    "name": "Gaming Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1209,
+    "url": "https://vk.com/gamingclubrf"
+  },
+  {
+    "domain": "colizeum_fili",
+    "name": "COLIZEUM ТЦ Фили | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1192,
+    "url": "https://vk.com/colizeum_fili"
+  },
+  {
+    "domain": "public_game_id",
+    "name": "Game ID - Cybersport | Некрасовка ЮВАО",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1164,
+    "url": "https://vk.com/public_game_id"
+  },
+  {
+    "domain": "cyberx_rio",
+    "name": "CyberX | Москва, РИО | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1154,
+    "url": "https://vk.com/cyberx_rio"
+  },
+  {
+    "domain": "colizeum_vernadsky",
+    "name": "COLIZEUM Вернадского | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1143,
+    "url": "https://vk.com/colizeum_vernadsky"
+  },
+  {
+    "domain": "colizeum_gorod",
+    "name": "COLIZEUM Лефортово | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1076,
+    "url": "https://vk.com/colizeum_gorod"
+  },
+  {
+    "domain": "colizeum_msk_kaluzhsky",
+    "name": "COLIZEUM Москва Калужский | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1059,
+    "url": "https://vk.com/colizeum_msk_kaluzhsky"
+  },
+  {
+    "domain": "colizeum_novoperedelkino",
+    "name": "COLIZEUM Ново-Переделкино | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1059,
+    "url": "https://vk.com/colizeum_novoperedelkino"
+  },
+  {
+    "domain": "levelscyberclub",
+    "name": "Levels | Компьютерный клуб | м.Аэропорт",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1032,
+    "url": "https://vk.com/levelscyberclub"
+  },
+  {
+    "domain": "in.game.dostoyevskaya",
+    "name": "IN.GAME | Достоевская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1022,
+    "url": "https://vk.com/in.game.dostoyevskaya"
+  },
+  {
+    "domain": "svreclub",
+    "name": "Компьютерный клуб \"Своя Реальность\" Южное Бутово",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 1001,
+    "url": "https://vk.com/svreclub"
+  },
+  {
+    "domain": "hivezone",
+    "name": "Hive Cyber Club | ТВК \"Тишинка\"",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 991,
+    "url": "https://vk.com/hivezone"
+  },
+  {
+    "domain": "savepoint_club",
+    "name": "SavePoint | сеть киберклубов | 24/7",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 975,
+    "url": "https://vk.com/savepoint_club"
+  },
+  {
+    "domain": "2fragsclub",
+    "name": "2FRAGS | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 950,
+    "url": "https://vk.com/2fragsclub"
+  },
+  {
+    "domain": "colizeum_msk_lublinskaya",
+    "name": "COLIZEUM Москва Люблинская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 929,
+    "url": "https://vk.com/colizeum_msk_lublinskaya"
+  },
+  {
+    "domain": "kiberpride_sannikova",
+    "name": "КиберПрайд | Отрадное  | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 882,
+    "url": "https://vk.com/kiberpride_sannikova"
+  },
+  {
+    "domain": "club4786687",
+    "name": "CYBER/GOTH/CLUBBERS/MOSCOW Афиша",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 866,
+    "url": "https://vk.com/club4786687"
+  },
+  {
+    "domain": "colizeum_universitet",
+    "name": "COLIZEUM Университет | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 862,
+    "url": "https://vk.com/colizeum_universitet"
+  },
+  {
+    "domain": "colizeum_dezhneva",
+    "name": "COLIZEUM Дежнева | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 851,
+    "url": "https://vk.com/colizeum_dezhneva"
+  },
+  {
+    "domain": "colizeum_belyayevo",
+    "name": "COLIZEUM Беляево | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 845,
+    "url": "https://vk.com/colizeum_belyayevo"
+  },
+  {
+    "domain": "cyberxbaumanskaya",
+    "name": "CyberX | Компьютерный клуб | Москва | Бауманская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 814,
+    "url": "https://vk.com/cyberxbaumanskaya"
+  },
+  {
+    "domain": "gameworldpc2024",
+    "name": "Компьютерный клуб Game world",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 811,
+    "url": "https://vk.com/gameworldpc2024"
+  },
+  {
+    "domain": "mansionclub",
+    "name": "Mansion | Компьютерный клуб | м.Университет",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 807,
+    "url": "https://vk.com/mansionclub"
+  },
+  {
+    "domain": "colizeum_vodniki",
+    "name": "COLIZEUM Водники | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 798,
+    "url": "https://vk.com/colizeum_vodniki"
+  },
+  {
+    "domain": "cyber__club",
+    "name": "Cyber Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 791,
+    "url": "https://vk.com/cyber__club"
+  },
+  {
+    "domain": "colizeum_lermontovsky",
+    "name": "COLIZEUM Лермонтовский | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 789,
+    "url": "https://vk.com/colizeum_lermontovsky"
+  },
+  {
+    "domain": "colizeum_akademicheskaya",
+    "name": "COLIZEUM Академическая | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 784,
+    "url": "https://vk.com/colizeum_akademicheskaya"
+  },
+  {
+    "domain": "colizeum_yaroslavka",
+    "name": "COLIZEUM Ярославка | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 779,
+    "url": "https://vk.com/colizeum_yaroslavka"
+  },
+  {
+    "domain": "neonclz",
+    "name": "NEON | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 777,
+    "url": "https://vk.com/neonclz"
+  },
+  {
+    "domain": "cobragamehouse",
+    "name": "Кобра -компьютерный клуб, магазин комиксов, кафе",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 776,
+    "url": "https://vk.com/cobragamehouse"
+  },
+  {
+    "domain": "kiberpide_msk_ubutovskaya",
+    "name": "КиберПрайд | Южнобутовская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 773,
+    "url": "https://vk.com/kiberpide_msk_ubutovskaya"
+  },
+  {
+    "domain": "marshal.center",
+    "name": "Компьютерный клуб Маршал Кантемировская Бирюлево",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 760,
+    "url": "https://vk.com/marshal.center"
+  },
+  {
+    "domain": "colizeum_chertanovskaya",
+    "name": "COLIZEUM Чертановская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 754,
+    "url": "https://vk.com/colizeum_chertanovskaya"
+  },
+  {
+    "domain": "kiberpridesviblovomsk",
+    "name": "КиберПрайд | Свиблово | Компьютерный клуб | Мск",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 747,
+    "url": "https://vk.com/kiberpridesviblovomsk"
+  },
+  {
+    "domain": "colizeum_luchi",
+    "name": "COLIZEUM Camp Лучи Солнцево  | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 743,
+    "url": "https://vk.com/colizeum_luchi"
+  },
+  {
+    "domain": "tgsev",
+    "name": "TRUE GAMERS l Северный | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 728,
+    "url": "https://vk.com/tgsev"
+  },
+  {
+    "domain": "thebazaaltufevo",
+    "name": "TheBaza | Компьютерный клуб м. Алтуфьево",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 722,
+    "url": "https://vk.com/thebazaaltufevo"
+  },
+  {
+    "domain": "dreamcybersportteam",
+    "name": "Dream Team | Компьютерный клуб 24/7",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 713,
+    "url": "https://vk.com/dreamcybersportteam"
+  },
+  {
+    "domain": "ugol.obzora",
+    "name": "Заугольников Дмитрий / ПК клубы и турниры",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 711,
+    "url": "https://vk.com/ugol.obzora"
+  },
+  {
+    "domain": "cyberspot_lounge",
+    "name": "IN.GAME | Алтуфьево | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 707,
+    "url": "https://vk.com/cyberspot_lounge"
+  },
+  {
+    "domain": "sbgameclub",
+    "name": "SBGame | Сеть компьютерных клубов I Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 707,
+    "url": "https://vk.com/sbgameclub"
+  },
+  {
+    "domain": "playhard_maryino",
+    "name": "PlayHard | Киберспортивный клуб | Марьино",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 690,
+    "url": "https://vk.com/playhard_maryino"
+  },
+  {
+    "domain": "colizeum_rokossovskogo",
+    "name": "COLIZEUM Рокоссовского | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 686,
+    "url": "https://vk.com/colizeum_rokossovskogo"
+  },
+  {
+    "domain": "inspot_sophia",
+    "name": "INSPOT София | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 685,
+    "url": "https://vk.com/inspot_sophia"
+  },
+  {
+    "domain": "bazaklub",
+    "name": "Компьютерный клуб БАЗА| ул. Базовская 17",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 675,
+    "url": "https://vk.com/bazaklub"
+  },
+  {
+    "domain": "level.arena",
+    "name": "LEVEL ARENA / компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 675,
+    "url": "https://vk.com/level.arena"
+  },
+  {
+    "domain": "colizeum_krasnaya_presnya",
+    "name": "COLIZEUM Красная Пресня | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 663,
+    "url": "https://vk.com/colizeum_krasnaya_presnya"
+  },
+  {
+    "domain": "kiberpride_kuzminki",
+    "name": "КиберПрайд | Кузьминки | Компьютерный клуб | Мск",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 658,
+    "url": "https://vk.com/kiberpride_kuzminki"
+  },
+  {
+    "domain": "letscube_msk",
+    "name": "LETSCUBE | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 656,
+    "url": "https://vk.com/letscube_msk"
+  },
+  {
+    "domain": "ngame_pcclub",
+    "name": "NGame Компьютерный Клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 652,
+    "url": "https://vk.com/ngame_pcclub"
+  },
+  {
+    "domain": "colizeum_lukhmanovskaya",
+    "name": "COLIZEUM Camp Лухмановская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 634,
+    "url": "https://vk.com/colizeum_lukhmanovskaya"
+  },
+  {
+    "domain": "alttaborehovo",
+    "name": "Компьютерный клуб | ALT TAB | Метро Орехово",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 616,
+    "url": "https://vk.com/alttaborehovo"
+  },
+  {
+    "domain": "colizeum_rechnoy_vokzal",
+    "name": "COLIZEUM Речной вокзал | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 616,
+    "url": "https://vk.com/colizeum_rechnoy_vokzal"
+  },
+  {
+    "domain": "colizeum_semenovskaya",
+    "name": "COLIZEUM Семеновская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 607,
+    "url": "https://vk.com/colizeum_semenovskaya"
+  },
+  {
+    "domain": "kiberpride_msk_kontimir",
+    "name": "КиберПрайд | Кантeмировская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 605,
+    "url": "https://vk.com/kiberpride_msk_kontimir"
+  },
+  {
+    "domain": "colizeum_new_khimki",
+    "name": "COLIZEUM ТЦ Новые Химки | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 597,
+    "url": "https://vk.com/colizeum_new_khimki"
+  },
+  {
+    "domain": "colizeum_ramenki",
+    "name": "COLIZEUM Раменки | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 596,
+    "url": "https://vk.com/colizeum_ramenki"
+  },
+  {
+    "domain": "midnightcyberclub",
+    "name": "Компьютерный клуб “Midnight” | Королёв",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 586,
+    "url": "https://vk.com/midnightcyberclub"
+  },
+  {
+    "domain": "inspot_azovsky",
+    "name": "INSPOT Азовский | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 576,
+    "url": "https://vk.com/inspot_azovsky"
+  },
+  {
+    "domain": "colizeum_yuzhnaya",
+    "name": "COLIZEUM Южная (Глобал Сити) | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 560,
+    "url": "https://vk.com/colizeum_yuzhnaya"
+  },
+  {
+    "domain": "colizeum_krasnoyarskiy_rabochiy",
+    "name": "COLIZEUM Красноярский Рабочий | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 552,
+    "url": "https://vk.com/colizeum_krasnoyarskiy_rabochiy"
+  },
+  {
+    "domain": "mskraykinplaza",
+    "name": "CyberX | Москва, Райкин Плаза| Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 546,
+    "url": "https://vk.com/mskraykinplaza"
+  },
+  {
+    "domain": "colizeum_camp_oktyabrskoe_pole",
+    "name": "COLIZEUM Camp Октябрьское поле|Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 542,
+    "url": "https://vk.com/colizeum_camp_oktyabrskoe_pole"
+  },
+  {
+    "domain": "tarena_moscow",
+    "name": "Т-Арена, Москва |  Киберклуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 540,
+    "url": "https://vk.com/tarena_moscow"
+  },
+  {
+    "domain": "unitedgamers_msk",
+    "name": "Компьютерный клуб - United Gamers | МОСКВА",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 538,
+    "url": "https://vk.com/unitedgamers_msk"
+  },
+  {
+    "domain": "everest_gaming_msk",
+    "name": "EVEREST GAMING Сходненская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 525,
+    "url": "https://vk.com/everest_gaming_msk"
+  },
+  {
+    "domain": "cyberbattlegroup",
+    "name": "Cyber Battle | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 523,
+    "url": "https://vk.com/cyberbattlegroup"
+  },
+  {
+    "domain": "abyx_club",
+    "name": "ABYX | Компьютерный клуб Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 519,
+    "url": "https://vk.com/abyx_club"
+  },
+  {
+    "domain": "cyber_tiger_pro",
+    "name": "Cyber Tiger | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 518,
+    "url": "https://vk.com/cyber_tiger_pro"
+  },
+  {
+    "domain": "justgameclub",
+    "name": "Just Gaming Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 516,
+    "url": "https://vk.com/justgameclub"
+  },
+  {
+    "domain": "bumpfire",
+    "name": "BumpFire | Компьютерный клуб | Москва, м.ВДНХ",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 513,
+    "url": "https://vk.com/bumpfire"
+  },
+  {
+    "domain": "jat_play",
+    "name": "JAT Play | Компьютерный клуб | Серпуховская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 505,
+    "url": "https://vk.com/jat_play"
+  },
+  {
+    "domain": "gg_wp_club",
+    "name": "GGWP |  Компьютерный клуб в Москве!",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 504,
+    "url": "https://vk.com/gg_wp_club"
+  },
+  {
+    "domain": "omegamsk",
+    "name": "OMEGA GAMING | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 503,
+    "url": "https://vk.com/omegamsk"
+  },
+  {
+    "domain": "vulkan_igrovoj_club",
+    "name": "Вулкан игровой клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 497,
+    "url": "https://vk.com/vulkan_igrovoj_club"
+  },
+  {
+    "domain": "colizeum_solncevo_park",
+    "name": "COLIZEUM Солнцево - Парк | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 482,
+    "url": "https://vk.com/colizeum_solncevo_park"
+  },
+  {
+    "domain": "colizeum_domodedovskaya",
+    "name": "COLIZEUM Домодедовская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 475,
+    "url": "https://vk.com/colizeum_domodedovskaya"
+  },
+  {
+    "domain": "colizeum_riviera",
+    "name": "COLIZEUM ТЦ Ривьера | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 474,
+    "url": "https://vk.com/colizeum_riviera"
+  },
+  {
+    "domain": "cyberx_otradnoe",
+    "name": "CyberX | Москва, Отрадное | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 472,
+    "url": "https://vk.com/cyberx_otradnoe"
+  },
+  {
+    "domain": "cyberx.leninskiy",
+    "name": "CyberX | Москва Ленинский | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 469,
+    "url": "https://vk.com/cyberx.leninskiy"
+  },
+  {
+    "domain": "colizeum_leninsky",
+    "name": "COLIZEUM Ленинский | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 464,
+    "url": "https://vk.com/colizeum_leninsky"
+  },
+  {
+    "domain": "colizeum_prigorod_lesnoe",
+    "name": "COLIZEUM Пригород Лесное | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 464,
+    "url": "https://vk.com/colizeum_prigorod_lesnoe"
+  },
+  {
+    "domain": "vibe_msk_cyber",
+    "name": "ВАЙБ - Компьютерный клуб | Жулебино, Люберцы",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 458,
+    "url": "https://vk.com/vibe_msk_cyber"
+  },
+  {
+    "domain": "cyberarenamsk",
+    "name": "Кибер Арена Войковская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 450,
+    "url": "https://vk.com/cyberarenamsk"
+  },
+  {
+    "domain": "cyberclub247",
+    "name": "247 | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 444,
+    "url": "https://vk.com/cyberclub247"
+  },
+  {
+    "domain": "arena_storm_sochi",
+    "name": "ШТОРМ компьютерный клуб | Сочи | ул.Вишнёвая",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 436,
+    "url": "https://vk.com/arena_storm_sochi"
+  },
+  {
+    "domain": "cclub24",
+    "name": "CYBERIA24 Красногорск | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 434,
+    "url": "https://vk.com/cclub24"
+  },
+  {
+    "domain": "omniplayclub",
+    "name": "OMNIPLAY | Компьютерный клуб на Нижегородской",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 434,
+    "url": "https://vk.com/omniplayclub"
+  },
+  {
+    "domain": "colizeum_kievskaya",
+    "name": "COLIZEUM КИЕВСКАЯ | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 426,
+    "url": "https://vk.com/colizeum_kievskaya"
+  },
+  {
+    "domain": "cyberxbutovo",
+    "name": "CyberX Москва Бутово Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 417,
+    "url": "https://vk.com/cyberxbutovo"
+  },
+  {
+    "domain": "inplay_degunino",
+    "name": "Компьютерный клуб | INPLAY | Дегунино",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 408,
+    "url": "https://vk.com/inplay_degunino"
+  },
+  {
+    "domain": "colizeum_flotiliya",
+    "name": "COLIZEUM Москва ТЦ Флотилия | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 406,
+    "url": "https://vk.com/colizeum_flotiliya"
+  },
+  {
+    "domain": "kiberpride_babushkinsky",
+    "name": "КиберПрайд | Бабушкинская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 403,
+    "url": "https://vk.com/kiberpride_babushkinsky"
+  },
+  {
+    "domain": "lednikclub",
+    "name": "Компьютерный Клуб «ЛЕДНИК»",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 400,
+    "url": "https://vk.com/lednikclub"
+  },
+  {
+    "domain": "ttclub_cyberzone",
+    "name": "TT | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 397,
+    "url": "https://vk.com/ttclub_cyberzone"
+  },
+  {
+    "domain": "colizeum_kurskaya",
+    "name": "COLIZEUM Курская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 392,
+    "url": "https://vk.com/colizeum_kurskaya"
+  },
+  {
+    "domain": "bumopc",
+    "name": "BuMo | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 389,
+    "url": "https://vk.com/bumopc"
+  },
+  {
+    "domain": "inspotrussia",
+    "name": "INSPOT | Сеть компьютерных клубов",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 382,
+    "url": "https://vk.com/inspotrussia"
+  },
+  {
+    "domain": "colizeum_prokshino",
+    "name": "COLIZEUM Camp Прокшино | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 380,
+    "url": "https://vk.com/colizeum_prokshino"
+  },
+  {
+    "domain": "sayplay_cyberlounge",
+    "name": "Say Play! CyberLounge",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 375,
+    "url": "https://vk.com/sayplay_cyberlounge"
+  },
+  {
+    "domain": "titan_cyberarena",
+    "name": "TITAN Cyber Arena",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 368,
+    "url": "https://vk.com/titan_cyberarena"
+  },
+  {
+    "domain": "kiberpridekhimki",
+    "name": "КиберПрайд | Химки | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 367,
+    "url": "https://vk.com/kiberpridekhimki"
+  },
+  {
+    "domain": "cyber_core_ru",
+    "name": "CYBER CORE | Кутузовский пр-кт",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 365,
+    "url": "https://vk.com/cyber_core_ru"
+  },
+  {
+    "domain": "bsg_marino",
+    "name": "Black Star Gaming Марьино • Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 362,
+    "url": "https://vk.com/bsg_marino"
+  },
+  {
+    "domain": "eazygameozernaya",
+    "name": "КОМПЬЮТЕРНЫЙ КЛУБ | м. Озёрная",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 359,
+    "url": "https://vk.com/eazygameozernaya"
+  },
+  {
+    "domain": "zumbi_blocks_game_club",
+    "name": "Zumbi Blocks Ultimate [Game Club]",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 356,
+    "url": "https://vk.com/zumbi_blocks_game_club"
+  },
+  {
+    "domain": "miigaik_gaming_club",
+    "name": "MGC | MIIGAiK Gaming Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 347,
+    "url": "https://vk.com/miigaik_gaming_club"
+  },
+  {
+    "domain": "club218233796",
+    "name": "Retro Game Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 345,
+    "url": "https://vk.com/club218233796"
+  },
+  {
+    "domain": "cyberrush",
+    "name": "CYBER RUSH | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 343,
+    "url": "https://vk.com/cyberrush"
+  },
+  {
+    "domain": "colizeum_crimskiy_val",
+    "name": "COLIZEUM Москва Крымский Вал | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 339,
+    "url": "https://vk.com/colizeum_crimskiy_val"
+  },
+  {
+    "domain": "venomcyberclub",
+    "name": "Venom Cyberclub",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 338,
+    "url": "https://vk.com/venomcyberclub"
+  },
+  {
+    "domain": "cyberaceclub",
+    "name": "ACE | Сеть компьютерных клубов",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 336,
+    "url": "https://vk.com/cyberaceclub"
+  },
+  {
+    "domain": "colizeum_shmitovsky",
+    "name": "COLIZEUM  Москва Шмитовский | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 335,
+    "url": "https://vk.com/colizeum_shmitovsky"
+  },
+  {
+    "domain": "colizeum_msk_butyrskaya",
+    "name": "COLIZEUM Москва Бутырская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 333,
+    "url": "https://vk.com/colizeum_msk_butyrskaya"
+  },
+  {
+    "domain": "voidmsk",
+    "name": "VOID | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 333,
+    "url": "https://vk.com/voidmsk"
+  },
+  {
+    "domain": "truegamers_nekrasovka",
+    "name": "TRUE GAMERS l Некрасовка | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 329,
+    "url": "https://vk.com/truegamers_nekrasovka"
+  },
+  {
+    "domain": "thebazaizmailovo",
+    "name": "TheBaza | Компьютерный клуб | Южное Измайлово",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 328,
+    "url": "https://vk.com/thebazaizmailovo"
+  },
+  {
+    "domain": "cyberspotlounge",
+    "name": "Компьютерный клуб | Cyberspot Lounge м.Алтуфьево",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 322,
+    "url": "https://vk.com/cyberspotlounge"
+  },
+  {
+    "domain": "unicorn_gaming_zil",
+    "name": "UNICORN GAMING l ЗИЛ l Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 319,
+    "url": "https://vk.com/unicorn_gaming_zil"
+  },
+  {
+    "domain": "club236790977",
+    "name": "English Game Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 318,
+    "url": "https://vk.com/club236790977"
+  },
+  {
+    "domain": "playpoint.moscow",
+    "name": "PlayPoint | Киберклуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 317,
+    "url": "https://vk.com/playpoint.moscow"
+  },
+  {
+    "domain": "cybercubeclub",
+    "name": "Cyber Cube Club | Киберспортивный клуб Лефортово",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 315,
+    "url": "https://vk.com/cybercubeclub"
+  },
+  {
+    "domain": "cybermagistr",
+    "name": "Кибермагистр | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 314,
+    "url": "https://vk.com/cybermagistr"
+  },
+  {
+    "domain": "colizeum_msk_uley",
+    "name": "COLIZEUM Москва ТЦ Улей | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 314,
+    "url": "https://vk.com/colizeum_msk_uley"
+  },
+  {
+    "domain": "kiberpride_msk_degunino",
+    "name": "КиберПрайд | Дегунино | Компьютерный клуб | Мск",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 308,
+    "url": "https://vk.com/kiberpride_msk_degunino"
+  },
+  {
+    "domain": "colizeum_rasskazovka",
+    "name": "COLIZEUM Рассказовка | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 308,
+    "url": "https://vk.com/colizeum_rasskazovka"
+  },
+  {
+    "domain": "onemoregameclub",
+    "name": "ONE MORE GAME | компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 308,
+    "url": "https://vk.com/onemoregameclub"
+  },
+  {
+    "domain": "cyber_balance",
+    "name": "CyberBalance | компьютерный клуб | м. Отрадное",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 307,
+    "url": "https://vk.com/cyber_balance"
+  },
+  {
+    "domain": "cyberx_moscow_lublino",
+    "name": "CyberX Москва Люблино | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 303,
+    "url": "https://vk.com/cyberx_moscow_lublino"
+  },
+  {
+    "domain": "colizeum_msk_megapolis",
+    "name": "COLIZEUM Москва ТЦ Мегаполис | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 302,
+    "url": "https://vk.com/colizeum_msk_megapolis"
+  },
+  {
+    "domain": "ccv109",
+    "name": "CYBER VAULT#109",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 302,
+    "url": "https://vk.com/ccv109"
+  },
+  {
+    "domain": "colizeum_petrozavodskaya",
+    "name": "COLIZEUM Москва Петрозаводская | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 301,
+    "url": "https://vk.com/colizeum_petrozavodskaya"
+  },
+  {
+    "domain": "kiberpride_garibaldi",
+    "name": "КиберПрайд | Черемушки | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 291,
+    "url": "https://vk.com/kiberpride_garibaldi"
+  },
+  {
+    "domain": "cyberx.teply_stan",
+    "name": "Компьютерный клуб | CyberX | Теплый Стан",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 291,
+    "url": "https://vk.com/cyberx.teply_stan"
+  },
+  {
+    "domain": "colizeum_sokol",
+    "name": "COLIZEUM Сокол | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 290,
+    "url": "https://vk.com/colizeum_sokol"
+  },
+  {
+    "domain": "netarenaclub",
+    "name": "Net Arena - Кибер Лофт",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 290,
+    "url": "https://vk.com/netarenaclub"
+  },
+  {
+    "domain": "old_mosgame",
+    "name": "MOSGAME НОВОМОСКОВСКАЯ | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 288,
+    "url": "https://vk.com/old_mosgame"
+  },
+  {
+    "domain": "cybercore_pro",
+    "name": "CYBER CORE | Элеваторная 11 | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 287,
+    "url": "https://vk.com/cybercore_pro"
+  },
+  {
+    "domain": "cyber_onyx",
+    "name": "Cyber Onyx | Компьютерный клуб | Некрасовка",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 283,
+    "url": "https://vk.com/cyber_onyx"
+  },
+  {
+    "domain": "mygamesmoscow",
+    "name": "Компьютерный клуб 'МОЯ ИГРА'",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 277,
+    "url": "https://vk.com/mygamesmoscow"
+  },
+  {
+    "domain": "aton_club",
+    "name": "КОМПЬЮТЕРНЫЙ КЛУБ | АТОН | МОСКВА",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 270,
+    "url": "https://vk.com/aton_club"
+  },
+  {
+    "domain": "inspot_kirghizia",
+    "name": "INSPOT РЦ «Киргизия» | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 269,
+    "url": "https://vk.com/inspot_kirghizia"
+  },
+  {
+    "domain": "condorclubgz",
+    "name": "CondorClub | Компьютерный Клуб | Солнцево-Парк",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 266,
+    "url": "https://vk.com/condorclubgz"
+  },
+  {
+    "domain": "gamehouseluxaltuf",
+    "name": "GAMEHOUSE | Компьютерный Клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 262,
+    "url": "https://vk.com/gamehouseluxaltuf"
+  },
+  {
+    "domain": "roomixclub",
+    "name": "ROOMIX | Игровое пространство",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 251,
+    "url": "https://vk.com/roomixclub"
+  },
+  {
+    "domain": "cyberonekommunarka",
+    "name": "CyberOne Коммунарка | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 250,
+    "url": "https://vk.com/cyberonekommunarka"
+  },
+  {
+    "domain": "cyberx_msknash",
+    "name": "CyberX Алтуфьево, Бибирево. Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 249,
+    "url": "https://vk.com/cyberx_msknash"
+  },
+  {
+    "domain": "colizeum_msk_brateevo",
+    "name": "COLIZEUM Москва Братеево | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 248,
+    "url": "https://vk.com/colizeum_msk_brateevo"
+  },
+  {
+    "domain": "cerberusarena",
+    "name": "Cerberus Arena | Киберклуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 246,
+    "url": "https://vk.com/cerberusarena"
+  },
+  {
+    "domain": "midkurkino",
+    "name": "MID компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 246,
+    "url": "https://vk.com/midkurkino"
+  },
+  {
+    "domain": "klabigthegame",
+    "name": "Компьютерный клуб «KLABIG»",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 245,
+    "url": "https://vk.com/klabigthegame"
+  },
+  {
+    "domain": "colizeum_seligerskaya",
+    "name": "COLIZEUM Селигерская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 243,
+    "url": "https://vk.com/colizeum_seligerskaya"
+  },
+  {
+    "domain": "colizeum_sireneviy_bulvar",
+    "name": "COLIZEUM Москва Сиреневый Бульвар | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 240,
+    "url": "https://vk.com/colizeum_sireneviy_bulvar"
+  },
+  {
+    "domain": "inspot_baikonur",
+    "name": "INSPOT Байконур | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 240,
+    "url": "https://vk.com/inspot_baikonur"
+  },
+  {
+    "domain": "skazlounge",
+    "name": "СКАЗ | Компьютерный клуб | Москва | Медынская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 238,
+    "url": "https://vk.com/skazlounge"
+  },
+  {
+    "domain": "ofc.warg.moscow",
+    "name": "Moscow Wargame Club (OFC)",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 238,
+    "url": "https://vk.com/ofc.warg.moscow"
+  },
+  {
+    "domain": "arkadacyber",
+    "name": "Компьютерный клуб Аркада | Кибер клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 235,
+    "url": "https://vk.com/arkadacyber"
+  },
+  {
+    "domain": "colizeum_leningradka",
+    "name": "COLIZEUM Ленинградка | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 231,
+    "url": "https://vk.com/colizeum_leningradka"
+  },
+  {
+    "domain": "cybergamearena",
+    "name": "Cyber Game Arena Аэропорт",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 231,
+    "url": "https://vk.com/cybergamearena"
+  },
+  {
+    "domain": "cyberx_dirizhabl",
+    "name": "CyberX Москва, Дирижабль | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 228,
+    "url": "https://vk.com/cyberx_dirizhabl"
+  },
+  {
+    "domain": "colizeum_taganka",
+    "name": "COLIZEUM Москва Таганка | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 227,
+    "url": "https://vk.com/colizeum_taganka"
+  },
+  {
+    "domain": "diesel_game_club",
+    "name": "Diesel Game Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 225,
+    "url": "https://vk.com/diesel_game_club"
+  },
+  {
+    "domain": "overtime138",
+    "name": "ОВЕРТАЙМ | Компьютерный клуб | АНГАРСК",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 224,
+    "url": "https://vk.com/overtime138"
+  },
+  {
+    "domain": "colizeum_msk_kapitoliy",
+    "name": "COLIZEUM Москва ТЦ Капитолий | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 223,
+    "url": "https://vk.com/colizeum_msk_kapitoliy"
+  },
+  {
+    "domain": "colizeum_varshavskoe_merimis",
+    "name": "COLIZEUM Москва ТЦ Меримис | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 222,
+    "url": "https://vk.com/colizeum_varshavskoe_merimis"
+  },
+  {
+    "domain": "inkluzivigra",
+    "name": "Клуб любителей настолок \"Игровой Калейдоскоп\"",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 213,
+    "url": "https://vk.com/inkluzivigra"
+  },
+  {
+    "domain": "pandagamingru",
+    "name": "Panda Gaming | Компьютерный Клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 213,
+    "url": "https://vk.com/pandagamingru"
+  },
+  {
+    "domain": "metrogamecenter",
+    "name": "METRO GAME CENTER | Новые Ватутинки",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 204,
+    "url": "https://vk.com/metrogamecenter"
+  },
+  {
+    "domain": "godjigame_moscow",
+    "name": "Godji Game | Москва | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 202,
+    "url": "https://vk.com/godjigame_moscow"
+  },
+  {
+    "domain": "colizeum_frunzenskaya",
+    "name": "COLIZEUM Фрунзенская Москва | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 200,
+    "url": "https://vk.com/colizeum_frunzenskaya"
+  },
+  {
+    "domain": "wins_moscow",
+    "name": "WINS ТРЦ Ривьера | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 194,
+    "url": "https://vk.com/wins_moscow"
+  },
+  {
+    "domain": "madi.cyber.club",
+    "name": "MADI Cyber Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 192,
+    "url": "https://vk.com/madi.cyber.club"
+  },
+  {
+    "domain": "cyberclub1991",
+    "name": "1991 CYBER CLUB",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 191,
+    "url": "https://vk.com/cyberclub1991"
+  },
+  {
+    "domain": "cyber_payback",
+    "name": "Payback - Компьютерный клуб | Калужская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 189,
+    "url": "https://vk.com/cyber_payback"
+  },
+  {
+    "domain": "maxshot.club",
+    "name": "MAX-SHOT - Киберспортивный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 187,
+    "url": "https://vk.com/maxshot.club"
+  },
+  {
+    "domain": "gameover_mal",
+    "name": "GameOver Малыгина | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 185,
+    "url": "https://vk.com/gameover_mal"
+  },
+  {
+    "domain": "urban_gameclub",
+    "name": "URBAN Gaming & Lounge | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 184,
+    "url": "https://vk.com/urban_gameclub"
+  },
+  {
+    "domain": "club_namidu",
+    "name": "Компьютерный клуб «На миду»",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 179,
+    "url": "https://vk.com/club_namidu"
+  },
+  {
+    "domain": "lossantosmoscow",
+    "name": "LOS SANTOS | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 179,
+    "url": "https://vk.com/lossantosmoscow"
+  },
+  {
+    "domain": "obruchewa",
+    "name": "Компьютерный клуб | ЦК | Обручева",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 177,
+    "url": "https://vk.com/obruchewa"
+  },
+  {
+    "domain": "cyberx_aviamotornaya",
+    "name": "CyberX Москва Авиамоторная | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 176,
+    "url": "https://vk.com/cyberx_aviamotornaya"
+  },
+  {
+    "domain": "alttabkurskaya",
+    "name": "Компьютерный клуб | ALT TAB | Курская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 173,
+    "url": "https://vk.com/alttabkurskaya"
+  },
+  {
+    "domain": "cybercorelobanova",
+    "name": "CYBER CORE | Лобанова | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 173,
+    "url": "https://vk.com/cybercorelobanova"
+  },
+  {
+    "domain": "cclub24_kuz",
+    "name": "CYBERIA24 | Киберклуб | Кузьминки",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 171,
+    "url": "https://vk.com/cclub24_kuz"
+  },
+  {
+    "domain": "mskstuden",
+    "name": "CyberX | МСК Студенческая | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 170,
+    "url": "https://vk.com/mskstuden"
+  },
+  {
+    "domain": "cyberplayspace",
+    "name": "PLAYSPACE | Компьютерный клуб | ПАВЛИНО",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 170,
+    "url": "https://vk.com/cyberplayspace"
+  },
+  {
+    "domain": "3dgamepark",
+    "name": "Game@Park - Российский КОМПЬЮТЕРНЫЙ КЛУБ",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 163,
+    "url": "https://vk.com/3dgamepark"
+  },
+  {
+    "domain": "cyber_dvizh",
+    "name": "CYBER_DVIZH",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 162,
+    "url": "https://vk.com/cyber_dvizh"
+  },
+  {
+    "domain": "club210339005",
+    "name": "Компьютерный клуб | ЦК | Авиамоторная",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 156,
+    "url": "https://vk.com/club210339005"
+  },
+  {
+    "domain": "cyberx_pr_mira_msk",
+    "name": "CyberX | Москва пр-кт Мира | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 156,
+    "url": "https://vk.com/cyberx_pr_mira_msk"
+  },
+  {
+    "domain": "colizeum_mikhailova",
+    "name": "COLIZEUM Москва Михайлова | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 153,
+    "url": "https://vk.com/colizeum_mikhailova"
+  },
+  {
+    "domain": "cyberclubmsk",
+    "name": "Cyber Club Moscow",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 153,
+    "url": "https://vk.com/cyberclubmsk"
+  },
+  {
+    "domain": "club224654093",
+    "name": "Cyber-Skuff (ПК Клуб Москва)",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 151,
+    "url": "https://vk.com/club224654093"
+  },
+  {
+    "domain": "cybersnake1",
+    "name": "Cyber Snake l Компьютерный клуб в Москве",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 148,
+    "url": "https://vk.com/cybersnake1"
+  },
+  {
+    "domain": "bsgbarrik",
+    "name": "BlinkGame Баррикадная • Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 145,
+    "url": "https://vk.com/bsgbarrik"
+  },
+  {
+    "domain": "colizeum_obraztsova",
+    "name": "COLIZEUM Москва Образцова | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 145,
+    "url": "https://vk.com/colizeum_obraztsova"
+  },
+  {
+    "domain": "club225449692",
+    "name": "CyberClub",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 139,
+    "url": "https://vk.com/club225449692"
+  },
+  {
+    "domain": "club236303348",
+    "name": "Компьютерный клуб | ЦК | Фрунзенская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 131,
+    "url": "https://vk.com/club236303348"
+  },
+  {
+    "domain": "horizonegaming",
+    "name": "Horizone | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 131,
+    "url": "https://vk.com/horizonegaming"
+  },
+  {
+    "domain": "colizeum_tulskaya",
+    "name": "COLIZEUM Москва Тульская | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 130,
+    "url": "https://vk.com/colizeum_tulskaya"
+  },
+  {
+    "domain": "colizeum_msk_yahromskaya",
+    "name": "COLIZEUM Москва Яхромская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 129,
+    "url": "https://vk.com/colizeum_msk_yahromskaya"
+  },
+  {
+    "domain": "club222745464",
+    "name": "VNetGaming компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 129,
+    "url": "https://vk.com/club222745464"
+  },
+  {
+    "domain": "colizeum_msk_yasny",
+    "name": "COLIZEUM Москва ЖК Ясный | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 128,
+    "url": "https://vk.com/colizeum_msk_yasny"
+  },
+  {
+    "domain": "goosecyberclub",
+    "name": "Goose Cyberclub",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 128,
+    "url": "https://vk.com/goosecyberclub"
+  },
+  {
+    "domain": "foxplay_club",
+    "name": "FOXPLAY Компьютерный Клуб | Марьино",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 127,
+    "url": "https://vk.com/foxplay_club"
+  },
+  {
+    "domain": "colizeum_lobanovskiy",
+    "name": "COLIZEUM Прокшино Лобановский лес | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 123,
+    "url": "https://vk.com/colizeum_lobanovskiy"
+  },
+  {
+    "domain": "alglounge",
+    "name": "Компьютерный клуб | ALGORITHM CYBER LOUNGE",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 121,
+    "url": "https://vk.com/alglounge"
+  },
+  {
+    "domain": "cybersyndicates",
+    "name": "Cyber Syndicate | Компьютерный Клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 121,
+    "url": "https://vk.com/cybersyndicates"
+  },
+  {
+    "domain": "battlehall_okruzhnaya",
+    "name": "BH | Компьютерный клуб | Окружная",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 113,
+    "url": "https://vk.com/battlehall_okruzhnaya"
+  },
+  {
+    "domain": "colizeum_baumanskaya",
+    "name": "COLIZEUM Москва Бауманская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 110,
+    "url": "https://vk.com/colizeum_baumanskaya"
+  },
+  {
+    "domain": "in.game.luzhniki",
+    "name": "IN.GAME | Лужники | Компьютерный клуб Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 110,
+    "url": "https://vk.com/in.game.luzhniki"
+  },
+  {
+    "domain": "club240230703",
+    "name": "CyberZONE START",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 108,
+    "url": "https://vk.com/club240230703"
+  },
+  {
+    "domain": "heropc8",
+    "name": "HERO PC /Компьютерный клуб/ Запрудня",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 108,
+    "url": "https://vk.com/heropc8"
+  },
+  {
+    "domain": "pokolenie_cybersport",
+    "name": "Поколение клуб киберспорта Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 105,
+    "url": "https://vk.com/pokolenie_cybersport"
+  },
+  {
+    "domain": "colizeum_kominterna",
+    "name": "COLIZEUM Москва Коминтерна | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 102,
+    "url": "https://vk.com/colizeum_kominterna"
+  },
+  {
+    "domain": "katkagaming",
+    "name": "KATKA Gaming Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 102,
+    "url": "https://vk.com/katkagaming"
+  },
+  {
+    "domain": "levingc",
+    "name": "Lev game club - официальный сайт",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 99,
+    "url": "https://vk.com/levingc"
+  },
+  {
+    "domain": "battlepassclub",
+    "name": "Компьютерный клуб | BATTLE PASS CLUB",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 97,
+    "url": "https://vk.com/battlepassclub"
+  },
+  {
+    "domain": "club226445399",
+    "name": "CyberX Москва Народного ополчения Киберклуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 96,
+    "url": "https://vk.com/club226445399"
+  },
+  {
+    "domain": "cyberxcommunityvdnh",
+    "name": "CyberX Москва ВДНХ Киберклуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 91,
+    "url": "https://vk.com/cyberxcommunityvdnh"
+  },
+  {
+    "domain": "colizeum_1905goda_msk",
+    "name": "COLIZEUM Москва 1905 года | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 90,
+    "url": "https://vk.com/colizeum_1905goda_msk"
+  },
+  {
+    "domain": "voltageblack_vn",
+    "name": "VOLTAGE BLACK - Компьютерный клуб | Вернадского",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 88,
+    "url": "https://vk.com/voltageblack_vn"
+  },
+  {
+    "domain": "publicatgiscameclub",
+    "name": "AEGIS - Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 87,
+    "url": "https://vk.com/publicatgiscameclub"
+  },
+  {
+    "domain": "club190578438",
+    "name": "GamePro",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 87,
+    "url": "https://vk.com/club190578438"
+  },
+  {
+    "domain": "clubvirtualiti",
+    "name": "Компьютерный клуб \"Virtualiti\"",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 85,
+    "url": "https://vk.com/clubvirtualiti"
+  },
+  {
+    "domain": "club224403383",
+    "name": "CyberX Компьютерный клуб Новокосино",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 84,
+    "url": "https://vk.com/club224403383"
+  },
+  {
+    "domain": "squad_msk",
+    "name": "СКВАД | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 83,
+    "url": "https://vk.com/squad_msk"
+  },
+  {
+    "domain": "goldgamearena",
+    "name": "GOLDGAME | Киберспортивный клуб | Бутово",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 78,
+    "url": "https://vk.com/goldgamearena"
+  },
+  {
+    "domain": "club240179344",
+    "name": "CyberX Омск | на Ватутина | компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 76,
+    "url": "https://vk.com/club240179344"
+  },
+  {
+    "domain": "colizeum_nagatino",
+    "name": "COLIZEUM Москва Нагатино | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 75,
+    "url": "https://vk.com/colizeum_nagatino"
+  },
+  {
+    "domain": "gromkiyvopros_chel",
+    "name": "Игровой клуб ГРОМКИЙ ВОПРОС | Челябинск",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 72,
+    "url": "https://vk.com/gromkiyvopros_chel"
+  },
+  {
+    "domain": "uplaymadi",
+    "name": "MVP Cyber club МАДИ",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 69,
+    "url": "https://vk.com/uplaymadi"
+  },
+  {
+    "domain": "colizeum_belomorskaya",
+    "name": "COLIZEUM Москва Беломорская | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 68,
+    "url": "https://vk.com/colizeum_belomorskaya"
+  },
+  {
+    "domain": "newgame_lifevarshavka",
+    "name": "NEW GAME | Компьютерный клуб | LIFE Варшавская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 68,
+    "url": "https://vk.com/newgame_lifevarshavka"
+  },
+  {
+    "domain": "cyberx_msk_ozernaya",
+    "name": "CyberX Москва Озёрная Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 67,
+    "url": "https://vk.com/cyberx_msk_ozernaya"
+  },
+  {
+    "domain": "colizeum_mars",
+    "name": "COLIZEUM Москва Марс | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 64,
+    "url": "https://vk.com/colizeum_mars"
+  },
+  {
+    "domain": "narayonecompclub",
+    "name": "Компьютерный Клуб #НАРАЙОНЕ",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 63,
+    "url": "https://vk.com/narayonecompclub"
+  },
+  {
+    "domain": "club225892662",
+    "name": "CyberX Москва Текстильщики Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 63,
+    "url": "https://vk.com/club225892662"
+  },
+  {
+    "domain": "cyberclub1474",
+    "name": "Киберклуб «ВЕГА»",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 62,
+    "url": "https://vk.com/cyberclub1474"
+  },
+  {
+    "domain": "continental.morethangame",
+    "name": "Continental. More Than Game",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 61,
+    "url": "https://vk.com/continental.morethangame"
+  },
+  {
+    "domain": "pantheoncamp",
+    "name": "Pantheon | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 61,
+    "url": "https://vk.com/pantheoncamp"
+  },
+  {
+    "domain": "club238221055",
+    "name": "CYBER URSA компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 60,
+    "url": "https://vk.com/club238221055"
+  },
+  {
+    "domain": "lord_of_arcana",
+    "name": "Lord Of Arcana PSP GAME CLUB",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 59,
+    "url": "https://vk.com/lord_of_arcana"
+  },
+  {
+    "domain": "voltageblack_vol",
+    "name": "VOLTAGE BLACK - Компьютерный клуб | Волгина 2",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 58,
+    "url": "https://vk.com/voltageblack_vol"
+  },
+  {
+    "domain": "etottclub",
+    "name": "TTCLUB Киберклуб | 24/7",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 57,
+    "url": "https://vk.com/etottclub"
+  },
+  {
+    "domain": "cyberia_dub",
+    "name": "Киберия | Дубнинская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 56,
+    "url": "https://vk.com/cyberia_dub"
+  },
+  {
+    "domain": "gdcgame",
+    "name": "GDC Game Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 56,
+    "url": "https://vk.com/gdcgame"
+  },
+  {
+    "domain": "rt_onlinegame",
+    "name": "RT. ONLINE GAME CLUB",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 51,
+    "url": "https://vk.com/rt_onlinegame"
+  },
+  {
+    "domain": "club230384206",
+    "name": "CyberX Москва Миклухо-Маклая Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 50,
+    "url": "https://vk.com/club230384206"
+  },
+  {
+    "domain": "sfera.gaming",
+    "name": "SFERA - Компьютерный клуб Астрахань",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 49,
+    "url": "https://vk.com/sfera.gaming"
+  },
+  {
+    "domain": "bigfishinggameclub",
+    "name": "Big Fishing Game Club. Морская трофейная рыбалка.",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 47,
+    "url": "https://vk.com/bigfishinggameclub"
+  },
+  {
+    "domain": "cs_game_club",
+    "name": "Cs game club|Группа игроков в кс",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 45,
+    "url": "https://vk.com/cs_game_club"
+  },
+  {
+    "domain": "runamsk1",
+    "name": "RUNA | CYBER CLUB | Варшавское",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 45,
+    "url": "https://vk.com/runamsk1"
+  },
+  {
+    "domain": "englishgameclub",
+    "name": "English Game Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 44,
+    "url": "https://vk.com/englishgameclub"
+  },
+  {
+    "domain": "mmgamezone",
+    "name": "MM Game Zone - киберспортивный компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 44,
+    "url": "https://vk.com/mmgamezone"
+  },
+  {
+    "domain": "cyber_plane",
+    "name": "Cyber Plane",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 41,
+    "url": "https://vk.com/cyber_plane"
+  },
+  {
+    "domain": "englishgamingclub",
+    "name": "English Gaming Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 40,
+    "url": "https://vk.com/englishgamingclub"
+  },
+  {
+    "domain": "cyberxarkadia",
+    "name": "CyberX Москва ТЦ Аркадия Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 38,
+    "url": "https://vk.com/cyberxarkadia"
+  },
+  {
+    "domain": "club23412733",
+    "name": "Game-zonecs|Tournament Official Сompany|GamesCup ChampShip,конта,кс,1.6,Strike,Counter,турниры,cw5x5",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 37,
+    "url": "https://vk.com/club23412733"
+  },
+  {
+    "domain": "club242259461",
+    "name": "Gost win | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 37,
+    "url": "https://vk.com/club242259461"
+  },
+  {
+    "domain": "socgcclan",
+    "name": "Раздача дропа из CS:GO. Socio-Game Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 36,
+    "url": "https://vk.com/socgcclan"
+  },
+  {
+    "domain": "colizeum_msk_galeon",
+    "name": "COLIZEUM Москва Галеон | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 36,
+    "url": "https://vk.com/colizeum_msk_galeon"
+  },
+  {
+    "domain": "metatronmsk",
+    "name": "Компьютерный клуб \"Metatron\"",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 35,
+    "url": "https://vk.com/metatronmsk"
+  },
+  {
+    "domain": "cyberx_seligerskaya",
+    "name": "CyberX Селигерская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 35,
+    "url": "https://vk.com/cyberx_seligerskaya"
+  },
+  {
+    "domain": "nastolkaclub49",
+    "name": "Игровой клуб \"НАСТОЛКА\"",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 34,
+    "url": "https://vk.com/nastolkaclub49"
+  },
+  {
+    "domain": "colizeum_msk_rustaveli",
+    "name": "COLIZEUM Camp Москва Руставели | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 32,
+    "url": "https://vk.com/colizeum_msk_rustaveli"
+  },
+  {
+    "domain": "gameclubsu",
+    "name": "Game Club - Игровой клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 32,
+    "url": "https://vk.com/gameclubsu"
+  },
+  {
+    "domain": "colizeum_kastanaevskaya",
+    "name": "COLIZEUM Москва Кастанаевская | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 30,
+    "url": "https://vk.com/colizeum_kastanaevskaya"
+  },
+  {
+    "domain": "colizeum_tolbuhina",
+    "name": "COLIZEUM Москва Толбухина | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 30,
+    "url": "https://vk.com/colizeum_tolbuhina"
+  },
+  {
+    "domain": "colizeum_msk_trekhpole",
+    "name": "COLIZEUM Москва Трехполье | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 30,
+    "url": "https://vk.com/colizeum_msk_trekhpole"
+  },
+  {
+    "domain": "colizeum_msk_birulevskaya",
+    "name": "COLIZEUM Москва Бирюлевская | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 28,
+    "url": "https://vk.com/colizeum_msk_birulevskaya"
+  },
+  {
+    "domain": "colizeum_moskvorechye",
+    "name": "COLIZEUM Москва Москворечье | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 28,
+    "url": "https://vk.com/colizeum_moskvorechye"
+  },
+  {
+    "domain": "msk_ochakovskoe",
+    "name": "COLIZEUM Москва Ома | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 28,
+    "url": "https://vk.com/msk_ochakovskoe"
+  },
+  {
+    "domain": "gamingclubmotor",
+    "name": "GAMING CLUB MOTOR",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 27,
+    "url": "https://vk.com/gamingclubmotor"
+  },
+  {
+    "domain": "gsony_arena",
+    "name": "Компьютерный клуб G-SONY",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 24,
+    "url": "https://vk.com/gsony_arena"
+  },
+  {
+    "domain": "club38017575",
+    "name": "Game Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 24,
+    "url": "https://vk.com/club38017575"
+  },
+  {
+    "domain": "colizeum_moscow_dubrovka",
+    "name": "COLIZEUM Москва Дубровка | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 22,
+    "url": "https://vk.com/colizeum_moscow_dubrovka"
+  },
+  {
+    "domain": "colizeum_kraski",
+    "name": "COLIZEUM Москва ТЦ Краски | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 22,
+    "url": "https://vk.com/colizeum_kraski"
+  },
+  {
+    "domain": "colizeum_msk_foodcity",
+    "name": "COLIZEUM Москва Фудсити | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 22,
+    "url": "https://vk.com/colizeum_msk_foodcity"
+  },
+  {
+    "domain": "colizeum_msk_avtozavodskaya",
+    "name": "COLIZEUM Москва Автозаводская | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 21,
+    "url": "https://vk.com/colizeum_msk_avtozavodskaya"
+  },
+  {
+    "domain": "colizeum_msk_planernaya",
+    "name": "COLIZEUM Москва Планерная | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 21,
+    "url": "https://vk.com/colizeum_msk_planernaya"
+  },
+  {
+    "domain": "cyberspot_zhukova",
+    "name": "Cyberspot | Компьютерный клуб | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 21,
+    "url": "https://vk.com/cyberspot_zhukova"
+  },
+  {
+    "domain": "igrok_club",
+    "name": "ИГРОК | Игровой клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 20,
+    "url": "https://vk.com/igrok_club"
+  },
+  {
+    "domain": "game_club_hd",
+    "name": "Game Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 20,
+    "url": "https://vk.com/game_club_hd"
+  },
+  {
+    "domain": "club8452859",
+    "name": "Game Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 20,
+    "url": "https://vk.com/club8452859"
+  },
+  {
+    "domain": "ronincyberhall",
+    "name": "RONIN Cyber Hall",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 19,
+    "url": "https://vk.com/ronincyberhall"
+  },
+  {
+    "domain": "connectarenaclub",
+    "name": "Connect Arena Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 18,
+    "url": "https://vk.com/connectarenaclub"
+  },
+  {
+    "domain": "cyber_gate",
+    "name": "Компьютерный клуб ДК \"Загорье\" Cyber Gate",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 17,
+    "url": "https://vk.com/cyber_gate"
+  },
+  {
+    "domain": "aegis_club",
+    "name": "AEGIS | Москва | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 17,
+    "url": "https://vk.com/aegis_club"
+  },
+  {
+    "domain": "colizeum_moskva_lublinskaya",
+    "name": "COLIZEUM Москва Люблинский парк | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 17,
+    "url": "https://vk.com/colizeum_moskva_lublinskaya"
+  },
+  {
+    "domain": "fastgameclub",
+    "name": "FAST GAME CLUB",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 17,
+    "url": "https://vk.com/fastgameclub"
+  },
+  {
+    "domain": "atlantida_cyber_club",
+    "name": "Atlantida Cyber Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 16,
+    "url": "https://vk.com/atlantida_cyber_club"
+  },
+  {
+    "domain": "colizeum_msk_horoshevskaya",
+    "name": "COLIZEUM Москва 3-я Хорошевская | Киберарена",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 16,
+    "url": "https://vk.com/colizeum_msk_horoshevskaya"
+  },
+  {
+    "domain": "vk_ramenki_1shot",
+    "name": "1shot | «Ваншот» Раменки | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 15,
+    "url": "https://vk.com/vk_ramenki_1shot"
+  },
+  {
+    "domain": "colizeum_msk_prokatnaya",
+    "name": "COLIZEUM Москва Прокатная | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 15,
+    "url": "https://vk.com/colizeum_msk_prokatnaya"
+  },
+  {
+    "domain": "colizeum_gris_moll",
+    "name": "COLIZEUM Москва Грис Молл | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 14,
+    "url": "https://vk.com/colizeum_gris_moll"
+  },
+  {
+    "domain": "colizeum_msk_headliner",
+    "name": "COLIZEUM Москва Хедлайнер | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 14,
+    "url": "https://vk.com/colizeum_msk_headliner"
+  },
+  {
+    "domain": "nexion_game",
+    "name": "Компьютерный клуб НЭКСИОН | Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 13,
+    "url": "https://vk.com/nexion_game"
+  },
+  {
+    "domain": "colizeum_msk_shelihova",
+    "name": "COLIZEUM Москва Символ | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 13,
+    "url": "https://vk.com/colizeum_msk_shelihova"
+  },
+  {
+    "domain": "club191666209",
+    "name": "Global Game Club - Варшавская",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 13,
+    "url": "https://vk.com/club191666209"
+  },
+  {
+    "domain": "club10295667",
+    "name": "PVE Gaming Club",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 13,
+    "url": "https://vk.com/club10295667"
+  },
+  {
+    "domain": "club1919060",
+    "name": "..::-=Game Club=-::..",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 12,
+    "url": "https://vk.com/club1919060"
+  },
+  {
+    "domain": "club79188637",
+    "name": "Семейный игровой клуб Муми-Дом🏡",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 12,
+    "url": "https://vk.com/club79188637"
+  },
+  {
+    "domain": "svpnt_altufyevo",
+    "name": "SavePoint Алтуфьево | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 12,
+    "url": "https://vk.com/svpnt_altufyevo"
+  },
+  {
+    "domain": "gameclubmsk",
+    "name": "Игровой клуб Москва",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 11,
+    "url": "https://vk.com/gameclubmsk"
+  },
+  {
+    "domain": "rsupemlbb",
+    "name": "Студенческий киберклуб РУС \"ГЦОЛиФК\" по MLBB",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 10,
+    "url": "https://vk.com/rsupemlbb"
+  },
+  {
+    "domain": "colizeum_msk_horoshevskoe",
+    "name": "COLIZEUM Москва Хорошевское | Компьютерный клуб",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 10,
+    "url": "https://vk.com/colizeum_msk_horoshevskoe"
+  },
+  {
+    "domain": "cyberleg1on_tournaments",
+    "name": "CYBER LEGION Иркутск | Tournaments | STREAM",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 10,
+    "url": "https://vk.com/cyberleg1on_tournaments"
+  },
+  {
+    "domain": "cyberclubsu",
+    "name": "Cyber-Club.su - Вайнахский игровой портал",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 10,
+    "url": "https://vk.com/cyberclubsu"
+  },
+  {
+    "domain": "yellow_game",
+    "name": "Fifa Yellow GAME",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 10,
+    "url": "https://vk.com/yellow_game"
+  },
+  {
+    "domain": "gameclub0012",
+    "name": "Game CLUB",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 10,
+    "url": "https://vk.com/gameclub0012"
+  },
+  {
+    "domain": "idrc5287663",
+    "name": "Game Club ID RC 5287663",
+    "city": "Москва",
+    "tz": "+03:00",
+    "members": 10,
+    "url": "https://vk.com/idrc5287663"
+  },
+  {
+    "domain": "magazin_miniature",
+    "name": "НеИгры: Warhammer, Варгеймы, Настолки",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 28218,
+    "url": "https://vk.com/magazin_miniature"
+  },
+  {
+    "domain": "igamez",
+    "name": "i-GAMEZ, Открыть компьютерный клуб, Оборудование",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 9224,
+    "url": "https://vk.com/igamez"
+  },
+  {
+    "domain": "cyberclubspb_escape",
+    "name": "Компьютерный Клуб СПБ Escape",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 8965,
+    "url": "https://vk.com/cyberclubspb_escape"
+  },
+  {
+    "domain": "darkwallclub",
+    "name": "DARKWALL - Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 8694,
+    "url": "https://vk.com/darkwallclub"
+  },
+  {
+    "domain": "playerone_club",
+    "name": "Компьютерный клуб Player One | СПБ Девяткино",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 8170,
+    "url": "https://vk.com/playerone_club"
+  },
+  {
+    "domain": "ggcitadel",
+    "name": "N7 | Сеть компьютерных клубов в Санкт-Петербурге",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 5817,
+    "url": "https://vk.com/ggcitadel"
+  },
+  {
+    "domain": "igraclub",
+    "name": "ИГРОВОЙ КЛУБ \"МАФИЯ ПИТЕР\"",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 5694,
+    "url": "https://vk.com/igraclub"
+  },
+  {
+    "domain": "colizeum_pik",
+    "name": "COLIZEUM ТРК Пик | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 5172,
+    "url": "https://vk.com/colizeum_pik"
+  },
+  {
+    "domain": "fullfocusvo",
+    "name": "FULL FOCUS | Компьютерный клуб | на ВО",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 4850,
+    "url": "https://vk.com/fullfocusvo"
+  },
+  {
+    "domain": "herzengame",
+    "name": "ГИК: Герценовский Игровой Клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 4585,
+    "url": "https://vk.com/herzengame"
+  },
+  {
+    "domain": "cyberxspbmirgorod",
+    "name": "CyberX | Спб | Площадь Восстания Киберклуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 4506,
+    "url": "https://vk.com/cyberxspbmirgorod"
+  },
+  {
+    "domain": "soulgamebalt",
+    "name": "Компьютерный клуб SoulGame | СПБ, м. Балтийская",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 4246,
+    "url": "https://vk.com/soulgamebalt"
+  },
+  {
+    "domain": "soulgamespb",
+    "name": "Компьютерный клуб SoulGame | СПБ, м. Лесная",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 4245,
+    "url": "https://vk.com/soulgamespb"
+  },
+  {
+    "domain": "toptabclub",
+    "name": "ТопТаб | Компьютерный клуб | СПБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 3396,
+    "url": "https://vk.com/toptabclub"
+  },
+  {
+    "domain": "cybcentrspb",
+    "name": "Центр Киберспорта - Компьютерный клуб I СПБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 3332,
+    "url": "https://vk.com/cybcentrspb"
+  },
+  {
+    "domain": "colizeum_kupchino",
+    "name": "COLIZEUM Купчино | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 3211,
+    "url": "https://vk.com/colizeum_kupchino"
+  },
+  {
+    "domain": "doberman.cyberclub",
+    "name": "DoberMan | Компьютерный клуб | СПб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 3162,
+    "url": "https://vk.com/doberman.cyberclub"
+  },
+  {
+    "domain": "colizeumcamp_komenda",
+    "name": "COLIZEUM Camp Комендантский | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 3061,
+    "url": "https://vk.com/colizeumcamp_komenda"
+  },
+  {
+    "domain": "kkspider",
+    "name": "Spider | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2947,
+    "url": "https://vk.com/kkspider"
+  },
+  {
+    "domain": "colizeum_kalininskiy",
+    "name": "COLIZEUM Калининский | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2896,
+    "url": "https://vk.com/colizeum_kalininskiy"
+  },
+  {
+    "domain": "colizeum_parkpobedi",
+    "name": "COLIZEUM Парк Победы | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2693,
+    "url": "https://vk.com/colizeum_parkpobedi"
+  },
+  {
+    "domain": "cyberxspbleninsky",
+    "name": "CyberX | Компьютерный клуб | СПб Ленинский",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2493,
+    "url": "https://vk.com/cyberxspbleninsky"
+  },
+  {
+    "domain": "xarena3",
+    "name": "Компьютерный клуб | XARENA | СПб Черная речка 10",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2492,
+    "url": "https://vk.com/xarena3"
+  },
+  {
+    "domain": "simple_play_spb",
+    "name": "SimplePlay. Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2487,
+    "url": "https://vk.com/simple_play_spb"
+  },
+  {
+    "domain": "krugzone",
+    "name": "Компьютерный клуб |  KRUG ZONE | Питер",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2379,
+    "url": "https://vk.com/krugzone"
+  },
+  {
+    "domain": "ubezhishche78_kk",
+    "name": "УБЕЖИЩЕ 78 - Компьютерный клуб | СПб, Всеволожск",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2325,
+    "url": "https://vk.com/ubezhishche78_kk"
+  },
+  {
+    "domain": "morvax",
+    "name": "MORVAX | Сеть компьютерных клубов | СПБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2241,
+    "url": "https://vk.com/morvax"
+  },
+  {
+    "domain": "smartshell",
+    "name": "SmartShell — Управление компьютерным клубом",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2210,
+    "url": "https://vk.com/smartshell"
+  },
+  {
+    "domain": "soulgamespbdub",
+    "name": "Компьютерный клуб SoulGame | м. Дыбенко",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2209,
+    "url": "https://vk.com/soulgamespbdub"
+  },
+  {
+    "domain": "playerone_club_cg",
+    "name": "Компьютерный клуб Player One | СПб Цветной город",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2204,
+    "url": "https://vk.com/playerone_club_cg"
+  },
+  {
+    "domain": "cyberxspbmedikov",
+    "name": "CyberX | СПБ Медиков 10к1 | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2130,
+    "url": "https://vk.com/cyberxspbmedikov"
+  },
+  {
+    "domain": "arena_justplay",
+    "name": "JUSTPLAY | КОМПЬЮТЕРНЫЙ КЛУБ/ШКОЛА КИБЕРСПОРТА",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 2065,
+    "url": "https://vk.com/arena_justplay"
+  },
+  {
+    "domain": "colizeum_akademka",
+    "name": "COLIZEUM Академка | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1935,
+    "url": "https://vk.com/colizeum_akademka"
+  },
+  {
+    "domain": "colizeum_prosvet",
+    "name": "COLIZEUM СПБ Просвещения | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1920,
+    "url": "https://vk.com/colizeum_prosvet"
+  },
+  {
+    "domain": "fullfocusclub",
+    "name": "FULL FOCUS | Сеть компьютерных клубов",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1890,
+    "url": "https://vk.com/fullfocusclub"
+  },
+  {
+    "domain": "cyberunionclub",
+    "name": "CyberUnion l КОМПЬЮТЕРНЫЙ КЛУБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1764,
+    "url": "https://vk.com/cyberunionclub"
+  },
+  {
+    "domain": "lobby_spb",
+    "name": "LOBBY | Компьютерный клуб | СПБ, Рыбацкое",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1712,
+    "url": "https://vk.com/lobby_spb"
+  },
+  {
+    "domain": "cyberx.spb.ozerki",
+    "name": "CyberX | Озерки | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1573,
+    "url": "https://vk.com/cyberx.spb.ozerki"
+  },
+  {
+    "domain": "cyberx.spb.kupchino",
+    "name": "CyberX | Купчино | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1539,
+    "url": "https://vk.com/cyberx.spb.kupchino"
+  },
+  {
+    "domain": "midas_cyberclub",
+    "name": "Компьютерный клуб Мидас Дыбенко - это киберспорт",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1523,
+    "url": "https://vk.com/midas_cyberclub"
+  },
+  {
+    "domain": "dojo.cyberclub",
+    "name": "DOJO — компьютерный клуб | Пионерская",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1499,
+    "url": "https://vk.com/dojo.cyberclub"
+  },
+  {
+    "domain": "battlezone_gameclub",
+    "name": "Компьютерный клуб BattleZone | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1498,
+    "url": "https://vk.com/battlezone_gameclub"
+  },
+  {
+    "domain": "matr1x_club",
+    "name": "Матрица - Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1426,
+    "url": "https://vk.com/matr1x_club"
+  },
+  {
+    "domain": "colizeum_spb_petrogradskiy",
+    "name": "COLIZEUM СПБ Петроградский | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1419,
+    "url": "https://vk.com/colizeum_spb_petrogradskiy"
+  },
+  {
+    "domain": "fullfocusprosvet",
+    "name": "FULL FOCUS | Компьютерный клуб | Просвет",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1398,
+    "url": "https://vk.com/fullfocusprosvet"
+  },
+  {
+    "domain": "cyberx.spb.narodnaya",
+    "name": "CyberX | СПб, Народная | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1388,
+    "url": "https://vk.com/cyberx.spb.narodnaya"
+  },
+  {
+    "domain": "colizeum_baykonurskaya",
+    "name": "COLIZEUM Байконурская | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1386,
+    "url": "https://vk.com/colizeum_baykonurskaya"
+  },
+  {
+    "domain": "vr_realvictory_spb",
+    "name": "VR Арена REAL VICTORY | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1368,
+    "url": "https://vk.com/vr_realvictory_spb"
+  },
+  {
+    "domain": "jotunheim.club",
+    "name": "Йотунхейм | Компьютерный клуб  | Озерки",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1356,
+    "url": "https://vk.com/jotunheim.club"
+  },
+  {
+    "domain": "xarena1",
+    "name": "Компьютерный клуб | XARENA| Спб Мурино",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1310,
+    "url": "https://vk.com/xarena1"
+  },
+  {
+    "domain": "cybersamurai_60",
+    "name": "Компьютерный клуб | CYBER SAMURAI | СПБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1285,
+    "url": "https://vk.com/cybersamurai_60"
+  },
+  {
+    "domain": "colizeum_kirovskiy",
+    "name": "COLIZEUM Кировский Завод | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1280,
+    "url": "https://vk.com/colizeum_kirovskiy"
+  },
+  {
+    "domain": "respawn.slava",
+    "name": "Компьютерный клуб Respawn | Славянка",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1222,
+    "url": "https://vk.com/respawn.slava"
+  },
+  {
+    "domain": "reflex.cyber",
+    "name": "РЕФЛЕКС | Компьютерный клуб | СПб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1191,
+    "url": "https://vk.com/reflex.cyber"
+  },
+  {
+    "domain": "highskill_spb",
+    "name": "High Skill | Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1189,
+    "url": "https://vk.com/highskill_spb"
+  },
+  {
+    "domain": "data_game_spb",
+    "name": "Data Game - Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1185,
+    "url": "https://vk.com/data_game_spb"
+  },
+  {
+    "domain": "colizeum_ligov",
+    "name": "COLIZEUM СПб ЛиговЪ | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1184,
+    "url": "https://vk.com/colizeum_ligov"
+  },
+  {
+    "domain": "forfameclub",
+    "name": "FOR FAME - Компьютерный клуб | Беговая",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1182,
+    "url": "https://vk.com/forfameclub"
+  },
+  {
+    "domain": "cyberx_karpinskogo",
+    "name": "CyberX | СПб | Карпинского | Киберклуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1175,
+    "url": "https://vk.com/cyberx_karpinskogo"
+  },
+  {
+    "domain": "spbcyborg",
+    "name": "КК CYBORG | Компьютерный клуб СПб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1154,
+    "url": "https://vk.com/spbcyborg"
+  },
+  {
+    "domain": "colizeum_spb_galaktika",
+    "name": "COLIZEUM СПб Галактика | Кибер-арена",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1133,
+    "url": "https://vk.com/colizeum_spb_galaktika"
+  },
+  {
+    "domain": "kiberpride_kosigina",
+    "name": "КиберПрайд | Косыгина | Компьютерный клуб | Спб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1124,
+    "url": "https://vk.com/kiberpride_kosigina"
+  },
+  {
+    "domain": "cyberx24",
+    "name": "CyberX | СПБ Международная | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1041,
+    "url": "https://vk.com/cyberx24"
+  },
+  {
+    "domain": "sigul_avtovo",
+    "name": "SIGUL AVTOVO | Lounge & Киберклуб | СПБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1032,
+    "url": "https://vk.com/sigul_avtovo"
+  },
+  {
+    "domain": "gamebackspb",
+    "name": "GAMEBACK | компьютерный клуб Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1016,
+    "url": "https://vk.com/gamebackspb"
+  },
+  {
+    "domain": "colizeum_spb_zarechnaya",
+    "name": "COLIZEUM Парнас Заречная | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1010,
+    "url": "https://vk.com/colizeum_spb_zarechnaya"
+  },
+  {
+    "domain": "strike_arena_spb_galaktika",
+    "name": "Strike Arena | СПб Галактика | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 1002,
+    "url": "https://vk.com/strike_arena_spb_galaktika"
+  },
+  {
+    "domain": "jotunheimclub",
+    "name": "Йотунхейм | Компьютерный клуб | Пр. Большевиков",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 926,
+    "url": "https://vk.com/jotunheimclub"
+  },
+  {
+    "domain": "greenspacegg",
+    "name": "GreenSpace | Компьютерный клуб SPB",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 876,
+    "url": "https://vk.com/greenspacegg"
+  },
+  {
+    "domain": "colizeum_spb_veteranov",
+    "name": "COLIZEUM СПб Ветеранов, 109 | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 873,
+    "url": "https://vk.com/colizeum_spb_veteranov"
+  },
+  {
+    "domain": "colizeum_kudrovo",
+    "name": "COLIZEUM Кудрово | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 867,
+    "url": "https://vk.com/colizeum_kudrovo"
+  },
+  {
+    "domain": "fullfocusclub_tehno",
+    "name": "FULL FOCUS | Компьютерный клуб | Техн. институт",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 854,
+    "url": "https://vk.com/fullfocusclub_tehno"
+  },
+  {
+    "domain": "xferum_spb",
+    "name": "XFERUM | Компьютерный клуб | СПБ | ТЦ Ульянка",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 848,
+    "url": "https://vk.com/xferum_spb"
+  },
+  {
+    "domain": "proskill_spb",
+    "name": "ProSkill | Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 837,
+    "url": "https://vk.com/proskill_spb"
+  },
+  {
+    "domain": "club104080296",
+    "name": "Компьютерный клуб ГБУ КЦСОН Приморского района",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 823,
+    "url": "https://vk.com/club104080296"
+  },
+  {
+    "domain": "kiberpride_spb",
+    "name": "КиберПрайд | Санкт-Петербург | Просвещения",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 821,
+    "url": "https://vk.com/kiberpride_spb"
+  },
+  {
+    "domain": "colizeum_leninskiy",
+    "name": "COLIZEUM СПб Ленинский | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 810,
+    "url": "https://vk.com/colizeum_leninskiy"
+  },
+  {
+    "domain": "colizeum_lakhta",
+    "name": "COLIZEUM Лахта | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 790,
+    "url": "https://vk.com/colizeum_lakhta"
+  },
+  {
+    "domain": "divinityspacespb",
+    "name": "Компьютерный клуб | Divinity Space | СПБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 785,
+    "url": "https://vk.com/divinityspacespb"
+  },
+  {
+    "domain": "f13cyberclub",
+    "name": "F13 - Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 782,
+    "url": "https://vk.com/f13cyberclub"
+  },
+  {
+    "domain": "g__gaming",
+    "name": "G-Gaming /  СПБ Мурино   / Компьютерный Клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 753,
+    "url": "https://vk.com/g__gaming"
+  },
+  {
+    "domain": "cyberclubnova",
+    "name": "NOVA [КОМПЬЮТЕРНЫЙ КЛУБ]",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 750,
+    "url": "https://vk.com/cyberclubnova"
+  },
+  {
+    "domain": "kb_arena",
+    "name": "Kronbars Arena | Компьютерный клуб ИТМО",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 735,
+    "url": "https://vk.com/kb_arena"
+  },
+  {
+    "domain": "kiberpridespbprazhskaya",
+    "name": "КиберПрайд |  Кудрово | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 730,
+    "url": "https://vk.com/kiberpridespbprazhskaya"
+  },
+  {
+    "domain": "midascyberlounge",
+    "name": "Компьютерный клуб | MIDAS Cyber Lounge",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 707,
+    "url": "https://vk.com/midascyberlounge"
+  },
+  {
+    "domain": "vk_mayakgames",
+    "name": "Игровой клуб «Маяк»|Настольные игры, квизы, кино",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 705,
+    "url": "https://vk.com/vk_mayakgames"
+  },
+  {
+    "domain": "cyber_dm",
+    "name": "Компьютерный клуб ДМ  | СПб | Колпино",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 690,
+    "url": "https://vk.com/cyber_dm"
+  },
+  {
+    "domain": "colizeum_spb_krasnoselsky",
+    "name": "COLIZEUM СПб Красносельский | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 688,
+    "url": "https://vk.com/colizeum_spb_krasnoselsky"
+  },
+  {
+    "domain": "endgame_aimclub",
+    "name": "ENDGAME aimclub",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 636,
+    "url": "https://vk.com/endgame_aimclub"
+  },
+  {
+    "domain": "cybersport_tochkadostupa",
+    "name": "ТОЧКА ДОСТУПА l Компьютерные клубы",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 592,
+    "url": "https://vk.com/cybersport_tochkadostupa"
+  },
+  {
+    "domain": "heaven_club",
+    "name": "Heaven | Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 586,
+    "url": "https://vk.com/heaven_club"
+  },
+  {
+    "domain": "artefact_dnd",
+    "name": "АРТЕФАКТ | Арт-игровой клуб | СПб | DND",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 579,
+    "url": "https://vk.com/artefact_dnd"
+  },
+  {
+    "domain": "kompyuternii_klub_pargolovo",
+    "name": "drop - компьютерный клуб, Парголово",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 576,
+    "url": "https://vk.com/kompyuternii_klub_pargolovo"
+  },
+  {
+    "domain": "cyberclub_underground",
+    "name": "Компьютерный клуб CYBERCLUB UNDERGROUND",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 542,
+    "url": "https://vk.com/cyberclub_underground"
+  },
+  {
+    "domain": "cyberclub_orig",
+    "name": "Компьютерный клуб Cyber Club | Новое Девяткино",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 483,
+    "url": "https://vk.com/cyberclub_orig"
+  },
+  {
+    "domain": "cyberspacespb",
+    "name": "CYBER SPACE | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 482,
+    "url": "https://vk.com/cyberspacespb"
+  },
+  {
+    "domain": "cyberwave_club",
+    "name": "CyberWave Девяткино | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 477,
+    "url": "https://vk.com/cyberwave_club"
+  },
+  {
+    "domain": "saveclub_spb",
+    "name": "SAVE | Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 465,
+    "url": "https://vk.com/saveclub_spb"
+  },
+  {
+    "domain": "club_x2_club",
+    "name": "Х2-спортивно - игровой клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 464,
+    "url": "https://vk.com/club_x2_club"
+  },
+  {
+    "domain": "kiberpide_nevskiy",
+    "name": "КиберПрайд | Невский | Компьютерный клуб | Спб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 436,
+    "url": "https://vk.com/kiberpide_nevskiy"
+  },
+  {
+    "domain": "fyrankgaming",
+    "name": "Компьютерный клуб ||Fyrank Gaming|| пр.Ветеранов",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 434,
+    "url": "https://vk.com/fyrankgaming"
+  },
+  {
+    "domain": "high_rate",
+    "name": "HIGHRATE | Компьютерный клуб | СПБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 377,
+    "url": "https://vk.com/high_rate"
+  },
+  {
+    "domain": "ggcamp",
+    "name": "GG Camp | Компьютерный клуб | Петергоф",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 362,
+    "url": "https://vk.com/ggcamp"
+  },
+  {
+    "domain": "l8spotvo",
+    "name": "L8 SPOT В.О. | Компьютерный клуб СПб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 353,
+    "url": "https://vk.com/l8spotvo"
+  },
+  {
+    "domain": "atriumarena_spb",
+    "name": "Atrium Arena Lounge - Компьютерный клуб | СПБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 331,
+    "url": "https://vk.com/atriumarena_spb"
+  },
+  {
+    "domain": "cyberwave_korol",
+    "name": "CyberWave СПБ| Компьютерный клуб Комендантский",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 299,
+    "url": "https://vk.com/cyberwave_korol"
+  },
+  {
+    "domain": "cyberspace_spb",
+    "name": "CYBERSPACE | Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 279,
+    "url": "https://vk.com/cyberspace_spb"
+  },
+  {
+    "domain": "pandbandryba",
+    "name": "PandaBanda • Компьютерный клуб • СПБ • Рыбацкое",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 277,
+    "url": "https://vk.com/pandbandryba"
+  },
+  {
+    "domain": "jungle.comp",
+    "name": "Компьютерный клуб | Jungle.Comp",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 273,
+    "url": "https://vk.com/jungle.comp"
+  },
+  {
+    "domain": "opengamearena",
+    "name": "Open Game | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 245,
+    "url": "https://vk.com/opengamearena"
+  },
+  {
+    "domain": "myinvent",
+    "name": "MYINVENT | Мебель для компьютерных клубов",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 236,
+    "url": "https://vk.com/myinvent"
+  },
+  {
+    "domain": "cosmos_spb",
+    "name": "КОСМОС | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 233,
+    "url": "https://vk.com/cosmos_spb"
+  },
+  {
+    "domain": "colizeum_spb_hudozhnikov",
+    "name": "COLIZEUM СПб Озерки | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 225,
+    "url": "https://vk.com/colizeum_spb_hudozhnikov"
+  },
+  {
+    "domain": "colizeum_spb_moskovsky_prospekt",
+    "name": "COLIZEUM СПБ Московская | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 224,
+    "url": "https://vk.com/colizeum_spb_moskovsky_prospekt"
+  },
+  {
+    "domain": "compclubnevsky",
+    "name": "КОЦ \"Александр Невский\" Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 223,
+    "url": "https://vk.com/compclubnevsky"
+  },
+  {
+    "domain": "kiberbara",
+    "name": "Компьютерный Клуб КИБЕРБАРА",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 210,
+    "url": "https://vk.com/kiberbara"
+  },
+  {
+    "domain": "digitall_heroes",
+    "name": "Киберклуб - \"Цифровые Герои\"",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 206,
+    "url": "https://vk.com/digitall_heroes"
+  },
+  {
+    "domain": "avernushome",
+    "name": "Avernus | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 187,
+    "url": "https://vk.com/avernushome"
+  },
+  {
+    "domain": "cyberfoss",
+    "name": "CYBERFOSS | Компьютерный клуб | Ленсоветовский",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 174,
+    "url": "https://vk.com/cyberfoss"
+  },
+  {
+    "domain": "major_ligov",
+    "name": "МАЖОР | Компьютерный клуб | Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 168,
+    "url": "https://vk.com/major_ligov"
+  },
+  {
+    "domain": "azbuka_nastolok",
+    "name": "Книжно-игровой клуб «АЗБУКА НАСТОЛОК»",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 139,
+    "url": "https://vk.com/azbuka_nastolok"
+  },
+  {
+    "domain": "club232353757",
+    "name": "SHOOTER I Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 135,
+    "url": "https://vk.com/club232353757"
+  },
+  {
+    "domain": "kk_cyborg",
+    "name": "КК CYBORG | Компьютерные клубы Санкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 122,
+    "url": "https://vk.com/kk_cyborg"
+  },
+  {
+    "domain": "colizeum_spb_devyatkino",
+    "name": "COLIZEUM Санкт-Петербург Девяткино | Киберарена",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 121,
+    "url": "https://vk.com/colizeum_spb_devyatkino"
+  },
+  {
+    "domain": "gamesvclub",
+    "name": "Game S CLUB | компьютерный клуб Cанкт-Петербург",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 120,
+    "url": "https://vk.com/gamesvclub"
+  },
+  {
+    "domain": "kult_pc",
+    "name": "КУЛЬТ | Компьютерный клуб Солнечный Город",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 116,
+    "url": "https://vk.com/kult_pc"
+  },
+  {
+    "domain": "thegameclud",
+    "name": "Game Club",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 100,
+    "url": "https://vk.com/thegameclud"
+  },
+  {
+    "domain": "computer_club_planb",
+    "name": "Plan B | Компьютерный клуб | Янино",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 97,
+    "url": "https://vk.com/computer_club_planb"
+  },
+  {
+    "domain": "shiftgamepc",
+    "name": "Shift Game Компьютерный клуб Новоселье",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 92,
+    "url": "https://vk.com/shiftgamepc"
+  },
+  {
+    "domain": "club239471456",
+    "name": "UNITY CYBER LOUNGE",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 85,
+    "url": "https://vk.com/club239471456"
+  },
+  {
+    "domain": "webagamingclub",
+    "name": "WEBA Gaming | Компьютерный клуб СПБ",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 83,
+    "url": "https://vk.com/webagamingclub"
+  },
+  {
+    "domain": "saturdaynightfightclub",
+    "name": "War3 retro gaming club",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 74,
+    "url": "https://vk.com/saturdaynightfightclub"
+  },
+  {
+    "domain": "truegamers_spb_smolenki",
+    "name": "TRUE GAMERS | Санкт-Петербург | наб. Смоленки",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 71,
+    "url": "https://vk.com/truegamers_spb_smolenki"
+  },
+  {
+    "domain": "skillowatt_lenenergo",
+    "name": "SkilloWatt КИБЕРКЛУБ ЛЕНЭНЕРГО",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 65,
+    "url": "https://vk.com/skillowatt_lenenergo"
+  },
+  {
+    "domain": "gamestackclub",
+    "name": "GAMESTACK | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 56,
+    "url": "https://vk.com/gamestackclub"
+  },
+  {
+    "domain": "raidgamingcyber",
+    "name": "Raid Gaming l компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 56,
+    "url": "https://vk.com/raidgamingcyber"
+  },
+  {
+    "domain": "cybermetro",
+    "name": "КИБЕРСПОРТ: КИБЕРКЛУБ СПБ МЕТРОПОЛИТЕНА",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 50,
+    "url": "https://vk.com/cybermetro"
+  },
+  {
+    "domain": "l8spotfr",
+    "name": "L8 SPOT ФР | Компьютерный клуб СПб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 40,
+    "url": "https://vk.com/l8spotfr"
+  },
+  {
+    "domain": "club7524804",
+    "name": "CYBER-CLUB*ИНТЕРКЛУБ*Клуб Кибернетик*Политех*6\"Ф\"",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 27,
+    "url": "https://vk.com/club7524804"
+  },
+  {
+    "domain": "danchaclub",
+    "name": "Dancha game club",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 27,
+    "url": "https://vk.com/danchaclub"
+  },
+  {
+    "domain": "fullfocusclub_sadovaya",
+    "name": "FULL FOCUS | Компьютерный клуб | Садовая",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 25,
+    "url": "https://vk.com/fullfocusclub_sadovaya"
+  },
+  {
+    "domain": "kk.cyber_house",
+    "name": "Cyber House | компьютерный клуб | Мурино",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 22,
+    "url": "https://vk.com/kk.cyber_house"
+  },
+  {
+    "domain": "old_game_club",
+    "name": "Old Game Club",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 22,
+    "url": "https://vk.com/old_game_club"
+  },
+  {
+    "domain": "club22044667",
+    "name": "GAME CLUB",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 19,
+    "url": "https://vk.com/club22044667"
+  },
+  {
+    "domain": "colizeum_spb_novolitovskaya",
+    "name": "COLIZEUM СПБ Новолитовская | Компьютерный клуб",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 18,
+    "url": "https://vk.com/colizeum_spb_novolitovskaya"
+  },
+  {
+    "domain": "club225868185",
+    "name": "Gaming club LPR",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 16,
+    "url": "https://vk.com/club225868185"
+  },
+  {
+    "domain": "cybergriffon",
+    "name": "Cyber Griffon",
+    "city": "Санкт-Петербург",
+    "tz": "+03:00",
+    "members": 10,
+    "url": "https://vk.com/cybergriffon"
+  }
+]

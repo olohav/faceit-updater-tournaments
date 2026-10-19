@@ -38,43 +38,16 @@ async function main() {
   }
   lap("общие списки загружены");
 
-    // 2. Поиск по ключевым словам — с защитой от зависания и выводом проблемных слов
+  // 2. Поиск по ключевым словам — тоже параллельно.
   const jobs = CONFIG.searchTerms.flatMap(term => combos.map(k => ({ term, ...k })));
   const found = new Map();
   let done = 0;
-  
   await pool(jobs, CONFIG.concurrency, async ({ term, game, disc, type }) => {
-    // Создаем защитный таймаут на 5 секунд для каждого поискового запроса
-    const timeoutPromise = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error(`Превышено время ожидания для слова "${term}"`)), 5000)
-    );
-
-    try {
-      // Запускаем гонку: либо поиск сработает быстрее 5 секунд, либо сработает таймаут
-      const items = await Promise.race([
-        searchChampionships(game, type, term),
-        timeoutPromise
-      ]);
-
-      if (DEBUG && items[0] && !found.size) console.log("RAW search item:", JSON.stringify(items[0], null, 2));
-      for (const it of items) { 
-        const id = idOf(it); 
-        if (id && !byId.has(id) && !found.has(id)) {
-          found.set(id, { it, id, discName: disc, running: type === "ongoing" }); 
-        }
-      }
-    } catch (e) {
-      // Если запрос завис или выдал ошибку, просто пишем об этом в консоль и НЕ ломаем скрипт
-      console.warn(`\n[Внимание] Запрос пропущен (${game}/${type}): ${e.message}`);
-    }
-    
-    // Выводим лог чаще (каждые 4 запроса вместо 40), чтобы видеть точный прогресс в конце
-    done++;
-    if (done % 4 === 0 || done > 200) {
-      lap(`поиск: ${done} из ${jobs.length} запросов, новых находок ${found.size}`);
-    }
+    const items = await searchChampionships(game, type, term);
+    if (DEBUG && items[0] && !found.size) console.log("RAW search item:", JSON.stringify(items[0], null, 2));
+    for (const it of items) { const id = idOf(it); if (id && !byId.has(id) && !found.has(id)) found.set(id, { it, id, discName: disc, running: type === "ongoing" }); }
+    if (++done % 40 === 0) lap(`поиск: ${done} из ${jobs.length} запросов, новых находок ${found.size}`);
   });
-
   // У находок поиска детали нужны, только если в записи нет данных о странах/датах.
   const needDetails = [...found.values()].filter(({ it }) => !it.join_checks || it.championship_start === undefined);
   for (const { it, id, discName, running } of found.values()) if (!needDetails.some(x => x.id === id)) byId.set(id, { c: { ...it, championship_id: id, _ongoing: running || undefined }, discName });
