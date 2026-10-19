@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://esf222.ru.swtest.ru/sitemap.xml

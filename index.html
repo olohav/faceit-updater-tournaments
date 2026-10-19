@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>КиберРадар — турниры по CS2, Valorant, Dota 2 и MLBB в России</title>
+<meta name="description" content="Актуальные турниры и квалификации по CS2, Dota 2, Valorant и MLBB для игроков из России: даты, призовые фонды, организаторы, регистрация. Фильтры по платформе и формату.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="КиберРадар"><meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="КиберРадар — турниры по CS2, Valorant, Dota 2 и MLBB в России">
+<meta property="og:description" content="Все открытые турниры и квалификации по киберспорту для игроков из России в одном списке.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;600;800&display=swap">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 
@@ -670,7 +674,7 @@ function route() {
   const page = m ? "home" : names[h] || "home";
   $$("[data-nav]").forEach(a => a.classList.toggle("on", a.dataset.nav === page));
   if (m) pageTournament(m[1]); else ({ home:pageHome, analytics:pageAnalytics, about:pageAbout, contacts:pageContacts, login:pageLogin, admin:pageAdmin })[page]();
-  $("#foot").textContent = "Данные на " + parseDate(DATA_UPDATED).toLocaleDateString("ru-RU") + ". Проверяйте актуальность на сайтах организаторов.";
+  $("#foot").innerHTML = "Данные на " + parseDate(DATA_UPDATED).toLocaleDateString("ru-RU") + ". Проверяйте актуальность на сайтах организаторов. · <a href=\"t/\">Каталог турниров</a>";
   scrollTo(0, 0);
 }
 
