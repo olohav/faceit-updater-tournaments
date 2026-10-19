@@ -2,3 +2,4 @@
 node_modules/
 data/vk-search-cache.json
 data/vk-unknown-cities.txt
+*.tmp

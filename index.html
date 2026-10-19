@@ -143,7 +143,8 @@ input[type=password],input[type=url],input[type=number],input[type=date],input[t
 "use strict";
 let DATA_UPDATED = "2026-10-17";     // дата последнего снимка данных (обновляется из data/faceit.json)
 const FACEIT_JSON = "data/faceit.json"; // файл, который автоматически обновляет scripts/sync-faceit.mjs
-let REMOTE = [];                     // турниры, загруженные с FACEIT автоматически
+const VK_JSON = "data/vk.json";         // одобренные вручную анонсы ПК-клубов из ВКонтакте (scripts/vk-tournaments.mjs)
+let REMOTE = [];                     // турниры, загруженные автоматически (FACEIT и ВКонтакте)
 let MANUAL = [];                     // турниры, добавленные администратором вручную (хранятся в Supabase)
 
 /* ---- Подключение сервисов: заполняется один раз, инструкция в README ---- */
@@ -173,7 +174,7 @@ const USD_RUB = 75;                  // примерный курс для ед�
 const DAY = 864e5;
 /* Платформы для фильтра и аналитики. Турнир с own:true (проводится самой платформой: FACEIT, FASTCUP, VK Play и т.д.) в списки не попадает;
    kind:"qualifier" помечает квалификацию к конкретному турниру, platform — где она проходит. */
-const PLATFORMS = ["FACEIT", "FASTCUP", "VK Play", "Cybermos", "Сайт организатора", "Не указана"];
+const PLATFORMS = ["FACEIT", "FASTCUP", "VK Play", "Cybermos", "ВКонтакте", "Сайт организатора", "Не указана"];
 
 /* Данные о турнирах. Пополняются из поиска; даты в формате ГГГГ-ММ-ДД.
    prize/fee: {v: число, c: "USD" | "RUB"}; fee: null — взнос не указан. */
@@ -690,17 +691,27 @@ setTheme(saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").m
 $("#themeBtn").onclick = () => setTheme(!document.documentElement.classList.contains("dark"));
 addEventListener("hashchange", route);
 
-/* Загружает data/faceit.json. Если файла нет или он повреждён — сайт работает на ручных данных. */
-async function loadRemote() {
+/* Загружает data/faceit.json и data/vk.json независимо друг от друга: если один файл недоступен или повреждён,
+   второй всё равно показывается, а при отсутствии обоих сайт работает на ручных данных. */
+async function loadJsonFile(url) {
   try {
     const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 5000);
-    const res = await fetch(FACEIT_JSON + "?t=" + Date.now(), { signal: ctl.signal, cache: "no-store" });
+    const res = await fetch(url + "?t=" + Date.now(), { signal: ctl.signal, cache: "no-store" });
     clearTimeout(timer);
     if (!res.ok) throw new Error(res.status);
-    const j = await res.json();
-    if (Array.isArray(j.tournaments)) REMOTE = j.tournaments.map(clean).filter(Boolean);
-    if (j.updatedAt) DATA_UPDATED = j.updatedAt.slice(0, 10);
-  } catch (e) { console.warn("FACEIT-данные недоступны, используются ручные:", e); }
+    return await res.json();
+  } catch (e) { console.warn("Данные недоступны (" + url + "):", e); return null; }
+}
+async function loadRemote() {
+  const files = await Promise.all([FACEIT_JSON, VK_JSON].map(loadJsonFile));
+  let updated = "";
+  REMOTE = [];
+  for (const j of files) {
+    if (!j) continue;
+    if (Array.isArray(j.tournaments)) REMOTE.push(...j.tournaments.map(clean).filter(Boolean));
+    if (j.updatedAt && j.updatedAt > updated) updated = j.updatedAt;
+  }
+  if (updated) DATA_UPDATED = updated.slice(0, 10);
 }
 
 /* Запуск: данные FACEIT и ручные турниры грузятся параллельно; состояние входа подхватывается позже и перерисовывает шапку/страницу. */

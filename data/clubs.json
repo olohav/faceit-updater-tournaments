@@ -1,5 +1,189 @@
 [
   {
+    "domain": "goodgameabk",
+    "name": "Good Game |Компьютерный клуб| Абакан",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 1186,
+    "url": "https://vk.com/goodgameabk"
+  },
+  {
+    "domain": "gameplayabakan",
+    "name": "GAMEPLAY | АБАКАН | КИБЕРСПОРТИВНЫЙ КЛУБ",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 1185,
+    "url": "https://vk.com/gameplayabakan"
+  },
+  {
+    "domain": "ninja_abakan",
+    "name": "NINJA | Компьютерный клуб | Абакан",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 973,
+    "url": "https://vk.com/ninja_abakan"
+  },
+  {
+    "domain": "random.abakan",
+    "name": "Игровой Клуб RANDOM",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 815,
+    "url": "https://vk.com/random.abakan"
+  },
+  {
+    "domain": "cyberx.abakan",
+    "name": "CyberX Абакан Компьютерный клуб",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 734,
+    "url": "https://vk.com/cyberx.abakan"
+  },
+  {
+    "domain": "cyberproabk",
+    "name": "Cyber Pro | Компьютерный клуб | Абакан",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 701,
+    "url": "https://vk.com/cyberproabk"
+  },
+  {
+    "domain": "club228806961",
+    "name": "CyberX Абакан ул. Торговая Компьютерный клуб",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 652,
+    "url": "https://vk.com/club228806961"
+  },
+  {
+    "domain": "pixelgameclubabakan",
+    "name": "PIXEL game club | Абакан",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 548,
+    "url": "https://vk.com/pixelgameclubabakan"
+  },
+  {
+    "domain": "inferno_19rus",
+    "name": "Компьютерный клуб \"INFERNO Gaming\" (Абакан)",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 48,
+    "url": "https://vk.com/inferno_19rus"
+  },
+  {
+    "domain": "novax.abakan",
+    "name": "NovaX - Cyber Club",
+    "city": "Абакан",
+    "tz": "+07:00",
+    "members": 30,
+    "url": "https://vk.com/novax.abakan"
+  },
+  {
+    "domain": "cyberx_angarsk",
+    "name": "CyberX | Ангарск | Компьютерный клуб",
+    "city": "Ангарск",
+    "tz": "+08:00",
+    "members": 3153,
+    "url": "https://vk.com/cyberx_angarsk"
+  },
+  {
+    "domain": "bunker_angarsk",
+    "name": "БУНКЕР | Ангарск | Компьютерный клуб",
+    "city": "Ангарск",
+    "tz": "+08:00",
+    "members": 2148,
+    "url": "https://vk.com/bunker_angarsk"
+  },
+  {
+    "domain": "cyberxarmavir",
+    "name": "CyberX | Армавир ТЦ Арбат | Компьютерный клуб",
+    "city": "Армавир",
+    "tz": "+03:00",
+    "members": 957,
+    "url": "https://vk.com/cyberxarmavir"
+  },
+  {
+    "domain": "gamer_armavir",
+    "name": "GAMER Компьютерный Клуб Армавир",
+    "city": "Армавир",
+    "tz": "+03:00",
+    "members": 943,
+    "url": "https://vk.com/gamer_armavir"
+  },
+  {
+    "domain": "truegamers_armavir",
+    "name": "TRUE GAMERS | Армавир | Компьютерный клуб",
+    "city": "Армавир",
+    "tz": "+03:00",
+    "members": 451,
+    "url": "https://vk.com/truegamers_armavir"
+  },
+  {
+    "domain": "cyberxarmavir26a",
+    "name": "CyberX|Армавир Азовская|Компьютерный клуб",
+    "city": "Армавир",
+    "tz": "+03:00",
+    "members": 235,
+    "url": "https://vk.com/cyberxarmavir26a"
+  },
+  {
+    "domain": "cyberclub_vavilon",
+    "name": "ВАВИЛОНПРО | Компьютерные Клубы в Архангельске",
+    "city": "Архангельск",
+    "tz": "+03:00",
+    "members": 11053,
+    "url": "https://vk.com/cyberclub_vavilon"
+  },
+  {
+    "domain": "cs_arh",
+    "name": "CYBER/SPOT Архангельск -  Компьютерный клуб",
+    "city": "Архангельск",
+    "tz": "+03:00",
+    "members": 4291,
+    "url": "https://vk.com/cs_arh"
+  },
+  {
+    "domain": "good_game_played",
+    "name": "Good Game | Компьютерный клуб | Архангельск",
+    "city": "Архангельск",
+    "tz": "+03:00",
+    "members": 4191,
+    "url": "https://vk.com/good_game_played"
+  },
+  {
+    "domain": "marscyberclub",
+    "name": "MARS | Компьютерный клуб Новодвинск",
+    "city": "Архангельск",
+    "tz": "+03:00",
+    "members": 3382,
+    "url": "https://vk.com/marscyberclub"
+  },
+  {
+    "domain": "storent",
+    "name": "100RENTGEN Компьютерный клуб",
+    "city": "Архангельск",
+    "tz": "+03:00",
+    "members": 2949,
+    "url": "https://vk.com/storent"
+  },
+  {
+    "domain": "colizeum_arkhangelsk_imperial",
+    "name": "COLIZEUM Архангельск Империал |Компьютерный клуб",
+    "city": "Архангельск",
+    "tz": "+03:00",
+    "members": 2469,
+    "url": "https://vk.com/colizeum_arkhangelsk_imperial"
+  },
+  {
+    "domain": "colizeum_arkhangelsk",
+    "name": "COLIZEUM Архангельск на Никитова | Киберарена",
+    "city": "Архангельск",
+    "tz": "+03:00",
+    "members": 388,
+    "url": "https://vk.com/colizeum_arkhangelsk"
+  },
+  {
     "domain": "tm.arena",
     "name": "ТМ АРЕНА | Компьютерный клуб Астрахань",
     "city": "Астрахань",
@@ -200,6 +384,70 @@
     "url": "https://vk.com/club149905013"
   },
   {
+    "domain": "colizeum_balashikha",
+    "name": "COLIZEUM Балашиха | Компьютерный клуб",
+    "city": "Балашиха",
+    "tz": "+03:00",
+    "members": 3111,
+    "url": "https://vk.com/colizeum_balashikha"
+  },
+  {
+    "domain": "redzonerespawn",
+    "name": "RedZone | Компьютерный клуб | Балашиха",
+    "city": "Балашиха",
+    "tz": "+03:00",
+    "members": 2436,
+    "url": "https://vk.com/redzonerespawn"
+  },
+  {
+    "domain": "oblaka.gaming",
+    "name": "Облака · Компьютерный клуб · Балашиха",
+    "city": "Балашиха",
+    "tz": "+03:00",
+    "members": 906,
+    "url": "https://vk.com/oblaka.gaming"
+  },
+  {
+    "domain": "bazalt_cyberclub",
+    "name": "Киберклуб Bazalt Железнодорожный",
+    "city": "Балашиха",
+    "tz": "+03:00",
+    "members": 754,
+    "url": "https://vk.com/bazalt_cyberclub"
+  },
+  {
+    "domain": "cyberclub_108",
+    "name": "108 - Компьютерный клуб | Балашиха",
+    "city": "Балашиха",
+    "tz": "+03:00",
+    "members": 651,
+    "url": "https://vk.com/cyberclub_108"
+  },
+  {
+    "domain": "immortal_lounge",
+    "name": "Компьютерный клуб \"Immortal Game Lounge\"",
+    "city": "Балашиха",
+    "tz": "+03:00",
+    "members": 402,
+    "url": "https://vk.com/immortal_lounge"
+  },
+  {
+    "domain": "moon_game_balashikha",
+    "name": "Moon Game | Компьютерный клуб | Балашиха",
+    "city": "Балашиха",
+    "tz": "+03:00",
+    "members": 99,
+    "url": "https://vk.com/moon_game_balashikha"
+  },
+  {
+    "domain": "cyberparkbalashiha",
+    "name": "КиберПарк - компьютерный клуб | Балашиха",
+    "city": "Балашиха",
+    "tz": "+03:00",
+    "members": 22,
+    "url": "https://vk.com/cyberparkbalashiha"
+  },
+  {
     "domain": "phoenix_cyber_arena",
     "name": "PHOENIX CYBERARENA - Компьютерный клуб | Барнаул",
     "city": "Барнаул",
@@ -252,7 +500,7 @@
     "name": "BG Компьютерный клуб | Барнаул",
     "city": "Барнаул",
     "tz": "+07:00",
-    "members": 2271,
+    "members": 2272,
     "url": "https://vk.com/boomgaming22"
   },
   {
@@ -416,6 +664,286 @@
     "url": "https://vk.com/club238184029"
   },
   {
+    "domain": "space.arena",
+    "name": "Компьютерный клуб SPACE l Белгород",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 7562,
+    "url": "https://vk.com/space.arena"
+  },
+  {
+    "domain": "gcyberclub31",
+    "name": "Компьютерные клубы G31 Старый Оскол, Белгород",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 7184,
+    "url": "https://vk.com/gcyberclub31"
+  },
+  {
+    "domain": "pingwin_arena",
+    "name": "ПингВин Арена • Компьютерные клубы • Белгород",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 5200,
+    "url": "https://vk.com/pingwin_arena"
+  },
+  {
+    "domain": "cyberxbgd",
+    "name": "CyberX | Компьютерный клуб | Белгород",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 2582,
+    "url": "https://vk.com/cyberxbgd"
+  },
+  {
+    "domain": "pixel_31",
+    "name": "Компьютерный клуб PIXEL l Белгород",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 1364,
+    "url": "https://vk.com/pixel_31"
+  },
+  {
+    "domain": "epiczone31",
+    "name": "Компьютерный клуб | Новый Оскол | Epic Zone",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 1176,
+    "url": "https://vk.com/epiczone31"
+  },
+  {
+    "domain": "kiberpridebelgorod",
+    "name": "КиберПрайд | Белгород | Компьютерный клуб",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 1009,
+    "url": "https://vk.com/kiberpridebelgorod"
+  },
+  {
+    "domain": "belgorod_universitet",
+    "name": "COLIZEUM Белгород Университет | Киберарена",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 949,
+    "url": "https://vk.com/belgorod_universitet"
+  },
+  {
+    "domain": "lider_cyberzone",
+    "name": "LiderCyberZone | Компьютерный клуб | Белгород",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 821,
+    "url": "https://vk.com/lider_cyberzone"
+  },
+  {
+    "domain": "colizeum_belgorod",
+    "name": "COLIZEUM Белгород Конева | Компьютерный клуб",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 695,
+    "url": "https://vk.com/colizeum_belgorod"
+  },
+  {
+    "domain": "club197511386",
+    "name": "Gaming Club",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 216,
+    "url": "https://vk.com/club197511386"
+  },
+  {
+    "domain": "bunker_belgorod31",
+    "name": "БУНКЕР | Киберспортивный клуб | Белгород",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 129,
+    "url": "https://vk.com/bunker_belgorod31"
+  },
+  {
+    "domain": "game.club4k",
+    "name": "Игровой клуб 4К | Центр молодежи",
+    "city": "Белгород",
+    "tz": "+03:00",
+    "members": 48,
+    "url": "https://vk.com/game.club4k"
+  },
+  {
+    "domain": "liveclub_blg",
+    "name": "LIVE CLUB | Компьютерный клуб Благовещенск",
+    "city": "Благовещенск",
+    "tz": "+09:00",
+    "members": 1143,
+    "url": "https://vk.com/liveclub_blg"
+  },
+  {
+    "domain": "strike_arena_blagoveshchensk",
+    "name": "Strike Arena | Компьютерный клуб | Благовещенск",
+    "city": "Благовещенск",
+    "tz": "+09:00",
+    "members": 1054,
+    "url": "https://vk.com/strike_arena_blagoveshchensk"
+  },
+  {
+    "domain": "cyberkaifblg",
+    "name": "КИБЕРКАЙФ | Киберспортивный клуб | Благовещенск",
+    "city": "Благовещенск",
+    "tz": "+09:00",
+    "members": 1046,
+    "url": "https://vk.com/cyberkaifblg"
+  },
+  {
+    "domain": "no_name_bratsk",
+    "name": "NO NAME | Компьютерный клуб Братск",
+    "city": "Братск",
+    "tz": "+08:00",
+    "members": 3642,
+    "url": "https://vk.com/no_name_bratsk"
+  },
+  {
+    "domain": "bootcampbratsk",
+    "name": "Компьютерный клуб BOOTCAMP | Братск",
+    "city": "Братск",
+    "tz": "+08:00",
+    "members": 1796,
+    "url": "https://vk.com/bootcampbratsk"
+  },
+  {
+    "domain": "minigamiya",
+    "name": "МИНИГАМИЯ | Семейный игровой клуб | Братск",
+    "city": "Братск",
+    "tz": "+08:00",
+    "members": 1549,
+    "url": "https://vk.com/minigamiya"
+  },
+  {
+    "domain": "prime_gameclub",
+    "name": "PRIME | БРАТСК | КОМПЬЮТЕРНЫЙ КЛУБ",
+    "city": "Братск",
+    "tz": "+08:00",
+    "members": 852,
+    "url": "https://vk.com/prime_gameclub"
+  },
+  {
+    "domain": "gg_arena_bratsk",
+    "name": "GG ARENA компьютерный клуб, г.Братск",
+    "city": "Братск",
+    "tz": "+08:00",
+    "members": 562,
+    "url": "https://vk.com/gg_arena_bratsk"
+  },
+  {
+    "domain": "cyberx_bratsk",
+    "name": "CyberX | Братск | Компьютерный клуб",
+    "city": "Братск",
+    "tz": "+08:00",
+    "members": 418,
+    "url": "https://vk.com/cyberx_bratsk"
+  },
+  {
+    "domain": "cyber_bryansk",
+    "name": "Компьютерный клуб TEvent Cyber Arena | Брянск",
+    "city": "Брянск",
+    "tz": "+03:00",
+    "members": 4419,
+    "url": "https://vk.com/cyber_bryansk"
+  },
+  {
+    "domain": "colizeum_camp_bryansk_gorky",
+    "name": "COLIZEUM Camp Брянск ДК Горького | Кибер арена",
+    "city": "Брянск",
+    "tz": "+03:00",
+    "members": 2543,
+    "url": "https://vk.com/colizeum_camp_bryansk_gorky"
+  },
+  {
+    "domain": "goodgameclub32",
+    "name": "GOOD GAME | Компьютерный клуб | Брянск | 24/7",
+    "city": "Брянск",
+    "tz": "+03:00",
+    "members": 2488,
+    "url": "https://vk.com/goodgameclub32"
+  },
+  {
+    "domain": "cp.game32",
+    "name": "Cyber Point | Компьютерный клуб Брянск | 24/7",
+    "city": "Брянск",
+    "tz": "+03:00",
+    "members": 1010,
+    "url": "https://vk.com/cp.game32"
+  },
+  {
+    "domain": "13rayon_cyberarena",
+    "name": "13 РАЙОН КИБЕР АРЕНА| Компьютерный клуб ВН",
+    "city": "Великий Новгород",
+    "tz": "+03:00",
+    "members": 3624,
+    "url": "https://vk.com/13rayon_cyberarena"
+  },
+  {
+    "domain": "lion_club.novgorod",
+    "name": "Lion Club Компьютерный клуб - Великий Новгород",
+    "city": "Великий Новгород",
+    "tz": "+03:00",
+    "members": 3001,
+    "url": "https://vk.com/lion_club.novgorod"
+  },
+  {
+    "domain": "krakencybervn",
+    "name": "KRAKEN Кибер клуб Свободы 7а Великий Новгород",
+    "city": "Великий Новгород",
+    "tz": "+03:00",
+    "members": 2603,
+    "url": "https://vk.com/krakencybervn"
+  },
+  {
+    "domain": "k2_cyber",
+    "name": "K2 Компьютерный клуб I Великий Новгород",
+    "city": "Великий Новгород",
+    "tz": "+03:00",
+    "members": 2227,
+    "url": "https://vk.com/k2_cyber"
+  },
+  {
+    "domain": "battlehall_vn",
+    "name": "Battle Hall Компьютерный клуб | Великий Новгород",
+    "city": "Великий Новгород",
+    "tz": "+03:00",
+    "members": 2015,
+    "url": "https://vk.com/battlehall_vn"
+  },
+  {
+    "domain": "krakencyber1",
+    "name": "KRAKEN Кибер Клуб ТРЦ Московский",
+    "city": "Великий Новгород",
+    "tz": "+03:00",
+    "members": 1991,
+    "url": "https://vk.com/krakencyber1"
+  },
+  {
+    "domain": "cybernovsu",
+    "name": "Киберспортивный клуб НовГУ | NovSU.Gaming",
+    "city": "Великий Новгород",
+    "tz": "+03:00",
+    "members": 1158,
+    "url": "https://vk.com/cybernovsu"
+  },
+  {
+    "domain": "ug_nov",
+    "name": "Компьютерный клуб - United Gamers | Новгород",
+    "city": "Великий Новгород",
+    "tz": "+03:00",
+    "members": 493,
+    "url": "https://vk.com/ug_nov"
+  },
+  {
+    "domain": "royal_cyber53",
+    "name": "Компьютерный клуб РОЯЛ | Великий Новгород",
+    "city": "Великий Новгород",
+    "tz": "+03:00",
+    "members": 79,
+    "url": "https://vk.com/royal_cyber53"
+  },
+  {
     "domain": "sektorcyberclub",
     "name": "SEKTOR | Сеть кибер клубов | Владивосток",
     "city": "Владивосток",
@@ -560,6 +1088,62 @@
     "url": "https://vk.com/mafia_vdk"
   },
   {
+    "domain": "cyberhub33",
+    "name": "КиберХаб® | Компьютерные клубы",
+    "city": "Владимир",
+    "tz": "+03:00",
+    "members": 2787,
+    "url": "https://vk.com/cyberhub33"
+  },
+  {
+    "domain": "vladimir_cyberx",
+    "name": "CyberX | Владимир | Компьютерный клуб",
+    "city": "Владимир",
+    "tz": "+03:00",
+    "members": 2158,
+    "url": "https://vk.com/vladimir_cyberx"
+  },
+  {
+    "domain": "colizeum_vladimir",
+    "name": "COLIZEUM Новинка | Компьютерный клуб | Владимир",
+    "city": "Владимир",
+    "tz": "+03:00",
+    "members": 1841,
+    "url": "https://vk.com/colizeum_vladimir"
+  },
+  {
+    "domain": "timecyberplace",
+    "name": "TIME CYBER PLACE | Компьютерный клуб | Владимир",
+    "city": "Владимир",
+    "tz": "+03:00",
+    "members": 982,
+    "url": "https://vk.com/timecyberplace"
+  },
+  {
+    "domain": "colizeum_vladimir_centr",
+    "name": "COLIZEUM Центр |  Компьютерный клуб | Владимир",
+    "city": "Владимир",
+    "tz": "+03:00",
+    "members": 949,
+    "url": "https://vk.com/colizeum_vladimir_centr"
+  },
+  {
+    "domain": "heroesclub33",
+    "name": "Heroes Club | Компьютерный клуб | #GRINCHSEASON",
+    "city": "Владимир",
+    "tz": "+03:00",
+    "members": 857,
+    "url": "https://vk.com/heroesclub33"
+  },
+  {
+    "domain": "zasada.gaming",
+    "name": "ZASADA - компьютерный клуб l Владимир",
+    "city": "Владимир",
+    "tz": "+03:00",
+    "members": 741,
+    "url": "https://vk.com/zasada.gaming"
+  },
+  {
     "domain": "cyberarenavlg",
     "name": "CYBERARENA - Компьютерный клуб | Волгоград",
     "city": "Волгоград",
@@ -588,7 +1172,7 @@
     "name": "SKILL Gaming",
     "city": "Волгоград",
     "tz": "+03:00",
-    "members": 3440,
+    "members": 3441,
     "url": "https://vk.com/skillgaming"
   },
   {
@@ -620,7 +1204,7 @@
     "name": "ZEUS - Компьютерный клуб | Волгоград",
     "city": "Волгоград",
     "tz": "+03:00",
-    "members": 2347,
+    "members": 2349,
     "url": "https://vk.com/zeus_vlg"
   },
   {
@@ -888,6 +1472,174 @@
     "url": "https://vk.com/gamehouseklimovsk"
   },
   {
+    "domain": "2kvlz",
+    "name": "2K | Компьютерный клуб | Волжский",
+    "city": "Волжский",
+    "tz": "+03:00",
+    "members": 2291,
+    "url": "https://vk.com/2kvlz"
+  },
+  {
+    "domain": "kiberpride_volzhskiy",
+    "name": "КиберПрайд | Волжский | Компьютерный клуб",
+    "city": "Волжский",
+    "tz": "+03:00",
+    "members": 2109,
+    "url": "https://vk.com/kiberpride_volzhskiy"
+  },
+  {
+    "domain": "projectpeek",
+    "name": "PEEK | Компьютерный клуб Волжский",
+    "city": "Волжский",
+    "tz": "+03:00",
+    "members": 726,
+    "url": "https://vk.com/projectpeek"
+  },
+  {
+    "domain": "kibervlz",
+    "name": "КИБЕР | Компьютерный Клуб | Волжский",
+    "city": "Волжский",
+    "tz": "+03:00",
+    "members": 523,
+    "url": "https://vk.com/kibervlz"
+  },
+  {
+    "domain": "vrdropvlz",
+    "name": "VR drop | Игровой клуб Волжский",
+    "city": "Волжский",
+    "tz": "+03:00",
+    "members": 485,
+    "url": "https://vk.com/vrdropvlz"
+  },
+  {
+    "domain": "miragecyber",
+    "name": "Мираж | Компьютерный клуб | Волжский",
+    "city": "Волжский",
+    "tz": "+03:00",
+    "members": 296,
+    "url": "https://vk.com/miragecyber"
+  },
+  {
+    "domain": "colizeum_vologda",
+    "name": "COLIZEUM Вологда | Компьютерный клуб",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 7962,
+    "url": "https://vk.com/colizeum_vologda"
+  },
+  {
+    "domain": "xgame35",
+    "name": "X-Game КОМПЬЮТЕРНЫЙ КЛУБ | ВОЛОГДА",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 3948,
+    "url": "https://vk.com/xgame35"
+  },
+  {
+    "domain": "cyberx_vologda",
+    "name": "CyberX | Компьютерный клуб | Вологда",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 2878,
+    "url": "https://vk.com/cyberx_vologda"
+  },
+  {
+    "domain": "spytnik035",
+    "name": "Компьютерный клуб СПУТНИК | Вологда",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 2552,
+    "url": "https://vk.com/spytnik035"
+  },
+  {
+    "domain": "trafficgaming",
+    "name": "Компьютерный клуб ТРАФИК | Вологда",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 2294,
+    "url": "https://vk.com/trafficgaming"
+  },
+  {
+    "domain": "hornetclub35",
+    "name": "Компьютерный клуб Hornet | Вологда",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 2254,
+    "url": "https://vk.com/hornetclub35"
+  },
+  {
+    "domain": "cyberspot35",
+    "name": "CYBER/SPOT Вологда - компьютерный клуб",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 2220,
+    "url": "https://vk.com/cyberspot35"
+  },
+  {
+    "domain": "igrakomplex_35",
+    "name": "Игровой центр \"Айсберг\"",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 1817,
+    "url": "https://vk.com/igrakomplex_35"
+  },
+  {
+    "domain": "prem__club",
+    "name": "PREM club | компьютерный клуб | Вологда",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 1702,
+    "url": "https://vk.com/prem__club"
+  },
+  {
+    "domain": "mw_vologa",
+    "name": "Компьютерный клуб MetaWorld | Вологда",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 1195,
+    "url": "https://vk.com/mw_vologa"
+  },
+  {
+    "domain": "d.gameclub.vologda",
+    "name": "D-Game | Вологда | Компьютерный клуб | Компы",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 1075,
+    "url": "https://vk.com/d.gameclub.vologda"
+  },
+  {
+    "domain": "metaworld35",
+    "name": "Компьютерный клуб MetaWorld | ТЦ «Оазис»",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 659,
+    "url": "https://vk.com/metaworld35"
+  },
+  {
+    "domain": "gladiatorfixgame",
+    "name": "Gladiator FixGame | Компьютерный клуб | Вологда",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 575,
+    "url": "https://vk.com/gladiatorfixgame"
+  },
+  {
+    "domain": "cyberepicenter",
+    "name": "CYBER EPICENTER Вологда | Компьютерный клуб",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 205,
+    "url": "https://vk.com/cyberepicenter"
+  },
+  {
+    "domain": "artes_club_vol",
+    "name": "Artes Club | Компьютерный клуб | Вологда",
+    "city": "Вологда",
+    "tz": "+03:00",
+    "members": 123,
+    "url": "https://vk.com/artes_club_vol"
+  },
+  {
     "domain": "paramatrixcyberarena",
     "name": "Paramatrix | КиберАрена | Компьютерный Клуб",
     "city": "Воронеж",
@@ -908,7 +1660,7 @@
     "name": "ПИКСЕЛЬ | Компьютерный клуб | Воронеж",
     "city": "Воронеж",
     "tz": "+03:00",
-    "members": 6026,
+    "members": 6025,
     "url": "https://vk.com/pixelcyber.club"
   },
   {
@@ -1328,6 +2080,38 @@
     "url": "https://vk.com/letscube_nn"
   },
   {
+    "domain": "xgame_dzr",
+    "name": "X-GAME Дзержинск Компьютерный клуб",
+    "city": "Дзержинск",
+    "tz": "+03:00",
+    "members": 4199,
+    "url": "https://vk.com/xgame_dzr"
+  },
+  {
+    "domain": "colizeum_camp_dzerzhinsk",
+    "name": "COLIZEUM Дзержинск | Компьютерный клуб",
+    "city": "Дзержинск",
+    "tz": "+03:00",
+    "members": 3539,
+    "url": "https://vk.com/colizeum_camp_dzerzhinsk"
+  },
+  {
+    "domain": "zxc_cyberclub",
+    "name": "Компьютерный клуб ZXC |  Дзержинск",
+    "city": "Дзержинск",
+    "tz": "+03:00",
+    "members": 2612,
+    "url": "https://vk.com/zxc_cyberclub"
+  },
+  {
+    "domain": "save_zone1",
+    "name": "Компьютерный клуб SaveZone | ДЗЕРЖИНСК",
+    "city": "Дзержинск",
+    "tz": "+03:00",
+    "members": 1324,
+    "url": "https://vk.com/save_zone1"
+  },
+  {
     "domain": "ingamearena",
     "name": "INGAME - Компьютерный клуб | Екатеринбург",
     "city": "Екатеринбург",
@@ -1692,7 +2476,7 @@
     "name": "Компьютерный клуб | ALT TAB | АЛЬТ ТАБ | ЕКБ",
     "city": "Екатеринбург",
     "tz": "+05:00",
-    "members": 167,
+    "members": 168,
     "url": "https://vk.com/alt_tab_ekb"
   },
   {
@@ -1766,6 +2550,86 @@
     "tz": "+05:00",
     "members": 13,
     "url": "https://vk.com/club219309629"
+  },
+  {
+    "domain": "tg_ivanovo",
+    "name": "TG Club - Компьютерный Клуб",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 6159,
+    "url": "https://vk.com/tg_ivanovo"
+  },
+  {
+    "domain": "colizeumcamp_ivanovo",
+    "name": "COLIZEUM Иваново Кузнецова | Компьютерный клуб",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 2637,
+    "url": "https://vk.com/colizeumcamp_ivanovo"
+  },
+  {
+    "domain": "cyber37room",
+    "name": "Компьютерный клуб Cyber Room | Иваново",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 2430,
+    "url": "https://vk.com/cyber37room"
+  },
+  {
+    "domain": "pc_zeus",
+    "name": "Компьютерный клуб |  \"Zeus\" Иваново",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 2366,
+    "url": "https://vk.com/pc_zeus"
+  },
+  {
+    "domain": "neon_37",
+    "name": "NEON | CYBER CLUB | Иваново | пр. Ленина 3",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 1583,
+    "url": "https://vk.com/neon_37"
+  },
+  {
+    "domain": "arenafps",
+    "name": "Компьютерный клуб FPS Gaming Club | Иваново",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 935,
+    "url": "https://vk.com/arenafps"
+  },
+  {
+    "domain": "colizeum_ivanovo_kukonkovykh",
+    "name": "COLIZEUM Иваново Куконковых | Компьютерный клуб",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 789,
+    "url": "https://vk.com/colizeum_ivanovo_kukonkovykh"
+  },
+  {
+    "domain": "rampage37",
+    "name": "RAMPAGE | Компьютерный клуб | ИВАНОВО",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 789,
+    "url": "https://vk.com/rampage37"
+  },
+  {
+    "domain": "cyberpoint37",
+    "name": "Cyber Point компьютерный клуб Иваново",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 573,
+    "url": "https://vk.com/cyberpoint37"
+  },
+  {
+    "domain": "insoprime",
+    "name": "Insomnia | Компьютерный клуб | Иваново",
+    "city": "Иваново",
+    "tz": "+03:00",
+    "members": 323,
+    "url": "https://vk.com/insoprime"
   },
   {
     "domain": "zeon_arena",
@@ -2206,6 +3070,54 @@
     "tz": "+08:00",
     "members": 12,
     "url": "https://vk.com/club176837587"
+  },
+  {
+    "domain": "colizeum_yoha",
+    "name": "COLIZEUM Йошкар-Ола Гагарина | Компьютерный клуб",
+    "city": "Йошкар-Ола",
+    "tz": "+03:00",
+    "members": 3496,
+    "url": "https://vk.com/colizeum_yoha"
+  },
+  {
+    "domain": "missclickclub",
+    "name": "Компьютерный клуб MISS CLICK",
+    "city": "Йошкар-Ола",
+    "tz": "+03:00",
+    "members": 2265,
+    "url": "https://vk.com/missclickclub"
+  },
+  {
+    "domain": "replaygc",
+    "name": "RP GAME CENTER | Йошкар-Ола | Компьютерный клуб",
+    "city": "Йошкар-Ола",
+    "tz": "+03:00",
+    "members": 634,
+    "url": "https://vk.com/replaygc"
+  },
+  {
+    "domain": "colizeum_gollandia",
+    "name": "COLIZEUM Йошкар-Ола ТЦ Голландия | Киберарена",
+    "city": "Йошкар-Ола",
+    "tz": "+03:00",
+    "members": 242,
+    "url": "https://vk.com/colizeum_gollandia"
+  },
+  {
+    "domain": "club160264341",
+    "name": "GAME CLUB^^^",
+    "city": "Йошкар-Ола",
+    "tz": "+03:00",
+    "members": 11,
+    "url": "https://vk.com/club160264341"
+  },
+  {
+    "domain": "afk__12",
+    "name": "Компьютерный клуб АФК",
+    "city": "Йошкар-Ола",
+    "tz": "+03:00",
+    "members": 7,
+    "url": "https://vk.com/afk__12"
   },
   {
     "domain": "tikiviki_kazan",
@@ -2864,6 +3776,78 @@
     "url": "https://vk.com/clicknet"
   },
   {
+    "domain": "cyberarena40",
+    "name": "КА*40 | Киберспортивный клуб | Калуга",
+    "city": "Калуга",
+    "tz": "+03:00",
+    "members": 5656,
+    "url": "https://vk.com/cyberarena40"
+  },
+  {
+    "domain": "neo_club_kaluga",
+    "name": "Компьютерный клуб НЕО Калуга",
+    "city": "Калуга",
+    "tz": "+03:00",
+    "members": 4211,
+    "url": "https://vk.com/neo_club_kaluga"
+  },
+  {
+    "domain": "cyber_zarya",
+    "name": "Кибер Заря - Компьютерный клуб | Калуга",
+    "city": "Калуга",
+    "tz": "+03:00",
+    "members": 2900,
+    "url": "https://vk.com/cyber_zarya"
+  },
+  {
+    "domain": "colizeum_kaluga_matrix",
+    "name": "COLIZEUM Калуга Матрица | Компьютерный клуб",
+    "city": "Калуга",
+    "tz": "+03:00",
+    "members": 2894,
+    "url": "https://vk.com/colizeum_kaluga_matrix"
+  },
+  {
+    "domain": "deadshot_kaluga",
+    "name": "Компьютерный клуб | ДЭДШОТ | Калуга",
+    "city": "Калуга",
+    "tz": "+03:00",
+    "members": 2362,
+    "url": "https://vk.com/deadshot_kaluga"
+  },
+  {
+    "domain": "gameroom40",
+    "name": "GAME ROOM - Компьютерный клуб | Калуга",
+    "city": "Калуга",
+    "tz": "+03:00",
+    "members": 1874,
+    "url": "https://vk.com/gameroom40"
+  },
+  {
+    "domain": "gameroom_pravo",
+    "name": "GAME ROOM-Правый Берег|Компьютерный клуб|Калуга",
+    "city": "Калуга",
+    "tz": "+03:00",
+    "members": 662,
+    "url": "https://vk.com/gameroom_pravo"
+  },
+  {
+    "domain": "oldskoof",
+    "name": "Old Skoof / Ретро-компьютерный клуб в Калуге",
+    "city": "Калуга",
+    "tz": "+03:00",
+    "members": 364,
+    "url": "https://vk.com/oldskoof"
+  },
+  {
+    "domain": "ugolok40",
+    "name": "«Уголок» | Антикафе | Компьютерный клуб | Калуга",
+    "city": "Калуга",
+    "tz": "+03:00",
+    "members": 126,
+    "url": "https://vk.com/ugolok40"
+  },
+  {
     "domain": "cafepoligon",
     "name": "Компьютерный клуб ПОЛИГОН Кемерово",
     "city": "Кемерово",
@@ -2998,6 +3982,278 @@
     "tz": "+07:00",
     "members": 33,
     "url": "https://vk.com/club31417076"
+  },
+  {
+    "domain": "kabanarena",
+    "name": "KABAN ARENA - Компьютерный клуб | Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 7575,
+    "url": "https://vk.com/kabanarena"
+  },
+  {
+    "domain": "mana_kirov",
+    "name": "MANA | Компьютерный клуб Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 6775,
+    "url": "https://vk.com/mana_kirov"
+  },
+  {
+    "domain": "respawnkirov",
+    "name": "RESPAWN | Компьютерный клуб | Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 3414,
+    "url": "https://vk.com/respawnkirov"
+  },
+  {
+    "domain": "progg_43",
+    "name": "PROGG | Киберклуб Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 2707,
+    "url": "https://vk.com/progg_43"
+  },
+  {
+    "domain": "legacykirov",
+    "name": "LEGACY | Компьютерный клуб | Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 1963,
+    "url": "https://vk.com/legacykirov"
+  },
+  {
+    "domain": "esc.kirov",
+    "name": "ESC | Киров | Компьютерный клуб",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 1837,
+    "url": "https://vk.com/esc.kirov"
+  },
+  {
+    "domain": "kaifgame43",
+    "name": "Компьютерный клуб KAIF GAME | Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 1198,
+    "url": "https://vk.com/kaifgame43"
+  },
+  {
+    "domain": "mw_kirov",
+    "name": "Компьютерный клуб MetaWorld | Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 1119,
+    "url": "https://vk.com/mw_kirov"
+  },
+  {
+    "domain": "cyberdynegaming",
+    "name": "Cyberdyne Gaming | Компьютерный клуб Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 850,
+    "url": "https://vk.com/cyberdynegaming"
+  },
+  {
+    "domain": "cybermera",
+    "name": "Компьютерный клуб Кибермера | Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 840,
+    "url": "https://vk.com/cybermera"
+  },
+  {
+    "domain": "rush_cyber_bar",
+    "name": "Кибербар RUSH | Киров | Казанская 75А",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 740,
+    "url": "https://vk.com/rush_cyber_bar"
+  },
+  {
+    "domain": "figital.kirov",
+    "name": "Фиджитал-центр Киров | Компьютерный клуб",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 613,
+    "url": "https://vk.com/figital.kirov"
+  },
+  {
+    "domain": "clubciberxkirov",
+    "name": "CyberX Киров Компьютерный клуб",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 250,
+    "url": "https://vk.com/clubciberxkirov"
+  },
+  {
+    "domain": "cyberclub43",
+    "name": "Компьютерный клуб \"Cyber\"(МЫ ЗАКРЫТЫ)",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 170,
+    "url": "https://vk.com/cyberclub43"
+  },
+  {
+    "domain": "metaworld43",
+    "name": "MetaWorld | Компьютерный клуб Киров",
+    "city": "Киров",
+    "tz": "+03:00",
+    "members": 160,
+    "url": "https://vk.com/metaworld43"
+  },
+  {
+    "domain": "atomkms",
+    "name": "АТОМ | Компьютерный клуб Комсомольск-на-Амуре",
+    "city": "Комсомольск-на-Амуре",
+    "tz": "+10:00",
+    "members": 2944,
+    "url": "https://vk.com/atomkms"
+  },
+  {
+    "domain": "cyberxkms",
+    "name": "CyberX Комсомольск-на-Амуре Киберклуб",
+    "city": "Комсомольск-на-Амуре",
+    "tz": "+10:00",
+    "members": 794,
+    "url": "https://vk.com/cyberxkms"
+  },
+  {
+    "domain": "gamelabkms",
+    "name": "Game Lab Комсомольск",
+    "city": "Комсомольск-на-Амуре",
+    "tz": "+10:00",
+    "members": 178,
+    "url": "https://vk.com/gamelabkms"
+  },
+  {
+    "domain": "colizeum_korolev",
+    "name": "COLIZEUM Королев | Компьютерный клуб",
+    "city": "Королёв",
+    "tz": "+03:00",
+    "members": 3331,
+    "url": "https://vk.com/colizeum_korolev"
+  },
+  {
+    "domain": "xo.gaming",
+    "name": "XO Gaming | Компьютерный клуб | Королев",
+    "city": "Королёв",
+    "tz": "+03:00",
+    "members": 378,
+    "url": "https://vk.com/xo.gaming"
+  },
+  {
+    "domain": "arena51.korolev",
+    "name": "Arena 51 | Gaming Club",
+    "city": "Королёв",
+    "tz": "+03:00",
+    "members": 307,
+    "url": "https://vk.com/arena51.korolev"
+  },
+  {
+    "domain": "truegamers_korolev_riverpark",
+    "name": "TRUE GAMERS l Королёв | Ривер Парк",
+    "city": "Королёв",
+    "tz": "+03:00",
+    "members": 268,
+    "url": "https://vk.com/truegamers_korolev_riverpark"
+  },
+  {
+    "domain": "ultra_cyber_club",
+    "name": "ULTRA CYBER CLUB",
+    "city": "Королёв",
+    "tz": "+03:00",
+    "members": 30,
+    "url": "https://vk.com/ultra_cyber_club"
+  },
+  {
+    "domain": "cyberclub_4942",
+    "name": "4942 | Компьютерный клуб | Кострома",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 3657,
+    "url": "https://vk.com/cyberclub_4942"
+  },
+  {
+    "domain": "esc_level44",
+    "name": "ESC LVL44 | КОМПЬЮТЕРНЫЙ КЛУБ",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 1445,
+    "url": "https://vk.com/esc_level44"
+  },
+  {
+    "domain": "magmacyberclub",
+    "name": "MAGMA Cyber Club | Компьютерный клуб | Кострома",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 1087,
+    "url": "https://vk.com/magmacyberclub"
+  },
+  {
+    "domain": "colizeum_kostroma_nikitskaya",
+    "name": "COLIZEUM Кострома Никитская | Компьютерный клуб",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 932,
+    "url": "https://vk.com/colizeum_kostroma_nikitskaya"
+  },
+  {
+    "domain": "impulsecc",
+    "name": "Impulse | Компьютерный клуб",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 915,
+    "url": "https://vk.com/impulsecc"
+  },
+  {
+    "domain": "streetgaming44",
+    "name": "STREET GAMING - Компьютерный клуб",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 752,
+    "url": "https://vk.com/streetgaming44"
+  },
+  {
+    "domain": "flamecyber44",
+    "name": "FLAME | Компьютерный клуб | Кострома",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 610,
+    "url": "https://vk.com/flamecyber44"
+  },
+  {
+    "domain": "igraclub44",
+    "name": "ИГРА | Кострома | Компьютерный клуб",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 402,
+    "url": "https://vk.com/igraclub44"
+  },
+  {
+    "domain": "strike_arena_44",
+    "name": "Strike Arena на Мира | Кострома",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 301,
+    "url": "https://vk.com/strike_arena_44"
+  },
+  {
+    "domain": "kostroma_magistralinaya",
+    "name": "COLIZEUM Кострома Магистральная | Киберарена",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 181,
+    "url": "https://vk.com/kostroma_magistralinaya"
+  },
+  {
+    "domain": "cyberarena44",
+    "name": "Cyber Arena Компьютерный клуб",
+    "city": "Кострома",
+    "tz": "+03:00",
+    "members": 179,
+    "url": "https://vk.com/cyberarena44"
   },
   {
     "domain": "1shot.krasnodar",
@@ -4240,6 +5496,78 @@
     "url": "https://vk.com/club13637087"
   },
   {
+    "domain": "pushgang45",
+    "name": "Pushgang - Компьютерный клуб | Курган",
+    "city": "Курган",
+    "tz": "+05:00",
+    "members": 7416,
+    "url": "https://vk.com/pushgang45"
+  },
+  {
+    "domain": "ggcamp45",
+    "name": "GGCamp Курган | Компьютерный клуб",
+    "city": "Курган",
+    "tz": "+05:00",
+    "members": 2685,
+    "url": "https://vk.com/ggcamp45"
+  },
+  {
+    "domain": "gamingzonekgn",
+    "name": "Gaming Zone | Компьютерный клуб | Курган",
+    "city": "Курган",
+    "tz": "+05:00",
+    "members": 910,
+    "url": "https://vk.com/gamingzonekgn"
+  },
+  {
+    "domain": "timmeit_kurgan",
+    "name": "ТИММЕЙТ l Курган | Компьютерный клуб",
+    "city": "Курган",
+    "tz": "+05:00",
+    "members": 892,
+    "url": "https://vk.com/timmeit_kurgan"
+  },
+  {
+    "domain": "skynet_game_club",
+    "name": "СКАЙНЕТ Компьютерный клуб Курск",
+    "city": "Курск",
+    "tz": "+03:00",
+    "members": 14536,
+    "url": "https://vk.com/skynet_game_club"
+  },
+  {
+    "domain": "kiberpride_kursk",
+    "name": "КиберПрайд | Курск | Компьютерный клуб",
+    "city": "Курск",
+    "tz": "+03:00",
+    "members": 3262,
+    "url": "https://vk.com/kiberpride_kursk"
+  },
+  {
+    "domain": "colizeum_kursk",
+    "name": "COLIZEUM Курск ТЦ Олимп | Компьютерный клуб",
+    "city": "Курск",
+    "tz": "+03:00",
+    "members": 193,
+    "url": "https://vk.com/colizeum_kursk"
+  },
+  {
+    "domain": "pudge_arena",
+    "name": "Пудж Арена",
+    "city": "Курск",
+    "tz": "+03:00",
+    "members": 168,
+    "url": "https://vk.com/pudge_arena"
+  },
+  {
+    "domain": "stangameclub",
+    "name": "STAN GAME CLUB",
+    "city": "Курск",
+    "tz": "+03:00",
+    "members": 134,
+    "url": "https://vk.com/stangameclub"
+  },
+  {
     "domain": "good_game48",
     "name": "Кибер Арена  \"Good Game\"  (г. Липецк)",
     "city": "Липецк",
@@ -4448,6 +5776,70 @@
     "url": "https://vk.com/club59506320"
   },
   {
+    "domain": "colizeum_lubertsy",
+    "name": "COLIZEUM Люберцы  | Компьютерный клуб",
+    "city": "Люберцы",
+    "tz": "+03:00",
+    "members": 2508,
+    "url": "https://vk.com/colizeum_lubertsy"
+  },
+  {
+    "domain": "newgame_gameclub",
+    "name": "NEW GAME | Компьютерный клуб | НЕКРАСОВКА",
+    "city": "Люберцы",
+    "tz": "+03:00",
+    "members": 896,
+    "url": "https://vk.com/newgame_gameclub"
+  },
+  {
+    "domain": "colizeum_kraskovo",
+    "name": "COLIZEUM Красково | Компьютерный клуб",
+    "city": "Люберцы",
+    "tz": "+03:00",
+    "members": 796,
+    "url": "https://vk.com/colizeum_kraskovo"
+  },
+  {
+    "domain": "easycyberarena",
+    "name": "Grizzly Cyber Arena [Компьютерный Клуб Люберцы]",
+    "city": "Люберцы",
+    "tz": "+03:00",
+    "members": 626,
+    "url": "https://vk.com/easycyberarena"
+  },
+  {
+    "domain": "colizeum_poselok_oktyabrskiy",
+    "name": "COLIZEUM Люберцы Октябрьский | Компьютерный клуб",
+    "city": "Люберцы",
+    "tz": "+03:00",
+    "members": 363,
+    "url": "https://vk.com/colizeum_poselok_oktyabrskiy"
+  },
+  {
+    "domain": "ccolizeum_camp_lyubertsy",
+    "name": "COLIZEUM CAMP Люберцы Парк | Киберарена",
+    "city": "Люберцы",
+    "tz": "+03:00",
+    "members": 206,
+    "url": "https://vk.com/ccolizeum_camp_lyubertsy"
+  },
+  {
+    "domain": "cyberayi",
+    "name": "Cyber Ayi",
+    "city": "Люберцы",
+    "tz": "+03:00",
+    "members": 125,
+    "url": "https://vk.com/cyberayi"
+  },
+  {
+    "domain": "dmesportslounge",
+    "name": "DM eSports Lounge",
+    "city": "Люберцы",
+    "tz": "+03:00",
+    "members": 33,
+    "url": "https://vk.com/dmesportslounge"
+  },
+  {
     "domain": "colizeum_magadan_lenina",
     "name": "COLIZEUM Магадан Ленина | Киберарена",
     "city": "Магадан",
@@ -4472,11 +5864,99 @@
     "url": "https://vk.com/dns.shop.magadan"
   },
   {
+    "domain": "gammagamingclub",
+    "name": "ГАММА | Компьютерный клуб | Магнитогорск | GAMMA",
+    "city": "Магнитогорск",
+    "tz": "+05:00",
+    "members": 9957,
+    "url": "https://vk.com/gammagamingclub"
+  },
+  {
+    "domain": "colizeum_magnitogorsk",
+    "name": "COLIZEUM Магнитогорск | Компьютерный клуб",
+    "city": "Магнитогорск",
+    "tz": "+05:00",
+    "members": 4324,
+    "url": "https://vk.com/colizeum_magnitogorsk"
+  },
+  {
+    "domain": "newlevelmgn",
+    "name": "Новый Уровень – Компьютерный клуб | Магнитогорск",
+    "city": "Магнитогорск",
+    "tz": "+05:00",
+    "members": 3176,
+    "url": "https://vk.com/newlevelmgn"
+  },
+  {
+    "domain": "cyberx_magnitogorsk",
+    "name": "CyberX Магнитогорск Компьютерный клуб",
+    "city": "Магнитогорск",
+    "tz": "+05:00",
+    "members": 1128,
+    "url": "https://vk.com/cyberx_magnitogorsk"
+  },
+  {
+    "domain": "ngmgn_club",
+    "name": "New Game Club",
+    "city": "Магнитогорск",
+    "tz": "+05:00",
+    "members": 430,
+    "url": "https://vk.com/ngmgn_club"
+  },
+  {
+    "domain": "plantsitemgn",
+    "name": "PLANTSITE | компьютерный клуб | Магнитогорск",
+    "city": "Магнитогорск",
+    "tz": "+05:00",
+    "members": 335,
+    "url": "https://vk.com/plantsitemgn"
+  },
+  {
+    "domain": "legomir_mgn",
+    "name": "Игровой клуб ЛегоМир | Магнитогорск",
+    "city": "Магнитогорск",
+    "tz": "+05:00",
+    "members": 249,
+    "url": "https://vk.com/legomir_mgn"
+  },
+  {
+    "domain": "ggmhk",
+    "name": "Go Game | Компьютерный клуб | Махачкала",
+    "city": "Махачкала",
+    "tz": "+03:00",
+    "members": 1070,
+    "url": "https://vk.com/ggmhk"
+  },
+  {
+    "domain": "cyberzone05",
+    "name": "CYBER ZONE Gaming Center",
+    "city": "Махачкала",
+    "tz": "+03:00",
+    "members": 593,
+    "url": "https://vk.com/cyberzone05"
+  },
+  {
+    "domain": "gameclubmimod",
+    "name": "Game Club \"MI MOD\"",
+    "city": "Махачкала",
+    "tz": "+03:00",
+    "members": 39,
+    "url": "https://vk.com/gameclubmimod"
+  },
+  {
+    "domain": "fullfocusclub_makhachkala",
+    "name": "FULL FOCUS | Компьютерный клуб | Махачкала",
+    "city": "Махачкала",
+    "tz": "+03:00",
+    "members": 34,
+    "url": "https://vk.com/fullfocusclub_makhachkala"
+  },
+  {
     "domain": "colizeumarena",
     "name": "COLIZEUM | Сеть компьютерных клубов",
     "city": "Москва",
     "tz": "+03:00",
-    "members": 149298,
+    "members": 149299,
     "url": "https://vk.com/colizeumarena"
   },
   {
@@ -7624,6 +9104,222 @@
     "url": "https://vk.com/idrc5287663"
   },
   {
+    "domain": "murmansk_mall_pc_club",
+    "name": "COLIZEON | ТРК Murmansk Mall | Компьютерный Клуб",
+    "city": "Мурманск",
+    "tz": "+03:00",
+    "members": 6227,
+    "url": "https://vk.com/murmansk_mall_pc_club"
+  },
+  {
+    "domain": "cyberx_murmansk",
+    "name": "CyberX | Мурманск | Компьютерные клубы",
+    "city": "Мурманск",
+    "tz": "+03:00",
+    "members": 3757,
+    "url": "https://vk.com/cyberx_murmansk"
+  },
+  {
+    "domain": "truegamers_murmansk",
+    "name": "TRUE GAMERS l Мурманск | Компьютерный клуб",
+    "city": "Мурманск",
+    "tz": "+03:00",
+    "members": 1816,
+    "url": "https://vk.com/truegamers_murmansk"
+  },
+  {
+    "domain": "baza_murmansk51",
+    "name": "БАЗА | Мурманск | Компьютерный клуб",
+    "city": "Мурманск",
+    "tz": "+03:00",
+    "members": 1248,
+    "url": "https://vk.com/baza_murmansk51"
+  },
+  {
+    "domain": "colizeum_severnoe_nagornoe",
+    "name": "COLIZEUM Мурманск Северное Нагорное | Киберарена",
+    "city": "Мурманск",
+    "tz": "+03:00",
+    "members": 852,
+    "url": "https://vk.com/colizeum_severnoe_nagornoe"
+  },
+  {
+    "domain": "a8_mytishchi",
+    "name": "A8 | Компьютерный клуб Мытищи",
+    "city": "Мытищи",
+    "tz": "+03:00",
+    "members": 3380,
+    "url": "https://vk.com/a8_mytishchi"
+  },
+  {
+    "domain": "ggpro_ru",
+    "name": "GG.PRO | Компьютерный клуб в Пироговском",
+    "city": "Мытищи",
+    "tz": "+03:00",
+    "members": 1228,
+    "url": "https://vk.com/ggpro_ru"
+  },
+  {
+    "domain": "cyberstart.club",
+    "name": "CYBER START | Компьютерный клуб Мытищи",
+    "city": "Мытищи",
+    "tz": "+03:00",
+    "members": 1126,
+    "url": "https://vk.com/cyberstart.club"
+  },
+  {
+    "domain": "club216580557",
+    "name": "ELIZIUM Arena | Компьютерный клуб | Мытищи",
+    "city": "Мытищи",
+    "tz": "+03:00",
+    "members": 1047,
+    "url": "https://vk.com/club216580557"
+  },
+  {
+    "domain": "1shotmira",
+    "name": "1shot | «Ваншот» Мытищи | Компьютерный клуб",
+    "city": "Мытищи",
+    "tz": "+03:00",
+    "members": 480,
+    "url": "https://vk.com/1shotmira"
+  },
+  {
+    "domain": "colizeum_novoe_medvedkovo",
+    "name": "COLIZEUM Мытищи Новое Медведково | Киберарена",
+    "city": "Мытищи",
+    "tz": "+03:00",
+    "members": 296,
+    "url": "https://vk.com/colizeum_novoe_medvedkovo"
+  },
+  {
+    "domain": "andycyberclub",
+    "name": "Cyber",
+    "city": "Мытищи",
+    "tz": "+03:00",
+    "members": 19,
+    "url": "https://vk.com/andycyberclub"
+  },
+  {
+    "domain": "gga_nc1",
+    "name": "GGA | Компьютерный клуб | Челны",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 7198,
+    "url": "https://vk.com/gga_nc1"
+  },
+  {
+    "domain": "cyberkaef_chelny",
+    "name": "CYBER KAEF | Набережные Челны",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 899,
+    "url": "https://vk.com/cyberkaef_chelny"
+  },
+  {
+    "domain": "trendygame",
+    "name": "Компьютерный клуб | TRENDY GAME | Челны",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 823,
+    "url": "https://vk.com/trendygame"
+  },
+  {
+    "domain": "battlehall_nch",
+    "name": "BH | Компьютерный клуб | Набережные Челны",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 809,
+    "url": "https://vk.com/battlehall_nch"
+  },
+  {
+    "domain": "gga_nc3",
+    "name": "GGA | Компьютерный клуб | Челны | Мидл",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 685,
+    "url": "https://vk.com/gga_nc3"
+  },
+  {
+    "domain": "xgame_nch",
+    "name": "Компьютерный клуб X Game| Набережные Челны",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 383,
+    "url": "https://vk.com/xgame_nch"
+  },
+  {
+    "domain": "skillgamersnch",
+    "name": "Компьютерный клуб \"Zona Gaming Club\"",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 331,
+    "url": "https://vk.com/skillgamersnch"
+  },
+  {
+    "domain": "rmplaychelny",
+    "name": "«R&M PLAY» | Компьютерный клуб",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 269,
+    "url": "https://vk.com/rmplaychelny"
+  },
+  {
+    "domain": "cyberclubchelny",
+    "name": "CyberX Набережные Челны Киберклуб",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 254,
+    "url": "https://vk.com/cyberclubchelny"
+  },
+  {
+    "domain": "volt_nch",
+    "name": "Компьютерный клуб VOLT | Набережные Челны",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 243,
+    "url": "https://vk.com/volt_nch"
+  },
+  {
+    "domain": "game_zone_nch",
+    "name": "Компьютерный клуб Game Zone",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 99,
+    "url": "https://vk.com/game_zone_nch"
+  },
+  {
+    "domain": "shiftnch",
+    "name": "SHIFT l Компьютерный клуб l Набережные Челны",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 65,
+    "url": "https://vk.com/shiftnch"
+  },
+  {
+    "domain": "stockarenanch",
+    "name": "Компьютерный клуб «Сток Арена» г. Челны",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 48,
+    "url": "https://vk.com/stockarenanch"
+  },
+  {
+    "domain": "boardgamearenavip",
+    "name": "Board Game Arena, купить премиум на BGA",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 43,
+    "url": "https://vk.com/boardgamearenavip"
+  },
+  {
+    "domain": "loot_nch",
+    "name": "GAME CLUB | CHELNY",
+    "city": "Набережные Челны",
+    "tz": "+03:00",
+    "members": 21,
+    "url": "https://vk.com/loot_nch"
+  },
+  {
     "domain": "justplayn",
     "name": "Джаст - Компьютерный клуб | Нижний Новгород",
     "city": "Нижний Новгород",
@@ -8014,6 +9710,206 @@
     "tz": "+03:00",
     "members": 13,
     "url": "https://vk.com/club242294875"
+  },
+  {
+    "domain": "fullhp.cyber",
+    "name": "Компьютерный клуб FullHP | Новокузнецк",
+    "city": "Новокузнецк",
+    "tz": "+07:00",
+    "members": 5345,
+    "url": "https://vk.com/fullhp.cyber"
+  },
+  {
+    "domain": "cyber_imperia",
+    "name": "ИМПЕРИЯ | Компьютерный клуб | Новокузнецк",
+    "city": "Новокузнецк",
+    "tz": "+07:00",
+    "members": 2470,
+    "url": "https://vk.com/cyber_imperia"
+  },
+  {
+    "domain": "colizeum_novokuznetsk",
+    "name": "COLIZEUM Континент | Компьютерный клуб",
+    "city": "Новокузнецк",
+    "tz": "+07:00",
+    "members": 2236,
+    "url": "https://vk.com/colizeum_novokuznetsk"
+  },
+  {
+    "domain": "kiberpridenovokuznetsk",
+    "name": "КиберПрайд | Новокузнецк | Компьютерный клуб",
+    "city": "Новокузнецк",
+    "tz": "+07:00",
+    "members": 1825,
+    "url": "https://vk.com/kiberpridenovokuznetsk"
+  },
+  {
+    "domain": "god_game.nvkz",
+    "name": "God Game | Новокузнецк | Компьютерный клуб",
+    "city": "Новокузнецк",
+    "tz": "+07:00",
+    "members": 1558,
+    "url": "https://vk.com/god_game.nvkz"
+  },
+  {
+    "domain": "colizeum_novokuznetsk_novoiliins",
+    "name": "COLIZEUM Новокузнецк Новоильинский | Кибер Арена",
+    "city": "Новокузнецк",
+    "tz": "+07:00",
+    "members": 1153,
+    "url": "https://vk.com/colizeum_novokuznetsk_novoiliins"
+  },
+  {
+    "domain": "easy_game_cyber_sport",
+    "name": "EASY GAME | NOVOKUZNETSK | CYBER SPORT",
+    "city": "Новокузнецк",
+    "tz": "+07:00",
+    "members": 180,
+    "url": "https://vk.com/easy_game_cyber_sport"
+  },
+  {
+    "domain": "easy_gamecybersport",
+    "name": "EASY GAME | NOVOKUZNETSK | CYBER SPORT",
+    "city": "Новокузнецк",
+    "tz": "+07:00",
+    "members": 93,
+    "url": "https://vk.com/easy_gamecybersport"
+  },
+  {
+    "domain": "undergroundnovoross",
+    "name": "Компьютерный клуб АНДЕР | Новороссийск",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 1779,
+    "url": "https://vk.com/undergroundnovoross"
+  },
+  {
+    "domain": "brogaming_nvrsk",
+    "name": "КИБЕР БРАТ × Компьютерный клуб × Пионерская",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 1499,
+    "url": "https://vk.com/brogaming_nvrsk"
+  },
+  {
+    "domain": "cyberplacenvrsk",
+    "name": "CYBER PLACE | Компьютерный клуб | Новороссийск",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 1258,
+    "url": "https://vk.com/cyberplacenvrsk"
+  },
+  {
+    "domain": "nintendonvrsk",
+    "name": "N1NTENDO CYBER LOUNGE - Новороссийск",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 1138,
+    "url": "https://vk.com/nintendonvrsk"
+  },
+  {
+    "domain": "undergroundnovoross2",
+    "name": "Компьютерный клуб Underground | Свободы 6",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 761,
+    "url": "https://vk.com/undergroundnovoross2"
+  },
+  {
+    "domain": "undergroundnovoross3",
+    "name": "Компьютерный клуб Underground | Пионерская 4",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 323,
+    "url": "https://vk.com/undergroundnovoross3"
+  },
+  {
+    "domain": "lostcuber",
+    "name": "LOST CYBER LOUNGE ст-ца Раевская",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 291,
+    "url": "https://vk.com/lostcuber"
+  },
+  {
+    "domain": "undergroundnovoross6",
+    "name": "Компьютерный клуб Underground | Герцена 3А",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 276,
+    "url": "https://vk.com/undergroundnovoross6"
+  },
+  {
+    "domain": "undergroundnovoross4",
+    "name": "Компьютерный клуб АНДЕР | Дзержинского 227",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 268,
+    "url": "https://vk.com/undergroundnovoross4"
+  },
+  {
+    "domain": "undergroundnovoross7",
+    "name": "Компьютерный клуб Underground | Бориса Пупко 5",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 229,
+    "url": "https://vk.com/undergroundnovoross7"
+  },
+  {
+    "domain": "gamerxnvrsk",
+    "name": "GamerX | Новороссийск | Компьютерный клуб",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 217,
+    "url": "https://vk.com/gamerxnvrsk"
+  },
+  {
+    "domain": "club227032548",
+    "name": "CyberX Новороссийск Южный Компьютерный клуб",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 199,
+    "url": "https://vk.com/club227032548"
+  },
+  {
+    "domain": "cyber.baza",
+    "name": "Cyber Baza | Компьютерный клуб | Новороссийск",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 184,
+    "url": "https://vk.com/cyber.baza"
+  },
+  {
+    "domain": "undergroundnovoross5",
+    "name": "Компьютерный клуб АНДЕР | Дзержинского 172",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 145,
+    "url": "https://vk.com/undergroundnovoross5"
+  },
+  {
+    "domain": "cyberzona23",
+    "name": "Компьютерный клуб | Кибер Зона 23| Новороссийск",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 129,
+    "url": "https://vk.com/cyberzona23"
+  },
+  {
+    "domain": "undergroundnovoross8",
+    "name": "Компьютерный клуб Underground | Пролетарская 20",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 73,
+    "url": "https://vk.com/undergroundnovoross8"
+  },
+  {
+    "domain": "cyberbro_vidova",
+    "name": "КИБЕР БРАТ × Компьютерный клуб × Видова",
+    "city": "Новороссийск",
+    "tz": "+03:00",
+    "members": 24,
+    "url": "https://vk.com/cyberbro_vidova"
   },
   {
     "domain": "gectorgeek",
@@ -8480,6 +10376,54 @@
     "url": "https://vk.com/scgamingclub"
   },
   {
+    "domain": "cyberx_obninsk",
+    "name": "CyberX | Обнинск | Компьютерный клуб",
+    "city": "Обнинск",
+    "tz": "+03:00",
+    "members": 2213,
+    "url": "https://vk.com/cyberx_obninsk"
+  },
+  {
+    "domain": "colizeum_obninsk",
+    "name": "COLIZEUM Camp Обнинск | Компьютерный клуб",
+    "city": "Обнинск",
+    "tz": "+03:00",
+    "members": 581,
+    "url": "https://vk.com/colizeum_obninsk"
+  },
+  {
+    "domain": "cyber_leader40",
+    "name": "Cyber Leader | Компьютерный клуб | Обнинск",
+    "city": "Обнинск",
+    "tz": "+03:00",
+    "members": 459,
+    "url": "https://vk.com/cyber_leader40"
+  },
+  {
+    "domain": "wargames_obninsk",
+    "name": "Варгейм клуб \"Гиперкуб\" Обнинск",
+    "city": "Обнинск",
+    "tz": "+03:00",
+    "members": 149,
+    "url": "https://vk.com/wargames_obninsk"
+  },
+  {
+    "domain": "obninskggarena",
+    "name": "GG CYBER ARENA |Обнинск",
+    "city": "Обнинск",
+    "tz": "+03:00",
+    "members": 136,
+    "url": "https://vk.com/obninskggarena"
+  },
+  {
+    "domain": "oblivionpcclub",
+    "name": "OBLIVION | CYBER CLUB | Обнинск",
+    "city": "Обнинск",
+    "tz": "+03:00",
+    "members": 44,
+    "url": "https://vk.com/oblivionpcclub"
+  },
+  {
     "domain": "arenacyberomsk",
     "name": "ARENA CYBEROMSK | Компьютерный клуб",
     "city": "Омск",
@@ -8704,6 +10648,46 @@
     "url": "https://vk.com/club43077706"
   },
   {
+    "domain": "cyberxorel",
+    "name": "CyberX | Орёл Компьютерный клуб",
+    "city": "Орёл",
+    "tz": "+03:00",
+    "members": 3605,
+    "url": "https://vk.com/cyberxorel"
+  },
+  {
+    "domain": "kiberpride_orel",
+    "name": "КиберПрайд | Орёл | Компьютерный клуб",
+    "city": "Орёл",
+    "tz": "+03:00",
+    "members": 2041,
+    "url": "https://vk.com/kiberpride_orel"
+  },
+  {
+    "domain": "empiregames_orel",
+    "name": "EMPIRE GAMES | Орёл | Компьютерный клуб",
+    "city": "Орёл",
+    "tz": "+03:00",
+    "members": 943,
+    "url": "https://vk.com/empiregames_orel"
+  },
+  {
+    "domain": "cyberspaceorel",
+    "name": "CYBER SPACE | Компьютерный клуб | Орёл",
+    "city": "Орёл",
+    "tz": "+03:00",
+    "members": 778,
+    "url": "https://vk.com/cyberspaceorel"
+  },
+  {
+    "domain": "pcclubbunkerorel",
+    "name": "Бункер | Орёл | Компьютерный Клуб",
+    "city": "Орёл",
+    "tz": "+03:00",
+    "members": 32,
+    "url": "https://vk.com/pcclubbunkerorel"
+  },
+  {
     "domain": "compdiamond",
     "name": "Компьютерный клуб Diamond | Оренбург",
     "city": "Оренбург",
@@ -8926,6 +10910,142 @@
     "tz": "+05:00",
     "members": 26,
     "url": "https://vk.com/cybercat_oren"
+  },
+  {
+    "domain": "goodgame_58",
+    "name": "Good Game | Ладожская 144 | Компьютерный клуб",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 5549,
+    "url": "https://vk.com/goodgame_58"
+  },
+  {
+    "domain": "cyberlineclub",
+    "name": "Компьютерный клуб CyberLine | Пенза",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 5304,
+    "url": "https://vk.com/cyberlineclub"
+  },
+  {
+    "domain": "b54gaming",
+    "name": "b54GAMING | компьютерный клуб | Пенза",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 4732,
+    "url": "https://vk.com/b54gaming"
+  },
+  {
+    "domain": "good_game_pnz",
+    "name": "Good Game | Компьютерный клуб | Киберарена",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 3787,
+    "url": "https://vk.com/good_game_pnz"
+  },
+  {
+    "domain": "fragstatarena",
+    "name": "FRAGSTAT ARENA | Компьютерный клуб | Пенза",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 2897,
+    "url": "https://vk.com/fragstatarena"
+  },
+  {
+    "domain": "kiberpride_penza",
+    "name": "КиберПрайд | Пенза | Компьютерный клуб",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 1805,
+    "url": "https://vk.com/kiberpride_penza"
+  },
+  {
+    "domain": "verticalgg",
+    "name": "Vertical | Компьютерный клуб | Пенза",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 1541,
+    "url": "https://vk.com/verticalgg"
+  },
+  {
+    "domain": "colizeum_arbekovo",
+    "name": "COLIZEUM Пенза Арбеково | Компьютерный клуб",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 1375,
+    "url": "https://vk.com/colizeum_arbekovo"
+  },
+  {
+    "domain": "eva_kamenka",
+    "name": "EVA  | Компьютерный клуб в Каменке",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 1016,
+    "url": "https://vk.com/eva_kamenka"
+  },
+  {
+    "domain": "club227855812",
+    "name": "CyberX Пенза ул.Мира 78 Компьютерный клуб",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 822,
+    "url": "https://vk.com/club227855812"
+  },
+  {
+    "domain": "truegamers_pnz",
+    "name": "TRUE GAMERS | Пенза | Леонова",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 668,
+    "url": "https://vk.com/truegamers_pnz"
+  },
+  {
+    "domain": "pnzclub",
+    "name": "Компьютерный клуб \"СЕТЬ\"",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 559,
+    "url": "https://vk.com/pnzclub"
+  },
+  {
+    "domain": "cyberx_penza",
+    "name": "CyberX  Пенза | Победы 97A | Компьютерный клуб",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 312,
+    "url": "https://vk.com/cyberx_penza"
+  },
+  {
+    "domain": "future_team_pguas",
+    "name": "Киберспортивный Клуб |  FUTURETEAM ПГУАС",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 260,
+    "url": "https://vk.com/future_team_pguas"
+  },
+  {
+    "domain": "portal.club48",
+    "name": "Игровой клуб «ПОРТАЛ»",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 97,
+    "url": "https://vk.com/portal.club48"
+  },
+  {
+    "domain": "poseidonpcclub",
+    "name": "POSEIDON | Компьютерный клуб | Пенза",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 82,
+    "url": "https://vk.com/poseidonpcclub"
+  },
+  {
+    "domain": "club232210332",
+    "name": "X.O. Game Club | Покер не на деньги | Пенза",
+    "city": "Пенза",
+    "tz": "+03:00",
+    "members": 50,
+    "url": "https://vk.com/club232210332"
   },
   {
     "domain": "korotishkiperm",
@@ -9510,6 +11630,166 @@
     "tz": "+05:00",
     "members": 13,
     "url": "https://vk.com/clubformika112"
+  },
+  {
+    "domain": "slashplay_ptz",
+    "name": "SlashPlay | Компьютерный клуб | Петрозаводск",
+    "city": "Петрозаводск",
+    "tz": "+03:00",
+    "members": 5830,
+    "url": "https://vk.com/slashplay_ptz"
+  },
+  {
+    "domain": "cyberx.petrozavodsk",
+    "name": "CyberX | Петрозаводск | Компьютерный клуб",
+    "city": "Петрозаводск",
+    "tz": "+03:00",
+    "members": 3317,
+    "url": "https://vk.com/cyberx.petrozavodsk"
+  },
+  {
+    "domain": "kyberdom.petrozavodsk",
+    "name": "КИБЕР дом | Петрозаводск | Компьютерный клуб",
+    "city": "Петрозаводск",
+    "tz": "+03:00",
+    "members": 2466,
+    "url": "https://vk.com/kyberdom.petrozavodsk"
+  },
+  {
+    "domain": "game_d18",
+    "name": "GAME l Петрозаводск | Компьютерный клуб",
+    "city": "Петрозаводск",
+    "tz": "+03:00",
+    "members": 1685,
+    "url": "https://vk.com/game_d18"
+  },
+  {
+    "domain": "ctrlptz",
+    "name": "CTRL | Компьютерный клуб | Петрозаводск",
+    "city": "Петрозаводск",
+    "tz": "+03:00",
+    "members": 1563,
+    "url": "https://vk.com/ctrlptz"
+  },
+  {
+    "domain": "ptz369",
+    "name": "Компьютерный клуб | 369 | Петрозаводск",
+    "city": "Петрозаводск",
+    "tz": "+03:00",
+    "members": 1549,
+    "url": "https://vk.com/ptz369"
+  },
+  {
+    "domain": "gamehubptz",
+    "name": "GAME HUB | Компьютерный клуб | Петрозаводск",
+    "city": "Петрозаводск",
+    "tz": "+03:00",
+    "members": 184,
+    "url": "https://vk.com/gamehubptz"
+  },
+  {
+    "domain": "club241518333",
+    "name": "Школа Киберспорта «Азимут» | Петрозаводск",
+    "city": "Петрозаводск",
+    "tz": "+03:00",
+    "members": 48,
+    "url": "https://vk.com/club241518333"
+  },
+  {
+    "domain": "mafia_game_club",
+    "name": "Mafia-game-club",
+    "city": "Петрозаводск",
+    "tz": "+03:00",
+    "members": 16,
+    "url": "https://vk.com/mafia_game_club"
+  },
+  {
+    "domain": "replaygamezone",
+    "name": "RePlay Game Zone l Компьютерный клуб l Подольск",
+    "city": "Подольск",
+    "tz": "+03:00",
+    "members": 2411,
+    "url": "https://vk.com/replaygamezone"
+  },
+  {
+    "domain": "pklub24",
+    "name": "Компьютерный клуб | Подольск",
+    "city": "Подольск",
+    "tz": "+03:00",
+    "members": 267,
+    "url": "https://vk.com/pklub24"
+  },
+  {
+    "domain": "zxcplaystyle",
+    "name": "ZXC gaming",
+    "city": "Подольск",
+    "tz": "+03:00",
+    "members": 188,
+    "url": "https://vk.com/zxcplaystyle"
+  },
+  {
+    "domain": "arenagamepskov",
+    "name": "Cyber Arena Псков",
+    "city": "Псков",
+    "tz": "+03:00",
+    "members": 2673,
+    "url": "https://vk.com/arenagamepskov"
+  },
+  {
+    "domain": "truegamers_pskov",
+    "name": "TRUE GAMERS l Псков | Компьютерный клуб",
+    "city": "Псков",
+    "tz": "+03:00",
+    "members": 1285,
+    "url": "https://vk.com/truegamers_pskov"
+  },
+  {
+    "domain": "cyberpointpskov",
+    "name": "Cyberpoint Компьютерный клуб - Псков",
+    "city": "Псков",
+    "tz": "+03:00",
+    "members": 793,
+    "url": "https://vk.com/cyberpointpskov"
+  },
+  {
+    "domain": "play_ground_ptg",
+    "name": "Компьютерный клуб ПГ на Кучуры 2 в Пятигорске",
+    "city": "Пятигорск",
+    "tz": "+03:00",
+    "members": 413,
+    "url": "https://vk.com/play_ground_ptg"
+  },
+  {
+    "domain": "space52k1",
+    "name": "Компьютерный клуб - SPACE - Пятигорск",
+    "city": "Пятигорск",
+    "tz": "+03:00",
+    "members": 120,
+    "url": "https://vk.com/space52k1"
+  },
+  {
+    "domain": "virusptg",
+    "name": "Компьютерный клуб VIRUS (г. Пятигорск)",
+    "city": "Пятигорск",
+    "tz": "+03:00",
+    "members": 85,
+    "url": "https://vk.com/virusptg"
+  },
+  {
+    "domain": "gameclubplay",
+    "name": "GAME CLUB PLAY",
+    "city": "Пятигорск",
+    "tz": "+03:00",
+    "members": 65,
+    "url": "https://vk.com/gameclubplay"
+  },
+  {
+    "domain": "goodgame26",
+    "name": "Good Game Компьютерный Клуб|Пятигорск",
+    "city": "Пятигорск",
+    "tz": "+03:00",
+    "members": 50,
+    "url": "https://vk.com/goodgame26"
   },
   {
     "domain": "meta4pro",
@@ -10508,7 +12788,7 @@
     "name": "Игровой клуб \"Убежище 13\"",
     "city": "Самара",
     "tz": "+04:00",
-    "members": 243,
+    "members": 244,
     "url": "https://vk.com/ourvault13"
   },
   {
@@ -10740,7 +13020,7 @@
     "name": "Компьютерный клуб SoulGame | СПБ, м. Лесная",
     "city": "Санкт-Петербург",
     "tz": "+03:00",
-    "members": 4245,
+    "members": 4244,
     "url": "https://vk.com/soulgamespb"
   },
   {
@@ -11816,6 +14096,46 @@
     "url": "https://vk.com/cybergriffon"
   },
   {
+    "domain": "art_game_saransk",
+    "name": "VR-Парк | ПК-Клуб «ARTGAME» | Саранск",
+    "city": "Саранск",
+    "tz": "+03:00",
+    "members": 6281,
+    "url": "https://vk.com/art_game_saransk"
+  },
+  {
+    "domain": "kiberpride_saransk",
+    "name": "КиберПрайд | Саранск | Компьютерный клуб",
+    "city": "Саранск",
+    "tz": "+03:00",
+    "members": 5175,
+    "url": "https://vk.com/kiberpride_saransk"
+  },
+  {
+    "domain": "hard.game13",
+    "name": "ХГ | Компьютерный клуб | Саранск",
+    "city": "Саранск",
+    "tz": "+03:00",
+    "members": 1359,
+    "url": "https://vk.com/hard.game13"
+  },
+  {
+    "domain": "prestigegamingsaransk",
+    "name": "Prestige Gaming",
+    "city": "Саранск",
+    "tz": "+03:00",
+    "members": 195,
+    "url": "https://vk.com/prestigegamingsaransk"
+  },
+  {
+    "domain": "club240622170",
+    "name": "0505 | CyberClub | Саранск",
+    "city": "Саранск",
+    "tz": "+03:00",
+    "members": 84,
+    "url": "https://vk.com/club240622170"
+  },
+  {
     "domain": "voltage_saratov",
     "name": "VOLTAGE - Компьютерный клуб | Саратов",
     "city": "Саратов",
@@ -12232,6 +14552,326 @@
     "url": "https://vk.com/voltagelounge"
   },
   {
+    "domain": "arenapoligon",
+    "name": "POLIGON ARENA Компьютерный клуб | Севастополь",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 6237,
+    "url": "https://vk.com/arenapoligon"
+  },
+  {
+    "domain": "cr4zz1.d1g1t5",
+    "name": "CRAZZI DIGITS - Компьютерный клуб | Севастополь",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 3588,
+    "url": "https://vk.com/cr4zz1.d1g1t5"
+  },
+  {
+    "domain": "coliseum_niagara",
+    "name": "COLISEUM Севастополь | Компьютерный клуб",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 3123,
+    "url": "https://vk.com/coliseum_niagara"
+  },
+  {
+    "domain": "csa.club",
+    "name": "ARENA | Компьютерный клуб",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 1465,
+    "url": "https://vk.com/csa.club"
+  },
+  {
+    "domain": "bioscyberclub",
+    "name": "BIOS cyber club | Компьютерный клуб Севастополь",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 1022,
+    "url": "https://vk.com/bioscyberclub"
+  },
+  {
+    "domain": "cyberx_sev",
+    "name": "CyberX | Компьютерный клуб | Севастополь",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 834,
+    "url": "https://vk.com/cyberx_sev"
+  },
+  {
+    "domain": "terabyte92rus",
+    "name": "CYBER ARENA TERA Севастополь",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 358,
+    "url": "https://vk.com/terabyte92rus"
+  },
+  {
+    "domain": "oneplayarena",
+    "name": "ONePlay арена| КОМПЬЮТЕРНЫЙ КЛУБ | Севастополь",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 222,
+    "url": "https://vk.com/oneplayarena"
+  },
+  {
+    "domain": "club240667733",
+    "name": "КОФЕ И КАТКИ | КОМПЬЮТЕРНЫЙ КЛУБ И КОФЕЙНЯ",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 65,
+    "url": "https://vk.com/club240667733"
+  },
+  {
+    "domain": "club230954669",
+    "name": "Game Zone",
+    "city": "Севастополь",
+    "tz": "+03:00",
+    "members": 14,
+    "url": "https://vk.com/club230954669"
+  },
+  {
+    "domain": "playhub_spv",
+    "name": "PlayHub Компьютерный клуб Серпухов",
+    "city": "Серпухов",
+    "tz": "+03:00",
+    "members": 2480,
+    "url": "https://vk.com/playhub_spv"
+  },
+  {
+    "domain": "cybersmokeclub",
+    "name": "КИБЕРДЫМ | Серпухов | GAME'S LOUNGE HOOKAH BAR",
+    "city": "Серпухов",
+    "tz": "+03:00",
+    "members": 2249,
+    "url": "https://vk.com/cybersmokeclub"
+  },
+  {
+    "domain": "colizeum_serpukhov_revolution",
+    "name": "COLIZEUM Серпухов Революции | Компьютерный клуб",
+    "city": "Серпухов",
+    "tz": "+03:00",
+    "members": 974,
+    "url": "https://vk.com/colizeum_serpukhov_revolution"
+  },
+  {
+    "domain": "cyberx.simferopol",
+    "name": "CyberX компьютерный клуб",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 9192,
+    "url": "https://vk.com/cyberx.simferopol"
+  },
+  {
+    "domain": "coliseum_simferopol_gogolya",
+    "name": "COLISEUM Симферополь Гоголя | Компьютерный клуб",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 3830,
+    "url": "https://vk.com/coliseum_simferopol_gogolya"
+  },
+  {
+    "domain": "cherema_cyber",
+    "name": "CHEREMA | Компьютерный клуб | Симферополь",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 2582,
+    "url": "https://vk.com/cherema_cyber"
+  },
+  {
+    "domain": "rampagearena82",
+    "name": "Rampage Arena | Компьютерный Клуб | Симферополь",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 2530,
+    "url": "https://vk.com/rampagearena82"
+  },
+  {
+    "domain": "godpmn",
+    "name": "Дофамин l Симферополь | Компьютерный клуб",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 2419,
+    "url": "https://vk.com/godpmn"
+  },
+  {
+    "domain": "game.land",
+    "name": "Компьютерный клуб Gameland | Симферополь",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 2320,
+    "url": "https://vk.com/game.land"
+  },
+  {
+    "domain": "gaming_bear",
+    "name": "GAMING BEAR компьютерный клуб",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 2072,
+    "url": "https://vk.com/gaming_bear"
+  },
+  {
+    "domain": "zxcsimfclub",
+    "name": "ZXC CYBER ARENA | Компьютерный клуб Симферополь",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 1283,
+    "url": "https://vk.com/zxcsimfclub"
+  },
+  {
+    "domain": "blackops_simf",
+    "name": "BlackOps - Компьютерный клуб - Симферополь",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 1240,
+    "url": "https://vk.com/blackops_simf"
+  },
+  {
+    "domain": "good____game",
+    "name": "КОМПЬЮТЕРНЫЙ КЛУБ | СИМФЕРОПОЛЬ",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 692,
+    "url": "https://vk.com/good____game"
+  },
+  {
+    "domain": "rampage_feo",
+    "name": "Rampage Arena | Компьютерный Клуб | Феодосия",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 673,
+    "url": "https://vk.com/rampage_feo"
+  },
+  {
+    "domain": "pobeda.simf",
+    "name": "КОМПЬЮТЕРНЫЙ КЛУБ | СИМФЕРОПОЛЬ",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 644,
+    "url": "https://vk.com/pobeda.simf"
+  },
+  {
+    "domain": "rampage_borodina",
+    "name": "Rampage Arena | Компьютерный Клуб | Симферополь",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 627,
+    "url": "https://vk.com/rampage_borodina"
+  },
+  {
+    "domain": "cyberbeargres_82",
+    "name": "Компьютерный клуб | Кибер Медведь | пгт.Грэс",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 521,
+    "url": "https://vk.com/cyberbeargres_82"
+  },
+  {
+    "domain": "dizyretrogame82",
+    "name": "DIZZY Ретро Гейм (Феодосия)",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 483,
+    "url": "https://vk.com/dizyretrogame82"
+  },
+  {
+    "domain": "gamespacecrimea",
+    "name": "GAME SPACE Киберспортивный клуб Симферополь",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 324,
+    "url": "https://vk.com/gamespacecrimea"
+  },
+  {
+    "domain": "prime_cyberclub",
+    "name": "PRIME CYBER CLUB | Симферополь",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 241,
+    "url": "https://vk.com/prime_cyberclub"
+  },
+  {
+    "domain": "gameclub2031",
+    "name": "20/31 Компьютерный Клуб | Симферополь",
+    "city": "Симферополь",
+    "tz": "+03:00",
+    "members": 64,
+    "url": "https://vk.com/gameclub2031"
+  },
+  {
+    "domain": "colizeum_smolensk",
+    "name": "COLIZEUM Смоленск Кирова | Компьютерный клуб",
+    "city": "Смоленск",
+    "tz": "+03:00",
+    "members": 6066,
+    "url": "https://vk.com/colizeum_smolensk"
+  },
+  {
+    "domain": "cyber_smolensk",
+    "name": "Компьютерный клуб TEvent Cyber Arena | Смоленск",
+    "city": "Смоленск",
+    "tz": "+03:00",
+    "members": 5798,
+    "url": "https://vk.com/cyber_smolensk"
+  },
+  {
+    "domain": "colizeum_smolensk_krup",
+    "name": "COLIZEUM Смоленск Крупской | Кибер арена",
+    "city": "Смоленск",
+    "tz": "+03:00",
+    "members": 4710,
+    "url": "https://vk.com/colizeum_smolensk_krup"
+  },
+  {
+    "domain": "cyberzest",
+    "name": "КИБЕР ЖЕСТЬ |  Компьютерный клуб | КИНОЗАЛ",
+    "city": "Смоленск",
+    "tz": "+03:00",
+    "members": 3487,
+    "url": "https://vk.com/cyberzest"
+  },
+  {
+    "domain": "quantum_smolensk67",
+    "name": "КВАНТУМ — компьютерный клуб Смоленск",
+    "city": "Смоленск",
+    "tz": "+03:00",
+    "members": 1747,
+    "url": "https://vk.com/quantum_smolensk67"
+  },
+  {
+    "domain": "colizeum_kolhoznaya",
+    "name": "COLIZEUM Смоленск Площадь Колхозная | Киберарена",
+    "city": "Смоленск",
+    "tz": "+03:00",
+    "members": 990,
+    "url": "https://vk.com/colizeum_kolhoznaya"
+  },
+  {
+    "domain": "laserwar.club",
+    "name": "LASERWAR CRM — система управления игровым клубом",
+    "city": "Смоленск",
+    "tz": "+03:00",
+    "members": 278,
+    "url": "https://vk.com/laserwar.club"
+  },
+  {
+    "domain": "setkasmol",
+    "name": "СЕТКА | Компьютерный клуб Смоленск",
+    "city": "Смоленск",
+    "tz": "+03:00",
+    "members": 249,
+    "url": "https://vk.com/setkasmol"
+  },
+  {
+    "domain": "oxygengam1ng",
+    "name": "OXYGEN GAMING",
+    "city": "Смоленск",
+    "tz": "+03:00",
+    "members": 94,
+    "url": "https://vk.com/oxygengam1ng"
+  },
+  {
     "domain": "arena_2307",
     "name": "ARENA | Компьютерный клуб в Сочи",
     "city": "Сочи",
@@ -12526,6 +15166,670 @@
     "tz": "+03:00",
     "members": 10,
     "url": "https://vk.com/gyberclub2024"
+  },
+  {
+    "domain": "target_cs",
+    "name": "Киберклуб Таргет Кибер Спейс | Ставрополь",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 3652,
+    "url": "https://vk.com/target_cs"
+  },
+  {
+    "domain": "kc_namir_stavropol",
+    "name": "КС на Мира | Компьютерный клуб",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 2354,
+    "url": "https://vk.com/kc_namir_stavropol"
+  },
+  {
+    "domain": "kc_stavropol",
+    "name": "КС Карла Маркса I Компьютерный клуб",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 1540,
+    "url": "https://vk.com/kc_stavropol"
+  },
+  {
+    "domain": "olympia_gaming",
+    "name": "Olympia Gaming | Компьютерный клуб | Ставрополь",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 1406,
+    "url": "https://vk.com/olympia_gaming"
+  },
+  {
+    "domain": "4sv_cyber_club",
+    "name": "ЧСВ cyber club | компьютерный клуб",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 1012,
+    "url": "https://vk.com/4sv_cyber_club"
+  },
+  {
+    "domain": "gameon.stavropol",
+    "name": "КОМПЬЮТЕРНЫЙ КЛУБ GameOn | СТАВРОПОЛЬ",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 1000,
+    "url": "https://vk.com/gameon.stavropol"
+  },
+  {
+    "domain": "neo_game_cyber_club",
+    "name": "Neo Game | Ставрополь | Компьютерный клуб",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 820,
+    "url": "https://vk.com/neo_game_cyber_club"
+  },
+  {
+    "domain": "ttg26",
+    "name": "Time to game | Ставрополь | Компьютерный клуб",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 645,
+    "url": "https://vk.com/ttg26"
+  },
+  {
+    "domain": "ww_gaming_club",
+    "name": "WW Gaming Club",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 634,
+    "url": "https://vk.com/ww_gaming_club"
+  },
+  {
+    "domain": "truegamers_stavropol",
+    "name": "TRUE GAMERS l Ставрополь | Центр",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 624,
+    "url": "https://vk.com/truegamers_stavropol"
+  },
+  {
+    "domain": "cyberpoint_26",
+    "name": "Cyber Point  | Компьютерный клуб",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 595,
+    "url": "https://vk.com/cyberpoint_26"
+  },
+  {
+    "domain": "lunaclub26",
+    "name": "LUNA | Компьютерный клуб | Ставрополь",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 509,
+    "url": "https://vk.com/lunaclub26"
+  },
+  {
+    "domain": "2k_cyber",
+    "name": "2к Компьютерный клуб",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 366,
+    "url": "https://vk.com/2k_cyber"
+  },
+  {
+    "domain": "l.a.gaming",
+    "name": "L.A. GAMING | Компьютерный клуб | Ставрополь",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 328,
+    "url": "https://vk.com/l.a.gaming"
+  },
+  {
+    "domain": "ttg204stav",
+    "name": "Time to game  | Ставрополь 204-й | Киберклуб",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 296,
+    "url": "https://vk.com/ttg204stav"
+  },
+  {
+    "domain": "zclub229191243",
+    "name": "CyberZ I  Компьютерный клуб I Ставрополь",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 263,
+    "url": "https://vk.com/zclub229191243"
+  },
+  {
+    "domain": "gamingclubstav",
+    "name": "Gaming Club | Ставрополь",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 140,
+    "url": "https://vk.com/gamingclubstav"
+  },
+  {
+    "domain": "zxcgaming26",
+    "name": "ZXC GAMING компьютерный клуб",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 136,
+    "url": "https://vk.com/zxcgaming26"
+  },
+  {
+    "domain": "truegamers_stav_chehova",
+    "name": "TRUE GAMERS l Ставрополь | Чехова",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 131,
+    "url": "https://vk.com/truegamers_stav_chehova"
+  },
+  {
+    "domain": "truegamers_stavropl",
+    "name": "TRUE GAMERS l Ставрополь | Матрены Наздрачевой",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 130,
+    "url": "https://vk.com/truegamers_stavropl"
+  },
+  {
+    "domain": "wasdcyber",
+    "name": "WASD CYBER CLUB",
+    "city": "Ставрополь",
+    "tz": "+03:00",
+    "members": 108,
+    "url": "https://vk.com/wasdcyber"
+  },
+  {
+    "domain": "colizeum_sterlitamak",
+    "name": "COLIZEUM Стерлитамак Искра | Компьютерный клуб",
+    "city": "Стерлитамак",
+    "tz": "+05:00",
+    "members": 5254,
+    "url": "https://vk.com/colizeum_sterlitamak"
+  },
+  {
+    "domain": "kiberpride_sterlitamak",
+    "name": "КиберПрайд | Стерлитамак | Компьютерный клуб",
+    "city": "Стерлитамак",
+    "tz": "+05:00",
+    "members": 2490,
+    "url": "https://vk.com/kiberpride_sterlitamak"
+  },
+  {
+    "domain": "goclubstr",
+    "name": "GO -  компьютерный клуб в Стерлитамаке",
+    "city": "Стерлитамак",
+    "tz": "+05:00",
+    "members": 1507,
+    "url": "https://vk.com/goclubstr"
+  },
+  {
+    "domain": "zionstr",
+    "name": "ZioN Gaming Club",
+    "city": "Стерлитамак",
+    "tz": "+05:00",
+    "members": 367,
+    "url": "https://vk.com/zionstr"
+  },
+  {
+    "domain": "colizeumsterlitamak_artema",
+    "name": "COLIZEUM Стерлитамак Артёма | Компьютерный клуб",
+    "city": "Стерлитамак",
+    "tz": "+05:00",
+    "members": 358,
+    "url": "https://vk.com/colizeumsterlitamak_artema"
+  },
+  {
+    "domain": "wotgame_club",
+    "name": "Game Club™",
+    "city": "Стерлитамак",
+    "tz": "+05:00",
+    "members": 188,
+    "url": "https://vk.com/wotgame_club"
+  },
+  {
+    "domain": "portal_sgt",
+    "name": "PORTAL | Компьютерный клуб | Сургут",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 6864,
+    "url": "https://vk.com/portal_sgt"
+  },
+  {
+    "domain": "pingsurgut",
+    "name": "PING | Компьютерные клубы | Сургут",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 4411,
+    "url": "https://vk.com/pingsurgut"
+  },
+  {
+    "domain": "colizeum_surgut",
+    "name": "COLIZEUM Сургут Мира 55| Компьютерный клуб",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 3360,
+    "url": "https://vk.com/colizeum_surgut"
+  },
+  {
+    "domain": "cybermonic",
+    "name": "Cybermonic - Компьютерный клуб | Сургут",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 3319,
+    "url": "https://vk.com/cybermonic"
+  },
+  {
+    "domain": "cyberkaef_surgut",
+    "name": "Кибер Кот| Сургут | Компьютерный клуб",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 2086,
+    "url": "https://vk.com/cyberkaef_surgut"
+  },
+  {
+    "domain": "colizeum_vozrozhdenie",
+    "name": "COLIZEUM Сургут ЖК Возрождение Компьютерный клуб",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 2071,
+    "url": "https://vk.com/colizeum_vozrozhdenie"
+  },
+  {
+    "domain": "kiberpride_surgut",
+    "name": "КиберПрайд | Сургут | Компьютерный клуб",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 1923,
+    "url": "https://vk.com/kiberpride_surgut"
+  },
+  {
+    "domain": "orda_surgut",
+    "name": "ORDA | Компьютерный клуб | Сургут",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 1099,
+    "url": "https://vk.com/orda_surgut"
+  },
+  {
+    "domain": "cyberhome186",
+    "name": "Cyber Home - Компьютерный клуб |30 лет Победы 41",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 572,
+    "url": "https://vk.com/cyberhome186"
+  },
+  {
+    "domain": "ping86",
+    "name": "CYBER-CLUB PING",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 137,
+    "url": "https://vk.com/ping86"
+  },
+  {
+    "domain": "cyber_home186",
+    "name": "Cyber Home - Компьютерный клуб | Пр. Ленина 11",
+    "city": "Сургут",
+    "tz": "+05:00",
+    "members": 99,
+    "url": "https://vk.com/cyber_home186"
+  },
+  {
+    "domain": "kroshkaenot11",
+    "name": "Детский игровой клуб  \"КРОШКА ЕНОТ\"",
+    "city": "Сыктывкар",
+    "tz": "+03:00",
+    "members": 5137,
+    "url": "https://vk.com/kroshkaenot11"
+  },
+  {
+    "domain": "skill_sykt",
+    "name": "SKILL | Компьютерный клуб | Сыктывкар",
+    "city": "Сыктывкар",
+    "tz": "+03:00",
+    "members": 3967,
+    "url": "https://vk.com/skill_sykt"
+  },
+  {
+    "domain": "colizeum_syktyvkar",
+    "name": "COLIZEUM Сыктывкар | Компьютерный клуб",
+    "city": "Сыктывкар",
+    "tz": "+03:00",
+    "members": 2585,
+    "url": "https://vk.com/colizeum_syktyvkar"
+  },
+  {
+    "domain": "cybervibe_s",
+    "name": "CyberVibe | Сыктывкар | Компьютерный клуб",
+    "city": "Сыктывкар",
+    "tz": "+03:00",
+    "members": 2577,
+    "url": "https://vk.com/cybervibe_s"
+  },
+  {
+    "domain": "rehab_cyber_syk",
+    "name": "Компьютерный клуб РЕХАБ Давпон| Сыктывкар",
+    "city": "Сыктывкар",
+    "tz": "+03:00",
+    "members": 1775,
+    "url": "https://vk.com/rehab_cyber_syk"
+  },
+  {
+    "domain": "cyberx_sykt",
+    "name": "CyberX|Сыктывкар|Компьютерный клуб",
+    "city": "Сыктывкар",
+    "tz": "+03:00",
+    "members": 1547,
+    "url": "https://vk.com/cyberx_sykt"
+  },
+  {
+    "domain": "primepc11",
+    "name": "PRIME - Компьютерный клуб | Сыктывкар",
+    "city": "Сыктывкар",
+    "tz": "+03:00",
+    "members": 921,
+    "url": "https://vk.com/primepc11"
+  },
+  {
+    "domain": "legion_tgn",
+    "name": "Компьютерный клуб  Legion CyberArena",
+    "city": "Таганрог",
+    "tz": "+03:00",
+    "members": 1947,
+    "url": "https://vk.com/legion_tgn"
+  },
+  {
+    "domain": "win_game_tgn",
+    "name": "Win Game | Кибер Клуб | Таганрог",
+    "city": "Таганрог",
+    "tz": "+03:00",
+    "members": 570,
+    "url": "https://vk.com/win_game_tgn"
+  },
+  {
+    "domain": "cyberarenaggwptgn",
+    "name": "Cyber Arena GGWP",
+    "city": "Таганрог",
+    "tz": "+03:00",
+    "members": 494,
+    "url": "https://vk.com/cyberarenaggwptgn"
+  },
+  {
+    "domain": "zeus.cybertgn",
+    "name": "«ЗЕВС» Компьютерный клуб | Таганрог",
+    "city": "Таганрог",
+    "tz": "+03:00",
+    "members": 273,
+    "url": "https://vk.com/zeus.cybertgn"
+  },
+  {
+    "domain": "skilltambov",
+    "name": "Компьютерный клуб SKILL Тамбов",
+    "city": "Тамбов",
+    "tz": "+03:00",
+    "members": 4884,
+    "url": "https://vk.com/skilltambov"
+  },
+  {
+    "domain": "kiberpride_tambov",
+    "name": "КиберПрайд | Тамбов | Компьютерный клуб",
+    "city": "Тамбов",
+    "tz": "+03:00",
+    "members": 4314,
+    "url": "https://vk.com/kiberpride_tambov"
+  },
+  {
+    "domain": "bbplay__tmb",
+    "name": "Black Bears Play | Компьютерные клубы | Тамбов",
+    "city": "Тамбов",
+    "tz": "+03:00",
+    "members": 3292,
+    "url": "https://vk.com/bbplay__tmb"
+  },
+  {
+    "domain": "bargamingtime",
+    "name": "BGT | Компьютерный клуб | Тамбов",
+    "city": "Тамбов",
+    "tz": "+03:00",
+    "members": 1424,
+    "url": "https://vk.com/bargamingtime"
+  },
+  {
+    "domain": "gamingclubbunker",
+    "name": "Компьютерный клуб Bunker | Тамбов",
+    "city": "Тамбов",
+    "tz": "+03:00",
+    "members": 1337,
+    "url": "https://vk.com/gamingclubbunker"
+  },
+  {
+    "domain": "cyber_staya",
+    "name": "КИБЕР СТАЯ | Компьютерный клуб | Тамбов",
+    "city": "Тамбов",
+    "tz": "+03:00",
+    "members": 574,
+    "url": "https://vk.com/cyber_staya"
+  },
+  {
+    "domain": "ne_cyber",
+    "name": "НЕ КИБЕР | Компьютерный клуб  | Тамбов",
+    "city": "Тамбов",
+    "tz": "+03:00",
+    "members": 499,
+    "url": "https://vk.com/ne_cyber"
+  },
+  {
+    "domain": "globalgaming.tver",
+    "name": "Global Gaming Тверь | Компьютерный клуб",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 5030,
+    "url": "https://vk.com/globalgaming.tver"
+  },
+  {
+    "domain": "colizeum_camp_tver_pobedy",
+    "name": "COLIZEUM Camp Тверь Победы | Компьютерный клуб",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 3968,
+    "url": "https://vk.com/colizeum_camp_tver_pobedy"
+  },
+  {
+    "domain": "kiberpride_tver",
+    "name": "КиберПрайд | Тверь | Компьютерный клуб",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 1706,
+    "url": "https://vk.com/kiberpride_tver"
+  },
+  {
+    "domain": "ug_tver",
+    "name": "ТВЕРЬ | Компьютерный клуб - United Gamers",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 1700,
+    "url": "https://vk.com/ug_tver"
+  },
+  {
+    "domain": "rusfrag.tver.unost",
+    "name": "Компьютерный клуб RusFrag Tver Юность",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 1545,
+    "url": "https://vk.com/rusfrag.tver.unost"
+  },
+  {
+    "domain": "rusfrag.tver.yuzhny",
+    "name": "Компьютерный клуб RusFrag Tver Южный",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 948,
+    "url": "https://vk.com/rusfrag.tver.yuzhny"
+  },
+  {
+    "domain": "methodgamingtver",
+    "name": "Method Gaming Tver",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 824,
+    "url": "https://vk.com/methodgamingtver"
+  },
+  {
+    "domain": "vdclubtver9s",
+    "name": "VD | Компьютерный клуб | Смоленский пер. 9",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 319,
+    "url": "https://vk.com/vdclubtver9s"
+  },
+  {
+    "domain": "colizeum_tver_peterburgskoe",
+    "name": "COLIZEUM Тверь Петербургское | Компьютерный клуб",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 312,
+    "url": "https://vk.com/colizeum_tver_peterburgskoe"
+  },
+  {
+    "domain": "meclubtver482",
+    "name": "ME | Компьютерный клуб",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 265,
+    "url": "https://vk.com/meclubtver482"
+  },
+  {
+    "domain": "rusfrag.tver.center",
+    "name": "Компьютерный клуб RusFrag Tver Центр",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 155,
+    "url": "https://vk.com/rusfrag.tver.center"
+  },
+  {
+    "domain": "euphoriagamingclub",
+    "name": "Euphoria gaming club (Игровой клуб 24/7)",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 60,
+    "url": "https://vk.com/euphoriagamingclub"
+  },
+  {
+    "domain": "castlegame",
+    "name": "Игры в Castle Beach - Game Club в Твери",
+    "city": "Тверь",
+    "tz": "+03:00",
+    "members": 22,
+    "url": "https://vk.com/castlegame"
+  },
+  {
+    "domain": "cyber_click_tlt",
+    "name": "Cyber Click | Компьютерный клуб | Тольятти",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 2937,
+    "url": "https://vk.com/cyber_click_tlt"
+  },
+  {
+    "domain": "colizeum_voroshilova",
+    "name": "COLIZEUM Тольятти Ворошилова | Компьютерный клуб",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 2866,
+    "url": "https://vk.com/colizeum_voroshilova"
+  },
+  {
+    "domain": "colizeum_tolyatti",
+    "name": "COLIZEUM Тольятти | Компьютерный клуб",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 2385,
+    "url": "https://vk.com/colizeum_tolyatti"
+  },
+  {
+    "domain": "eternal_tlt_primorskiy",
+    "name": "ETERNAL | Компьютерный клуб | Приморский бульвар",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 2092,
+    "url": "https://vk.com/eternal_tlt_primorskiy"
+  },
+  {
+    "domain": "toplvl_tlt",
+    "name": "TOP LVL - Компьютерный клуб | Тольятти",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 1385,
+    "url": "https://vk.com/toplvl_tlt"
+  },
+  {
+    "domain": "underground_gamezone",
+    "name": "Underground | Тольятти | Компьютерный клуб",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 1385,
+    "url": "https://vk.com/underground_gamezone"
+  },
+  {
+    "domain": "truegamers_toliatti",
+    "name": "Компьютерный клуб Тольятти TRUE GAMERS",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 1072,
+    "url": "https://vk.com/truegamers_toliatti"
+  },
+  {
+    "domain": "uptake_tlt",
+    "name": "UPTAKE | Компьютерный клуб | Тольятти",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 1065,
+    "url": "https://vk.com/uptake_tlt"
+  },
+  {
+    "domain": "goodgame63",
+    "name": "Компьютерные клубы \"GOOD GAME\" | Тольятти",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 454,
+    "url": "https://vk.com/goodgame63"
+  },
+  {
+    "domain": "anubis.gaming",
+    "name": "Anubis | компьютерный клуб в Тольятти",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 271,
+    "url": "https://vk.com/anubis.gaming"
+  },
+  {
+    "domain": "strikearena63",
+    "name": "Strike Arena | Тольятти на Толстого",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 152,
+    "url": "https://vk.com/strikearena63"
+  },
+  {
+    "domain": "club81872819",
+    "name": "Компьютерный клуб ZORGE",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 107,
+    "url": "https://vk.com/club81872819"
+  },
+  {
+    "domain": "poligonclubtlt",
+    "name": "Компьютерный клуб \"Полигон\"",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 57,
+    "url": "https://vk.com/poligonclubtlt"
+  },
+  {
+    "domain": "game0club",
+    "name": "Game Club",
+    "city": "Тольятти",
+    "tz": "+04:00",
+    "members": 22,
+    "url": "https://vk.com/game0club"
   },
   {
     "domain": "cybersport_pro",
@@ -13044,7 +16348,7 @@
     "name": "Детское игровое пространство «Балу» Тюмень",
     "city": "Тюмень",
     "tz": "+05:00",
-    "members": 237,
+    "members": 238,
     "url": "https://vk.com/balu72"
   },
   {
@@ -13676,7 +16980,7 @@
     "name": "Сеть компьютерных клубов в Уфе | Los Santos",
     "city": "Уфа",
     "tz": "+05:00",
-    "members": 1695,
+    "members": 1694,
     "url": "https://vk.com/gameclub_lossantos"
   },
   {
@@ -14216,6 +17520,230 @@
     "url": "https://vk.com/cyberiumgamingclub"
   },
   {
+    "domain": "cyberbox_kh",
+    "name": "Компьютерный клуб CYBERBOX в Химках - 24 часа",
+    "city": "Химки",
+    "tz": "+03:00",
+    "members": 1358,
+    "url": "https://vk.com/cyberbox_kh"
+  },
+  {
+    "domain": "ggarenaclub",
+    "name": "GG ARENA | Химки | Компьютерный клуб",
+    "city": "Химки",
+    "tz": "+03:00",
+    "members": 569,
+    "url": "https://vk.com/ggarenaclub"
+  },
+  {
+    "domain": "eazygameclub",
+    "name": "Компьютерный клуб | Химки",
+    "city": "Химки",
+    "tz": "+03:00",
+    "members": 509,
+    "url": "https://vk.com/eazygameclub"
+  },
+  {
+    "domain": "level_pro_club",
+    "name": "Level Pro | Компьютерный клуб | Химки",
+    "city": "Химки",
+    "tz": "+03:00",
+    "members": 341,
+    "url": "https://vk.com/level_pro_club"
+  },
+  {
+    "domain": "ug_khimki",
+    "name": "Киберклуб - United Gamers | ХИМКИ",
+    "city": "Химки",
+    "tz": "+03:00",
+    "members": 289,
+    "url": "https://vk.com/ug_khimki"
+  },
+  {
+    "domain": "goosecyberclub2",
+    "name": "Goose CyberClub 2 | Компьютерный клуб",
+    "city": "Химки",
+    "tz": "+03:00",
+    "members": 53,
+    "url": "https://vk.com/goosecyberclub2"
+  },
+  {
+    "domain": "colizeum_khimki_liga",
+    "name": "COLIZEUM Химки Лига | Компьютерный клуб",
+    "city": "Химки",
+    "tz": "+03:00",
+    "members": 34,
+    "url": "https://vk.com/colizeum_khimki_liga"
+  },
+  {
+    "domain": "colizeum_himki_park",
+    "name": "COLIZEUM Химки Парк Льва Толстого | Киберарена",
+    "city": "Химки",
+    "tz": "+03:00",
+    "members": 27,
+    "url": "https://vk.com/colizeum_himki_park"
+  },
+  {
+    "domain": "united_gamers_cheb",
+    "name": "United Gamers киберклуб в Чебоксарах",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 6836,
+    "url": "https://vk.com/united_gamers_cheb"
+  },
+  {
+    "domain": "cyberx.cheboksary",
+    "name": "CyberX | Чебоксары | Компьютерный клуб",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 3571,
+    "url": "https://vk.com/cyberx.cheboksary"
+  },
+  {
+    "domain": "cyber.chgu",
+    "name": "Киберклуб ЧувГУ",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 2800,
+    "url": "https://vk.com/cyber.chgu"
+  },
+  {
+    "domain": "ronincomp",
+    "name": "РОНИН / компьютерный клуб / лаундж",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 2430,
+    "url": "https://vk.com/ronincomp"
+  },
+  {
+    "domain": "divizion_club",
+    "name": "DIVIZION - Компьютерный клуб Чебоксары",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 2205,
+    "url": "https://vk.com/divizion_club"
+  },
+  {
+    "domain": "zaga_game_cheboksary",
+    "name": "Zaga-Game Чебоксары | VR-арена",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 1691,
+    "url": "https://vk.com/zaga_game_cheboksary"
+  },
+  {
+    "domain": "imbafamily",
+    "name": "IMBA | Чебоксары | Компьютерный клуб",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 1411,
+    "url": "https://vk.com/imbafamily"
+  },
+  {
+    "domain": "cyberxcheb",
+    "name": "CyberX | Чебоксары ЮЗР | Компьютерный клуб",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 1371,
+    "url": "https://vk.com/cyberxcheb"
+  },
+  {
+    "domain": "goplay_gamezone",
+    "name": "GO PLAY | КОМПЬЮТЕРНЫЙ КЛУБ",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 1338,
+    "url": "https://vk.com/goplay_gamezone"
+  },
+  {
+    "domain": "soffgame",
+    "name": "СОФФ | Игровой клуб + PC",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 783,
+    "url": "https://vk.com/soffgame"
+  },
+  {
+    "domain": "club218421407",
+    "name": "GAME ROOM KANASH",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 748,
+    "url": "https://vk.com/club218421407"
+  },
+  {
+    "domain": "soul_play21",
+    "name": "СОУЛ ПЛЕЙ - Компьютерный клуб | Новочебоксарск",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 492,
+    "url": "https://vk.com/soul_play21"
+  },
+  {
+    "domain": "yakovlevesports",
+    "name": "Yakovlev eSports | КиберКлуб ЧГПУ",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 329,
+    "url": "https://vk.com/yakovlevesports"
+  },
+  {
+    "domain": "club220780478",
+    "name": "Киберклуб \"Инфознайка\"",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 283,
+    "url": "https://vk.com/club220780478"
+  },
+  {
+    "domain": "mlbb_chgu",
+    "name": "Киберклуб ЧувГУ | Mobile Legends",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 232,
+    "url": "https://vk.com/mlbb_chgu"
+  },
+  {
+    "domain": "officecommunity",
+    "name": "OFFICE cyber community",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 206,
+    "url": "https://vk.com/officecommunity"
+  },
+  {
+    "domain": "stargameclub",
+    "name": "Киберклуб \"StarGame\"",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 103,
+    "url": "https://vk.com/stargameclub"
+  },
+  {
+    "domain": "club239663755",
+    "name": "Strike Arena | Новая Москва",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 48,
+    "url": "https://vk.com/club239663755"
+  },
+  {
+    "domain": "club54787614",
+    "name": "Game Club(GC)",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 25,
+    "url": "https://vk.com/club54787614"
+  },
+  {
+    "domain": "buncer_clubcheb",
+    "name": "БУНКЕР | Компьютерный клуб | Чебоксары",
+    "city": "Чебоксары",
+    "tz": "+03:00",
+    "members": 24,
+    "url": "https://vk.com/buncer_clubcheb"
+  },
+  {
     "domain": "kiberpride_chelybinsk",
     "name": "КиберПрайд | Челябинск | Компьютерный клуб",
     "city": "Челябинск",
@@ -14592,6 +18120,86 @@
     "url": "https://vk.com/pc_clubzodiak"
   },
   {
+    "domain": "imba.cherepovec",
+    "name": "Компьютерный клуб Imba Game | Череповец",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 3701,
+    "url": "https://vk.com/imba.cherepovec"
+  },
+  {
+    "domain": "mw_sovetsky",
+    "name": "Компьютерный клуб MetaWorld | Советский пр. 75",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 3041,
+    "url": "https://vk.com/mw_sovetsky"
+  },
+  {
+    "domain": "mw.cher",
+    "name": "Компьютерный клуб MetaWorld | Монтклер. 20",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 2498,
+    "url": "https://vk.com/mw.cher"
+  },
+  {
+    "domain": "onegame_che",
+    "name": "Компьютерный клуб ONE Game | Череповец",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 2316,
+    "url": "https://vk.com/onegame_che"
+  },
+  {
+    "domain": "elizium35",
+    "name": "Elizium - Компьютерный клуб | Череповец",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 2108,
+    "url": "https://vk.com/elizium35"
+  },
+  {
+    "domain": "cyberia_cherepovets",
+    "name": "CYBERIA | Компьютерный клуб | Череповец",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 2106,
+    "url": "https://vk.com/cyberia_cherepovets"
+  },
+  {
+    "domain": "strike_arena_cherepovets",
+    "name": "Strike Arena | Череповец ЗШК | Компьютерный клуб",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 1826,
+    "url": "https://vk.com/strike_arena_cherepovets"
+  },
+  {
+    "domain": "cyberkus35",
+    "name": "Кибер Кусь",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 395,
+    "url": "https://vk.com/cyberkus35"
+  },
+  {
+    "domain": "paradise_cyber",
+    "name": "Компьютерный клуб Парадиз • Череповец",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 367,
+    "url": "https://vk.com/paradise_cyber"
+  },
+  {
+    "domain": "comp_cherepovets",
+    "name": "Компы | Компьютерный клуб | Череповец",
+    "city": "Череповец",
+    "tz": "+03:00",
+    "members": 195,
+    "url": "https://vk.com/comp_cherepovets"
+  },
+  {
     "domain": "ultimate75",
     "name": "ULTIMATE - Компьютерный клуб | Чита",
     "city": "Чита",
@@ -14710,6 +18318,46 @@
     "tz": "+09:00",
     "members": 14,
     "url": "https://vk.com/inside_chita"
+  },
+  {
+    "domain": "unicorn_gaming",
+    "name": "UNICORN GAMING Электросталь | Компьютерный клуб",
+    "city": "Электросталь",
+    "tz": "+03:00",
+    "members": 3301,
+    "url": "https://vk.com/unicorn_gaming"
+  },
+  {
+    "domain": "colizeum_electrostal",
+    "name": "COLIZEUM Arena Плаза | Компьютерный клуб",
+    "city": "Электросталь",
+    "tz": "+03:00",
+    "members": 2404,
+    "url": "https://vk.com/colizeum_electrostal"
+  },
+  {
+    "domain": "game.port.elektrostal",
+    "name": "Компьютерный клуб Game Порт",
+    "city": "Электросталь",
+    "tz": "+03:00",
+    "members": 1288,
+    "url": "https://vk.com/game.port.elektrostal"
+  },
+  {
+    "domain": "cyberxpobedy",
+    "name": "CyberX Победы - Компьютерный клуб | Электросталь",
+    "city": "Электросталь",
+    "tz": "+03:00",
+    "members": 355,
+    "url": "https://vk.com/cyberxpobedy"
+  },
+  {
+    "domain": "cyberdeagle",
+    "name": "Компьютерный клуб «D’Eagle» | Электросталь",
+    "city": "Электросталь",
+    "tz": "+03:00",
+    "members": 241,
+    "url": "https://vk.com/cyberdeagle"
   },
   {
     "domain": "miraicyber",
@@ -14884,7 +18532,7 @@
     "name": "Time Zone | Компьютерный клуб | Ярославль",
     "city": "Ярославль",
     "tz": "+03:00",
-    "members": 793,
+    "members": 794,
     "url": "https://vk.com/timezone_yar"
   },
   {

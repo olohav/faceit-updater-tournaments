@@ -2,7 +2,7 @@
  * Генератор страниц для поисковиков: по одной статичной HTML-странице на каждый актуальный турнир.
  * Создаёт:  t/<id>/index.html  (страница турнира),  t/index.html  (каталог),  sitemap.xml,  robots.txt
  * Запуск:   node scripts/build-pages.mjs      (после scripts/sync-faceit.mjs)
- * Источники: data/faceit.json + ручные записи из index.html + турниры администратора из Supabase (если подключён).
+ * Источники: data/faceit.json + data/vk.json + ручные записи из index.html + турниры администратора из Supabase (если подключён).
  * Адрес сайта берётся из site.config.json (поле siteUrl) — при смене домена поправьте его там.
  */
 import { readFile, writeFile, mkdir, rm } from "node:fs/promises";
@@ -29,8 +29,11 @@ function staticTournaments() {
   catch (e) { console.warn("Не удалось прочитать TOURNAMENTS из index.html:", e.message); return []; }
 }
 async function remoteTournaments() {
-  try { return JSON.parse(await readFile(resolve(ROOT, "data/faceit.json"), "utf8")).tournaments || []; }
-  catch { console.warn("data/faceit.json не найден — страницы FACEIT пропущены."); return []; }
+  const read = async f => {
+    try { return JSON.parse(await readFile(resolve(ROOT, f), "utf8")).tournaments || []; }
+    catch { console.warn(f + " не найден — его страницы пропущены."); return []; }
+  };
+  return [...await read("data/faceit.json"), ...await read("data/vk.json")];
 }
 /* Турниры администратора: публичное чтение из Supabase (ключи берутся из index.html). */
 async function manualTournaments() {

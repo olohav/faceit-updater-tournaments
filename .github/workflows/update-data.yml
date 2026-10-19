@@ -1,0 +1,108 @@
+name: Update site data
+
+# Один конвейер для всех источников. Порядок: FACEIT -> ВКонтакте -> страницы для поисковиков -> коммит -> хостинг по FTP.
+on:
+  schedule:
+    - cron: "17 * * * *"      # каждый час: FACEIT + пересборка data/vk.json (турниры, которые уже начались, уходят с сайта)
+    - cron: "23 */6 * * *"    # каждые 6 часов: плюс обход ВК-групп клубов (около 30 минут)
+  push:
+    paths:                    # вы одобрили турниры у себя и сделали git push -> сайт обновляется сразу
+      - "data/vk-decisions.json"
+      - "data/vk-skip.json"
+  workflow_dispatch:           # ручной запуск кнопкой "Run workflow"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}      # если секрет не задан, шаг загрузки на хостинг пропускается
+      VK_TOKEN: ${{ secrets.VK_TOKEN }}          # если секрет не задан, обход ВК пропускается
+      FACEIT_API_KEY: ${{ secrets.FACEIT_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Что обновлять в этом запуске
+        id: mode
+        run: |
+          faceit=1; vk=1
+          if [ "${{ github.event_name }}" = "push" ]; then faceit=0; vk=0; fi
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" != "23 */6 * * *" ]; then vk=0; fi
+          echo "faceit=$faceit" >> "$GITHUB_OUTPUT"
+          echo "vk=$vk" >> "$GITHUB_OUTPUT"
+
+      # Каждый источник может упасть, не останавливая остальные; в конце запуск всё равно станет красным.
+      - name: FACEIT
+        id: faceit
+        if: steps.mode.outputs.faceit == '1' && env.FACEIT_API_KEY != ''
+        continue-on-error: true
+        run: node scripts/sync-faceit.mjs
+
+      - name: ВКонтакте, обход групп клубов
+        id: vk
+        if: steps.mode.outputs.vk == '1' && env.VK_TOKEN != ''
+        continue-on-error: true
+        run: node scripts/vk-tournaments.mjs
+
+      - name: ВКонтакте, пересборка data/vk.json из ваших решений
+        if: steps.mode.outputs.vk != '1' || env.VK_TOKEN == ''
+        run: node scripts/vk-tournaments.mjs --publish-only
+
+      - name: Страницы для поисковиков
+        run: node scripts/build-pages.mjs
+
+      - name: Коммит, если данные изменились
+        run: |
+          if [ -n "$(git status --porcelain data/ t/ sitemap.xml robots.txt)" ]; then
+            git config user.name "data-sync-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git add -A data t sitemap.xml robots.txt
+            git commit -m "Обновление данных турниров"
+            for i in 1 2 3; do
+              git pull --rebase --autostash && git push && break
+              sleep 5
+            done
+          fi
+
+      - name: Загрузка на хостинг по FTP
+        if: env.FTP_SERVER != ''
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_DIR || '/' }}
+          protocol: ${{ secrets.FTP_PROTOCOL || 'ftp' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            scripts/**
+            supabase/**
+            README.md
+            *.bat
+            *.mjs
+            site.config.json
+            data/clubs.json
+            data/organizers.json
+            data/vk-candidates.json
+            data/vk-decisions.json
+            data/vk-skip.json
+            data/vk-search-cache.json
+            data/vk-unknown-cities.txt
+
+      - name: Сообщить, если источник не отработал
+        if: steps.faceit.outcome == 'failure' || steps.vk.outcome == 'failure'
+        run: |
+          echo "::error::Один из источников завершился с ошибкой (FACEIT: ${{ steps.faceit.outcome }}, ВК: ${{ steps.vk.outcome }}). Сайт обновлён тем, что удалось собрать."
+          exit 1
