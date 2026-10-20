@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-19T22:25:38.694Z",
+  "updatedAt": "2026-10-20T14:52:48.919Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-90455361-82cc-4ed1-9daf-f9ffbda85a50",
@@ -946,6 +946,33 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/a60804c5-f408-458a-960c-0c8d2ac0ec26/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-e2037cd9-af1b-453c-a02a-ac7880d28ff2",
+      "name": "BILA DE AUR REVINE",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-24",
+      "end": "2026-10-24",
+      "startsAt": "2026-10-24T15:00:00+03:00",
+      "prize": {
+        "v": 100,
+        "c": "USD"
+      },
+      "fee": null,
+      "regEnd": "2026-10-24T14:50:00+03:00",
+      "op": "crissstea",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 15:00 по МСК. PRIZE POOL 100$ PENTRU REVENIREA TURNEULUI BILA DE AUR. 5V5 VENITI CU ECHIPELE DE ACASA SAU PUTETI SA VA GASITI ECHIPA PE DISCORD.GG/CRISSSTEA",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/e2037cd9-af1b-453c-a02a-ac7880d28ff2/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
