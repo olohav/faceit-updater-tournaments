@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-20T14:52:48.919Z",
+  "updatedAt": "2026-10-20T16:50:18.492Z",
   "source": "FACEIT Data API v4",
-  "count": 82,
+  "count": 83,
   "tournaments": [
     {
       "id": "fc-90455361-82cc-4ed1-9daf-f9ffbda85a50",
@@ -604,6 +604,31 @@
       "social": []
     },
     {
+      "id": "fc-b30915c4-ee5a-44a2-8c48-2f3f12a5460d",
+      "name": "Gorilla Cup 4 Division 2 Q1",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-20",
+      "end": "2026-10-20",
+      "startsAt": "2026-10-20T19:00:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-20T18:55:00+03:00",
+      "op": "Gorilla Game League",
+      "teams": 128,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 128. Старт в 19:00 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/b30915c4-ee5a-44a2-8c48-2f3f12a5460d/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
       "id": "fc-69274a19-96dd-4ac2-9278-649a3004ed36",
       "name": "SkinClub BACK THE MAKERS stage 3",
       "kind": "main",
@@ -613,6 +638,7 @@
       "start": "2026-10-20",
       "end": "2026-10-20",
       "startsAt": "2026-10-20T19:00:00+03:00",
+      "endUnknown": true,
       "prize": null,
       "fee": null,
       "regEnd": "2026-10-20T18:45:00+03:00",
