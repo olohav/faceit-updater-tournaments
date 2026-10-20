@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-20T18:56:13.482Z",
+  "updatedAt": "2026-10-20T19:12:21.802Z",
   "source": "FACEIT Data API v4",
-  "count": 82,
+  "count": 81,
   "tournaments": [
     {
       "id": "fc-90455361-82cc-4ed1-9daf-f9ffbda85a50",
@@ -675,30 +675,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/3f6c3798-0def-42c4-bf70-afbb829d6928/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-cfdb840a-890f-4e01-a1a1-fdfc2f078664",
-      "name": "TUF Gaming 5v5",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-20",
-      "end": "2026-10-20",
-      "startsAt": "2026-10-20T22:00:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-18T22:00:00+03:00",
-      "op": "Empire Inc",
-      "teams": 16,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 22:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/cfdb840a-890f-4e01-a1a1-fdfc2f078664/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
