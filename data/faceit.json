@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-21T10:51:53.923Z",
+  "updatedAt": "2026-10-21T16:51:32.637Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-90455361-82cc-4ed1-9daf-f9ffbda85a50",
@@ -275,6 +275,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/7b0fc446-736a-442b-9f62-e9e71629cb5e/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-dd88e8eb-430b-4fd8-b5b6-23bf37874b62",
+      "name": "E-sporta 3 Liga - S7",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-14",
+      "end": "2026-10-28",
+      "startsAt": "2026-10-14T19:50:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-13T14:30:00+03:00",
+      "op": "kleverr",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 19:50 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/dd88e8eb-430b-4fd8-b5b6-23bf37874b62/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
