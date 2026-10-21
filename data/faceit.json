@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T16:51:32.637Z",
+  "updatedAt": "2026-10-21T18:58:07.556Z",
   "source": "FACEIT Data API v4",
   "count": 82,
   "tournaments": [
@@ -668,7 +668,7 @@
         "c": "RUB"
       },
       "fee": null,
-      "regEnd": "2026-10-22T15:00:00+03:00",
+      "regEnd": "2026-10-22T16:30:00+03:00",
       "op": "Narodnaya Liga",
       "teams": 128,
       "platform": "FACEIT",
@@ -794,7 +794,7 @@
         "c": "RUB"
       },
       "fee": null,
-      "regEnd": "2026-10-23T15:00:00+03:00",
+      "regEnd": "2026-10-23T16:30:00+03:00",
       "op": "Narodnaya Liga",
       "teams": 128,
       "platform": "FACEIT",
@@ -1016,7 +1016,7 @@
         "c": "RUB"
       },
       "fee": null,
-      "regEnd": "2026-10-24T15:00:00+03:00",
+      "regEnd": "2026-10-24T16:30:00+03:00",
       "op": "Narodnaya Liga",
       "teams": 128,
       "platform": "FACEIT",
@@ -1043,7 +1043,7 @@
         "c": "RUB"
       },
       "fee": null,
-      "regEnd": "2026-10-25T15:00:00+03:00",
+      "regEnd": "2026-10-25T16:30:00+03:00",
       "op": "Narodnaya Liga",
       "teams": 128,
       "platform": "FACEIT",
