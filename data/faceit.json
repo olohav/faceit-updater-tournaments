@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-20T21:51:43.234Z",
+  "updatedAt": "2026-10-21T05:49:34.485Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-90455361-82cc-4ed1-9daf-f9ffbda85a50",
@@ -1396,6 +1396,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/a21bd764-477f-4c7a-824d-b4b9efff39ee/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-2fe8a3c9-32be-4edd-a693-dd663f56b0f6",
+      "name": "VERTUS HALLOWEEN CUP",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "startsAt": "2026-10-31T18:30:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-28T23:00:00+03:00",
+      "op": "VertusCyber",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 18:30 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/2fe8a3c9-32be-4edd-a693-dd663f56b0f6/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
