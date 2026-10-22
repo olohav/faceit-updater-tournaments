@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-22T19:13:22.829Z",
+  "updatedAt": "2026-10-22T20:50:41.280Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 84,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1257,7 +1257,7 @@
     },
     {
       "id": "fc-3371a3c5-0919-4600-873d-a0b5c4cc337d",
-      "name": "Stripe Qualifications 5v5",
+      "name": "Stripes Qualifications 5v5",
       "kind": "qualifier",
       "disc": "CS2",
       "format": "Online",
@@ -1402,7 +1402,7 @@
     },
     {
       "id": "fc-a21bd764-477f-4c7a-824d-b4b9efff39ee",
-      "name": "WIN IO Female Cup OQ 1",
+      "name": "WINIO Female Cup OQ 1",
       "kind": "main",
       "disc": "CS2",
       "format": "Online",
@@ -1450,7 +1450,7 @@
     },
     {
       "id": "fc-2339aa20-de59-433b-801c-f0963b65ccfd",
-      "name": "WIN IO Female Cup OQ 2",
+      "name": "WINIO Female Cup OQ 2",
       "kind": "main",
       "disc": "CS2",
       "format": "Online",
@@ -1546,7 +1546,7 @@
     },
     {
       "id": "fc-71cab7c1-8252-4bc0-9b4d-69955fc64983",
-      "name": "WIN IO Female Cup OQ 3",
+      "name": "WINIO Female Cup OQ 3",
       "kind": "main",
       "disc": "CS2",
       "format": "Online",
@@ -1669,7 +1669,7 @@
     },
     {
       "id": "fc-cdd4406c-b439-47eb-b5f5-5b16e69489a1",
-      "name": "WIN IO Female Cup OQ 4",
+      "name": "WINIO Female Cup OQ 4",
       "kind": "main",
       "disc": "CS2",
       "format": "Online",
@@ -2051,6 +2051,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/1f96a252-27b9-45a5-87d6-d60b97e18a44/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-be6535c9-82b4-4d8d-8d0a-177841d51e42",
+      "name": "test1",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2027-01-22",
+      "end": "2027-01-22",
+      "startsAt": "2027-01-22T23:35:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2027-01-22T23:30:00+03:00",
+      "op": "NotSoOften",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 23:35 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/be6535c9-82b4-4d8d-8d0a-177841d51e42/",
       "siteName": "Страница на FACEIT",
       "social": []
     }
