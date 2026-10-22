@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T13:20:13.436Z",
+  "updatedAt": "2026-10-22T14:53:55.375Z",
   "source": "FACEIT Data API v4",
   "count": 81,
   "tournaments": [
@@ -638,6 +638,7 @@
       "start": "2026-10-22",
       "end": "2026-10-22",
       "startsAt": "2026-10-22T18:00:00+03:00",
+      "endUnknown": true,
       "prize": {
         "v": 10000000,
         "c": "RUB"
@@ -1231,7 +1232,7 @@
     },
     {
       "id": "fc-3371a3c5-0919-4600-873d-a0b5c4cc337d",
-      "name": "Stripe Qualifications 5v5",
+      "name": "Str Qualifications 5v5",
       "kind": "qualifier",
       "disc": "CS2",
       "format": "Online",
@@ -1367,7 +1368,7 @@
       "teams": 64,
       "platform": "FACEIT",
       "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 64. Старт в 16:00 по МСК.",
+      "desc": "Турнир на FACEIT (CS2). Мест: 64. Старт в 16:00 по МСК. Single Elimination Discord: https://discord.gg/GYKx5567Q The Open Qualifier will be hosted online on FACEIT, with unlimited signups. There are no country & region restrictions at the tournament. The filter applied is female rosters (women’s lineups). Servers for Open Qualifier: Moscow, Netherlands, Germany, Sweden, Finland, France, UK Starting at 14:00 am CET on Monday, October 31st. Initial match",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/a21bd764-477f-4c7a-824d-b4b9efff39ee/",
@@ -1562,7 +1563,7 @@
       "teams": 64,
       "platform": "FACEIT",
       "ru": true,
-      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 64. Старт в 18:05 по МСК. https://t.me/yoruesports (Команда, которая победила в квалификации - ОБЯЗАНА отписать менеджеру в TG, ВАЖНО!!! Для комфорта и удобства, отпишите заранее менеджеру в телеграмм, приложив название вашей команды и ссылку на вашу команду). Желаем ��дачи! MAIN TOURNAMENT PRIZEPOLL: ~800$",
+      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 64. Старт в 18:05 по МСК. https://t.me/yoruesports (Команда, которая победила в квалификации - ОБЯЗАНА отписать менеджеру в TG, ВАЖНО!!! Для комфорта и удобства, отпишите заранее менеджеру в телеграмм, приложив название вашей команды и ссылку на вашу команду). Желаем удачи! MAIN TOURNAMENT PRIZEPOLL: ~800$",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/842aff2e-fa39-454b-b2a1-c73a9bb32de6/",
