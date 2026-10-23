@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T22:48:30.289Z",
+  "updatedAt": "2026-10-23T01:05:20.319Z",
   "source": "FACEIT Data API v4",
   "count": 83,
   "tournaments": [
@@ -1229,7 +1229,7 @@
     },
     {
       "id": "fc-3371a3c5-0919-4600-873d-a0b5c4cc337d",
-      "name": "Stripes Qualifications 5v5",
+      "name": "Stripe Qualifications 5v5",
       "kind": "qualifier",
       "disc": "CS2",
       "format": "Online",
