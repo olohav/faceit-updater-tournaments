@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-23T01:05:20.319Z",
+  "updatedAt": "2026-10-23T08:53:34.210Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 84,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1001,6 +1001,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/18f55a26-8a3e-4773-8ef8-1825056fbed5/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-8f3e1ce3-25e3-4f74-a105-41495c3c8dca",
+      "name": "Miedzyszkolny turniej CS2",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "startsAt": "2026-10-25T18:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-24T21:00:00+03:00",
+      "op": "lesniak",
+      "teams": 30,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 30. Старт в 18:00 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/8f3e1ce3-25e3-4f74-a105-41495c3c8dca/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
