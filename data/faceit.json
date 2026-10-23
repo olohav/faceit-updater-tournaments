@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-23T18:57:35.462Z",
+  "updatedAt": "2026-10-23T19:50:10.565Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-90455361-82cc-4ed1-9daf-f9ffbda85a50",
@@ -757,30 +757,6 @@
       "social": []
     },
     {
-      "id": "fc-ea296d99-0933-48df-b85e-119f336fa859",
-      "name": "DDeSports CS2 Cup 2",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-23",
-      "end": "2026-10-23",
-      "startsAt": "2026-10-23T22:30:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-23T01:55:00+03:00",
-      "op": "DDeSports",
-      "teams": 16,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 22:30 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/ea296d99-0933-48df-b85e-119f336fa859/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
       "id": "fc-a955d02d-7b6d-4232-afb3-376f8bc9567e",
       "name": "Helloween Tournament PlanB",
       "kind": "main",
@@ -830,7 +806,7 @@
     },
     {
       "id": "fc-a60804c5-f408-458a-960c-0c8d2ac0ec26",
-      "name": "RE:STRIKE - SEASON 2",
+      "name": "RE:STRIKE - Season 2",
       "kind": "main",
       "disc": "CS2",
       "format": "Online",
