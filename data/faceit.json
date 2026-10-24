@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-24T10:48:48.458Z",
+  "updatedAt": "2026-10-24T11:50:22.287Z",
   "source": "FACEIT Data API v4",
-  "count": 78,
+  "count": 77,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -675,31 +675,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/ca276ac2-5d1e-4b1f-ac80-5446b8bdcae6/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-f9ec4d39-afb5-4429-81ce-b1ab4df2d3a0",
-      "name": "Stavropol Krai Esports Championship 2026 Online Stage",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-24",
-      "end": "2026-10-24",
-      "startsAt": "2026-10-24T10:05:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-24T09:50:00+03:00",
-      "op": "FKS SK",
-      "teams": 8,
-      "platform": "FACEIT",
-      "ru": true,
-      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 10:05 по МСК. Чемпионат Ставропольского края 2026 по компьютерному спорту | Counter-Strike 2 Приглашаем команды принять участие в Чемпионате Ставропольского края по компьютерному спорту в дисциплине «Тактический трёхмерный бой» (Counter-Strike 2). Отборочные матчи пройдут онлайн на платформе FACEIT. Сильнейшие команды выйдут в финал, который состоится 25-го числа в формате LAN в Ставрополе. Участников ждут матч",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/f9ec4d39-afb5-4429-81ce-b1ab4df2d3a0/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
