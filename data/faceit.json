@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-24T15:49:34.359Z",
+  "updatedAt": "2026-10-24T16:51:06.827Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 80,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -704,31 +704,6 @@
       "social": []
     },
     {
-      "id": "fc-0f9ca083-d836-4d49-8802-8a88eaa72d18",
-      "name": "GOTKACUP",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-24",
-      "end": "2026-10-24",
-      "startsAt": "2026-10-24T17:00:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-24T00:55:00+03:00",
-      "op": "GOTKAHUB",
-      "teams": 32,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 17:00 по МСК. 🏆 TURNIEJ 2V2 WINGMAN Witamy w turnieju 2v2 Wingman rozgrywanym na platformie FACEIT! Zbierzcie swoje duo, przygotujcie się na rywalizację i walczcie o miejsce na podium. 🔥 👥 FORMAT • Drużyny: 2 zawodników • Tryb: Wingman 2v2 • System: pojedyncza eliminacja • Pierwsza faza turnieju: BO1 • Półfinały: BO3 • Mecz o 3. miejsce: BO3 • Finał: BO3 Przegrana w meczu eliminacyjnym oznacza odpadnięcie z ",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/0f9ca083-d836-4d49-8802-8a88eaa72d18/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
       "id": "fc-57f7dfb7-3a7c-4042-8516-4ef9c7471925",
       "name": "Miedzyszkolny Kaliski Turniej W CS2",
       "kind": "main",
@@ -791,6 +766,7 @@
       "start": "2026-10-24",
       "end": "2026-10-24",
       "startsAt": "2026-10-24T19:00:00+03:00",
+      "endUnknown": true,
       "prize": null,
       "fee": null,
       "regEnd": "2026-10-24T18:55:00+03:00",
