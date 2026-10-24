@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T12:55:42.009Z",
+  "updatedAt": "2026-10-24T14:48:41.254Z",
   "source": "FACEIT Data API v4",
   "count": 77,
   "tournaments": [
@@ -741,6 +741,7 @@
       "start": "2026-10-24",
       "end": "2026-10-24",
       "startsAt": "2026-10-24T17:00:00+03:00",
+      "endUnknown": true,
       "prize": null,
       "fee": null,
       "regEnd": "2026-10-24T00:55:00+03:00",
@@ -765,6 +766,7 @@
       "start": "2026-10-24",
       "end": "2026-10-24",
       "startsAt": "2026-10-24T17:00:00+03:00",
+      "endUnknown": true,
       "prize": null,
       "fee": null,
       "regEnd": "2026-10-23T00:55:00+03:00",
@@ -789,6 +791,7 @@
       "start": "2026-10-24",
       "end": "2026-10-24",
       "startsAt": "2026-10-24T18:00:00+03:00",
+      "endUnknown": true,
       "prize": {
         "v": 10000000,
         "c": "RUB"
@@ -1050,7 +1053,7 @@
       "teams": 32,
       "platform": "FACEIT",
       "ru": false,
-      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 32. Старт в 23:00 по МСК. > # PLAYERS HAVE TO JOIN A TEAM AND GET AN INVITE > - ![✪ JOIN YOUR LOBBY NOW! ✪](https://faceit.plus//?created=pgl&access=invited_only&league=open_league) > - ### WE AIM TO ENSURE FAIR COMPETITION BY TAKING ACTION AGAINST SMURFS, CHEATERS, NEW ACCOUNTS AND TOXIC PLAYERS",
+      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 32. Старт в 23:00 по МСК. > # PLAYERS HAVE TO JOIN A TEAM AND GET AN INVITE > - ![✪ JOIN YOUR LOBBY NOW! ✪]() > - ### WE AIM TO ENSURE FAIR COMPETITION BY TAKING ACTION AGAINST SMURFS, CHEATERS, NEW ACCOUNTS AND TOXIC PLAYERS",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/3371a3c5-0919-4600-873d-a0b5c4cc337d/",
