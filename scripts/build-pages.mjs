@@ -2,7 +2,7 @@
  * Генератор страниц для поисковиков: по одной статичной HTML-странице на каждый актуальный турнир.
  * Создаёт:  t/<id>/index.html  (страница турнира),  t/index.html  (каталог),  sitemap.xml,  robots.txt
  * Запуск:   node scripts/build-pages.mjs      (после scripts/sync-faceit.mjs)
- * Источники: data/faceit.json + data/vk.json + ручные записи из index.html + турниры администратора из Supabase (если подключён).
+ * Источники: data/faceit.json + ручные записи из index.html + турниры администратора из Supabase (если подключён).
  * Адрес сайта берётся из site.config.json (поле siteUrl) — при смене домена поправьте его там.
  */
 import { readFile, writeFile, mkdir, rm } from "node:fs/promises";
@@ -33,7 +33,8 @@ async function remoteTournaments() {
     try { return JSON.parse(await readFile(resolve(ROOT, f), "utf8")).tournaments || []; }
     catch { console.warn(f + " не найден — его страницы пропущены."); return []; }
   };
-  return [...await read("data/faceit.json"), ...await read("data/vk.json")];
+  // ВК-турниры живут на сайте недолго и меняются при каждом решении модератора, поэтому отдельных страниц для поисковиков у них нет
+  return read("data/faceit.json");
 }
 /* Турниры администратора: публичное чтение из Supabase (ключи берутся из index.html). */
 async function manualTournaments() {
@@ -145,6 +146,6 @@ await writeFile(resolve(ROOT, "t/index.html"), catalogPage());
 if (SITE) {
   const urls = [[SITE + "/", today, "daily", "1.0"], [SITE + "/t/", today, "daily", "0.9"], ...all.map(t => [pageUrl(t), today, "daily", "0.8"])];
   await writeFile(resolve(ROOT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([u, d, f, p]) => `  <url><loc>${esc(u)}</loc><lastmod>${d}</lastmod><changefreq>${f}</changefreq><priority>${p}</priority></url>`).join("\n")}\n</urlset>\n`);
-  await writeFile(resolve(ROOT, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+  await writeFile(resolve(ROOT, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /moderation.html\nDisallow: /api/\n\nSitemap: ${SITE}/sitemap.xml\n`);
 }
 console.log(`Готово: ${all.length} страниц турниров (FACEIT: ${all.filter(t => String(t.id).startsWith("fc-")).length}, администратор: ${all.filter(t => String(t.id).startsWith("m-")).length}), каталог t/index.html${SITE ? ", sitemap.xml, robots.txt" : ""}.`);

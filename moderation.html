@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Модерация турниров ВК — КиберРадар</title>
+<style>
+:root{--bg:#f2f4f9;--panel:#fff;--ink:#141a2b;--mute:#5b6479;--line:#dde2ee;--acc:#2f4bff;--acc-ink:#fff;--ok:#12805c;--bad:#c4264a;--warn:#b86e00;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0c1019;--panel:#151b29;--ink:#e8ecf6;--mute:#93a0bb;--line:#26304a;--acc:#8a98ff;--acc-ink:#0c1019;--ok:#4fd3a2;--bad:#ff6b8a;--warn:#ffb347;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.bar{max-width:1000px;margin:auto;padding:.7rem 1rem;display:flex;gap:.8rem;align-items:center;flex-wrap:wrap}
+.bar h1{font-size:1.05rem;margin:0 auto 0 0}
+main{max-width:1000px;margin:0 auto;padding:1rem}
+a{color:var(--acc)}
+button,input,select{font:inherit;color:inherit}
+button{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:.4rem .8rem;cursor:pointer}
+button:hover{border-color:var(--acc)}
+button:disabled{opacity:.5;cursor:not-allowed}
+button.pri{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+button.ok{border-color:var(--ok);color:var(--ok)}
+button.bad{border-color:var(--bad);color:var(--bad)}
+input,select{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:.4rem .6rem;min-width:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1rem;margin:.8rem 0}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.grow{flex:1 1 220px}
+.mute{color:var(--mute);font-size:.88rem}
+.chip{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:0 .6rem;font-size:.8rem;margin-right:.3rem}
+.chip.s-approved{color:var(--ok);border-color:var(--ok)}.chip.s-rejected{color:var(--bad);border-color:var(--bad)}.chip.s-pending{color:var(--warn);border-color:var(--warn)}
+.tabs button.on{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.title{font-weight:700;font-size:1.02rem;margin:0 0 .2rem;overflow-wrap:anywhere}
+.edit{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.6rem;margin-top:.8rem}
+.edit label{display:flex;flex-direction:column;gap:.2rem;font-size:.85rem;color:var(--mute)}
+.edit .wide{grid-column:1/-1}
+.members{margin:.6rem 0 0;padding:0;list-style:none;max-height:260px;overflow:auto;border-top:1px solid var(--line)}
+.members li{display:flex;gap:.6rem;align-items:center;padding:.3rem 0;border-bottom:1px solid var(--line);font-size:.88rem}
+.members li.off{opacity:.5;text-decoration:line-through}
+.members .n{flex:1;min-width:0;overflow-wrap:anywhere}
+#toast{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:.6rem 1rem;border-radius:10px;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90vw;z-index:9}
+#toast.on{opacity:1}#toast.err{background:var(--bad);color:#fff}
+.hidden{display:none!important}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem}
+.stats div{background:var(--bg);border-radius:8px;padding:.5rem .7rem}.stats b{display:block;font-size:1.2rem}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <h1>Модерация турниров ВК</h1>
+  <span id="saveState" class="mute"></span>
+  <a href="./">На сайт</a>
+  <button id="logout" class="hidden">Выйти</button>
+</div></header>
+<main>
+  <section id="login" class="card hidden">
+    <h2 style="margin-top:0">Вход</h2>
+    <div class="row"><input id="pw" type="password" placeholder="Пароль модератора" autocomplete="current-password" class="grow"><button id="loginBtn" class="pri">Войти</button></div>
+    <p id="loginMsg" class="mute"></p>
+  </section>
+  <section id="fatal" class="card hidden"></section>
+  <section id="app" class="hidden">
+    <div class="card"><div id="stats" class="stats"></div><p id="statsNote" class="mute" style="margin:.6rem 0 0"></p></div>
+    <div class="card"><div class="row">
+      <div class="tabs row" id="tabs"></div>
+      <input id="q" type="search" placeholder="Поиск по названию, клубу, городу" class="grow">
+      <label class="row mute"><input id="dated" type="checkbox">только с датой</label>
+      <select id="sort"><option value="date">по дате</option><option value="size">по числу клубов</option></select>
+    </div></div>
+    <div id="list"></div>
+  </section>
+</main>
+<div id="toast"></div>
+<script type="module">
+import { groupAll, buildPublished, emptyDecisions, groupKeyOf } from "./lib/vk-publish.js";
+
+const API = "api/vk.php";
+const GAMES = ["CS2", "Dota 2", "Valorant", "MLBB"];
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const S = { cands: [], decisions: emptyDecisions(), skip: [], rev: "", stats: null, tab: "pending", q: "", dated: false, sort: "date", open: new Set(), edit: new Set() };
+let chain = Promise.resolve();
+
+async function api(action, body) {
+  const opt = body ? { method: "POST", headers: { "Content-Type": "application/json", "X-Requested-With": "tf-moderation" }, body: JSON.stringify(body) } : {};
+  const r = await fetch(`${API}?action=${action}`, { ...opt, credentials: "same-origin", cache: "no-store" });
+  let j;
+  try { j = await r.json(); } catch { j = { error: "Сервер ответил не JSON. Проверьте, что на хостинге работает PHP: откройте api/vk.php?action=ping" }; }
+  if (!r.ok) throw Object.assign(new Error(j.error || `Ошибка ${r.status}`), { status: r.status });
+  return j;
+}
+
+function toast(msg, err) {
+  const t = $("#toast");
+  t.textContent = msg; t.className = "on" + (err ? " err" : "");
+  clearTimeout(toast.t); toast.t = setTimeout(() => (t.className = ""), err ? 6000 : 2500);
+}
+
+const show = (id, on) => $(id).classList.toggle("hidden", !on);
+const fatal = (html) => { show("#login", false); show("#app", false); $("#fatal").innerHTML = html; show("#fatal", true); };
+
+// ---------- загрузка ----------
+async function loadAll() {
+  const [cands, srv, stats] = await Promise.all([
+    fetch("data/vk-candidates.json?t=" + Date.now(), { cache: "no-store" }).then((r) => (r.ok ? r.json() : [])).catch(() => []),
+    api("load"),
+    fetch("data/vk-stats.json?t=" + Date.now(), { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+  ]);
+  const d = srv.decisions || {};
+  S.cands = Array.isArray(cands) ? cands : [];
+  S.decisions = { groups: Array.isArray(d.groups) ? {} : d.groups || {}, posts: Array.isArray(d.posts) ? {} : d.posts || {} };
+  S.skip = Array.isArray(srv.skip) ? srv.skip : [];
+  S.rev = srv.rev; S.stats = stats;
+  render();
+}
+
+async function boot() {
+  let ping;
+  try { ping = await api("ping"); } catch (e) {
+    return fatal(`<b>Сервер не отвечает.</b><br>${esc(e.message)}<br><span class="mute">Файл api/vk.php должен быть загружен на хостинг, а на хостинге включён PHP.</span>`);
+  }
+  if (!ping.configured) return fatal("<b>Пароль не настроен.</b><br>Добавьте секрет <code>MODERATOR_PASSWORD</code> в GitHub (Settings → Secrets → Actions) и запустите workflow «Update site data».");
+  if (!ping.dataWritable) return fatal("<b>Папка data на хостинге недоступна для записи.</b><br>Выдайте ей права 755 или 775 в панели хостинга или через FileZilla.");
+  const s = await api("session");
+  if (!s.auth) { show("#login", true); $("#pw").focus(); return; }
+  await enter();
+}
+async function enter() {
+  show("#login", false); show("#logout", true);
+  try { await loadAll(); show("#app", true); } catch (e) {
+    if (e.status === 401) { show("#app", false); show("#logout", false); show("#login", true); } else fatal(esc(e.message));
+  }
+}
+
+$("#loginBtn").onclick = login;
+$("#pw").onkeydown = (e) => e.key === "Enter" && login();
+async function login() {
+  $("#loginMsg").textContent = "";
+  try { await api("login", { password: $("#pw").value }); $("#pw").value = ""; await enter(); }
+  catch (e) { $("#loginMsg").textContent = e.message; }
+}
+$("#logout").onclick = async () => { await api("logout", {}); location.reload(); };
+
+// ---------- сохранение ----------
+// Любое изменение: правим решения -> считаем итоговый список -> отправляем на сервер (по очереди).
+function commit(mutate) {
+  chain = chain.then(async () => {
+    mutate(S.decisions, S.skip);
+    prune();
+    render();
+    $("#saveState").textContent = "Сохраняю…";
+    try {
+      const published = buildPublished(S.cands, S.decisions, S.skip);
+      const r = await api("save", { baseRev: S.rev, decisions: S.decisions, skip: S.skip, published });
+      S.rev = r.rev;
+      $("#saveState").textContent = `Сохранено · на сайте ВК-турниров: ${r.count}`;
+    } catch (e) {
+      $("#saveState").textContent = "";
+      toast(e.message, true);
+      if (e.status === 401) location.reload(); else await loadAll().catch(() => {});
+    }
+  });
+  return chain;
+}
+
+// Удаляем решения для постов и групп, которых уже нет среди кандидатов
+function prune() {
+  const keys = new Set(S.cands.map(groupKeyOf)), ids = new Set(S.cands.map((c) => c.id));
+  for (const k of Object.keys(S.decisions.groups)) if (!keys.has(k)) delete S.decisions.groups[k];
+  for (const k of Object.keys(S.decisions.posts)) if (!ids.has(k)) delete S.decisions.posts[k];
+}
+
+// ---------- действия ----------
+function setStatus(key, status) {
+  const g = groupAll(S.cands, S.decisions, S.skip).find((x) => x.key === key);
+  if (status === "approved" && !g?.rep.date) return toast("Сначала укажите дату турнира (кнопка «Править»).", true);
+  commit((d) => {
+    const cur = d.groups[key] || {};
+    if (status === "pending" && Object.keys(cur).every((k) => k === "status")) delete d.groups[key];
+    else d.groups[key] = { ...cur, status };
+  });
+}
+
+function saveEdit(key, form) {
+  const g = groupAll(S.cands, S.decisions, S.skip).find((x) => x.key === key);
+  const base = g.rep.raw, f = new FormData(form);
+  const edits = {};
+  const cmp = (k, v) => { const b = base[k] ?? ""; if (v !== b) edits[k] = v; };
+  cmp("title", f.get("title").trim()); cmp("date", f.get("date")); cmp("time", f.get("time")); cmp("prize", f.get("prize").trim()); cmp("format", f.get("format"));
+  const games = f.getAll("games");
+  if (!games.length) return toast("Выберите хотя бы одну игру.", true);
+  if (games.slice().sort().join() !== (base.games || []).slice().sort().join()) edits.games = games;
+  const op = f.get("op").trim(); if (op) edits.op = op;
+  if (!edits.title && !f.get("title").trim()) return toast("Название не может быть пустым.", true);
+  commit((d) => { d.groups[key] = { status: d.groups[key]?.status || "pending", ...edits }; });
+  S.edit.delete(key); toast("Правки сохранены");
+}
+
+function togglePost(id) {
+  commit((d) => { if (d.posts[id]) delete d.posts[id]; else d.posts[id] = { status: "rejected" }; });
+}
+function hideClub(domain, name) {
+  if (!confirm(`Скрыть клуб «${name}»? Его ожидающие посты исчезнут из списка. Вернуть можно только вручную.`)) return;
+  commit((d, skip) => { if (!skip.includes(domain)) skip.push(domain); });
+}
+
+// ---------- отрисовка ----------
+const fmtDate = (d, t) => (d ? `${d.split("-").reverse().join(".")}${t ? " " + t : ""}` : "дата не указана");
+const STATUS = { pending: "на проверке", approved: "одобрено", rejected: "отклонено" };
+
+function render() {
+  const groups = groupAll(S.cands, S.decisions, S.skip).map((g) => ({ ...g, st: S.decisions.groups[g.key]?.status ?? "pending" }));
+  const count = (s) => groups.filter((g) => g.st === s).length;
+  const live = buildPublished(S.cands, S.decisions, S.skip).count;
+  $("#stats").innerHTML = [["На проверке", count("pending")], ["Одобрено", count("approved")], ["Отклонено", count("rejected")], ["На сайте сейчас", live], ["Постов клубов", S.cands.length]]
+    .map(([l, n]) => `<div><b>${n}</b>${l}</div>`).join("");
+  const st = S.stats;
+  $("#statsNote").textContent = st ? `Последний сбор: ${new Date(st.runAt).toLocaleString("ru")} · клубов обработано ${st.clubsOk} из ${st.clubsTotal} · просмотрено постов ${st.posts}` : "Данных о последнем сборе пока нет.";
+  $("#tabs").innerHTML = [["pending", "На проверке"], ["approved", "Одобренные"], ["rejected", "Отклонённые"], ["all", "Все"]]
+    .map(([k, l]) => `<button data-tab="${k}" class="${S.tab === k ? "on" : ""}">${l}${k !== "all" ? " " + count(k) : ""}</button>`).join("");
+
+  const q = S.q.toLowerCase();
+  let list = groups.filter((g) => (S.tab === "all" || g.st === S.tab) && (!S.dated || g.rep.date) &&
+    (!q || `${g.rep.title} ${g.members.map((m) => m.club.name + " " + m.club.city).join(" ")}`.toLowerCase().includes(q)));
+  list.sort(S.sort === "size"
+    ? (a, b) => b.members.length - a.members.length
+    : (a, b) => (a.rep.date ?? "9999").localeCompare(b.rep.date ?? "9999") || b.members.length - a.members.length);
+
+  $("#list").innerHTML = list.length ? list.map(card).join("") : `<p class="mute">В этом разделе пока ничего нет.</p>`;
+}
+
+function card(g) {
+  const r = g.rep, open = S.open.has(g.key), editing = S.edit.has(g.key);
+  const active = g.members.filter((m) => m.status !== "rejected" || g.st === "rejected").length;
+  const cities = g.cities.length > 3 ? `${g.cities.length} городов` : g.cities.join(", ");
+  return `<article class="card" data-key="${g.key}">
+    <div class="row"><span class="chip s-${g.st}">${STATUS[g.st]}</span>${g.edited ? '<span class="chip">с правками</span>' : ""}
+      <span class="mute">${esc(fmtDate(r.date, r.time))} · ${esc(r.games.join(", "))}${r.format ? " · " + esc(r.format) : ""}</span></div>
+    <p class="title">${esc(r.title)}</p>
+    <div class="mute">${g.members.length > 1 ? `${g.members.length} клубов · ` : ""}${esc(cities)}${r.prize ? " · " + esc(r.prize) : ""}</div>
+    <div class="row" style="margin-top:.6rem">
+      ${g.st !== "approved" ? `<button class="ok" data-act="approve">Одобрить${g.members.length > 1 ? " все посты" : ""}</button>` : ""}
+      ${g.st !== "rejected" ? `<button class="bad" data-act="reject">Отклонить</button>` : ""}
+      ${g.st !== "pending" ? `<button data-act="pending">Вернуть на проверку</button>` : ""}
+      <button data-act="edit">${editing ? "Закрыть правки" : "Править"}</button>
+      <button data-act="posts">${open ? "Скрыть" : "Посты"} (${active}/${g.members.length})</button>
+    </div>
+    ${editing ? editForm(g) : ""}
+    ${open ? `<ul class="members">${g.members.map((m) => member(m)).join("")}</ul>` : ""}
+  </article>`;
+}
+
+function member(m) {
+  const off = S.decisions.posts[m.id]?.status === "rejected";
+  return `<li class="${off ? "off" : ""}" data-id="${esc(m.id)}"><span class="n">${esc(m.club.city)} · ${esc(m.club.name)} · <a href="${esc(m.url)}" target="_blank" rel="noopener">пост</a></span>
+    <button data-act="post">${off ? "Вернуть" : "Исключить"}</button><button data-act="hide" data-domain="${esc(m.club.domain)}" data-name="${esc(m.club.name)}">Скрыть клуб</button></li>`;
+}
+
+function editForm(g) {
+  const r = g.rep;
+  return `<form class="edit" data-key="${g.key}">
+    <label class="wide">Название<input name="title" value="${esc(r.title)}" maxlength="160"></label>
+    <label>Дата<input name="date" type="date" value="${esc(r.date || "")}"></label>
+    <label>Время<input name="time" type="time" value="${esc(r.time || "")}"></label>
+    <label>Формат<select name="format">${["", "1x1", "2x2", "3x3", "5x5"].map((f) => `<option value="${f}"${(r.format || "") === f ? " selected" : ""}>${f || "не указан"}</option>`).join("")}</select></label>
+    <label>Организатор (сеть)<input name="op" value="${esc(r.op || "")}" placeholder="определится автоматически" maxlength="80"></label>
+    <label class="wide">Призовой фонд (строка из поста)<input name="prize" value="${esc(r.prize || "")}" maxlength="160"></label>
+    <div class="wide row">${GAMES.map((x) => `<label class="row" style="flex-direction:row"><input type="checkbox" name="games" value="${x}"${r.games.includes(x) ? " checked" : ""}>${x}</label>`).join("")}</div>
+    <div class="wide row"><button class="pri" type="submit">Сохранить правки</button><span class="mute">Правки применяются ко всем постам этого события.</span></div>
+  </form>`;
+}
+
+// ---------- события ----------
+$("#list").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-act]");
+  if (!b) return;
+  const key = b.closest("[data-key]")?.dataset.key, act = b.dataset.act;
+  if (act === "approve") setStatus(key, "approved");
+  else if (act === "reject") setStatus(key, "rejected");
+  else if (act === "pending") setStatus(key, "pending");
+  else if (act === "edit") { S.edit.has(key) ? S.edit.delete(key) : S.edit.add(key); render(); }
+  else if (act === "posts") { S.open.has(key) ? S.open.delete(key) : S.open.add(key); render(); }
+  else if (act === "post") togglePost(b.closest("li").dataset.id);
+  else if (act === "hide") hideClub(b.dataset.domain, b.dataset.name);
+});
+$("#list").addEventListener("submit", (e) => { e.preventDefault(); saveEdit(e.target.dataset.key, e.target); });
+$("#tabs").addEventListener("click", (e) => { const t = e.target.closest("[data-tab]"); if (t) { S.tab = t.dataset.tab; render(); } });
+$("#q").oninput = (e) => { S.q = e.target.value; render(); };
+$("#dated").onchange = (e) => { S.dated = e.target.checked; render(); };
+$("#sort").onchange = (e) => { S.sort = e.target.value; render(); };
+
+boot();
+</script>
+</body>
+</html>

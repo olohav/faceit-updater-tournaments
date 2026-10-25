@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /moderation.html
+Disallow: /api/
 
-Sitemap: http://esf222.ru.swtest.ru/sitemap.xml
+Sitemap: https://www.tournament-finder.ru/sitemap.xml

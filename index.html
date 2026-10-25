@@ -154,6 +154,8 @@ const FEEDBACK_ENDPOINT = "";        // адрес формы Formspree, нап�
 
 /* Экранирование: данные из FACEIT и базы попадают в HTML, поэтому спецсимволы обезвреживаются. */
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+/* Поля из data/*.json приходят экранированными (clean); для document.title нужен обычный текст. */
+const plain = h => new DOMParser().parseFromString(String(h), "text/html").documentElement.textContent;
 const safeUrl = u => (/^https?:\/\//i.test(u || "") ? esc(u) : "");
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const money0 = m => (m && isFinite(+m.v) && m.v !== "" && m.v !== null ? { v: +m.v, c: m.c === "USD" ? "USD" : "RUB" } : null);
@@ -395,7 +397,7 @@ function pageHome() {
 function pageTournament(id) {
   const t = activeList().find(x => x.id === id);
   if (!t) { $("#app").innerHTML = `<div class="card empty">Турнир не найден или уже завершён. <a href="#/">К списку турниров</a></div>`; return; }
-  document.title = t.name + " — КиберРадар";
+  document.title = plain(t.name) + " — КиберРадар";
   const links = [t.site && `<a href="${t.site}" target="_blank" rel="noopener">${t.siteName}</a>`, ...t.social.map(s => s.u ? `<a href="${s.u}" target="_blank" rel="noopener">${s.t}</a>` : s.t)].filter(Boolean);
   $("#app").innerHTML = `<p><a href="#/">← Все турниры</a></p>
   <span class="st ${t.st.k}">${t.st.l}</span><h1 style="margin-top:.6rem">${t.name}</h1>

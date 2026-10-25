@@ -3,3 +3,8 @@ node_modules/
 data/vk-search-cache.json
 data/vk-unknown-cities.txt
 *.tmp
+api/config.php
+data/vk.json
+data/vk-decisions.json
+data/vk-skip.json
+data/.login-fail.json

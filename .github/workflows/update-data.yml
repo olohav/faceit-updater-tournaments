@@ -1,14 +1,19 @@
 name: Update site data
 
-# Один конвейер для всех источников. Порядок: FACEIT -> ВКонтакте -> страницы для поисковиков -> коммит -> хостинг по FTP.
+# Один конвейер: тесты -> FACEIT -> ВКонтакте (сбор кандидатов) -> страницы для поисковиков -> коммит -> хостинг по FTP.
+# Одобрение ВК-турниров происходит на сайте (moderation.html) и этот workflow не требует: решения пишет api/vk.php на хостинге.
 on:
   schedule:
-    - cron: "17 * * * *"      # каждый час: FACEIT + пересборка data/vk.json (турниры, которые уже начались, уходят с сайта)
-    - cron: "23 */6 * * *"    # каждые 6 часов: плюс обход ВК-групп клубов (около 30 минут)
+    - cron: "17 * * * *"      # каждый час: FACEIT
+    - cron: "23 */6 * * *"    # каждые 6 часов: FACEIT и обход ВК-групп клубов (около 30 минут)
   push:
-    paths:                    # вы одобрили турниры у себя и сделали git push -> сайт обновляется сразу
-      - "data/vk-decisions.json"
-      - "data/vk-skip.json"
+    branches: [main]
+    paths:                    # правки сайта на GitHub сразу уходят на хостинг (без запроса к FACEIT и ВК)
+      - "index.html"
+      - "moderation.html"
+      - "api/**"
+      - "lib/**"
+      - "site.config.json"
   workflow_dispatch:           # ручной запуск кнопкой "Run workflow"
 
 permissions:
@@ -23,14 +28,43 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
-      FTP_SERVER: ${{ secrets.FTP_SERVER }}      # если секрет не задан, шаг загрузки на хостинг пропускается
-      VK_TOKEN: ${{ secrets.VK_TOKEN }}          # если секрет не задан, обход ВК пропускается
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}      # без этого секрета загрузка на хостинг пропускается
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      FTP_DIR: ${{ secrets.FTP_DIR }}            # папка сайта на сервере, например /public_html/
+      FTP_PROTOCOL: ${{ secrets.FTP_PROTOCOL }}  # ftp (по умолчанию) или ftps
+      VK_TOKEN: ${{ secrets.VK_TOKEN }}          # без этого секрета обход ВК пропускается
       FACEIT_API_KEY: ${{ secrets.FACEIT_API_KEY }}
+      MODERATOR_PASSWORD: ${{ secrets.MODERATOR_PASSWORD }}  # пароль страницы moderation.html (не короче 10 символов)
+      # Что НЕ загружается на хостинг. data/vk*.json пишет api/vk.php на сервере, перезаписывать их нельзя.
+      FTP_EXCLUDE: |
+        **/.git*
+        **/.git*/**
+        .github/**
+        scripts/**
+        supabase/**
+        README.md
+        package.json
+        *.bat
+        *.mjs
+        site.config.json
+        api/*.tmp*
+        data/clubs.json
+        data/organizers.json
+        data/vk.json
+        data/vk-decisions.json
+        data/vk-skip.json
+        data/vk-search-cache.json
+        data/vk-unknown-cities.txt
+        data/.login-fail.json
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Автотесты
+        run: node --test scripts/test.mjs
 
       - name: Что обновлять в этом запуске
         id: mode
@@ -54,12 +88,14 @@ jobs:
         continue-on-error: true
         run: node scripts/vk-tournaments.mjs
 
-      - name: ВКонтакте, пересборка data/vk.json из ваших решений
-        if: steps.mode.outputs.vk != '1' || env.VK_TOKEN == ''
-        run: node scripts/vk-tournaments.mjs --publish-only
-
       - name: Страницы для поисковиков
         run: node scripts/build-pages.mjs
+
+      - name: Пароль модератора (api/config.php)
+        id: modcfg
+        if: env.MODERATOR_PASSWORD != ''
+        continue-on-error: true
+        run: node scripts/make-moderator-config.mjs
 
       - name: Коммит, если данные изменились
         run: |
@@ -75,7 +111,9 @@ jobs:
           fi
 
       - name: Загрузка на хостинг по FTP
+        id: ftp
         if: env.FTP_SERVER != ''
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -83,26 +121,40 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_DIR || '/' }}
           protocol: ${{ secrets.FTP_PROTOCOL || 'ftp' }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            .github/**
-            scripts/**
-            supabase/**
-            README.md
-            *.bat
-            *.mjs
-            site.config.json
-            data/clubs.json
-            data/organizers.json
-            data/vk-candidates.json
-            data/vk-decisions.json
-            data/vk-skip.json
-            data/vk-search-cache.json
-            data/vk-unknown-cities.txt
+          exclude: ${{ env.FTP_EXCLUDE }}
 
-      - name: Сообщить, если источник не отработал
-        if: steps.faceit.outcome == 'failure' || steps.vk.outcome == 'failure'
+      # Ошибка «550 Can't change directory»: файл состояния выкладки на сервере разошёлся с реальными файлами
+      # (что-то удалили вручную). Удаляем файл состояния, и повторная загрузка зальёт всё заново.
+      - name: FTP, самовосстановление после сбоя
+        id: ftp_heal
+        if: env.FTP_SERVER != '' && steps.ftp.outcome == 'failure'
+        continue-on-error: true
         run: |
-          echo "::error::Один из источников завершился с ошибкой (FACEIT: ${{ steps.faceit.outcome }}, ВК: ${{ steps.vk.outcome }}). Сайт обновлён тем, что удалось собрать."
-          exit 1
+          DIR="${FTP_DIR:-/}"; case "$DIR" in */) ;; *) DIR="$DIR/";; esac
+          SSL=""; case "${FTP_PROTOCOL:-ftp}" in ftps*) SSL="--ssl-reqd";; esac
+          curl -sS --max-time 60 $SSL -u "$FTP_USERNAME:$FTP_PASSWORD" "ftp://$FTP_SERVER/" -Q "-DELE ${DIR}.ftp-deploy-sync-state.json" -o /dev/null || true
+          echo "Файл состояния выкладки сброшен, повторяю загрузку."
+
+      - name: Загрузка на хостинг по FTP (повтор)
+        id: ftp_retry
+        if: env.FTP_SERVER != '' && steps.ftp.outcome == 'failure'
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_DIR || '/' }}
+          protocol: ${{ secrets.FTP_PROTOCOL || 'ftp' }}
+          exclude: ${{ env.FTP_EXCLUDE }}
+
+      - name: Итог запуска
+        if: always()
+        run: |
+          fail=0
+          [ "${{ steps.faceit.outcome }}" = "failure" ] && { echo "::error::FACEIT завершился с ошибкой"; fail=1; }
+          [ "${{ steps.vk.outcome }}" = "failure" ] && { echo "::error::Обход ВКонтакте завершился с ошибкой"; fail=1; }
+          [ "${{ steps.modcfg.outcome }}" = "failure" ] && { echo "::error::Пароль модератора не применён: проверьте секрет MODERATOR_PASSWORD (не короче 10 символов)"; fail=1; }
+          if [ "${{ steps.ftp.outcome }}" = "failure" ] && [ "${{ steps.ftp_retry.outcome }}" != "success" ]; then echo "::error::Загрузка на хостинг не удалась даже после повтора"; fail=1; fi
+          [ "${{ steps.ftp.outcome }}" = "failure" ] && [ "${{ steps.ftp_retry.outcome }}" = "success" ] && echo "::warning::FTP восстановился после сброса состояния выкладки"
+          exit $fail
