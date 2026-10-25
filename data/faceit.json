@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-24T23:44:06.141Z",
+  "updatedAt": "2026-10-25T13:39:32.125Z",
   "source": "FACEIT Data API v4",
-  "count": 78,
+  "count": 79,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -731,30 +731,6 @@
       "social": []
     },
     {
-      "id": "fc-c1262b96-6752-45a0-9140-960964fe5a67",
-      "name": "ITCS Season 1",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-25",
-      "end": "2026-10-25",
-      "startsAt": "2026-10-25T19:00:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-25T16:00:00+03:00",
-      "op": "ITCS",
-      "teams": 8,
-      "platform": "FACEIT",
-      "ru": true,
-      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 19:00 по МСК. Регламент: https://docs.google.com/document/d/1O5GPXPXEVccIHzOW0cM5dT0pdKK49jIeh4i90bbZ6O0/edit?usp=sharing",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/c1262b96-6752-45a0-9140-960964fe5a67/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
       "id": "fc-c2780724-d6c1-407a-9135-7bc0c8a158a6",
       "name": "25 Divisioona Playoffs",
       "kind": "main",
@@ -1316,6 +1292,33 @@
       "social": []
     },
     {
+      "id": "fc-7ac9970c-d990-4ea7-928c-7742a43a66b7",
+      "name": "Razer Gaming Series | 5v5",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "startsAt": "2026-11-01T17:21:00+03:00",
+      "prize": {
+        "v": 500,
+        "c": "USD"
+      },
+      "fee": null,
+      "regEnd": "2026-11-01T16:21:00+03:00",
+      "op": "Razer Comp",
+      "teams": 8,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 17:21 по МСК. **⚠️To participate in Faceit tournaments, you must pass ![VERIFICATION](https://faceit.menu/verification) in order to become a participant in the tournament. ** _________________________________________________________________________________________________ **WHY I NEED TO VERIFY MY ACCOUNT** * We want to ensure fair competition by taking action against smurfs, cheaters, new accounts and toxic pl",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/7ac9970c-d990-4ea7-928c-7742a43a66b7/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
       "id": "fc-f0a531da-cdae-47e5-be1f-fedf9fb6c25f",
       "name": "Silent Halloween Hellcase 5x5(1-6LVL)",
       "kind": "main",
@@ -1750,6 +1753,33 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/159f16af-16a6-4565-abcb-ddc6b8b78a09/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-f1b34ea5-acff-4697-afff-b06c914da246",
+      "name": "VANTA Autumn 5v5 Cup",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-27",
+      "end": "2026-11-27",
+      "startsAt": "2026-11-27T20:00:00+03:00",
+      "prize": {
+        "v": 13000,
+        "c": "RUB"
+      },
+      "fee": null,
+      "regEnd": "2026-11-25T20:00:00+03:00",
+      "op": "VANTA",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": true,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 20:00 по МСК. ПЛАТНЫЙ любительский турнир по CS2 на общую сумму призовых 13.000 ₽. Первые матчи турнира стартуют 27 ноября в 20:00-21:00 по МСК. Остальные матчи 28-29 ноября 13:00-20:00. Конечное расписание будет выложено в Telegram: https://t.me/VANTA1337 Перед регистрацией на FACEIT обязательно нужно пройти регистрацию по инструкции в Telegram'е турнира: https://t.me/VANTA1337, иначе команда будет автоматичес",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/f1b34ea5-acff-4697-afff-b06c914da246/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
