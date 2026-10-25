@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-25T14:48:14.335Z",
+  "updatedAt": "2026-10-25T16:50:12.491Z",
   "source": "FACEIT Data API v4",
-  "count": 79,
+  "count": 80,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -150,6 +150,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/6c10a37b-8d80-4471-aa6a-3dba6dd5a062/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-3a957279-d560-4e1d-9315-a1984b4ecd69",
+      "name": "Optibet E-sporta Virsliga | Groups - S7",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-11",
+      "end": "2026-11-01",
+      "startsAt": "2026-10-11T18:55:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-08T20:15:00+03:00",
+      "op": "kleverr",
+      "teams": 8,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 18:55 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/3a957279-d560-4e1d-9315-a1984b4ecd69/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
