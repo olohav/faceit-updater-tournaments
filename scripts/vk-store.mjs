@@ -8,6 +8,7 @@
 //   data/vk.json             только vk-tournaments.mjs: итог для сайта (одобренные и ещё не начавшиеся)
 
 import { readFile, writeFile, rename, mkdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parsePrize } from './parse.mjs';
@@ -113,11 +114,59 @@ export function toSiteEntries(c) {
     social: [{ t: `Группа «${c.club.name}» во ВКонтакте`, u: `https://vk.com/${c.club.domain}` }],
   }));
 }
+// ---------- одинаковые турниры из разных клубов сети -> одна запись ----------
 
+// Ключ «того же события»: название, дата, время и игры совпадают
+const groupKey = (c) => [
+  String(c.title).toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim(),
+  c.date, c.time ?? '', [...(c.games || [])].sort().join('+'),
+].join('|');
+
+// Общее начало названий клубов: «CyberX Казань», «CyberX Уфа» -> «CyberX»
+function commonPrefix(names) {
+  const parts = names.map((n) => n.trim().split(/\s+/));
+  const out = [];
+  for (let i = 0; i < parts[0].length; i++) {
+    const w = parts[0][i].toLowerCase();
+    if (!parts.every((p) => p[i] && p[i].toLowerCase() === w)) break;
+    out.push(parts[0][i]);
+  }
+  return out.join(' ').replace(/[\s|,:;—–-]+$/u, '');
+}
+
+// Одна запись на событие, которое проходит сразу в нескольких клубах
+function toGroupEntries(key, members) {
+  members.sort((a, b) => a.club.city.localeCompare(b.club.city, 'ru') || a.id.localeCompare(b.id));
+  const first = members[0];
+  const cities = [...new Set(members.map((c) => c.club.city))];
+  const base = toSiteEntries(first);
+  const suffix = base[0]?.format === 'Online' ? ' / онлайн' : '';
+  const city = (cities.length <= 3 ? cities.join(', ') : `${cities.length} городов`) + suffix;
+  const op = commonPrefix(members.map((c) => c.club.name)) || `${first.club.name} и другие клубы`;
+  const hash = createHash('sha1').update(key).digest('hex').slice(0, 8);
+  return base.map((e) => ({
+    ...e,
+    id: base.length > 1 ? `vk-grp-${hash}-${e.disc.toLowerCase().replace(/\W+/g, '')}` : `vk-grp-${hash}`,
+    city,
+    op,
+    contact: `Турнир проходит в клубах (${members.length}): ${cities.join(', ')}. Подробности и регистрация: в посте клуба вашего города (ссылки ниже).`,
+    social: members.slice(0, 40).map((c) => ({ t: `${c.club.city}: ${c.club.name}`, u: c.url })),
+  }));
+}
+
+// Записи для сайта: одобренные и не начавшиеся; одинаковые события разных клубов склеиваются
+export function siteEntries(merged, now = Date.now()) {
+  const groups = new Map();
+  for (const c of selectPublished(merged, now)) {
+    const k = groupKey(c);
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(c);
+  }
+  return [...groups].flatMap(([k, ms]) => (ms.length === 1 ? toSiteEntries(ms[0]) : toGroupEntries(k, ms)));
+}
 // Пишет data/vk.json для сайта. Если список не изменился, файл не трогаем (нет лишних коммитов).
 export async function writePublished(merged, now = Date.now()) {
-  const tournaments = selectPublished(merged, now)
-    .flatMap(toSiteEntries)
+  const tournaments = siteEntries(merged, now)
     .sort((a, b) => (a.startsAt || a.start).localeCompare(b.startsAt || b.start) || a.id.localeCompare(b.id));
   const prev = await loadJSON(P.published, null);
   if (prev && JSON.stringify(prev.tournaments) === JSON.stringify(tournaments)) return tournaments.length;
