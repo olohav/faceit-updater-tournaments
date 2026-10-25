@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T17:48:29.576Z",
+  "updatedAt": "2026-10-25T18:51:32.884Z",
   "source": "FACEIT Data API v4",
   "count": 80,
   "tournaments": [
@@ -655,7 +655,7 @@
     },
     {
       "id": "fc-ca276ac2-5d1e-4b1f-ac80-5446b8bdcae6",
-      "name": "XPrime Championship | Playoff | Prize: 3000 USD",
+      "name": "XPrime Championship | Playoff 5x5 | Prize: 3000 USD",
       "kind": "main",
       "disc": "CS2",
       "format": "Online",
@@ -664,14 +664,17 @@
       "end": "2026-11-01",
       "startsAt": "2026-10-23T13:00:00+03:00",
       "endUnknown": true,
-      "prize": null,
+      "prize": {
+        "v": 3000,
+        "c": "USD"
+      },
       "fee": null,
       "regEnd": "2026-10-20T23:05:00+03:00",
       "op": "XPrime",
       "teams": 8,
       "platform": "FACEIT",
       "ru": true,
-      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 13:00 по МСК.",
+      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 13:00 по МСК. ## Prize Pool 💰 **Total: 3000 USDT** 🥇 **1st Place — 1500 USDT** 🥈 **2nd Place — 1000 USDT** 🥉 **3rd Place — 500 USDT**",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/ca276ac2-5d1e-4b1f-ac80-5446b8bdcae6/",
@@ -948,7 +951,7 @@
       "teams": 32,
       "platform": "FACEIT",
       "ru": false,
-      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 32. Старт в 23:00 по МСК. > # PLAYERS HAVE TO JOIN A TEAM AND GET AN INVITE > - ![✪ JOIN YOUR LOBBY NOW! ✪](https://facelt.cc/?created=pgl&access=invited_only&league=open_league) > - ### WE AIM TO ENSURE FAIR COMPETITION BY TAKING ACTION AGAINST SMURFS, CHEATERS, NEW ACCOUNTS AND TOXIC PLAYERS",
+      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 32. Старт в 23:00 по МСК. > # PLAYERS HAVE TO JOIN A TEAM AND GET AN INVITE > - ![✪ JOIN YOUR LOBBY NOW! ✪]() > - ### WE AIM TO ENSURE FAIR COMPETITION BY TAKING ACTION AGAINST SMURFS, CHEATERS, NEW ACCOUNTS AND TOXIC PLAYERS",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/3371a3c5-0919-4600-873d-a0b5c4cc337d/",
