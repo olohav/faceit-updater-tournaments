@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-25T21:47:59.595Z",
+  "updatedAt": "2026-10-26T07:04:58.024Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1436,30 +1436,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/82b1a6e3-d8d4-4a29-804d-29012b8cfb7a/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-29bd5603-7a94-42a9-897a-417cd936c8b4",
-      "name": "Site 06",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-01",
-      "end": "2026-11-01",
-      "startsAt": "2026-11-01T21:45:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-01T20:45:00+03:00",
-      "op": "ViKu JBG",
-      "teams": 32,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 21:45 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/29bd5603-7a94-42a9-897a-417cd936c8b4/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
