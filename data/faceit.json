@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-26T12:45:44.544Z",
+  "updatedAt": "2026-10-26T16:20:51.331Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -863,6 +863,7 @@
       "start": "2026-10-26",
       "end": "2026-10-26",
       "startsAt": "2026-10-26T19:00:00+03:00",
+      "endUnknown": true,
       "prize": null,
       "fee": null,
       "regEnd": "2026-10-26T18:55:00+03:00",
@@ -1236,33 +1237,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/2339aa20-de59-433b-801c-f0963b65ccfd/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-7ac9970c-d990-4ea7-928c-7742a43a66b7",
-      "name": "Razer Gaming Series | 5v5",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-01",
-      "end": "2026-11-01",
-      "startsAt": "2026-11-01T17:21:00+03:00",
-      "prize": {
-        "v": 500,
-        "c": "USD"
-      },
-      "fee": null,
-      "regEnd": "2026-11-01T16:21:00+03:00",
-      "op": "Razer Comp",
-      "teams": 8,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 17:21 по МСК. **⚠️To participate in Faceit tournaments, you must pass ![VERIFICATION](https://faceit.menu/verification) in order to become a participant in the tournament. ** _________________________________________________________________________________________________ **WHY I NEED TO VERIFY MY ACCOUNT** * We want to ensure fair competition by taking action against smurfs, cheaters, new accounts and toxic pl",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/7ac9970c-d990-4ea7-928c-7742a43a66b7/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
