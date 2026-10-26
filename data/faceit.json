@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T16:20:51.331Z",
+  "updatedAt": "2026-10-26T17:02:17.695Z",
   "source": "FACEIT Data API v4",
   "count": 82,
   "tournaments": [
@@ -880,7 +880,7 @@
     },
     {
       "id": "fc-3371a3c5-0919-4600-873d-a0b5c4cc337d",
-      "name": "Stripe Qualifications 5v5",
+      "name": "Dark Qualifications 5v5",
       "kind": "qualifier",
       "disc": "CS2",
       "format": "Online",
@@ -1160,8 +1160,8 @@
       "op": "VertusCyber",
       "teams": 32,
       "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 18:30 по МСК.",
+      "ru": true,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 18:30 по МСК. Наш Discord - https://discord.gg/YGqtGCUGc",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/2fe8a3c9-32be-4edd-a693-dd663f56b0f6/",
