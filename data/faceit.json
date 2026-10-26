@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-26T17:55:25.868Z",
+  "updatedAt": "2026-10-26T19:04:42.608Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1678,6 +1678,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/dc3855bb-f705-4988-afc7-c7c055fb5a06/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-7334607a-7660-4262-93e0-88a66a85dc0f",
+      "name": "la pause gaming",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "startsAt": "2026-11-13T20:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-12T02:00:00+03:00",
+      "op": "clercq",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 20:00 по МСК. 🏆 **CS2 COMPETITIVE TOURNAMENT** 🔥 Préparez-vous à affronter les meilleurs et à prouver votre niveau sur Counter-Strike 2 ! 🎯 **Objectif :** gagner, progresser et montrer votre talent. 💣 **Mode :** matchs compétitifs CS2. 🤝 **Fair-play :** respect obligatoire entre toutes les équipes. ⚡ **Compétition :** concentration, stratégie et esprit d'équipe. 🔫 **Donnez tout, chaque round compte !** 📜",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/7334607a-7660-4262-93e0-88a66a85dc0f/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
