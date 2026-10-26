@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T09:02:06.241Z",
+  "updatedAt": "2026-10-26T12:45:44.544Z",
   "source": "FACEIT Data API v4",
   "count": 83,
   "tournaments": [
@@ -865,7 +865,7 @@
       "startsAt": "2026-10-26T19:00:00+03:00",
       "prize": null,
       "fee": null,
-      "regEnd": "2026-10-26T18:00:00+03:00",
+      "regEnd": "2026-10-26T18:55:00+03:00",
       "op": "Gorilla Game League",
       "teams": 128,
       "platform": "FACEIT",
