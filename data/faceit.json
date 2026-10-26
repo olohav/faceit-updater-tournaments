@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-26T19:19:46.523Z",
+  "updatedAt": "2026-10-26T19:57:44.615Z",
   "source": "FACEIT Data API v4",
-  "count": 80,
+  "count": 79,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -800,31 +800,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/4fccc265-9e08-40cd-8450-1beb62de31d7/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-5e4af232-056c-4675-9c74-afeef5e86fa1",
-      "name": "Gorilla Cup 4 Division 1 Q3",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-26",
-      "end": "2026-10-26",
-      "startsAt": "2026-10-26T19:00:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-26T18:55:00+03:00",
-      "op": "Gorilla Game League",
-      "teams": 128,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 128. Старт в 19:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/5e4af232-056c-4675-9c74-afeef5e86fa1/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
