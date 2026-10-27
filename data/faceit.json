@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-26T22:51:55.453Z",
+  "updatedAt": "2026-10-27T01:58:52.812Z",
   "source": "FACEIT Data API v4",
-  "count": 78,
+  "count": 79,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1312,6 +1312,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/061c3516-b136-48ee-8981-e56ea8a4b1b3/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-75365627-2fbb-445d-8431-b91ac074738f",
+      "name": "VIVA TOKENS",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-03",
+      "end": "2026-11-03",
+      "startsAt": "2026-11-03T21:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-03T20:00:00+03:00",
+      "op": "VIVA TOKENS",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 21:00 по МСК. 🔥 CS2 1v1 SHOWDOWN — KING OF AIM 🔥 🎯 Ești pregătit să demonstrezi că ai cel mai bun aim? Se organizează un turneu de Counter-Strike 2 — 1v1, unde 32 de jucători se vor lupta pentru supremație și pentru premiul cel mare! 🏆 🎮 DETALII TURNEU 👥 Participanți: 32 de jucători ⚔️ Mod de joc: 1v1 🎟️ Taxă de participare: 80 LEI / jucător 💰 Premiu pentru câștigător: 500 LEI La ora 20:00, toți partici",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/75365627-2fbb-445d-8431-b91ac074738f/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
