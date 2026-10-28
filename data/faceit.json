@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T07:12:42.199Z",
+  "updatedAt": "2026-10-28T08:14:09.856Z",
   "source": "FACEIT Data API v4",
   "count": 79,
   "tournaments": [
@@ -305,7 +305,7 @@
     },
     {
       "id": "fc-bba56d50-46bf-4571-b250-e7f21c23ba52",
-      "name": "Esporto 1 Lyga | S4",
+      "name": "Esporto 1 Lyga | S4 OLD",
       "kind": "main",
       "disc": "CS2",
       "format": "Online",
