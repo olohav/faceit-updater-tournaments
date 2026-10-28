@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T23:49:27.535Z",
+  "updatedAt": "2026-10-28T01:15:36.545Z",
   "source": "FACEIT Data API v4",
   "count": 82,
   "tournaments": [
@@ -1160,7 +1160,7 @@
       "teams": 32,
       "platform": "FACEIT",
       "ru": true,
-      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 19:00 по МСК. Prize information and details on how prizes are distributed can be found in our THE Gathering Discord. Winners will be able to claim their rewards through the designated prize channel and will be given instructions on the claiming process. Compete in a THE Gathering CS2 tournament and battle your way to the top. Join our Discord to stay updated on upcoming tournaments, events, giveaways, and commu",
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 19:00 по МСК. # 🏆 TOURNAMENT PRIZE POOL 🥇 **1st Place:** 2x M4A1-S | Golden Coil 🥈 **2nd Place:** 2x AK-47 | Aphrodite 🥉 **3rd Place:** 2x AWP | Green Energy ⭐ **Bonus:** Special Tournament MVP Prize ## 📩 PRIZE CLAIMS Winners can claim their rewards through the designated prize channel in **The Gathering Discord**. 🔗 Join The Gathering Discord: https://discord.gg/K8JuQm6uzC",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/36fb300e-d647-425b-9de9-1a992ab399ae/",
@@ -1799,7 +1799,7 @@
       "teams": 16,
       "platform": "FACEIT",
       "ru": false,
-      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 16. Старт в 15:00 по МСК. > # PLAYERS HAVE TO JOIN A TEAM AND GET AN INVITE > - ![✪ JOIN YOUR LOBBY NOW! ✪](https://faceit.plus/?created=pgl&access=invited_only&league=open_league) > - ### WE AIM TO ENSURE FAIR COMPETITION BY TAKING ACTION AGAINST SMURFS, CHEATERS, NEW ACCOUNTS AND TOXIC PLAYERS",
+      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 16. Старт в 15:00 по МСК. > # PLAYERS HAVE TO JOIN A TEAM AND GET AN INVITE > - ![✪ JOIN YOUR LOBBY NOW! ✪](https://faceit.plus/lobbies/?created=pgl&access=invited_only&league=open_league) > - ### WE AIM TO ENSURE FAIR COMPETITION BY TAKING ACTION AGAINST SMURFS, CHEATERS, NEW ACCOUNTS AND TOXIC PLAYERS",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/ea9806a3-06a6-4aa9-ab79-ffda07a80d42/",
