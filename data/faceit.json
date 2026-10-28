@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-28T14:14:42.799Z",
+  "updatedAt": "2026-10-28T15:10:11.299Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 84,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1364,6 +1364,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/cabb8389-e40e-46a0-ae44-18fe85b26fe9/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-5c92be6e-75b6-44bb-9ac3-ade1211eebf8",
+      "name": "Stripe Qualifications",
+      "kind": "qualifier",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-04",
+      "end": "2026-11-04",
+      "startsAt": "2026-11-04T16:06:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-04T15:06:00+03:00",
+      "op": "Gamers Club",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 32. Старт в 16:06 по МСК. > # PLAYERS HAVE TO JOIN A TEAM AND GET AN INVITE > - ![✪ JOIN YOUR LOBBY NOW! ✪](https://facelt.cc/?created=pgl&access=invited_only&league=open_league) > - ### WE AIM TO ENSURE FAIR COMPETITION BY TAKING ACTION AGAINST SMURFS, CHEATERS, NEW ACCOUNTS AND TOXIC PLAYERS",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/5c92be6e-75b6-44bb-9ac3-ade1211eebf8/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
