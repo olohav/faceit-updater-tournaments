@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-29T06:02:39.515Z",
+  "updatedAt": "2026-10-29T13:14:09.850Z",
   "source": "FACEIT Data API v4",
-  "count": 85,
+  "count": 86,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -875,6 +875,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/285e3dc1-e0f6-48c8-aaaf-d3178a1ccdff/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-97f75a80-72bf-4b1f-a802-aaddd87ec499",
+      "name": "Cyber Art 2vs2 | Season One",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-29",
+      "end": "2026-10-29",
+      "startsAt": "2026-10-29T17:05:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-29T17:00:00+03:00",
+      "op": "Cyber Art",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 17:05 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/97f75a80-72bf-4b1f-a802-aaddd87ec499/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
