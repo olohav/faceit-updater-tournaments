@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-29T16:09:45.356Z",
+  "updatedAt": "2026-10-29T17:08:48.225Z",
   "source": "FACEIT Data API v4",
-  "count": 84,
+  "count": 85,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1044,6 +1044,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/5a03a810-100c-4275-ae61-5643dcb85f02/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-1e279ca0-34f8-42f6-9736-d4fef09dc18d",
+      "name": "Italian Cup (1-6)",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "startsAt": "2026-10-31T22:30:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-31T21:00:00+03:00",
+      "op": "THoB",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": true,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 22:30 по МСК. Italian Cup on FACEIT — a CS2 5v5 tournament on the Italy map. Open to players and teams ranked from Level 1 to Level 6 on FACEIT. Every match counts in this compact, high‑intensity bracket.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/1e279ca0-34f8-42f6-9736-d4fef09dc18d/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
