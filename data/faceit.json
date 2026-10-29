@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-28T21:00:40.622Z",
+  "updatedAt": "2026-10-29T01:35:26.680Z",
   "source": "FACEIT Data API v4",
-  "count": 84,
+  "count": 85,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1389,6 +1389,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/cabb8389-e40e-46a0-ae44-18fe85b26fe9/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-f55e7444-267e-4987-afa7-5e613db0fae7",
+      "name": "ChaoZone Season 2",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "startsAt": "2026-11-06T18:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-05T20:00:00+03:00",
+      "op": "ChaoZone",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": true,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 18:00 по МСК. ChaoZone CS2 Season 2 An open community Counter-Strike 2 tournament by TeamChaoZ. Prize pool: €32.50. ⚠️ How to register (two steps) First, submit your team application on our website: https://tourney-hub-155.emergent.host Then register on this FACEIT tournament page. Registering on FACEIT alone, without a website application, will not be accepted. Registration closes: November 5, 6:00 PM (CET). M",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/f55e7444-267e-4987-afa7-5e613db0fae7/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
