@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-29T17:08:48.225Z",
+  "updatedAt": "2026-10-29T19:07:43.480Z",
   "source": "FACEIT Data API v4",
-  "count": 85,
+  "count": 84,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -2069,30 +2069,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/1f96a252-27b9-45a5-87d6-d60b97e18a44/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-be6535c9-82b4-4d8d-8d0a-177841d51e42",
-      "name": "test1",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2027-01-22",
-      "end": "2027-01-22",
-      "startsAt": "2027-01-22T23:35:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2027-01-22T23:30:00+03:00",
-      "op": "NotSoOften",
-      "teams": 16,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 23:35 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/be6535c9-82b4-4d8d-8d0a-177841d51e42/",
       "siteName": "Страница на FACEIT",
       "social": []
     }
