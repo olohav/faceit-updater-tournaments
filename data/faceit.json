@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-29T13:14:09.850Z",
+  "updatedAt": "2026-10-29T14:19:28.348Z",
   "source": "FACEIT Data API v4",
-  "count": 86,
+  "count": 85,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -923,30 +923,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/9615684f-7a82-46da-a35e-8dd2437c8a70/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-27521460-bf4e-4676-982c-a17811909e05",
-      "name": "Rog Esports 5v5",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-29",
-      "end": "2026-10-29",
-      "startsAt": "2026-10-29T21:14:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-29T20:14:00+03:00",
-      "op": "Masters inc",
-      "teams": 8,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 21:14 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/27521460-bf4e-4676-982c-a17811909e05/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
