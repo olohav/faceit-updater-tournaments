@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-29T14:19:28.348Z",
+  "updatedAt": "2026-10-29T15:13:03.758Z",
   "source": "FACEIT Data API v4",
-  "count": 85,
+  "count": 84,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -625,31 +625,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/704acf58-e573-442d-9d8e-b9418f9e784e/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-57f7dfb7-3a7c-4042-8516-4ef9c7471925",
-      "name": "Miedzyszkolny Kaliski Turniej W CS2",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-24",
-      "end": "2026-11-05",
-      "startsAt": "2026-10-24T17:00:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-23T00:55:00+03:00",
-      "op": "lesniak",
-      "teams": 30,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 30. Старт в 17:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/57f7dfb7-3a7c-4042-8516-4ef9c7471925/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
