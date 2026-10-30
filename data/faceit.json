@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T13:11:13.029Z",
+  "updatedAt": "2026-10-30T14:15:55.428Z",
   "source": "FACEIT Data API v4",
   "count": 85,
   "tournaments": [
@@ -854,7 +854,7 @@
       "social": []
     },
     {
-      "id": "fc-e2d51bda-abd1-4131-9cf4-5ed641ea3a65",
+      "id": "fc-13a9f1ca-39f7-4d52-a38d-55cb11ab3df3",
       "name": "AUTUMN FE CUP [CSFGIRLS]",
       "kind": "main",
       "disc": "CS2",
@@ -865,7 +865,7 @@
       "startsAt": "2026-10-31T14:00:00+03:00",
       "prize": null,
       "fee": null,
-      "regEnd": "2026-10-30T10:05:00+03:00",
+      "regEnd": "2026-10-31T13:00:00+03:00",
       "op": "alymia17",
       "teams": 8,
       "platform": "FACEIT",
@@ -873,7 +873,7 @@
       "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 14:00 по МСК.",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/e2d51bda-abd1-4131-9cf4-5ed641ea3a65/",
+      "site": "https://www.faceit.com/ru/championship/13a9f1ca-39f7-4d52-a38d-55cb11ab3df3/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
