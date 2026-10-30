@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-30T10:07:03.667Z",
+  "updatedAt": "2026-10-30T11:58:53.632Z",
   "source": "FACEIT Data API v4",
-  "count": 82,
+  "count": 83,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1267,6 +1267,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/061c3516-b136-48ee-8981-e56ea8a4b1b3/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-b3f04db0-82d6-41c2-bb70-c35b66450c80",
+      "name": "Uniliga Liga 1 Winterseason 2026",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-03",
+      "end": "2026-11-03",
+      "startsAt": "2026-11-03T18:00:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-30T14:15:00+03:00",
+      "op": "Uniliga",
+      "teams": 8,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 18:00 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/b3f04db0-82d6-41c2-bb70-c35b66450c80/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
