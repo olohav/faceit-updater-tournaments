@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-30T20:02:08.220Z",
+  "updatedAt": "2026-10-30T20:59:22.391Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -625,31 +625,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/a22bdf7c-ce5e-4670-9acc-5ae15edc6b6d/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-07eee760-fbee-4f38-9705-fb741eb0c02c",
-      "name": "24 Divisioona Playoffs",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-25",
-      "end": "2026-11-06",
-      "startsAt": "2026-10-25T21:00:05+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-18T22:45:00+03:00",
-      "op": "Pappaliiga",
-      "teams": 8,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 21:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/07eee760-fbee-4f38-9705-fb741eb0c02c/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
