@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-29T21:01:59.837Z",
+  "updatedAt": "2026-10-30T10:07:03.667Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1315,6 +1315,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/cabb8389-e40e-46a0-ae44-18fe85b26fe9/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-6db07bb2-77a4-4c2c-9480-62f467a98b76",
+      "name": "SETEC Arena 2026",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-04",
+      "end": "2026-11-04",
+      "startsAt": "2026-11-04T20:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-04T19:55:00+03:00",
+      "op": "ESPORTSMK",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 20:00 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/6db07bb2-77a4-4c2c-9480-62f467a98b76/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
