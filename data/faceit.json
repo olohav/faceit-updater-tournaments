@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-30T17:03:46.526Z",
+  "updatedAt": "2026-10-30T19:02:42.883Z",
   "source": "FACEIT Data API v4",
-  "count": 86,
+  "count": 85,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -100,31 +100,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/3148d040-22c1-4293-8d66-5032a800e993/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-e3a3dbf5-6621-457a-a82f-6a6fe7d48444",
-      "name": "TUNISIAN COUNTER STRIKE 2 SUPER LEAGUE26",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-10",
-      "end": "2026-11-06",
-      "startsAt": "2026-10-10T20:00:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-10T03:26:40+03:00",
-      "op": "TUNESF",
-      "teams": 12,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 12. Старт в 20:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/e3a3dbf5-6621-457a-a82f-6a6fe7d48444/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
