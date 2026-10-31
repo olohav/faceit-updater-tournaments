@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T13:23:52.990Z",
+  "updatedAt": "2026-10-31T14:00:00.641Z",
   "source": "FACEIT Data API v4",
   "count": 80,
   "tournaments": [
@@ -790,7 +790,7 @@
       "startsAt": "2026-10-31T18:30:00+03:00",
       "prize": null,
       "fee": null,
-      "regEnd": "2026-10-31T18:00:00+03:00",
+      "regEnd": "2026-10-31T17:00:00+03:00",
       "op": "VertusCyber",
       "teams": 32,
       "platform": "FACEIT",
