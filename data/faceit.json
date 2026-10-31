@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-31T21:53:53.445Z",
+  "updatedAt": "2026-10-31T23:50:51.605Z",
   "source": "FACEIT Data API v4",
-  "count": 80,
+  "count": 81,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1145,6 +1145,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/6db07bb2-77a4-4c2c-9480-62f467a98b76/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-8315d4fe-9792-4bc4-9d2f-95b3cb5732f6",
+      "name": "NORTE Tournament Series 1",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-05",
+      "end": "2026-11-05",
+      "startsAt": "2026-11-05T17:30:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-05T15:00:00+03:00",
+      "op": "NORTE Tournament Series",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 17:30 по МСК. 🏆 NORTE Tournament Series #1 — CS2 TOURNAMENT Welcome to the first edition of NORTE OPEN! Get ready to compete, prove your skills and fight your way to the top. Tournament Format: Game: Counter-Strike 2 Format: 5v5 Bracket: Single Elimination Matches: BO1 Grand Final: BO3 Match Format: MR12 Rules & Fair Play: All teams are expected to respect the tournament rules, their opponents and the spirit o",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/8315d4fe-9792-4bc4-9d2f-95b3cb5732f6/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
