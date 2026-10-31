@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-31T14:00:00.641Z",
+  "updatedAt": "2026-10-31T14:53:58.955Z",
   "source": "FACEIT Data API v4",
-  "count": 80,
+  "count": 81,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1702,6 +1702,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/159f16af-16a6-4565-abcb-ddc6b8b78a09/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-0a258856-0fa9-4034-ace2-8b7f73f5cfba",
+      "name": "Brace For Impact: EU Women's Cash Cup November 2026",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "startsAt": "2026-11-21T20:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-21T19:45:00+03:00",
+      "op": "Brace For Impact",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 20:00 по МСК. Brace 4 Impact is bringing back monthly FE Cash Cups! • Review the Rules tab for details on: Eligibility, verification requirements, Prize pools and repeated winner ineligibility. • Required steps to compete: 1. Discord: https://discord.gg/braceforimpact 2. Verify: https://b4impact.com/verification/",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/0a258856-0fa9-4034-ace2-8b7f73f5cfba/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
