@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-31T15:54:11.364Z",
+  "updatedAt": "2026-10-31T16:53:18.804Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -800,6 +800,33 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/d52671f7-8ecc-4be2-b44c-8b0427b2f749/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-bab165a5-c9e7-44a2-8cc0-22cef9756a4c",
+      "name": "CS2 Polska Discord X CaseHug | 2 EDYCJA 200 USD PRIZEPOOL",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "startsAt": "2026-10-31T21:00:00+03:00",
+      "prize": {
+        "v": 2000000,
+        "c": "USD"
+      },
+      "fee": null,
+      "regEnd": "2026-10-31T20:55:00+03:00",
+      "op": "CS2 Polska",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 21:00 по МСК. Drugi, hallowenowy turniej w kolaboracji z https://casehug.com/r/CSPL Wymaganie dołączenia do turnieju/odebrania wygranej - użycie kodu CSPL na https://casehug.com/r/CSPL Pula nagród: 1 Miejsce - 100$ 2 Miejsce - 50$ 3-4 Miejsce - 20$",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/bab165a5-c9e7-44a2-8cc0-22cef9756a4c/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
