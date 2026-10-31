@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-31T03:03:17.236Z",
+  "updatedAt": "2026-10-31T10:52:38.555Z",
   "source": "FACEIT Data API v4",
-  "count": 84,
+  "count": 83,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -774,30 +774,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/13a9f1ca-39f7-4d52-a38d-55cb11ab3df3/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-c8bb83b4-7040-4b30-8523-92c8e4343914",
-      "name": "Dindins Cup",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-31",
-      "end": "2026-10-31",
-      "startsAt": "2026-10-31T14:00:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-31T13:00:00+03:00",
-      "op": "DINDIN Community",
-      "teams": 32,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 14:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/c8bb83b4-7040-4b30-8523-92c8e4343914/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
