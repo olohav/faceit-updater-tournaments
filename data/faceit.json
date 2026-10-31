@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-30T22:54:35.774Z",
+  "updatedAt": "2026-10-31T03:03:17.236Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 84,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1750,6 +1750,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/2ae6e303-d51c-49ba-9c6f-8a9a480403be/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-4388b3f6-f351-4942-8e56-c613401483ea",
+      "name": "KOLO CS2 SEASON 4",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "startsAt": "2026-11-21T14:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-20T19:00:00+03:00",
+      "op": "KOLO UA",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 14:00 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/4388b3f6-f351-4942-8e56-c613401483ea/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
