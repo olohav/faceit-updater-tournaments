@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-31T13:06:39.491Z",
+  "updatedAt": "2026-10-31T13:23:52.990Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 80,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -750,30 +750,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/f4603a38-177f-4c62-a940-9b44e6880fe3/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-e2afe5ff-b13e-40e8-a695-e93a2205f29d",
-      "name": "UENetwork Tournament",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-31",
-      "end": "2026-10-31",
-      "startsAt": "2026-10-31T16:00:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-21T00:00:00+03:00",
-      "op": "UENetwork Tournament",
-      "teams": 64,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 64. Старт в 16:00 по МСК. 5v5, cs2.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/e2afe5ff-b13e-40e8-a695-e93a2205f29d/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
