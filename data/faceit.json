@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T09:03:04.078Z",
+  "updatedAt": "2026-11-01T14:54:32.883Z",
   "source": "FACEIT Data API v4",
   "count": 81,
   "tournaments": [
@@ -1431,7 +1431,7 @@
       "teams": 32,
       "platform": "FACEIT",
       "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 22:00 по МСК. FDZxIFA Novembre Numerique Tournament by PC Click",
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 22:00 по МСК. FDZxIFA Novembre Numerique Tournament sponsored by PC Click",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/5a8db548-5555-4472-80ac-c3da5f5de45b/",
