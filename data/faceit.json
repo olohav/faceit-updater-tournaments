@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-01T16:53:24.508Z",
+  "updatedAt": "2026-11-01T17:51:04.407Z",
   "source": "FACEIT Data API v4",
-  "count": 80,
+  "count": 81,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -475,6 +475,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/13383163-9b50-47fc-b3ff-6d6b33753767/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-e837aad7-a318-4d9b-b94c-22979655571b",
+      "name": "Synex League Saison 5 - Division 1",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-18",
+      "end": "2026-11-08",
+      "startsAt": "2026-10-18T22:00:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-12T20:30:00+03:00",
+      "op": "Synex",
+      "teams": 10,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 10. Старт в 22:00 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/e837aad7-a318-4d9b-b94c-22979655571b/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
