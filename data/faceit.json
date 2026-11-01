@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-01T19:00:50.748Z",
+  "updatedAt": "2026-11-01T19:54:28.617Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 84,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1487,6 +1487,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/5a8db548-5555-4472-80ac-c3da5f5de45b/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-25ae9224-0d28-4a8f-8d56-d18c2dde38dc",
+      "name": "testtest",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-08",
+      "end": "2026-11-08",
+      "startsAt": "2026-11-08T23:10:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-08T22:53:00+03:00",
+      "op": "Esport Mechan Lan",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 23:10 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/25ae9224-0d28-4a8f-8d56-d18c2dde38dc/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
