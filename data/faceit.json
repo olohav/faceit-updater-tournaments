@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-01T21:54:33.542Z",
+  "updatedAt": "2026-11-01T22:52:47.396Z",
   "source": "FACEIT Data API v4",
-  "count": 84,
+  "count": 83,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -475,31 +475,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/11384629-5596-4f0b-be8f-040bbf484941/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-b1368128-4470-4571-9e51-077ca5977ca5",
-      "name": "UKIC Masters | Season 12 | Online Stage",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-20",
-      "end": "2026-11-09",
-      "startsAt": "2026-10-20T21:00:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-17T01:55:00+03:00",
-      "op": "UK & Ireland Circuit",
-      "teams": 8,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 21:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/b1368128-4470-4571-9e51-077ca5977ca5/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
