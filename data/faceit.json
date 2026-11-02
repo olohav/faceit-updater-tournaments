@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-01T22:52:47.396Z",
+  "updatedAt": "2026-11-02T01:22:01.950Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1463,30 +1463,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/c46b8064-8d65-49df-a297-977e2cfe9bc5/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-5a8db548-5555-4472-80ac-c3da5f5de45b",
-      "name": "FDZxIFA Novembre Numerique Tournament",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-08",
-      "end": "2026-11-08",
-      "startsAt": "2026-11-08T22:00:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-07T14:00:00+03:00",
-      "op": "FDZ ALGERIA",
-      "teams": 32,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 22:00 по МСК. FDZxIFA Novembre Numerique Tournament sponsored by PC Click",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/5a8db548-5555-4472-80ac-c3da5f5de45b/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
