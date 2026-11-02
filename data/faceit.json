@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-02T01:22:01.950Z",
+  "updatedAt": "2026-11-02T12:08:50.567Z",
   "source": "FACEIT Data API v4",
-  "count": 82,
+  "count": 83,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1655,6 +1655,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/8533fb63-5fe0-4f34-bc47-63fade92d681/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-862b6c7f-1450-4b9e-b933-04f12227bf83",
+      "name": "Yoru Zenith 2026 - Open Qualifiers",
+      "kind": "qualifier",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "startsAt": "2026-11-14T16:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-14T15:55:00+03:00",
+      "op": "Yoru Esports",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 32. Старт в 16:00 по МСК. You need to register on https://yoruesports.com 2 Teams will qualify to main tournament.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/862b6c7f-1450-4b9e-b933-04f12227bf83/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
