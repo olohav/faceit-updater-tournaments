@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-02T19:11:10.768Z",
+  "updatedAt": "2026-11-02T19:28:18.605Z",
   "source": "FACEIT Data API v4",
-  "count": 89,
+  "count": 88,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -325,31 +325,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/b5212ff0-e452-4ad5-a35b-4f0bd6060654/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-c94f3044-feff-4a95-8db0-085b5f5c2e81",
-      "name": "Kleverr E-spordi Esiliiga | Groups | S5",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-14",
-      "end": "2026-11-09",
-      "startsAt": "2026-10-14T20:00:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-10-14T18:10:00+03:00",
-      "op": "kleverr",
-      "teams": 14,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 14. Старт в 20:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/c94f3044-feff-4a95-8db0-085b5f5c2e81/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
