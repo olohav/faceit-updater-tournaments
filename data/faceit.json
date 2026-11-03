@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-03T12:05:47.576Z",
+  "updatedAt": "2026-11-03T14:31:34.721Z",
   "source": "FACEIT Data API v4",
-  "count": 84,
+  "count": 85,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1653,6 +1653,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/862b6c7f-1450-4b9e-b933-04f12227bf83/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-40e72384-a34c-4d03-adb0-2911fd9fd8b3",
+      "name": "Podziemny Krag x Darkness Cup",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "startsAt": "2026-11-14T18:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-14T01:55:00+03:00",
+      "op": "Podziemny Krag",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 18:00 по МСК. **Turniej drużyn 5 na 5 społeczności Podziemnego Kręgu.** **Nagrody od Darkness dla każdego gracza z drużyny:** - 1. miejsce: AK-47 o wartości około 50 zł - 2. miejsce: AK-47 o wartości około 25 zł - 3. miejsce: AK-47 o wartości około 15 zł **Terminy:** sobota 14.11 od 16:00 start. Niedziela 15.11 o 19:00 finał (Bo3) **Format:** drabinka pucharowa, mecze Bo1, finał Bo3 **Check-in:** kapitan w sobo",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/40e72384-a34c-4d03-adb0-2911fd9fd8b3/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
