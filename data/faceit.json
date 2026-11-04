@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T13:22:14.269Z",
+  "updatedAt": "2026-11-04T16:09:05.399Z",
   "source": "FACEIT Data API v4",
   "count": 79,
   "tournaments": [
@@ -840,7 +840,7 @@
       "startsAt": "2026-11-04T20:00:00+03:00",
       "prize": null,
       "fee": null,
-      "regEnd": "2026-11-04T19:55:00+03:00",
+      "regEnd": "2026-11-04T19:05:00+03:00",
       "op": "ESPORTSMK",
       "teams": 16,
       "platform": "FACEIT",
