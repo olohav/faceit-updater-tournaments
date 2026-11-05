@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T12:12:50.245Z",
+  "updatedAt": "2026-11-05T13:28:27.467Z",
   "source": "FACEIT Data API v4",
   "count": 86,
   "tournaments": [
@@ -1014,7 +1014,7 @@
       "startsAt": "2026-11-06T18:00:00+03:00",
       "prize": null,
       "fee": null,
-      "regEnd": "2026-11-05T20:00:00+03:00",
+      "regEnd": "2026-11-05T23:00:00+03:00",
       "op": "ChaoZone",
       "teams": 16,
       "platform": "FACEIT",
