@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T16:05:12.740Z",
+  "updatedAt": "2026-11-06T17:09:05.881Z",
   "source": "FACEIT Data API v4",
   "count": 90,
   "tournaments": [
@@ -1690,7 +1690,7 @@
     },
     {
       "id": "fc-a4dd9700-c66c-4b7e-91d5-be22fcc7b69a",
-      "name": "Manchester Pub",
+      "name": "Clutch Masters Season 11",
       "kind": "main",
       "disc": "CS2",
       "format": "Online",
