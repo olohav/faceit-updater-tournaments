@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-06T21:03:03.842Z",
+  "updatedAt": "2026-11-06T23:00:31.667Z",
   "source": "FACEIT Data API v4",
-  "count": 77,
+  "count": 76,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -800,30 +800,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/77fa8588-1e76-43f4-8b72-9580e157b8aa/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-acfbabd0-df9c-4771-80ba-444afafdfd4c",
-      "name": "PG-Turnier",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-07",
-      "end": "2026-11-07",
-      "startsAt": "2026-11-07T01:05:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-07T01:00:00+03:00",
-      "op": "Crunch",
-      "teams": 32,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 01:05 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/acfbabd0-df9c-4771-80ba-444afafdfd4c/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
