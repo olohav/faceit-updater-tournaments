@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-08T10:06:06.766Z",
+  "updatedAt": "2026-11-08T11:00:14.335Z",
   "source": "FACEIT Data API v4",
-  "count": 70,
+  "count": 71,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1238,6 +1238,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/4388b3f6-f351-4942-8e56-c613401483ea/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-12c87d9e-ef61-4d20-a0af-9b91d9312dba",
+      "name": "StraweN League",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "startsAt": "2026-11-14T15:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-13T21:00:00+03:00",
+      "op": "StraweN",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 15:00 по МСК. StraweN daro ilgalaikį turnyrą, kur galite atvesti savo komanda, žaisti turnyruose, kovoti dėl taškų, o kas mėnesio gale daugiausiai surinkusi komandą, patenka žaisti tarp lan'o. Are You Ready To Play? Žaidimo taisyklės paprastos. • 32 komandos • Top 3 komandos gauna po 1 vieta - 5 taškai 2 vieta - 4 taškai 3 vieta - 3 taškai Kitos likusios nuo 32 iki top 4 gauna po 1 bendrą tašką. Per mėnesį įvyk",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/12c87d9e-ef61-4d20-a0af-9b91d9312dba/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
