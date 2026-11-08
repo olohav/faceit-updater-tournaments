@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-07T21:53:06.465Z",
+  "updatedAt": "2026-11-08T10:06:06.766Z",
   "source": "FACEIT Data API v4",
-  "count": 71,
+  "count": 70,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -800,31 +800,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/77fa8588-1e76-43f4-8b72-9580e157b8aa/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-caf0ec12-d4a6-4d35-8916-f2f3122b4c37",
-      "name": "CCT 2026 Contenders Europe 11 - Open Qualifier 1",
-      "kind": "qualifier",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-07",
-      "end": "2026-11-15",
-      "startsAt": "2026-11-07T17:00:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-07T16:55:00+03:00",
-      "op": "CCT",
-      "teams": 128,
-      "platform": "FACEIT",
-      "ru": true,
-      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 128. Старт в 17:00 по МСК. Qualification: Top 8 teams will advance to the Main Event of CCT 2026 Contenders Europe 11. Match Format: All matches will be played in Best-of-1 format. Roster Locks: Rosters are locked at the start of the tournament; no changes allowed once competition begins. Teams that qualify must use the same starting five during CCT 2026 Contenders Europe 8. Team Availability: Qualified teams must confirm f",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/caf0ec12-d4a6-4d35-8916-f2f3122b4c37/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
