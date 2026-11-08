@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-08T11:58:43.492Z",
+  "updatedAt": "2026-11-08T14:57:33.947Z",
   "source": "FACEIT Data API v4",
-  "count": 71,
+  "count": 72,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -813,6 +813,7 @@
       "start": "2026-11-08",
       "end": "2026-11-08",
       "startsAt": "2026-11-08T17:00:00+03:00",
+      "endUnknown": true,
       "prize": null,
       "fee": null,
       "regEnd": "2026-11-08T16:55:00+03:00",
@@ -1409,6 +1410,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/862b6c7f-1450-4b9e-b933-04f12227bf83/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-01cdaac2-ef0c-47a9-955a-adc53fc6dc21",
+      "name": "CSAL Season 1 GROUPS",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-15",
+      "end": "2026-11-15",
+      "startsAt": "2026-11-15T18:57:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-15T17:57:00+03:00",
+      "op": "CS Amateur Leauge",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 18:57 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/01cdaac2-ef0c-47a9-955a-adc53fc6dc21/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
