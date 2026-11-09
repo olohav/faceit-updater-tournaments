@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-09T19:29:10.756Z",
+  "updatedAt": "2026-11-09T20:10:08.321Z",
   "source": "FACEIT Data API v4",
-  "count": 86,
+  "count": 85,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -825,31 +825,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/b3f04db0-82d6-41c2-bb70-c35b66450c80/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-77fa8588-1e76-43f4-8b72-9580e157b8aa",
-      "name": "SKY CUP SEASON 2",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-05",
-      "end": "2026-11-16",
-      "startsAt": "2026-11-05T19:30:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-05T18:30:00+03:00",
-      "op": "Sky Den Games",
-      "teams": 12,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 12. Старт в 19:30 по МСК. Prize Pool : 50 Million Feathers Registration : Thursday, Oct 8, 2026 - Wednesday, Nov 4, 2026 Duration : Thursday, Nov 5, 2026 - Thursday, Nov 19, 2026 Competition Mode: GroupElimination Entrance Mode: Free Participation Mode: Team ( 5 players + 1 optional ) Genre: Competitive , First Person Shooter , Shooter Platforms: Steam Players: Multiplayer",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/77fa8588-1e76-43f4-8b72-9580e157b8aa/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
