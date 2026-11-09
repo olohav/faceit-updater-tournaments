@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T10:15:35.112Z",
+  "updatedAt": "2026-11-09T11:13:46.874Z",
   "source": "FACEIT Data API v4",
   "count": 80,
   "tournaments": [
@@ -1377,7 +1377,7 @@
       "startsAt": "2026-11-14T18:00:00+03:00",
       "prize": null,
       "fee": null,
-      "regEnd": "2026-11-14T01:55:00+03:00",
+      "regEnd": "2026-11-14T17:30:00+03:00",
       "op": "Podziemny Krag",
       "teams": 16,
       "platform": "FACEIT",
