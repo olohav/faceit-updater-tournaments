@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-09T16:19:39.119Z",
+  "updatedAt": "2026-11-09T18:15:33.082Z",
   "source": "FACEIT Data API v4",
-  "count": 83,
+  "count": 86,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1788,6 +1788,33 @@
       "social": []
     },
     {
+      "id": "fc-27eff155-c098-427d-81e8-35bfa4e043c0",
+      "name": "LIGA STAVOK NARODNAYA LIGA TOUR IV OPEN QUALIFICATION 1 | Prize: 1 000 000 RUB",
+      "kind": "qualifier",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-27",
+      "end": "2026-11-27",
+      "startsAt": "2026-11-27T18:00:00+03:00",
+      "prize": {
+        "v": 10000000,
+        "c": "RUB"
+      },
+      "fee": null,
+      "regEnd": "2026-11-27T16:30:00+03:00",
+      "op": "Narodnaya Liga",
+      "teams": 256,
+      "platform": "FACEIT",
+      "ru": true,
+      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 256. Старт в 18:00 по МСК. Первая любительская лига по CS2 в РФ с оплачиваемым рейтингом и призовыми на общую сумму 10.000.000 ₽. Четвёртый тур на 1 млн ₽ стартует 27 ноября: 3 квалификации 27-29 ноября, групповой этап — 5 и 6 декабря, плей-офф — 12-13 декабря. Перед регистрацией на FACEIT обязательно нужно пройти регистрацию на сайте турнира: https://liga.ru/ Будут проведены четыре квалификации. По итогам каждой квалификац",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/27eff155-c098-427d-81e8-35bfa4e043c0/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
       "id": "fc-4ae0801d-2034-4791-8688-c184c647e1cc",
       "name": "SkinClub GRAND THEFT HEIST stage 4",
       "kind": "main",
@@ -1907,6 +1934,60 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/67b884ed-eede-4786-a751-6a2913c7fd61/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-42ea136a-e21a-4aa3-b944-fd2f0b74c367",
+      "name": "LIGA STAVOK NARODNAYA LIGA TOUR IV OPEN QUALIFICATION 2 | Prize: 1 000 000 RUB",
+      "kind": "qualifier",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "startsAt": "2026-11-28T18:00:00+03:00",
+      "prize": {
+        "v": 10000000,
+        "c": "RUB"
+      },
+      "fee": null,
+      "regEnd": "2026-11-28T16:30:00+03:00",
+      "op": "Narodnaya Liga",
+      "teams": 256,
+      "platform": "FACEIT",
+      "ru": true,
+      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 256. Старт в 18:00 по МСК. Первая любительская лига по CS2 в РФ с оплачиваемым рейтингом и призовыми на общую сумму 10.000.000 ₽. Четвёртый тур на 1 млн ₽ стартует 27 ноября: 3 квалификации 27-29 ноября, групповой этап — 5 и 6 декабря, плей-офф — 12-13 декабря. Перед регистрацией на FACEIT обязательно нужно пройти регистрацию на сайте турнира: https://liga.ru/ Будут проведены четыре квалификации. По итогам каждой квалификац",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/42ea136a-e21a-4aa3-b944-fd2f0b74c367/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-6e82a710-2c86-47ba-aeff-afcf8cb7ecb1",
+      "name": "LIGA STAVOK NARODNAYA LIGA TOUR IV OPEN QUALIFICATION 3 | Prize: 1 000 000 RUB",
+      "kind": "qualifier",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "startsAt": "2026-11-29T18:00:00+03:00",
+      "prize": {
+        "v": 10000000,
+        "c": "RUB"
+      },
+      "fee": null,
+      "regEnd": "2026-11-29T16:30:00+03:00",
+      "op": "Narodnaya Liga",
+      "teams": 256,
+      "platform": "FACEIT",
+      "ru": true,
+      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 256. Старт в 18:00 по МСК. Первая любительская лига по CS2 в РФ с оплачиваемым рейтингом и призовыми на общую сумму 10.000.000 ₽. Четвёртый тур на 1 млн ₽ стартует 27 ноября: 3 квалификации 27-29 ноября, групповой этап — 5 и 6 декабря, плей-офф — 12-13 декабря. Перед регистрацией на FACEIT обязательно нужно пройти регистрацию на сайте турнира: https://liga.ru/ Будут проведены четыре квалификации. По итогам каждой квалификац",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/6e82a710-2c86-47ba-aeff-afcf8cb7ecb1/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
