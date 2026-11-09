@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-08T22:56:54.883Z",
+  "updatedAt": "2026-11-09T02:29:15.683Z",
   "source": "FACEIT Data API v4",
-  "count": 79,
+  "count": 80,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1338,6 +1338,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/8533fb63-5fe0-4f34-bc47-63fade92d681/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-008034c2-a7a1-4a0e-ba38-87258b93adb1",
+      "name": "DDeSports CS2 Cup 2",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "startsAt": "2026-11-14T17:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-13T21:00:00+03:00",
+      "op": "DDeSports",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 17:00 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/008034c2-a7a1-4a0e-ba38-87258b93adb1/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
