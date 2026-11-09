@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-09T02:29:15.683Z",
+  "updatedAt": "2026-11-09T04:14:14.407Z",
   "source": "FACEIT Data API v4",
-  "count": 80,
+  "count": 79,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -25,31 +25,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/709409ec-b79b-4a88-8373-de6fe8db070d/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-8319d241-769c-42f9-9ccf-be9b40619475",
-      "name": "LEGA ITALGO B S2",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-10-09",
-      "end": "2026-11-16",
-      "startsAt": "2026-10-09T05:00:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-09-30T15:30:00+03:00",
-      "op": "ITAL'GO",
-      "teams": 22,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 22. Старт в 05:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/8319d241-769c-42f9-9ccf-be9b40619475/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
