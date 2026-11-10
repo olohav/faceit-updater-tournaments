@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T21:08:05.807Z",
+  "updatedAt": "2026-11-10T01:19:42.520Z",
   "source": "FACEIT Data API v4",
   "count": 84,
   "tournaments": [
@@ -1085,7 +1085,7 @@
       "startsAt": "2026-11-12T20:00:00+03:00",
       "prize": null,
       "fee": null,
-      "regEnd": "2026-11-11T02:00:00+03:00",
+      "regEnd": "2026-11-12T17:00:00+03:00",
       "op": "Double T e-sports",
       "teams": 8,
       "platform": "FACEIT",
