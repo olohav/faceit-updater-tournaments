@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-10T18:04:45.359Z",
+  "updatedAt": "2026-11-10T19:09:58.592Z",
   "source": "FACEIT Data API v4",
-  "count": 89,
+  "count": 88,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1025,31 +1025,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/3fbd8063-38ab-4483-8643-5ba157b25e6e/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-bc52a519-85c4-4741-b97b-1003967fd3d4",
-      "name": "SkinClub GRAND THEFT HEIST stage 1",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-10",
-      "end": "2026-11-10",
-      "startsAt": "2026-11-10T20:00:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-10T19:45:00+03:00",
-      "op": "SkinClub Global League",
-      "teams": 64,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 64. Старт в 20:00 по МСК. # To check the current seasonal rankings, head over to the Skin.Club Community 👉🏻 https://l.skin.club/Tournaments - 👀Please read the tournament rules carefully👀",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/bc52a519-85c4-4741-b97b-1003967fd3d4/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
