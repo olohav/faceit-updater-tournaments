@@ -146,7 +146,12 @@ async function enter() {
 }
 
 $("#loginBtn").onclick = login;
-$("#pw").onkeydown = (e) => e.key === "Enter" && login();
+$("#pw").onkeydown = (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    login();
+  }
+};
 async function login() {
   $("#loginMsg").textContent = "";
   try { await api("login", { password: $("#pw").value }); $("#pw").value = ""; await enter(); }
