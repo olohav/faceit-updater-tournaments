@@ -115,6 +115,74 @@ input[type=password],input[type=url],input[type=number],input[type=date],input[t
 .note{background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:.8rem 1rem;color:var(--mute);font-size:.92rem}
 @media (prefers-reduced-motion:reduce){.toast{animation:none}}
 @media (max-width:820px){.layout,.cols{grid-template-columns:1fr}.filters{position:static}.auth{width:100%}}
+
+/* ======================= CYBER RADAR DESIGN SYSTEM ======================= */
+:root{
+  --bg:#080d17;--panel:#101827;--panel-2:#141f31;--ink:#edf3ff;--mute:#91a0b9;
+  --line:#26344b;--acc:#69e0d0;--acc-ink:#07131a;--live:#ff657d;--chk:#ffc66b;--soon:#71aaff;
+  --shadow:0 18px 50px rgba(0,0,0,.22);--radius:18px;color-scheme:dark;
+}
+html:not(.dark){
+  --bg:#f3f6fb;--panel:#fff;--panel-2:#f8faff;--ink:#172238;--mute:#66748c;
+  --line:#e0e7f1;--acc:#246fdb;--acc-ink:#fff;--live:#d53a59;--chk:#9a650d;--soon:#286eb7;
+  --shadow:0 14px 35px rgba(29,49,82,.08);color-scheme:light;
+}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{background:radial-gradient(ellipse at 12% 0%,rgba(62,112,153,.13),transparent 34rem),var(--bg);font-size:15px;line-height:1.6;letter-spacing:.005em}
+body::before{background:var(--bg)}
+header{background:color-mix(in srgb,var(--panel) 88%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid color-mix(in srgb,var(--line) 78%,transparent);box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.bar{max-width:1280px;min-height:76px;padding:.75rem 1.5rem;gap:1rem}
+.logo{display:flex;align-items:center;gap:.75rem;margin-right:1rem;min-width:190px;color:var(--ink)}
+.brand-mark{position:relative;display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#69e0d0,#3986b8);box-shadow:0 8px 25px rgba(69,190,183,.22);overflow:hidden}
+.brand-mark:before,.brand-mark:after{content:"";position:absolute;border:1.5px solid rgba(5,27,34,.55);border-radius:50%;width:25px;height:25px}
+.brand-mark:after{width:13px;height:13px}
+.brand-mark i{position:absolute;width:2px;height:15px;bottom:19px;background:#08232b;transform-origin:bottom;transform:rotate(45deg)}
+.brand-copy{display:grid;gap:0;line-height:1.2}.brand-copy b{font:700 .96rem Unbounded,Manrope,sans-serif;letter-spacing:-.035em}.brand-copy small{margin-top:.28rem;color:var(--mute);font-size:.55rem;font-weight:800;letter-spacing:.16em}
+nav{align-items:center;gap:.2rem}
+nav a{padding:.55rem .8rem;border-radius:10px;color:var(--mute);font-size:.86rem;font-weight:800;transition:background .18s,color .18s}
+nav a:hover{background:var(--panel-2);color:var(--ink)}nav a.on{background:color-mix(in srgb,var(--acc) 15%,var(--panel));color:var(--acc);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--acc) 22%,transparent)}
+button,input,select,textarea{font-size:inherit}button{transition:transform .16s ease,background .16s ease,border-color .16s ease,opacity .16s ease}
+button:active{transform:translateY(1px)}button:disabled{opacity:.55;cursor:wait}
+.btn{min-height:42px;padding:.65rem 1rem;border-radius:11px;background:var(--acc);color:var(--acc-ink);font-size:.86rem;font-weight:800;box-shadow:0 6px 18px color-mix(in srgb,var(--acc) 17%,transparent)}
+.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}.btn.ghost{background:var(--panel-2);color:var(--ink);border:1px solid var(--line);box-shadow:none}.btn.danger{background:var(--live);color:white}
+.theme-toggle{white-space:nowrap}.auth{gap:.55rem}.auth .btn{min-height:38px}.who{max-width:11rem;font-size:.8rem}
+.nav-toggle{display:none;width:42px;height:42px;padding:.65rem;flex-direction:column;justify-content:center;gap:4px}.nav-toggle span{display:block;height:2px;width:18px;background:currentColor;border-radius:9px}
+main{max-width:1280px;padding:2rem 1.5rem 4rem;min-height:60vh}
+#foot{max-width:1280px;padding:1.25rem 1.5rem 2.25rem;border-top:1px solid var(--line);line-height:1.7}
+h1,h2,h3{letter-spacing:-.035em}h1{font-size:clamp(1.65rem,3.5vw,2.65rem);line-height:1.12}h2{font-size:1.15rem}
+.lead{max-width:70ch;color:var(--mute);font-size:1rem}
+.card{background:linear-gradient(155deg,var(--panel),color-mix(in srgb,var(--panel-2) 70%,var(--panel)));border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow)}
+.layout{grid-template-columns:300px minmax(0,1fr);gap:1.25rem}
+.filters{top:95px;border-radius:16px;box-shadow:none;background:var(--panel)}
+.filters fieldset{padding:0;margin:0 0 1rem}.filters legend{font-size:.82rem;letter-spacing:.04em;color:var(--ink)}
+input[type=search],input[type=text],input[type=email],input[type=password],input[type=url],input[type=number],input[type=date],input[type=time],select,textarea{min-height:42px;padding:.68rem .8rem;background:var(--bg);border:1px solid var(--line);border-radius:11px;transition:border-color .16s,box-shadow .16s}
+input:focus,select:focus,textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 13%,transparent);outline:none}
+input[type=checkbox],input[type=range]{accent-color:var(--acc)}.chk{padding:.3rem .1rem;color:var(--mute);font-size:.88rem}.chk:hover{color:var(--ink)}
+.dd,.grp{border:1px solid var(--line);border-radius:12px;background:var(--panel-2);overflow:hidden}.dd>summary{padding:.75rem .85rem}.dd-body{padding:.2rem .85rem .75rem;max-height:230px}
+.rng{gap:.55rem}.rng label{grid-template-columns:2rem minmax(0,1fr);font-size:.82rem;color:var(--mute)}.range-val{padding-top:.2rem;font-size:.78rem}
+.t-row{grid-template-columns:minmax(0,1fr) minmax(130px,190px);gap:.7rem 1.2rem;position:relative;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-left:1px solid var(--line);border-radius:15px;padding:1.1rem 1.2rem;box-shadow:0 8px 26px rgba(0,0,0,.07);transition:transform .18s,border-color .18s,box-shadow .18s}
+.t-row:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--acc);opacity:.8}.t-row:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--acc) 50%,var(--line));box-shadow:0 16px 34px rgba(0,0,0,.12)}
+.t-row h3{font:700 1rem/1.35 Manrope,sans-serif;color:var(--ink);margin:0 0 .3rem}.meta{color:var(--mute);font-size:.82rem}.prize{font:700 1.02rem Unbounded,Manrope,sans-serif;color:var(--acc);font-size:clamp(.88rem,1.4vw,1.08rem)}
+.tags{gap:.38rem;margin-top:.55rem}.tag{font-size:.71rem;background:var(--panel-2);color:var(--mute);border:1px solid var(--line);padding:.16rem .55rem}.st{font-size:.72rem;letter-spacing:.015em;padding:.24rem .62rem}.st.live{background:var(--live)}.st.checkin{background:var(--chk);color:#241600}.st.soon{background:var(--soon);color:#06182a}
+.grp{margin-bottom:1rem;background:transparent}.grp>summary{padding:.85rem 1rem;background:var(--panel);font-size:.9rem}.grp>summary b{font-size:.75rem;min-width:27px;text-align:center}.grp>.list{padding:.75rem 0 0;gap:.65rem}
+.home-hero{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr);gap:2rem;align-items:center;padding:clamp(1.4rem,4vw,2.7rem);margin-bottom:1.2rem;border:1px solid rgba(126,210,215,.2);border-radius:24px;background:radial-gradient(circle at 82% 20%,rgba(91,193,190,.19),transparent 18rem),linear-gradient(120deg,#111c2b,#0c1724 70%,#102b34);color:#f0f8ff;box-shadow:0 24px 70px rgba(0,0,0,.2)}
+.home-hero:after{content:"";position:absolute;z-index:-1;width:310px;height:310px;right:-80px;bottom:-190px;border:1px solid rgba(105,224,208,.18);border-radius:50%;box-shadow:0 0 0 28px rgba(105,224,208,.035),0 0 0 58px rgba(105,224,208,.025)}
+.hero-kicker{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:.9rem;color:#8de8dc;font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.hero-kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:#69e0d0;box-shadow:0 0 14px #69e0d0}
+.home-hero h1{max-width:720px;color:#f4f9ff;margin:0 0 .8rem}.home-hero p{max-width:62ch;color:#b7c7d7;margin:0}.hero-search{display:flex;gap:.55rem;margin-top:1.35rem;max-width:650px}.hero-search input{min-width:0;min-height:50px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:white;border-radius:12px}.hero-search input::placeholder{color:#a8b9ca}.hero-search .btn{min-width:112px;background:#69e0d0;color:#07131a}
+.hero-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}.hero-metric{padding:.9rem;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:14px;backdrop-filter:blur(8px)}.hero-metric b{display:block;color:white;font:700 1.4rem Unbounded,sans-serif}.hero-metric span{display:block;margin-top:.22rem;color:#a9bacb;font-size:.72rem}
+.quick-games{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:1rem 0 1.1rem}.quick-games-label{color:var(--mute);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-right:.25rem}.game-chip{border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--mute);padding:.44rem .85rem;font-size:.8rem;font-weight:800;cursor:pointer}.game-chip[aria-pressed="true"]{color:var(--acc);border-color:color-mix(in srgb,var(--acc) 55%,var(--line));background:color-mix(in srgb,var(--acc) 10%,var(--panel))}
+.directory-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.7rem;padding:.15rem 0}.directory-toolbar .meta{font-weight:700}.directory-sort{display:flex;align-items:center;gap:.5rem;color:var(--mute);font-size:.8rem}.directory-sort select{width:auto;min-width:145px;min-height:38px;padding:.45rem .7rem}
+.filters-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}.filters-head h2{margin:0}.filter-close{display:none}.filter-toggle{display:none}
+.grid2{gap:.9rem}.grid2>div{padding:.8rem;background:var(--panel-2);border:1px solid var(--line);border-radius:12px}.grid2 div b{margin-bottom:.2rem}.cols{gap:1.2rem}.kpis{gap:.9rem}.kpi{padding:1rem}.kpi b{font-size:1.4rem;color:var(--acc)}
+.hero{background:linear-gradient(125deg,#14283b,#17555b);border:1px solid rgba(105,224,208,.22);border-radius:22px;padding:clamp(1.5rem,4vw,2.4rem);box-shadow:var(--shadow)}.hero h1{font-size:clamp(1.6rem,3.4vw,2.4rem)}
+.field{margin-bottom:1rem}.field label{font-size:.86rem}.adm{gap:1rem}.arow{padding:1rem 0}.note{background:var(--panel-2);border:1px solid var(--line);border-radius:12px}
+footer a{color:var(--acc)}#toasts{right:1.25rem;bottom:1.25rem}.toast{background:var(--panel);color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow)}
+@media(max-width:1100px){.bar{gap:.55rem}.logo{min-width:170px}nav a{padding:.5rem .55rem;font-size:.8rem}.auth .who{display:none}}
+@media(max-width:900px){.nav-toggle{display:flex;margin-left:auto}nav#topNav{display:none;position:absolute;left:1rem;right:1rem;top:calc(100% + .5rem);padding:.7rem;background:var(--panel);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}nav#topNav.open{display:flex}nav#topNav a{padding:.8rem}.bar{position:relative}.auth{width:auto}.theme-toggle{min-width:42px;font-size:0}.theme-toggle:before{content:"◐";font-size:1.1rem}.layout,.cols{grid-template-columns:1fr}.filters{position:static}}
+@media(max-width:680px){.bar{padding:.65rem 1rem;min-height:66px}.logo{min-width:0;margin-right:0}.brand-copy small{font-size:.48rem}.auth .who,.auth .badge{display:none}.auth .btn{min-height:38px;padding:.5rem .65rem;font-size:.75rem}.nav-toggle{order:4}.theme-toggle{order:3}.auth{order:2}.bar nav{order:5}.bar{gap:.45rem}main{padding:1.1rem .9rem 2.8rem}.home-hero{grid-template-columns:1fr;gap:1.25rem;padding:1.4rem;border-radius:19px}.home-hero h1{font-size:1.75rem}.home-hero p{font-size:.9rem}.hero-search{margin-top:1rem}.hero-search input{min-height:46px}.hero-search .btn{min-width:88px;padding:.55rem .65rem;font-size:.78rem}.hero-metrics{grid-template-columns:repeat(4,minmax(0,1fr));gap:.4rem}.hero-metric{padding:.6rem .45rem}.hero-metric b{font-size:.95rem}.hero-metric span{font-size:.61rem;line-height:1.35}.quick-games{gap:.4rem}.quick-games-label{width:100%;margin-bottom:.1rem}.game-chip{padding:.4rem .68rem;font-size:.74rem}.directory-toolbar{align-items:flex-start;flex-wrap:wrap}.directory-sort{margin-left:auto}.filter-toggle{display:inline-flex}.filters{display:none;position:fixed;z-index:40;inset:0 0 0 auto;width:min(88vw,390px);max-height:100dvh;overflow:auto;margin:0;border-radius:0;padding:1.2rem;background:var(--panel);box-shadow:-20px 0 60px rgba(0,0,0,.35)}.filters.open{display:block}.filter-close{display:inline-flex;min-height:36px;padding:.4rem .65rem}.filters-head{position:sticky;top:-1.2rem;z-index:2;padding:.15rem 0 .75rem;background:var(--panel)}body.filters-open:after{content:"";position:fixed;inset:0;z-index:35;background:rgba(2,8,15,.62)}.t-row{grid-template-columns:minmax(0,1fr);padding:1rem;gap:.5rem}.t-row>div:last-child{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}.t-row>div:last-child .meta{text-align:left!important}.prize{font-size:.95rem}.cols{gap:.8rem}.card{padding:1rem;border-radius:15px}.an{grid-template-columns:1fr}.br{grid-template-columns:95px minmax(0,1fr) auto;font-size:.8rem}.arow{grid-template-columns:1fr}.arow .acts{justify-content:flex-start;flex-wrap:wrap}.tabs{flex-wrap:wrap}.tabs button{flex:1 1 auto}}
+@media(max-width:390px){.brand-copy b{font-size:.83rem}.brand-mark{width:34px;height:34px}.hero-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-search{flex-direction:column}.hero-search .btn{width:100%}.directory-sort{width:100%;margin:0}.directory-sort select{flex:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
 </style>
 </head>
 
@@ -122,8 +190,12 @@ input[type=password],input[type=url],input[type=number],input[type=date],input[t
 <body>
 <header>
   <div class="bar">
-    <a class="logo" href="#/">КиберРадар</a>
-    <nav aria-label="Разделы">
+    <a class="logo" href="#/" aria-label="КиберРадар — на главную">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-copy"><b>КиберРадар</b><small>ТУРНИРЫ · КИБЕРСПОРТ</small></span>
+    </a>
+    <button class="nav-toggle btn ghost" id="navToggle" type="button" aria-expanded="false" aria-controls="topNav" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+    <nav id="topNav" aria-label="Разделы">
       <a href="#/" data-nav="home">Поиск турниров</a>
       <a href="#/analytics" data-nav="analytics">Аналитика</a>
       <a href="#/about" data-nav="about">О проекте</a>
@@ -131,7 +203,7 @@ input[type=password],input[type=url],input[type=number],input[type=date],input[t
       <a href="#/admin" data-nav="admin" id="navAdmin" hidden>Админ-панель</a>
     </nav>
     <div class="auth" id="auth"></div>
-    <button class="btn ghost" id="themeBtn" type="button" aria-label="Переключить тему">Тёмная тема</button>
+    <button class="btn ghost theme-toggle" id="themeBtn" type="button" aria-label="Переключить тему">Тёмная тема</button>
   </div>
 </header>
 <main id="app"></main>
@@ -180,61 +252,7 @@ const PLATFORMS = ["FACEIT", "FASTCUP", "VK Play", "Cybermos", "ВКонтакт
 
 /* Данные о турнирах. Пополняются из поиска; даты в формате ГГГГ-ММ-ДД.
    prize/fee: {v: число, c: "USD" | "RUB"}; fee: null — взнос не указан. */
-const TOURNAMENTS = [
-  { id:"cis9", name:"WINLINE MPKBK CIS LAN Season 9", disc:"CS2", format:"LAN", city:"Москва",
-    start:"2026-10-20", end:"2026-10-23", prize:{v:50000,c:"USD"}, fee:null, op:"MPKBK × WINLINE", teams:16,
-    desc:"Ранговый LAN-турнир серии CIS LAN: заключительный из четырёх перед отсечкой рейтинга VRS (2 ноября) и PGL Major Singapore 2026. 16 команд, приглашения по рейтингу VRS.",
-    fee_note:"Открытой оплаты нет: места распределяются по VRS-приоритету и приглашениям.",
-    contact:"Анонсы и заявки — через личный Telegram-канал организатора Андрея «MPKBK» Ермакова.",
-    site:"https://www.hltv.org/events/9426/winline-mpkbk-cis-lan-season-9", siteName:"Страница на HLTV",
-    social:[{t:"Страница турнира на Cybersport.ru",u:"https://www.cybersport.ru/tournaments/cs2/cis-lan-9"},{t:"Telegram: личный канал Андрея MPKBK Ермакова — анонсы и открытие регистрации"}] },
-  { id:"predator", name:"Predator League Open Cup", disc:"Valorant", format:"Online", city:"Вся Россия",
-    start:"2026-10-25", end:"2026-11-15", prize:{v:500000,c:"RUB"}, fee:null, op:"Acer Predator League", teams:null,
-    desc:"Первый в России турнир серии Predator League по VALORANT. Участвовать может любой желающий, кроме профессиональных игроков. Регистрация на 1-ю квалификацию до 24.10, на 2-ю до 30.10. Квалификации: 25 и 31 октября. Групповой этап: 7–8 ноября. Плей-офф: 13–15 ноября.",
-    platform:"Сайт организатора", fee_note:"Размер взноса в анонсе не указан — уточняйте на сайте Predator League.",
-    contact:"Регистрация и вопросы — на сайте Predator League (Acer).",
-    site:"https://trashbox.ru/link/2026-09-29-uchastvovat-v-turnire-po-valorant-ot-predator-league-smogut-tolko-neprofessional", siteName:"Анонс турнира",
-    social:[] },
-  ...[["CS2","cs2"],["Valorant","val"],["Dota 2","dota"],["MLBB","mlbb"]].map(([d,k])=>({
-    id:"cm-"+k, name:"Московский Киберспорт — еженедельный турнир ("+d+")", disc:d, format:"Online", city:"Вся Россия",
-    start:"2026-10-17", end:"2026-12-31", prize:{v:20000,c:"RUB"}, fee:{v:0,c:"RUB"}, op:"ФКС Москвы · Московский Киберспорт", teams:null,
-    desc:"Серия онлайн-турниров 5×5 на платформе Cybermos: в течение 2026 года проходит не менее 140 соревнований по нескольким дисциплинам. Призы по последним анонсам: 12 000 ₽ за 1-е место и 8 000 ₽ за 2-е. Регистрация закрывается в день турнира в 17:55 МСК. Точные даты ближайшего этапа смотрите на сайте.",
-    fee_note:"Участие бесплатно: вступительных взносов нет.",
-    contact:"Регистрация и поддержка — на платформе Cybermos.",
-    platform:"Cybermos", site:"https://cybermos.ru", siteName:"Cybermos.ru", social:[{t:"ВКонтакте: страница «Московского Киберспорта»"},{t:"Telegram: канал CYBERMOS"},{t:"Discord: матчи проходят на серверах, доступ после регистрации"}] })),
-  /* Студенческие лиги: сезон 2026/27 анонсирован не полностью, поэтому даты не заданы (tba). */
-  ...[["vksl","CS2","cs2"],["vksl","Dota 2","dota"],["mskl","Valorant","val"],["mskl","MLBB","mlbb"]].map(([i,d,k])=>{ const v = i==="vksl"; return {
-    id:"st-"+i+"-"+k, name:(v?"Всероссийская киберспортивная студенческая лига (ВКСЛ)":"Московская студенческая киберспортивная лига (МСКЛ)")+", "+d,
-    disc:d, format:v?"Online/LAN":"Online", city:v?"Россия, через региональные отделения ФКС":"Студенты вузов и ссузов всей России",
-    tba:true, student:true, prize:null, fee:null, op:v?"ФКС России · НСЛКС":"ФКС Москвы · МСКЛ", teams:null,
-    desc:v?"Ежегодная лига для студентов вузов и ссузов 16–25 лет: региональный, зональный и финальный этапы (финал — LAN). Команда формируется из студентов одного учебного заведения. Даты нового сезона на момент проверки не объявлены; в сезоне IX призовой фонд лиги составлял 3 000 000 ₽.":"Открыто для студентов вузов и ссузов со всей России. В 16-м сезоне (февраль 2026) заявки принимались по почте, игры стартовали 14 февраля. Даты следующего сезона на момент проверки не объявлены.",
-    fee_note:"Размер взноса в анонсах не указан.",
-    contact:v?"Заявка — через региональное отделение ФКС России; региональный департамент: region@resf.ru.":"Заявки в 16-м сезоне принимались на mscl@fcs.msk.ru.",
-    site:v?"https://xn--80afcqo8ahi.xn--p1ai/":"https://fcs.msk.ru/", siteName:v?"Сайт ВКСЛ":"Сайт ФКС Москвы",
-    social:[{t:v?"ВКонтакте, Telegram и Одноклассники ФКС России":"ВКонтакте и Telegram «Московского Киберспорта»"}] }; }),
-  /* FACEIT: турниры и квалификации сторонних организаторов. Турниры самой платформы (own:true) и с начислением FACEIT Points (fp:true) не включаются. */
-  { id:"cct11", name:"CCT Europe 2026 Contenders #11", disc:"CS2", format:"Online", city:"Европа, онлайн",
-    start:"2026-11-19", end:"2026-11-27", prize:{v:2500,c:"USD"}, fee:null, op:"CCT (Champion of Champions Tour)", teams:16, platform:"FACEIT",
-    desc:"Онлайн-турнир серии CCT Europe (Valve Tier 2): 16 команд, double elimination, все матчи Bo3. Часть мест разыгрывается в открытых квалификациях на FACEIT.",
-    fee_note:"Взнос в источниках не указан.", contact:"Регистрация и регламент — на странице квалификации на FACEIT.",
-    site:"https://liquipedia.net/counterstrike/CCT/2026/Europe/Contenders_11", siteName:"Страница турнира на Liquipedia", social:[] },
-  { id:"cct11-oq1", name:"CCT 2026 Contenders Europe 11 — Open Qualifier 1", kind:"qualifier", disc:"CS2", format:"Online", city:"Европа, онлайн",
-    tba:true, prize:null, fee:null, op:"CCT (Champion of Champions Tour)", teams:null, platform:"FACEIT",
-    desc:"Открытая квалификация к турниру CCT Europe 2026 Contenders #11 (19–27 ноября 2026, призовой фонд $2 500). Даты самой квалификации найти не удалось — смотрите страницу на FACEIT.",
-    fee_note:"Взнос в источниках не указан.", contact:"Регистрация команды — на странице квалификации на FACEIT.",
-    site:"https://www.faceit.com/ru/championship/caf0ec12-d4a6-4d35-8916-f2f3122b4c37/CCT%202026%20Contenders%20Europe%2011%20-%20Open%20Qualifier%201", siteName:"Квалификация на FACEIT", social:[] },
-  { id:"ls-nl3-oq2", name:"LIGA STAVOK NARODNAYA LIGA TOUR III OPEN QUALIFICATION 2", disc:"CS2", format:"Online", city:"Россия, онлайн",
-    tba:true, prize:{v:1000000,c:"RUB"}, fee:null, op:"Лига Ставок · Народная лига", teams:null, platform:"FACEIT",
-    desc:"Открытая квалификация Народной лиги Лиги Ставок по CS2 с призовым фондом 1 000 000 ₽ (по данным со страницы FACEIT). Даты и условия автоматически получить не удалось — откройте список турниров на FACEIT.",
-    fee_note:"Взнос не указан.", contact:"Регистрация — на странице турнира на FACEIT.",
-    site:"https://www.faceit.com/ru/cs2/tournaments?gameMode=5v5&joinable=joinableOnly", siteName:"Список турниров CS2 на FACEIT", social:[] },
-  /* По скриншоту FACEIT: две открытые квалификации к CCT Contenders Europe 12, 5v5, 128 мест. */
-  ...[1, 2].map(n => ({ id:"cct12-oq" + n, name:"CCT 2026 Contenders Europe 12 - Open Qualifier " + n, kind:"qualifier", disc:"CS2", format:"Online", city:"Европа / онлайн",
-    start:"2026-12-0" + (4 + n), end:"2026-12-0" + (4 + n), prize:null, fee:null, op:"CCT (Champion of Champions Tour)", teams:128, platform:"FACEIT",
-    desc:"Открытая квалификация к CCT Europe 2026 Contenders #12 на FACEIT, формат 5v5. Старт в 17:00 по МСК. Всего 128 мест, на момент скриншота заявок 0. Призовой фонд на странице не указан.",
-    fee_note:"Взнос не указан.", contact:"Регистрация команды — на странице квалификации на FACEIT.",
-    site:"https://www.faceit.com/ru/cs2/tournaments?gameMode=5v5&joinable=joinableOnly", siteName:"Список турниров CS2 на FACEIT", social:[] }))
-];
+let TOURNAMENTS = []; // Загружается из data/static-tournaments.json — общий источник для сайта и SEO.
 
 /* ---------- Вспомогательные функции ---------- */
 const $ = (s, r = document) => r.querySelector(s);
@@ -338,10 +356,27 @@ function pageHome() {
   /* Отдельные ползунки «от» и «до». */
   const rng = (id, title) => `<fieldset><legend>${title}</legend><div class="rng"><label>от <input type="range" id="${id}min" min="0" step="${SL[id]}" value="0"></label><label>до <input type="range" id="${id}max" min="0" step="${SL[id]}"></label></div><div class="range-val" id="${id}V"></div></fieldset>`;
 
-  $("#app").innerHTML = `<h1>Турниры по киберспорту в России</h1>
-  <p class="lead">CS2, Dota 2, Valorant и MLBB: LAN и онлайн, форматы 1x1, 2x2, 5x5 и студенческие лиги. Завершённые турниры скрываются автоматически.</p>
-  <div class="layout"><aside class="card filters" aria-label="Фильтры">
-    <fieldset><legend>Поиск</legend><input type="search" id="q" placeholder="Турнир или оператор"></fieldset>
+  const freeCount = all.filter(t => t.fee && t.fee.v === 0).length;
+  const datedCount = all.filter(t => !t.tba).length;
+  $("#app").innerHTML = `<section class="home-hero">
+    <div><div class="hero-kicker">Единый радар киберспортивных событий</div>
+      <h1>Находи свой следующий турнир.</h1>
+      <p>Открытые соревнования по CS2, Dota 2, Valorant и MLBB. Сравнивай условия, призовые и даты — регистрация проходит на площадке организатора.</p>
+      <div class="hero-search"><input type="search" id="q" placeholder="Найти турнир, игру или организатора" aria-label="Поиск турниров"><button class="btn" type="button" id="heroSearch">Найти турнир</button></div>
+    </div>
+    <div class="hero-metrics" aria-label="Статистика каталога">
+      <div class="hero-metric"><b>${all.length}</b><span>актуальных событий</span></div>
+      <div class="hero-metric"><b>${datedCount}</b><span>с объявленными датами</span></div>
+      <div class="hero-metric"><b>${freeCount}</b><span>бесплатных турниров</span></div>
+      <div class="hero-metric"><b>4</b><span>киберспортивные дисциплины</span></div>
+    </div>
+  </section>
+  <div class="quick-games"><span class="quick-games-label">Быстрый выбор</span>${discs.map(d => `<button class="game-chip" type="button" data-quick-disc="${d}" aria-pressed="false">${d}</button>`).join("")}</div>
+  <div class="directory-toolbar"><button class="btn ghost filter-toggle" id="filterToggle" type="button" aria-expanded="false">☷ Фильтры</button><div class="meta" id="count" aria-live="polite"></div>
+    <label class="directory-sort">Сортировка <select id="sort"><option value="date">По дате</option><option value="prize">По призовым</option><option value="name">По названию</option></select></label>
+  </div>
+  <div class="layout"><aside class="card filters" id="filtersPanel" aria-label="Фильтры">
+    <div class="filters-head"><h2>Фильтры</h2><button class="btn ghost filter-close" id="filterClose" type="button">Закрыть</button></div>
     ${dd("d", "Дисциплина", discs.map(d => chk("d", d, d === "MLBB" ? "MLBB (Mobile Legends: Bang Bang)" : d)).join(""))}
     ${dd("m", "Формат матчей", ["1x1", "2x2", "5x5"].map(m => chk("m", m)).join(""))}
     ${dd("t", "Тип", `<label class="chk"><input type="checkbox" id="stu"> Только студенческие лиги</label><label class="chk"><input type="checkbox" id="qual"> Только квалификации</label><label class="chk"><input type="checkbox" id="ru"> С российским фокусом (русскоязычные и из РФ)</label>`)}
@@ -349,7 +384,7 @@ function pageHome() {
     ${dd("o", "Турнирный оператор", ops.map(o => chk("o", o)).join(""))}
     ${rng("prize", "Призовой фонд")}${rng("fee", "Взнос за участие")}
     <button class="btn ghost" type="button" id="reset">Сбросить</button>
-  </aside><section><div class="meta" id="count" style="margin-bottom:.6rem"></div><div id="list"></div></section></div>`;
+  </aside><section aria-label="Результаты поиска"><div id="list"></div></section></div>`;
 
   /* Границы и подписи пары ползунков; `moved` — какой двигали (он не может перескочить соседа). */
   function slider(id, reset, moved) {
@@ -368,17 +403,25 @@ function pageHome() {
   /* Применяет фильтры и рисует турниры группами по играм (раскрывающиеся списки). */
   function draw() {
     const q = f.q.toLowerCase();
-    const res = all.filter(t => (!q || (t.name + " " + t.op).toLowerCase().includes(q)) && (!f.d.size || f.d.has(t.disc)) &&
+    const res = all.filter(t => (!q || [t.name, t.op, t.city, t.disc, t.platform].join(" ").toLowerCase().includes(q)) && (!f.d.size || f.d.has(t.disc)) &&
       (!f.o.size || f.o.has(t.op)) && (!f.m.size || f.m.has(t.team)) && (!f.p.size || f.p.has(t.platform)) && (!f.stu || t.student) &&
       (!f.qual || t.kind === "qualifier") && (!f.ru || t.ru) && inRange(t.prize, f.prize) && (t.fee ? inRange(t.fee, f.fee) : f.fee[0] === 0));
-    $("#count").textContent = "Найдено: " + res.length + " из " + all.length;
+    const sortMode = $("#sort") ? $("#sort").value : "date";
+    if (sortMode === "prize") res.sort((a,b) => toRub(b.prize) - toRub(a.prize));
+    else if (sortMode === "name") res.sort((a,b) => plain(a.name).localeCompare(plain(b.name), "ru"));
+    else res.sort((a,b) => (a.tba ? 9e15 : +parseDate(a.start)) - (b.tba ? 9e15 : +parseDate(b.start)));
+    $("#count").textContent = "Найдено " + res.length + " из " + all.length + " турниров";
     const order = d => (discs.includes(d) ? discs.indexOf(d) : 99);
     const games = [...new Set(res.map(t => t.disc))].sort((x, y) => order(x) - order(y));
     $("#list").innerHTML = res.length ? games.map(d => { const g = res.filter(t => t.disc === d);
       return `<details class="grp" data-g="${d}"${openG.has(d) || f.q ? " open" : ""}><summary>${d}<b>${g.length}</b></summary><div class="list">${g.map(row).join("")}</div></details>`; }).join("")
       : `<div class="card empty">Ничего не найдено. Расширьте фильтры или сбросьте их.</div>`;
     $$(".grp").forEach(g => g.ontoggle = () => (g.open ? openG.add(g.dataset.g) : openG.delete(g.dataset.g)));
-    $$("[data-c]").forEach(e => { const n = e.dataset.c === "t" ? +f.stu + +f.qual + +f.ru : f[e.dataset.c].size; e.textContent = n ? " · " + n : ""; });
+    $$('[data-c]').forEach(e => { const n = e.dataset.c === "t" ? +f.stu + +f.qual + +f.ru : f[e.dataset.c].size; e.textContent = n ? " · " + n : ""; });
+    $$('[data-d]').forEach(c => c.checked = f.d.has(c.dataset.d));
+    $$('[data-quick-disc]').forEach(b => b.setAttribute('aria-pressed', String(f.d.has(b.dataset.quickDisc))));
+    const active = f.d.size + f.o.size + f.m.size + f.p.size + +f.stu + +f.qual + +f.ru;
+    const ft = $('#filterToggle'); if (ft) ft.textContent = active ? `☷ Фильтры · ${active}` : '☷ Фильтры';
   }
   $("#q").oninput = e => { f.q = e.target.value; draw(); };
   $$("[data-d]").forEach(c => c.onchange = () => { c.checked ? f.d.add(c.dataset.d) : f.d.delete(c.dataset.d); bounds(true); draw(); });
@@ -390,6 +433,19 @@ function pageHome() {
   $("#ru").onchange = e => { f.ru = e.target.checked; draw(); };
   Object.keys(SL).forEach(id => ["min", "max"].forEach(k => $("#" + id + k).oninput = () => { slider(id, false, k); draw(); }));
   $("#reset").onclick = pageHome;
+  $("#sort").onchange = draw;
+  $("#heroSearch").onclick = () => $("#q").focus();
+  $$('[data-quick-disc]').forEach(b => b.onclick = () => {
+    const d = b.dataset.quickDisc;
+    if (f.d.has(d)) f.d.delete(d); else f.d.add(d);
+    bounds(true); draw();
+  });
+  const panel = $('#filtersPanel'), toggle = $('#filterToggle');
+  const closeFilters = () => { panel.classList.remove('open'); document.body.classList.remove('filters-open'); toggle.setAttribute('aria-expanded','false'); };
+  toggle.onclick = () => { const open = !panel.classList.contains('open'); panel.classList.toggle('open', open); document.body.classList.toggle('filters-open', open); toggle.setAttribute('aria-expanded', String(open)); if (open) $('#filterClose').focus(); };
+  document.onclick = e => { if (document.body.classList.contains('filters-open') && !panel.contains(e.target) && !toggle.contains(e.target)) closeFilters(); };
+  $('#filterClose').onclick = closeFilters;
+  document.onkeydown = e => { if (e.key === 'Escape' && panel.classList.contains('open')) closeFilters(); };
   bounds(true); draw();
 }
 
@@ -409,11 +465,10 @@ function pageTournament(id) {
       <p>${t.desc}</p><p class="meta">${t.fee_note}</p></div>
     <div class="card" style="margin-top:1rem"><h2>Контакты и ссылки</h2><p>${t.contact}</p>
       <p>${links.length ? links.join("<br>") : "Сайт турнира не найден."}</p></div>
-  </div><div class="card"><h2>Заявка на участие</h2>
-    <form id="reg" novalidate>${field("team", "Название команды")}${field("nick", "Ник капитана")}${field("email", "Email капитана", "email")}${field("tg", "Telegram для связи")}
-    <button class="btn" type="submit">Отправить заявку</button></form>
-    <p class="meta">Форма демонстрационная: данные никуда не передаются. Официальная регистрация — на сайте оператора.</p></div></div>`;
-  bindForm($("#reg"), d => toast("Заявка сформирована", "Команда «" + d.team + "» — " + t.name + ". Подтверждение придёт на " + d.email + "."));
+  </div><div class="card registration-card"><h2>Участие в турнире</h2>
+    <p class="meta">Регистрация проводится организатором. КиберРадар не принимает заявки и не передаёт персональные данные участников.</p>
+    ${t.site && /^https?:\/\//i.test(t.site) ? `<a class="btn" href="${t.site}" target="_blank" rel="noopener noreferrer">Перейти к регистрации ↗</a>` : `<span class="badge">Ссылка на регистрацию не указана</span>`}
+    </div></div>`;
 }
 
 /* ---------- Страница: аналитика по актуальным турнирам ---------- */
@@ -692,6 +747,11 @@ try { saved = localStorage.getItem("theme"); } catch (e) {}
 setTheme(saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
 $("#themeBtn").onclick = () => setTheme(!document.documentElement.classList.contains("dark"));
 addEventListener("hashchange", route);
+const navToggle = document.getElementById("navToggle"), topNav = document.getElementById("topNav");
+const closeTopNav = () => { topNav.classList.remove("open"); navToggle.setAttribute("aria-expanded", "false"); navToggle.setAttribute("aria-label", "Открыть меню"); };
+navToggle.onclick = () => { const open = !topNav.classList.contains("open"); topNav.classList.toggle("open", open); navToggle.setAttribute("aria-expanded", String(open)); navToggle.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню"); };
+topNav.addEventListener("click", e => { if (e.target.closest("a")) closeTopNav(); });
+addEventListener("resize", () => { if (innerWidth > 900) closeTopNav(); });
 
 /* Загружает data/faceit.json и data/vk.json независимо друг от друга: если один файл недоступен или повреждён,
    второй всё равно показывается, а при отсутствии обоих сайт работает на ручных данных. */
@@ -704,6 +764,17 @@ async function loadJsonFile(url) {
     return await res.json();
   } catch (e) { console.warn("Данные недоступны (" + url + "):", e); return null; }
 }
+async function loadStatic() {
+  try {
+    const data = await loadJsonFile("data/static-tournaments.json");
+    TOURNAMENTS = Array.isArray(data && data.tournaments) ? data.tournaments.map(clean).filter(Boolean) : [];
+    if (!TOURNAMENTS.length) console.warn("Статический каталог турниров пуст или недоступен.");
+  } catch (e) {
+    console.warn("Не удалось загрузить статический каталог турниров:", e);
+    TOURNAMENTS = [];
+  }
+}
+
 async function loadRemote() {
   const files = await Promise.all([FACEIT_JSON, VK_JSON].map(loadJsonFile));
   let updated = "";
@@ -719,7 +790,7 @@ async function loadRemote() {
 /* Запуск: данные FACEIT и ручные турниры грузятся параллельно; состояние входа подхватывается позже и перерисовывает шапку/страницу. */
 initSupabase();
 renderAuth();
-Promise.all([loadRemote(), loadManual()]).finally(route);
+Promise.all([loadStatic(), loadRemote(), loadManual()]).finally(route);
 if (SB) {
   SB.auth.getSession().then(async ({ data }) => {
     AUTH.user = data.session ? data.session.user : null; await loadRole(); AUTH.ready = true; renderAuth();

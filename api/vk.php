@@ -11,6 +11,10 @@
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: DENY');
+header('Referrer-Policy: same-origin');
+header('Permissions-Policy: camera=(), microphone=(), geolocation=()');
+header("Content-Security-Policy: default-src 'none'; frame-ancestors 'none'; base-uri 'none'");
 
 $ROOT = dirname(__DIR__);
 $DATA = $ROOT . '/data';
@@ -80,7 +84,7 @@ function read_json_file($path, $fallback)
 function revision($files)
 {
     $s = '';
-    foreach (array($files['decisions'], $files['skip']) as $f) $s .= is_file($f) ? md5_file($f) : '-';
+    foreach (array($files['decisions'], $files['skip'], $files['published']) as $f) $s .= is_file($f) ? md5_file($f) : '-';
     return md5($s);
 }
 
@@ -100,6 +104,18 @@ function post_body()
 {
     if (!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || $_SERVER['HTTP_X_REQUESTED_WITH'] !== 'tf-moderation') {
         out(403, array('error' => 'Запрос отклонён (нет заголовка защиты).'));
+    }
+    // Дополнительная защита от cross-site запросов. Заголовок Origin может отсутствовать
+    // у старых клиентов, но если он передан — он обязан совпадать с текущим хостом.
+    if (!empty($_SERVER['HTTP_ORIGIN'])) {
+        $originHost = parse_url($_SERVER['HTTP_ORIGIN'], PHP_URL_HOST);
+        $requestHost = isset($_SERVER['HTTP_HOST']) ? strtolower(preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'])) : '';
+        if (!$originHost || strtolower($originHost) !== $requestHost) {
+            out(403, array('error' => 'Межсайтовый запрос отклонён.'));
+        }
+    }
+    if (!empty($_SERVER['HTTP_SEC_FETCH_SITE']) && !in_array($_SERVER['HTTP_SEC_FETCH_SITE'], array('same-origin', 'same-site', 'none'), true)) {
+        out(403, array('error' => 'Межсайтовый запрос отклонён.'));
     }
     $raw = file_get_contents('php://input', false, null, 0, MAX_BODY + 1);
     if ($raw === false || strlen($raw) > MAX_BODY) out(413, array('error' => 'Слишком большой запрос.'));
@@ -172,13 +188,25 @@ function write_atomic($path, $data)
 {
     $json = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     if ($json === false) return false;
-    $tmp = $path . '.tmp' . getmypid();
-    if (file_put_contents($tmp, $json, LOCK_EX) === false) return false;
-    if (!@rename($tmp, $path)) { // на некоторых хостингах rename поверх существующего файла не работает
-        $ok = copy($tmp, $path);
-        @unlink($tmp);
-        return $ok;
+    $tmp = $path . '.tmp.' . getmypid() . '.' . mt_rand(10000, 99999);
+    $fh = @fopen($tmp, 'xb');
+    if (!$fh) return false;
+    $ok = false;
+    if (flock($fh, LOCK_EX)) {
+        $written = 0;
+        $length = strlen($json);
+        while ($written < $length) {
+            $n = fwrite($fh, substr($json, $written));
+            if ($n === false || $n === 0) break;
+            $written += $n;
+        }
+        $ok = ($written === $length) && fflush($fh);
+        flock($fh, LOCK_UN);
     }
+    fclose($fh);
+    if (!$ok) { @unlink($tmp); return false; }
+    if (is_file($path)) @chmod($tmp, fileperms($path) & 0777);
+    if (!@rename($tmp, $path)) { @unlink($tmp); return false; }
     return true;
 }
 
@@ -233,33 +261,77 @@ if ($action === 'logout') {
 if (!is_auth($cfg)) out(401, array('error' => 'Нужен вход.'));
 
 if ($action === 'load') {
-    out(200, array(
+    // Читаем связанный набор файлов под shared-lock, чтобы не вернуть промежуточное
+    // состояние, пока другой запрос атомарно сохраняет решения и опубликованный список.
+    $lock = @fopen($DATA . '/.vk-save.lock', 'c');
+    if (!$lock || !flock($lock, LOCK_SH)) {
+        if ($lock) fclose($lock);
+        out(500, array('error' => 'Не удалось заблокировать хранилище модерации.'));
+    }
+    $candidates = read_json_file($DATA . '/vk-candidates.json', array());
+    $stats = read_json_file($DATA . '/vk-stats.json', null);
+    $payload = array(
         'decisions' => read_json_file($FILES['decisions'], array('groups' => new stdClass(), 'posts' => new stdClass())),
         'skip' => read_json_file($FILES['skip'], array()),
+        'candidates' => is_array($candidates) ? $candidates : array(),
+        'stats' => is_array($stats) ? $stats : null,
         'rev' => revision($FILES),
-    ));
+    );
+    flock($lock, LOCK_UN);
+    fclose($lock);
+    out(200, $payload);
 }
 
 if ($action === 'save') {
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') out(405, array('error' => 'Нужен POST.'));
     $body = post_body();
     if (!is_dir($DATA) || !is_writable($DATA)) out(500, array('error' => 'Папка data на сервере недоступна для записи.'));
+
+    // Один lock сериализует все операции модерации: несколько вкладок не смогут
+    // одновременно пройти проверку ревизии и затереть изменения друг друга.
+    $lock = @fopen($DATA . '/.vk-save.lock', 'c');
+    if (!$lock || !flock($lock, LOCK_EX)) out(500, array('error' => 'Не удалось заблокировать хранилище модерации.'));
+
     if (!isset($body['baseRev']) || $body['baseRev'] !== revision($FILES)) {
+        flock($lock, LOCK_UN); fclose($lock);
         out(409, array('error' => 'Данные изменились в другой вкладке или у другого модератора. Страница перезагрузит свежие.'));
     }
     $decisions = clean_decisions(isset($body['decisions']) ? $body['decisions'] : array());
     $skip = clean_skip(isset($body['skip']) ? $body['skip'] : array());
     $published = clean_published(isset($body['published']) ? $body['published'] : null);
-    if ($published === null) out(400, array('error' => 'Список турниров для сайта некорректен.'));
+    if ($published === null) {
+        flock($lock, LOCK_UN); fclose($lock);
+        out(400, array('error' => 'Список турниров для сайта некорректен.'));
+    }
 
-    // пустой массив в JSON должен остаться объектом
+    // Пустой массив в JSON должен остаться объектом.
     $decisions['groups'] = (object)$decisions['groups'];
     $decisions['posts'] = (object)$decisions['posts'];
-
-    if (!write_atomic($FILES['decisions'], $decisions) || !write_atomic($FILES['skip'], $skip) || !write_atomic($FILES['published'], $published)) {
-        out(500, array('error' => 'Не удалось записать файлы на сервере.'));
+    $payloads = array($FILES['decisions'] => $decisions, $FILES['skip'] => $skip, $FILES['published'] => $published);
+    $backup = array();
+    foreach ($payloads as $path => $value) $backup[$path] = is_file($path) ? file_get_contents($path) : null;
+    $written = array();
+    $ok = true;
+    foreach ($payloads as $path => $value) {
+        if (!write_atomic($path, $value)) { $ok = false; break; }
+        $written[] = $path;
     }
-    out(200, array('ok' => true, 'rev' => revision($FILES), 'count' => $published['count']));
+    if (!$ok) {
+        // Откатываем уже записанные файлы, если одна из связанных операций не удалась.
+        foreach ($written as $path) {
+            if ($backup[$path] === null) @unlink($path);
+            else {
+                $old = json_decode($backup[$path], true);
+                if ($old !== null) write_atomic($path, $old);
+                else { $tmp = $path . '.restore.' . getmypid(); if (file_put_contents($tmp, $backup[$path], LOCK_EX) !== false) @rename($tmp, $path); }
+            }
+        }
+        flock($lock, LOCK_UN); fclose($lock);
+        out(500, array('error' => 'Не удалось сохранить все данные. Предыдущие файлы восстановлены, повторите действие.'));
+    }
+    $newRev = revision($FILES);
+    flock($lock, LOCK_UN); fclose($lock);
+    out(200, array('ok' => true, 'rev' => $newRev, 'count' => $published['count']));
 }
 
 out(404, array('error' => 'Неизвестное действие.'));

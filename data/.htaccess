@@ -1,0 +1,14 @@
+# Публичными остаются faceit.json, vk.json и static-tournaments.json.
+# Кандидаты, статистика обхода и справочники доступны только серверу PHP.
+Options -Indexes
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(vk-candidates\.json|vk-stats\.json|clubs\.json|organizers\.json|vk-decisions\.json|vk-skip\.json|\.login-fail\.json|\.vk-save\.lock)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "^(vk-candidates\.json|vk-stats\.json|clubs\.json|organizers\.json|vk-decisions\.json|vk-skip\.json|\.login-fail\.json|\.vk-save\.lock)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>

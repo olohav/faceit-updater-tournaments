@@ -1,1 +1,8 @@
-{ "private": true, "type": "module" }
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test scripts/test.mjs",
+    "build:seo": "node scripts/build-pages.mjs"
+  }
+}
