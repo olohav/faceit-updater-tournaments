@@ -277,12 +277,31 @@ const regLine = t => {
 
 /* Статус по дате: идёт / чек-ин (за 3 дня до старта) / скоро. null — турнир окончен или дальше 365 дней. */
 function statusOf(t, now = new Date()) {
-  if (t.tba) return { k:"soon", l:"Даты уточняются" };   // сезон анонсирован, дат ещё нет
-  const s = parseDate(t.start), e = parseDate(t.end, true);
-  if (e < now || s - now > 365 * DAY) return null;
-  if (s <= now) return { k:"live", l:"Турнир идёт" };
-  if (s - now <= 3 * DAY) return { k:"checkin", l:"Чек-ин" };
-  return { k:"soon", l:"Скоро: " + Math.ceil((s - now) / DAY) + " дн." };
+  if (t.tba) return { k:"soon", l:"Даты уточняются" };
+
+  const s = parseDate(t.start);
+
+  // Если окончание неизвестно, не используем
+  // условную дату end для исключения турнира.
+  const endIsKnown = !t.endUnknown;
+  const e = endIsKnown ? parseDate(t.end, true) : null;
+
+  if ((endIsKnown && e < now) || s - now > 365 * DAY) {
+    return null;
+  }
+
+  if (s <= now) {
+    return { k:"live", l:"Турнир идёт" };
+  }
+
+  if (s - now <= 3 * DAY) {
+    return { k:"checkin", l:"Чек-ин" };
+  }
+
+  return {
+    k:"soon",
+    l:"Скоро: " + Math.ceil((s - now) / DAY) + " дн."
+  };
 }
 
 /* Актуальные турниры: завершённые автоматически исчезают из списков. */
