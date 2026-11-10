@@ -220,8 +220,8 @@ let REMOTE = [];                     // турниры, загруженные �
 let MANUAL = [];                     // турниры, добавленные администратором вручную (хранятся в Supabase)
 
 /* ---- Подключение сервисов: заполняется один раз, инструкция в README ---- */
-const SUPABASE_URL = "";             // например https://abcd1234.supabase.co
-const SUPABASE_ANON_KEY = "";        // публичный ключ anon (НЕ service_role!)
+const SUPABASE_URL = "https://rnobslymqlgejavgvarx.supabase.co/rest/v1/";             // например https://abcd1234.supabase.co
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJub2JzbHltcWxnZWphdmd2YXJ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIzMjg1MzAsImV4cCI6MjEwNzkwNDUzMH0.LFQ5bulFMxIITN01dFZBxQmkh1OYzQF-Ld9kdcEazeY";        // публичный ключ anon (НЕ service_role!)
 const FEEDBACK_ENDPOINT = "";        // адрес формы Formspree, например https://formspree.io/f/abcdwxyz
 
 /* Экранирование: данные из FACEIT и базы попадают в HTML, поэтому спецсимволы обезвреживаются. */
