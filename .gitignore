@@ -8,3 +8,5 @@ data/vk.json
 data/vk-decisions.json
 data/vk-skip.json
 data/.login-fail.json
+
+data/.vk-save.lock

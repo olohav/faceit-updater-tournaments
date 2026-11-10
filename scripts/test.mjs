@@ -1,5 +1,7 @@
 // Автотесты: node --test scripts/test.mjs  (запускаются и в GitHub Actions перед выкладкой)
 import test from 'node:test';
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 import { parseDate, parseTime, pickDateTime, rejectReason, pickTitle, evaluate, detectGames } from './vk-tournaments.mjs';
 import { parsePrize } from '../lib/prize.js';
@@ -99,4 +101,34 @@ test('публикация: начавшиеся турниры уходят, и
 test('сеть клубов определяется по самому частому фирменному слову', () => {
   assert.equal(commonPrefix(['CyberX Казань', 'Компьютерный клуб CyberX Уфа', 'Cyberx Омск']), 'CyberX');
   assert.equal(commonPrefix(['Альфа', 'Бета', 'Гамма']), '');
+});
+
+
+test('единый каталог: JSON доступен сайту и SEO, содержит корректные уникальные записи', async () => {
+  const file = JSON.parse(await readFile(resolve('data/static-tournaments.json'), 'utf8'));
+  assert.ok(Array.isArray(file.tournaments));
+  assert.ok(file.tournaments.length > 0);
+  const ids = file.tournaments.map(x => x.id);
+  assert.equal(new Set(ids).size, ids.length, 'id ручных турниров должны быть уникальными');
+  for (const item of file.tournaments) {
+    assert.equal(typeof item.id, 'string');
+    assert.equal(typeof item.name, 'string');
+    assert.ok(item.id && item.name);
+    assert.ok(item.tba || (item.start && item.end));
+  }
+});
+
+test('сборка и FTP-деплой используют общий каталог и сохраняют серверную блокировку', async () => {
+  const build = await readFile(resolve('scripts/build-pages.mjs'), 'utf8');
+  const workflow = await readFile(resolve('.github/workflows/update-data.yml'), 'utf8');
+  const pagesWorkflow = await readFile(resolve('.github/workflows/static.yml'), 'utf8');
+  const page = await readFile(resolve('index.html'), 'utf8');
+  assert.match(build, /data\/static-tournaments\.json/);
+  assert.match(page, /data\/static-tournaments\.json/);
+  assert.doesNotMatch(build, /match\(\/const TOURNAMENTS/);
+  assert.match(workflow, /data\/\.vk-save\.lock/);
+  assert.match(workflow, /secrets\.MODERATOR_PASSWORD == '' && 'api\/config\.php'/);
+  assert.match(workflow, /\.github\/workflows\/\*\*/);
+  assert.match(pagesWorkflow, /data\/static-tournaments\.json/);
+  assert.doesNotMatch(pagesWorkflow, /vk-candidates|moderation\.html|api\/vk\.php/);
 });

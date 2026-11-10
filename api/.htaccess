@@ -1,0 +1,13 @@
+# Конфигурация генерируется из GitHub Secret и не должна открываться по HTTP.
+Options -Indexes
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(config\.php|.*\.tmp(?:\..*)?|.*\.restore\..*)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "^(config\.php|.*\.tmp(?:\..*)?|.*\.restore\..*)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>

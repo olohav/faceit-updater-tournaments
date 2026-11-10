@@ -1,0 +1,11 @@
+# Безопасные HTTP-заголовки для Apache. CSP не задаём на уровне сайта,
+# поскольку приложение использует inline-скрипты и внешние CDN; API задаёт отдельную строгую CSP.
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>

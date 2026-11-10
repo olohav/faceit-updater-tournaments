@@ -2,13 +2,12 @@
  * Генератор страниц для поисковиков: по одной статичной HTML-странице на каждый актуальный турнир.
  * Создаёт:  t/<id>/index.html  (страница турнира),  t/index.html  (каталог),  sitemap.xml,  robots.txt
  * Запуск:   node scripts/build-pages.mjs      (после scripts/sync-faceit.mjs)
- * Источники: data/faceit.json + ручные записи из index.html + турниры администратора из Supabase (если подключён).
+ * Источники: data/static-tournaments.json + data/faceit.json + турниры администратора из Supabase (если подключён).
  * Адрес сайта берётся из site.config.json (поле siteUrl) — при смене домена поправьте его там.
  */
 import { readFile, writeFile, mkdir, rm } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import vm from "node:vm";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const cfg = JSON.parse(await readFile(resolve(ROOT, "site.config.json"), "utf8").catch(() => "{}"));
@@ -17,16 +16,20 @@ const NAME = cfg.siteName || "КиберРадар";
 if (!SITE) console.warn("В site.config.json не указан siteUrl: ссылки будут относительными, а sitemap.xml не создастся.");
 
 /* ---------- сбор данных ---------- */
-const html = await readFile(resolve(ROOT, "index.html"), "utf8");
-const USD_RUB = Number((html.match(/const USD_RUB = (\d+)/) || [])[1]) || 75;
+const siteHtml = await readFile(resolve(ROOT, "index.html"), "utf8").catch(() => "");
+const USD_RUB = Number(cfg.usdRub) || 75;
 
-/* Ручные записи лежат прямо в index.html (массив TOURNAMENTS): достаём и вычисляем его в песочнице. */
-function staticTournaments() {
-  const a = html.indexOf("const TOURNAMENTS = [");
-  const b = html.indexOf("\n];", a);
-  if (a < 0 || b < 0) return [];
-  try { return vm.runInNewContext("(" + html.slice(a + "const TOURNAMENTS = ".length, b + 2) + ")", {}, { timeout: 2000 }); }
-  catch (e) { console.warn("Не удалось прочитать TOURNAMENTS из index.html:", e.message); return []; }
+/* Общий источник ручных турниров для фронтенда и SEO. */
+async function staticTournaments() {
+  try {
+    const file = JSON.parse(await readFile(resolve(ROOT, "data/static-tournaments.json"), "utf8"));
+    if (!Array.isArray(file.tournaments)) throw new Error("нет массива tournaments");
+    return file.tournaments;
+  } catch (e) {
+    console.error("Не удалось прочитать data/static-tournaments.json:", e.message);
+    process.exitCode = 1;
+    return [];
+  }
 }
 async function remoteTournaments() {
   const read = async f => {
@@ -38,7 +41,7 @@ async function remoteTournaments() {
 }
 /* Турниры администратора: публичное чтение из Supabase (ключи берутся из index.html). */
 async function manualTournaments() {
-  const url = (html.match(/const SUPABASE_URL = "([^"]*)"/) || [])[1], key = (html.match(/const SUPABASE_ANON_KEY = "([^"]*)"/) || [])[1];
+  const url = (siteHtml.match(/const SUPABASE_URL = "([^"]*)"/) || [])[1], key = (siteHtml.match(/const SUPABASE_ANON_KEY = "([^"]*)"/) || [])[1];
   if (!url || !key) return [];
   try {
     const r = await fetch(`${url}/rest/v1/tournaments?select=id,data,expires_at`, { headers: { apikey: key, Authorization: "Bearer " + key } });
@@ -49,11 +52,11 @@ async function manualTournaments() {
 }
 
 const uuid = u => ((u || "").match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/i) || [""])[0].toLowerCase();
-const remote = await remoteTournaments(), manual = await manualTournaments();
+const [staticData, remote, manual] = await Promise.all([staticTournaments(), remoteTournaments(), manualTournaments()]);
 const auto = new Set(remote.map(t => uuid(t.site)).filter(Boolean));
 const seen = new Set();
 const today = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Moscow" });
-const all = [...staticTournaments().filter(t => !auto.has(uuid(t.site))), ...remote, ...manual]
+const all = [...staticData.filter(t => !auto.has(uuid(t.site))), ...remote, ...manual]
   .map(t => ({ team: "5x5", platform: "Не указана", ru: true, ...t }))
   .filter(t => t && t.id && t.name && !t.own && !t.fp && (t.tba || (t.end && t.end >= today)) && !seen.has(t.id) && seen.add(t.id))
   .sort((a, b) => (a.start || "9999").localeCompare(b.start || "9999") || a.name.localeCompare(b.name));
@@ -74,18 +77,18 @@ const trim = (s, n) => (s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/,
 const base = SITE || "../..";
 const pageUrl = t => `${SITE}/t/${slug(t)}/`;
 const homeUrl = SITE ? SITE + "/" : "../../";
-const CSS = `:root{--bg:#f2f4f9;--panel:#fff;--ink:#141a2b;--mute:#5b6479;--line:#dde2ee;--acc:#2f4bff}
-@media (prefers-color-scheme:dark){:root{--bg:#0c1019;--panel:#151b29;--ink:#e8ecf6;--mute:#93a0bb;--line:#26304a;--acc:#8a98ff}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,Arial,sans-serif}
-a{color:var(--acc)}header,main,footer{max-width:900px;margin:auto;padding:1rem}header{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between}
-.logo{font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--ink)}h1{font-size:clamp(1.4rem,4vw,2rem);line-height:1.25;margin:.3rem 0 .6rem}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.1rem;margin-bottom:1rem}
-dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem 1.2rem;margin:0}dt{color:var(--mute);font-size:.85rem}dd{margin:0;font-weight:600}
-.btn{display:inline-block;background:var(--acc);color:var(--panel);padding:.65rem 1.1rem;border-radius:10px;font-weight:800;text-decoration:none}
-ul{padding-left:1.2rem}.meta{color:var(--mute);font-size:.9rem}h2{font-size:1.15rem}footer{color:var(--mute);font-size:.9rem}`;
+const CSS = `:root{--bg:#080d17;--panel:#101827;--ink:#edf3ff;--mute:#91a0b9;--line:#26344b;--acc:#69e0d0;color-scheme:dark}
+@media(prefers-color-scheme:light){:root{--bg:#f3f6fb;--panel:#fff;--ink:#172238;--mute:#66748c;--line:#e0e7f1;--acc:#246fdb;color-scheme:light}}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 12% 0%,rgba(62,112,153,.13),transparent 34rem),var(--bg);color:var(--ink);font:15px/1.65 Manrope,system-ui,Arial,sans-serif}
+a{color:var(--acc)}header,main,footer{max-width:1040px;margin:auto;padding:1.2rem 1.5rem}header{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font:700 1rem Unbounded,Manrope,sans-serif;text-decoration:none;color:var(--ink);letter-spacing:-.03em}header nav{font-size:.88rem;color:var(--mute)}h1{font:700 clamp(1.5rem,4vw,2.3rem)/1.2 Unbounded,Manrope,sans-serif;letter-spacing:-.04em;margin:.6rem 0 1rem}
+.card{background:linear-gradient(155deg,var(--panel),#111d2d);border:1px solid var(--line);border-radius:17px;padding:1.25rem;margin:1rem 0;box-shadow:0 14px 38px rgba(0,0,0,.12)}dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem 1.2rem;margin:0}dt{color:var(--mute);font-size:.82rem}dd{margin:0;font-weight:700}
+.btn{display:inline-block;background:var(--acc);color:#07131a;padding:.7rem 1.1rem;border-radius:11px;font-weight:800;text-decoration:none}ul{padding-left:1.2rem}.meta{color:var(--mute);font-size:.88rem}h2{font:700 1.08rem Manrope,sans-serif;letter-spacing:-.02em}footer{color:var(--mute);font-size:.88rem;border-top:1px solid var(--line);margin-top:2rem}
+@media(max-width:600px){header,main,footer{padding:1rem}header nav{width:100%}.card{padding:1rem}dl{grid-template-columns:1fr 1fr}}`
 
 const layout = (title, desc, canonical, body, jsonld) => `<!DOCTYPE html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 <title>${esc(title)}</title><meta name="description" content="${esc(desc)}">
 ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ""}
 <meta property="og:type" content="website"><meta property="og:site_name" content="${esc(NAME)}"><meta property="og:locale" content="ru_RU">
