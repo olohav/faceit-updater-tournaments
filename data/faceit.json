@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-10T01:19:42.520Z",
+  "updatedAt": "2026-11-10T09:08:25.396Z",
   "source": "FACEIT Data API v4",
-  "count": 84,
+  "count": 83,
   "tournaments": [
     {
       "id": "fc-709409ec-b79b-4a88-8373-de6fe8db070d",
@@ -1022,30 +1022,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/e63e5130-4395-48a2-8900-71e734aa6a3c/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-617754b2-d8b2-4723-81da-0d3672cb4312",
-      "name": "MEDITERRANEAN ESPORT FEDERATIONS - ITALIAN QUALIFIER",
-      "kind": "qualifier",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-11",
-      "end": "2026-11-11",
-      "startsAt": "2026-11-11T21:30:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-11T01:55:00+03:00",
-      "op": "ITAL'GO",
-      "teams": 32,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 32. Старт в 21:30 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/617754b2-d8b2-4723-81da-0d3672cb4312/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
