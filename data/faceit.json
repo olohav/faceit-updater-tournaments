@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-10T23:00:09.836Z",
+  "updatedAt": "2026-11-11T01:22:46.919Z",
   "source": "FACEIT Data API v4",
-  "count": 86,
+  "count": 87,
   "tournaments": [
     {
       "id": "fc-3148d040-22c1-4293-8d66-5032a800e993",
@@ -1934,6 +1934,33 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/42ea136a-e21a-4aa3-b944-fd2f0b74c367/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-bc56fe2b-b70a-400a-89b1-bfff8a7282b0",
+      "name": "JOJU - 1",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "startsAt": "2026-11-28T19:00:00+03:00",
+      "prize": {
+        "v": 2000,
+        "c": "RUB"
+      },
+      "fee": null,
+      "regEnd": "2026-11-28T18:00:00+03:00",
+      "op": "Yoru Esports",
+      "teams": 8,
+      "platform": "FACEIT",
+      "ru": true,
+      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 19:00 по МСК. Любительский турнир для небольших команд. Призовой фонд - 2000 рублей. Регламент: https://disk.yandex.ru/i/tfY5aVMVNqkMSg tgk: https://t.me/JoJuUnnyw ",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/bc56fe2b-b70a-400a-89b1-bfff8a7282b0/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
