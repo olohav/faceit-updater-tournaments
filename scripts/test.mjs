@@ -165,6 +165,21 @@ test('ВК: автоматический статус остаётся режи�
   assert.equal(entry.statusMode, 'auto');
 });
 
+test('ВК: ручное расписание не обрывается в дату события и скрывает турнир только по таймеру', () => {
+  const post = cand({ date: '2026-10-27', time: '18:00' });
+  const d = emptyDecisions();
+  d.groups[groupKeyOf(post)] = {
+    status: 'approved', statusMode: 'soon', soonDays: 4, checkinDays: 2,
+    removeAfterDays: 8, statusSetAt: '2026-10-25T12:00:00.000Z'
+  };
+  const duringCheckin = Date.parse('2026-10-30T12:00:00.000Z'); // дата события уже прошла, таймер ещё нет
+  assert.equal(groupAll([post], d, [], duringCheckin).length, 1);
+  assert.equal(buildPublished([post], d, [], duringCheckin).count, 1);
+  const afterRemoval = Date.parse('2026-11-03T12:00:00.000Z');
+  assert.equal(groupAll([post], d, [], afterRemoval).length, 0);
+  assert.equal(buildPublished([post], d, [], afterRemoval).count, 0);
+});
+
 test('API принимает план «Скоро» до одобрения и требует время старта только при одобрении', async () => {
   const api = await readFile(resolve('api/vk.php'), 'utf8');
   assert.match(api, /approvedWithoutStart = \(\(\$o\['status'\] \?\? 'pending'\) === 'approved'\) && empty\(\$o\['statusSetAt'\]\)/);

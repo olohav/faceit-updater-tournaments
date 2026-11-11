@@ -296,15 +296,15 @@ const regLine = t => {
 function statusOf(t, now = new Date()) {
   if (t.tba) return { k:"soon", l:"Даты уточняются" };
   const s = parseDate(t.start);
-  const endIsKnown = !t.endUnknown;
-  const e = endIsKnown ? parseDate(t.end, true) : null;
-  if ((endIsKnown && e < now) || s - now > 365 * DAY) return null;
-  if (s <= now) return { k:"live", l:"Турнир идёт" };
+  if (s - now > 365 * DAY) return null;
 
+  // Ручной цикл «Скоро → Чек-ин → убрать» задаётся модератором от момента одобрения.
+  // Он должен иметь приоритет над датой события, иначе турнир исчезает в день старта
+  // и настроенный срок показа/чек-ина не отрабатывает.
   const mode = t.statusMode || "auto";
-  if (mode === "checkin") return { k:"checkin", l:"Чек-ин" };
   if (mode === "soon") {
-    const setAt = t.statusSetAt ? new Date(t.statusSetAt).getTime() : now.getTime();
+    const parsed = t.statusSetAt ? new Date(t.statusSetAt).getTime() : now.getTime();
+    const setAt = Number.isFinite(parsed) ? parsed : now.getTime();
     const elapsed = Math.max(0, Math.floor((now.getTime() - setAt) / DAY));
     const soonDays = Math.max(1, Number(t.soonDays) || 1);
     const checkinDays = Math.max(1, Number(t.checkinDays) || 1);
@@ -313,6 +313,12 @@ function statusOf(t, now = new Date()) {
     if (elapsed < soonDays) return { k:"soon", l:"Скоро: " + (soonDays - elapsed) + " дн." };
     return { k:"checkin", l:"Чек-ин" };
   }
+
+  const endIsKnown = !t.endUnknown;
+  const e = endIsKnown ? parseDate(t.end, true) : null;
+  if (endIsKnown && e < now) return null;
+  if (s <= now) return { k:"live", l:"Турнир идёт" };
+  if (mode === "checkin") return { k:"checkin", l:"Чек-ин" };
   if (s - now <= 3 * DAY) return { k:"checkin", l:"Чек-ин" };
   return { k:"soon", l:"Скоро: " + Math.ceil((s - now) / DAY) + " дн." };
 }
@@ -401,7 +407,7 @@ function tournamentEditorDialog(t) {
       <div class="field"><label>Дисциплина</label><select name="disc">${["CS2","Dota 2","Valorant","MLBB"].map(x=>`<option${d.disc===x?" selected":""}>${x}</option>`).join("")}</select></div>
       <div class="field"><label>Тип</label><select name="kind"><option value="main"${d.kind!=="qualifier"?" selected":""}>Турнир</option><option value="qualifier"${d.kind==="qualifier"?" selected":""}>Квалификация</option></select></div>
       <div class="field"><label>Площадка</label><select name="format"><option value="Online"${d.format==="Online"?" selected":""}>ONLINE</option><option value="LAN"${d.format==="LAN"?" selected":""}>LAN</option></select></div>
-      <div class="field"><label>Город / место</label><input name="city" value="${val(d.city)}"></div>
+      <div class="field"><label>Город / города</label><input name="city" value="${val(d.cities?.length ? d.cities.join(", ") : d.city)}"></div>
       <div class="field"><label>Организатор</label><input name="op" value="${val(d.op)}"></div>
       <div class="field"><label>Платформа</label><input name="platform" value="${val(d.platform)}"></div>
       <div class="field"><label>Формат матчей</label><select name="team">${["1x1","2x2","5x5"].map(x=>`<option${(d.team||"5x5")===x?" selected":""}>${x}</option>`).join("")}</select></div>
@@ -437,7 +443,7 @@ function openTournamentEditor(t) {
     if (!name) return $("#teError").textContent = "Название обязательно.";
     if (!tba && (!v("start") || !v("end") || v("end") < v("start"))) return $("#teError").textContent = "Укажите корректные даты начала и окончания.";
     if (site && !/^https?:\/\//i.test(site)) return $("#teError").textContent = "Ссылка должна начинаться с http:// или https://.";
-    const patch = { name, disc:v("disc"), kind:v("kind"), format:v("format"), city:v("city") || (v("format")==="Online"?"Онлайн":"Не указан"), op:v("op"), platform:v("platform"), team:v("team"),
+    const patch = { name, disc:v("disc"), kind:v("kind"), format:v("format"), city:v("city") || (v("format")==="Online"?"Онлайн":"Не указан"), cities:v("format")==="LAN" ? [...new Set(v("city").split(/[,;|/]/).map(x=>x.trim()).filter(Boolean))] : [], op:v("op"), platform:v("platform"), team:v("team"),
       desc:v("desc"), fee_note:v("fee_note"), contact:v("contact"), site, siteName:v("siteName"), student:f.has("student"), ru:f.has("ru"),
       prize:v("prizeValue")!==""?{v:Number(v("prizeValue")),c:v("prizeCurrency")} : null,
       fee:v("feeValue")!==""?{v:Number(v("feeValue")),c:v("feeCurrency")} : null };
@@ -911,7 +917,7 @@ async function moveTournamentToTrash(t) {
 
 async function saveTournamentOverride(sourceId, patch) {
   if (!SB || !isAdmin()) throw new Error("Нужны права администратора.");
-  const fields = ["name", "disc", "kind", "format", "city", "op", "platform", "team", "teams", "start", "end", "tba", "startsAt", "regEnd", "prize", "fee", "desc", "fee_note", "contact", "site", "siteName", "student", "ru"];
+  const fields = ["name", "disc", "kind", "format", "city", "cities", "op", "platform", "team", "teams", "start", "end", "tba", "startsAt", "regEnd", "prize", "fee", "desc", "fee_note", "contact", "site", "siteName", "student", "ru"];
   const safe = Object.fromEntries(Object.entries(patch).filter(([k]) => fields.includes(k)));
   const { error } = await SB.from("tournament_overrides").upsert({
     source_id: String(sourceId), patch: safe, is_trashed: false, permanently_hidden: false,
