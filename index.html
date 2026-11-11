@@ -828,9 +828,16 @@ function pageAdmin() {
   };
 
   async function list() {
+    // Перезагружаем overrides перед списком: удалённые вручную турниры остаются
+    // в исходной таблице до истечения 7 дней, но не должны показываться среди активных.
+    await loadTournamentOverrides();
     const { data, error } = await SB.from("tournaments").select("id,data,expires_at").order("created_at", { ascending: false });
     if (error) { $("#alist").innerHTML = `<p class="err">Не удалось загрузить: ${esc(error.message)}</p>`; return; }
-    rows = data || [];
+    rows = (data || []).filter(r => {
+      const sourceId = String(r.data?.restored_source_id || ("m-" + r.id));
+      const ov = TOURNAMENT_OVERRIDES.get(sourceId);
+      return !(ov && (ov.is_trashed || ov.permanently_hidden));
+    });
     const now = new Date();
     $("#alist").innerHTML = rows.length ? rows.map(r => { const d = r.data || {}, exp = r.expires_at && new Date(r.expires_at) < now;
       return `<div class="arow${exp ? " exp" : ""}"><div><b>${esc(d.name)}</b><div class="meta">${esc(d.disc)} · ${d.tba ? "даты неизвестны" : esc(d.start) + " — " + esc(d.end)} · ${esc(d.op)}<br>${r.expires_at ? (exp ? "Срок показа истёк " : "Удалится после ") + ymdMsk(r.expires_at) : "Без даты удаления (скроется после окончания турнира)"}</div></div>

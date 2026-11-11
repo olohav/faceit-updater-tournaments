@@ -203,6 +203,9 @@ test('главная: LAN-фильтр по городам и делегиров
   assert.match(html, /openTournamentEditor\(tournament\)/);
   assert.match(html, /moveTournamentToTrash\(tournament\)/);
   assert.match(html, /restore_tournament/);
+  assert.match(html, /await loadTournamentOverrides\(\);\s*const \{ data, error \} = await SB\.from\("tournaments"\)/);
+  assert.match(html, /rows = \(data \|\| \[\]\)\.filter\(r => \{/);
+  assert.match(html, /ov && \(ov\.is_trashed \|\| ov\.permanently_hidden\)/);
 });
 
 test('корзина: SQL гарантирует окно 7 дней и pg_cron удаляет просроченные снимки', async () => {
