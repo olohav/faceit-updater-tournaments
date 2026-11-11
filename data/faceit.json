@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-11T16:07:15.647Z",
+  "updatedAt": "2026-11-11T17:11:40.166Z",
   "source": "FACEIT Data API v4",
-  "count": 85,
+  "count": 86,
   "tournaments": [
     {
       "id": "fc-3148d040-22c1-4293-8d66-5032a800e993",
@@ -325,6 +325,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/23af5e16-7429-43f5-a4b0-3a49b67f6234/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-09b2d943-f97d-4754-9cb4-cb048c6f2fe6",
+      "name": "Prospects S6 Playoffs",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-10-14",
+      "end": "2026-11-18",
+      "startsAt": "2026-10-14T20:00:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-10-06T21:15:00+03:00",
+      "op": "Kanaliiga",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 20:00 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/09b2d943-f97d-4754-9cb4-cb048c6f2fe6/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
