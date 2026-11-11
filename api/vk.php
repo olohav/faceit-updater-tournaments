@@ -140,8 +140,27 @@ function clean_decisions($d)
         if (!preg_match('/^g[0-9a-f]{16}$/', (string)$key) || !is_array($g)) continue;
         if (!isset($g['status']) || !in_array($g['status'], $statuses, true)) continue;
         $o = array('status' => $g['status']);
-        foreach (array('title' => 160, 'prize' => 160, 'op' => 80, 'format' => 8) as $k => $max) {
+        foreach (array('title' => 160, 'prize' => 160, 'op' => 80, 'format' => 8, 'venueCity' => 160) as $k => $max) {
             if (array_key_exists($k, $g) && ($v = str($g[$k], $max)) !== null) $o[$k] = $v;
+        }
+        if (isset($g['venueType']) && in_array($g['venueType'], array('auto', 'Online', 'LAN'), true)) $o['venueType'] = $g['venueType'];
+        if (isset($g['statusMode']) && in_array($g['statusMode'], array('auto', 'soon', 'checkin'), true)) $o['statusMode'] = $g['statusMode'];
+        $limits = array('soonDays' => 365, 'checkinDays' => 30, 'removeAfterDays' => 365);
+        foreach ($limits as $k => $max) {
+            if (isset($g[$k]) && is_numeric($g[$k])) {
+                $v = (int)$g[$k];
+                if ($v >= 1 && $v <= $max) $o[$k] = $v;
+            }
+        }
+        if (isset($g['statusSetAt']) && is_string($g['statusSetAt']) && strtotime($g['statusSetAt']) !== false) {
+            $o['statusSetAt'] = gmdate('c', strtotime($g['statusSetAt']));
+        }
+        if (($o['statusMode'] ?? 'auto') === 'soon') {
+            $soon = $o['soonDays'] ?? 0; $checkin = $o['checkinDays'] ?? 0; $remove = $o['removeAfterDays'] ?? 0;
+            $approvedWithoutStart = (($o['status'] ?? 'pending') === 'approved') && empty($o['statusSetAt']);
+            if (!$soon || !$checkin || !$remove || $remove < $soon + $checkin || $approvedWithoutStart) {
+                unset($o['statusMode'], $o['soonDays'], $o['checkinDays'], $o['removeAfterDays'], $o['statusSetAt']);
+            }
         }
         if (isset($g['date']) && is_string($g['date']) && ($g['date'] === '' || preg_match('/^\d{4}-\d{2}-\d{2}$/', $g['date']))) $o['date'] = $g['date'];
         if (isset($g['time']) && is_string($g['time']) && ($g['time'] === '' || preg_match('/^\d{2}:\d{2}$/', $g['time']))) $o['time'] = $g['time'];

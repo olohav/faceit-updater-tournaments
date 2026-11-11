@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 import { parseDate, parseTime, pickDateTime, rejectReason, pickTitle, evaluate, detectGames } from './vk-tournaments.mjs';
 import { parsePrize } from '../lib/prize.js';
-import { groupKeyOf, decorate, groupAll, buildPublished, emptyDecisions, parseFee, commonPrefix } from '../lib/vk-publish.js';
+import { groupKeyOf, decorate, groupAll, buildPublished, emptyDecisions, parseFee, commonPrefix, groupToSiteEntries } from '../lib/vk-publish.js';
 
 const NOW = Date.parse('2026-10-25T12:00:00Z');
 const club = (name, city, domain = 'c1') => ({ domain, name, city });
@@ -131,4 +131,88 @@ test('сборка и FTP-деплой используют общий ката�
   assert.match(workflow, /\.github\/workflows\/\*\*/);
   assert.match(pagesWorkflow, /data\/static-tournaments\.json/);
   assert.doesNotMatch(pagesWorkflow, /vk-candidates|moderation\.html|api\/vk\.php/);
+});
+
+
+test('ВК: модератор может задать LAN, несколько городов и ручной статус «Скоро» с расписанием', () => {
+  const post = cand({ text: 'Кубок CyberX. Призовой фонд 50 000 ₽. Регистрация открыта.' });
+  const d = emptyDecisions();
+  d.groups[groupKeyOf(post)] = {
+    status: 'approved', venueType: 'LAN', venueCity: 'Казань, Уфа', statusMode: 'soon',
+    soonDays: 4, checkinDays: 2, removeAfterDays: 8, statusSetAt: '2026-10-25T12:00:00.000Z'
+  };
+  const group = groupAll([post], d, [], NOW)[0];
+  const entries = groupToSiteEntries(group, group.members);
+  assert.equal(entries.length, 1);
+  assert.equal(entries[0].format, 'LAN');
+  assert.equal(entries[0].venueType, 'LAN');
+  assert.deepEqual(entries[0].cities, ['Казань', 'Уфа']);
+  assert.equal(entries[0].city, 'Казань, Уфа');
+  assert.equal(entries[0].statusMode, 'soon');
+  assert.equal(entries[0].soonDays, 4);
+  assert.equal(entries[0].checkinDays, 2);
+  assert.equal(entries[0].removeAfterDays, 8);
+  assert.equal(entries[0].statusSetAt, '2026-10-25T12:00:00.000Z');
+});
+
+test('ВК: автоматический статус остаётся режимом по умолчанию; Online не получает LAN-города', () => {
+  const post = cand({ text: 'Турнир онлайн. Регистрация открыта.' });
+  const d = emptyDecisions(); d.groups[groupKeyOf(post)] = { status: 'approved', venueType: 'Online', venueCity: '' };
+  const group = groupAll([post], d, [], NOW)[0];
+  const [entry] = groupToSiteEntries(group, group.members);
+  assert.equal(entry.format, 'Online');
+  assert.deepEqual(entry.cities, []);
+  assert.equal(entry.statusMode, 'auto');
+});
+
+test('ВК: ручное расписание не обрывается в дату события и скрывает турнир только по таймеру', () => {
+  const post = cand({ date: '2026-10-27', time: '18:00' });
+  const d = emptyDecisions();
+  d.groups[groupKeyOf(post)] = {
+    status: 'approved', statusMode: 'soon', soonDays: 4, checkinDays: 2,
+    removeAfterDays: 8, statusSetAt: '2026-10-25T12:00:00.000Z'
+  };
+  const duringCheckin = Date.parse('2026-10-30T12:00:00.000Z'); // дата события уже прошла, таймер ещё нет
+  assert.equal(groupAll([post], d, [], duringCheckin).length, 1);
+  assert.equal(buildPublished([post], d, [], duringCheckin).count, 1);
+  const afterRemoval = Date.parse('2026-11-03T12:00:00.000Z');
+  assert.equal(groupAll([post], d, [], afterRemoval).length, 0);
+  assert.equal(buildPublished([post], d, [], afterRemoval).count, 0);
+});
+
+test('API принимает план «Скоро» до одобрения и требует время старта только при одобрении', async () => {
+  const api = await readFile(resolve('api/vk.php'), 'utf8');
+  assert.match(api, /approvedWithoutStart = \(\(\$o\['status'\] \?\? 'pending'\) === 'approved'\) && empty\(\$o\['statusSetAt'\]\)/);
+});
+
+test('ВК-модерация: форма содержит площадку, режим статуса и все три параметра расписания', async () => {
+  const html = await readFile(resolve('moderation.html'), 'utf8');
+  assert.match(html, /name="venueType"/);
+  assert.match(html, /name="venueCity"/);
+  assert.match(html, /name="statusMode"/);
+  assert.match(html, /name="soonDays"/);
+  assert.match(html, /name="checkinDays"/);
+  assert.match(html, /name="removeAfterDays"/);
+});
+
+test('главная: LAN-фильтр по городам и делегированные кнопки редактирования/корзины администратора', async () => {
+  const html = await readFile(resolve('index.html'), 'utf8');
+  assert.match(html, /id="lanCityFilter"/);
+  assert.match(html, /data-admin-edit/);
+  assert.match(html, /data-admin-trash/);
+  assert.match(html, /openTournamentEditor\(tournament\)/);
+  assert.match(html, /moveTournamentToTrash\(tournament\)/);
+  assert.match(html, /restore_tournament/);
+  assert.match(html, /await loadTournamentOverrides\(\);\s*const \{ data, error \} = await SB\.from\("tournaments"\)/);
+  assert.match(html, /rows = \(data \|\| \[\]\)\.filter\(r => \{/);
+  assert.match(html, /ov && \(ov\.is_trashed \|\| ov\.permanently_hidden\)/);
+});
+
+test('корзина: SQL гарантирует окно 7 дней и pg_cron удаляет просроченные снимки', async () => {
+  const sql = await readFile(resolve('supabase/migrations/20261111_tournament_admin_trash.sql'), 'utf8');
+  assert.match(sql, /now\(\) \+ interval '7 days'/);
+  assert.match(sql, /create or replace function public\.restore_tournament/);
+  assert.match(sql, /create or replace function public\.purge_expired_tournament_trash/);
+  assert.match(sql, /cron\.schedule\('kiberradar-purge-tournament-trash', '\*\/5 \* \* \* \*'/);
+  assert.match(sql, /permanently_hidden = true/);
 });

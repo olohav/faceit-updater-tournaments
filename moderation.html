@@ -35,6 +35,8 @@ input,select{border:1px solid var(--line);background:var(--bg);border-radius:8px
 .edit{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.6rem;margin-top:.8rem}
 .edit label{display:flex;flex-direction:column;gap:.2rem;font-size:.85rem;color:var(--mute)}
 .edit .wide{grid-column:1/-1}
+.edit .status-plan{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem;padding:.7rem;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.edit .status-plan[hidden]{display:none!important}.edit .hint{font-size:.78rem;color:var(--mute);font-weight:400}
 .members{margin:.6rem 0 0;padding:0;list-style:none;max-height:260px;overflow:auto;border-top:1px solid var(--line)}
 .members li{display:flex;gap:.6rem;align-items:center;padding:.3rem 0;border-bottom:1px solid var(--line);font-size:.88rem}
 .members li.off{opacity:.5;text-decoration:line-through}
@@ -146,12 +148,7 @@ async function enter() {
 }
 
 $("#loginBtn").onclick = login;
-$("#pw").onkeydown = (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    login();
-  }
-};
+$("#pw").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); login(); } };
 async function login() {
   $("#loginMsg").textContent = "";
   try { await api("login", { password: $("#pw").value }); $("#pw").value = ""; await enter(); }
@@ -195,21 +192,53 @@ function setStatus(key, status) {
   commit((d) => {
     const cur = d.groups[key] || {};
     if (status === "pending" && Object.keys(cur).every((k) => k === "status")) delete d.groups[key];
-    else d.groups[key] = { ...cur, status };
+    else d.groups[key] = { ...cur, status, ...(status === "approved" && cur.statusMode === "soon" && !cur.statusSetAt ? { statusSetAt: new Date().toISOString() } : {}) };
   });
 }
 
 function saveEdit(key, form) {
   const g = groupAll(S.cands, S.decisions, S.skip).find((x) => x.key === key);
+  if (!g) return toast("Событие уже отсутствует в списке.", true);
   const base = g.rep.raw, f = new FormData(form);
   const edits = {};
   const cmp = (k, v) => { const b = base[k] ?? ""; if (v !== b) edits[k] = v; };
-  cmp("title", f.get("title").trim()); cmp("date", f.get("date")); cmp("time", f.get("time")); cmp("prize", f.get("prize").trim()); cmp("format", f.get("format"));
+  cmp("title", String(f.get("title") || "").trim());
+  cmp("date", f.get("date") || "");
+  cmp("time", f.get("time") || "");
+  cmp("prize", String(f.get("prize") || "").trim());
+  cmp("format", f.get("format") || "");
   const games = f.getAll("games");
   if (!games.length) return toast("Выберите хотя бы одну игру.", true);
   if (games.slice().sort().join() !== (base.games || []).slice().sort().join()) edits.games = games;
-  const op = f.get("op").trim(); if (op) edits.op = op;
-  if (!edits.title && !f.get("title").trim()) return toast("Название не может быть пустым.", true);
+  const op = String(f.get("op") || "").trim();
+  if (op) edits.op = op; else if (base.op) edits.op = "";
+
+  const venueType = f.get("venueType") || "auto";
+  const venueCity = String(f.get("venueCity") || "").trim();
+  edits.venueType = venueType;
+  edits.venueCity = venueCity;
+
+  const statusMode = f.get("statusMode") || "auto";
+  edits.statusMode = statusMode;
+  if (statusMode === "soon") {
+    const soonDays = Number(f.get("soonDays"));
+    const checkinDays = Number(f.get("checkinDays"));
+    const removeAfterDays = Number(f.get("removeAfterDays"));
+    if (!Number.isInteger(soonDays) || soonDays < 1 || soonDays > 365) return toast("Для статуса «Скоро» укажите от 1 до 365 дней.", true);
+    if (!Number.isInteger(checkinDays) || checkinDays < 1 || checkinDays > 30) return toast("Длительность чек-ина должна быть от 1 до 30 дней.", true);
+    if (!Number.isInteger(removeAfterDays) || removeAfterDays < soonDays + checkinDays || removeAfterDays > 365) return toast(`Удаление должно быть не раньше чем через ${soonDays + checkinDays} дней и не позже 365 дней.`, true);
+    edits.soonDays = soonDays;
+    edits.checkinDays = checkinDays;
+    edits.removeAfterDays = removeAfterDays;
+    edits.statusSetAt = g.status === "approved" ? new Date().toISOString() : "";
+  } else {
+    edits.soonDays = "";
+    edits.checkinDays = "";
+    edits.removeAfterDays = "";
+    edits.statusSetAt = "";
+  }
+  if (!String(f.get("title") || "").trim()) return toast("Название не может быть пустым.", true);
+  if (venueType === "LAN" && !venueCity) return toast("Для LAN укажите город или города проведения.", true);
   commit((d) => { d.groups[key] = { status: d.groups[key]?.status || "pending", ...edits }; });
   S.edit.delete(key); toast("Правки сохранены");
 }
@@ -224,6 +253,27 @@ function hideClub(domain, name) {
 
 // ---------- отрисовка ----------
 const fmtDate = (d, t) => (d ? `${d.split("-").reverse().join(".")}${t ? " " + t : ""}` : "дата не указана");
+const DAY = 86400000;
+function autoStatusLabel(r) {
+  if (!r.date) return "Даты не указаны";
+  const start = new Date(`${r.date}T${r.time || "23:59"}:00${r.tz || "+03:00"}`).getTime();
+  const diff = start - Date.now();
+  if (diff <= 0) return "Турнир идёт";
+  if (diff <= 3 * DAY) return "Чек-ин";
+  return `Скоро: ${Math.ceil(diff / DAY)} дн.`;
+}
+function statusPlanLabel(r) {
+  const mode = r.statusMode || "auto";
+  if (mode === "auto") return `Автоматически · сейчас: ${autoStatusLabel(r)}`;
+  if (mode === "checkin") return "Чек-ин · вручную до начала турнира";
+  const since = r.statusSetAt ? Date.parse(r.statusSetAt) : Date.now();
+  const elapsed = Math.max(0, Math.floor((Date.now() - since) / DAY));
+  const soon = Number(r.soonDays) || 1, checkin = Number(r.checkinDays) || 1, remove = Number(r.removeAfterDays) || soon + checkin;
+  if (elapsed >= remove) return "По расписанию уже должен быть скрыт";
+  if (elapsed < soon) return `Скоро · осталось ${soon - elapsed} дн. до чек-ина`;
+  if (elapsed < soon + checkin) return `Чек-ин · осталось ${soon + checkin - elapsed} дн.`;
+  return `Чек-ин · будет скрыт через ${remove - elapsed} дн.`;
+}
 const STATUS = { pending: "на проверке", approved: "одобрено", rejected: "отклонено" };
 
 function render() {
@@ -253,7 +303,7 @@ function card(g) {
   const cities = g.cities.length > 3 ? `${g.cities.length} городов` : g.cities.join(", ");
   return `<article class="card" data-key="${g.key}">
     <div class="row"><span class="chip s-${g.st}">${STATUS[g.st]}</span>${g.edited ? '<span class="chip">с правками</span>' : ""}
-      <span class="mute">${esc(fmtDate(r.date, r.time))} · ${esc(r.games.join(", "))}${r.format ? " · " + esc(r.format) : ""}</span></div>
+      <span class="mute">${esc(fmtDate(r.date, r.time))} · ${esc(r.games.join(", "))}${r.format ? " · формат матчей " + esc(r.format) : ""} · ${r.venueType === "Online" ? "ONLINE" : r.venueType === "LAN" ? "LAN" : "площадка авто"}</span></div>
     <p class="title">${esc(r.title)}</p>
     <div class="mute">${g.members.length > 1 ? `${g.members.length} клубов · ` : ""}${esc(cities)}${r.prize ? " · " + esc(r.prize) : ""}</div>
     <div class="row" style="margin-top:.6rem">
@@ -276,11 +326,28 @@ function member(m) {
 
 function editForm(g) {
   const r = g.rep;
+  const mode = r.statusMode || "auto";
+  const venue = r.venueType || "auto";
+  const planHidden = mode !== "soon";
+  const soon = Number(r.soonDays) || 3, checkin = Number(r.checkinDays) || 2, remove = Number(r.removeAfterDays) || soon + checkin;
   return `<form class="edit" data-key="${g.key}">
     <label class="wide">Название<input name="title" value="${esc(r.title)}" maxlength="160"></label>
     <label>Дата<input name="date" type="date" value="${esc(r.date || "")}"></label>
     <label>Время<input name="time" type="time" value="${esc(r.time || "")}"></label>
-    <label>Формат<select name="format">${["", "1x1", "2x2", "3x3", "5x5"].map((f) => `<option value="${f}"${(r.format || "") === f ? " selected" : ""}>${f || "не указан"}</option>`).join("")}</select></label>
+    <label>Формат матчей<select name="format">${["", "1x1", "2x2", "3x3", "5x5"].map((f) => `<option value="${f}"${(r.format || "") === f ? " selected" : ""}>${f || "не указан"}</option>`).join("")}</select></label>
+    <label>Площадка турнира<select name="venueType"><option value="auto"${venue === "auto" ? " selected" : ""}>Автоматически</option><option value="Online"${venue === "Online" ? " selected" : ""}>ONLINE</option><option value="LAN"${venue === "LAN" ? " selected" : ""}>LAN</option></select></label>
+    <label class="wide">Город / города LAN<input name="venueCity" value="${esc(r.venueCity || (r.venueType === "LAN" ? r.city || "" : ""))}" placeholder="Например: Казань, Уфа"></label>
+    <label class="wide">Статус на сайте<select name="statusMode">
+      <option value="auto"${mode === "auto" ? " selected" : ""}>Автоматически · сейчас: ${esc(autoStatusLabel(r))}</option>
+      <option value="soon"${mode === "soon" ? " selected" : ""}>Скоро → затем чек-ин → убрать</option>
+      <option value="checkin"${mode === "checkin" ? " selected" : ""}>Чек-ин (вручную)</option>
+    </select><span class="hint">Автоматический статус рассчитывается по дате турнира.</span></label>
+    <div class="wide status-plan" data-status-plan${planHidden ? " hidden" : ""}>
+      <label>Показывать «Скоро», дней<input name="soonDays" type="number" min="1" max="365" value="${soon}"></label>
+      <label>Длительность чек-ина, дней<input name="checkinDays" type="number" min="1" max="30" value="${checkin}"></label>
+      <label>Убрать из списка через, дней<input name="removeAfterDays" type="number" min="2" max="365" value="${remove}"></label>
+      <div class="wide hint">Отсчёт начинается с одобрения турнира (или с сохранения новой настройки для уже одобренного турнира). Удаление должно быть не раньше окончания чек-ина.</div>
+    </div>
     <label>Организатор (сеть)<input name="op" value="${esc(r.op || "")}" placeholder="определится автоматически" maxlength="80"></label>
     <label class="wide">Призовой фонд (строка из поста)<input name="prize" value="${esc(r.prize || "")}" maxlength="160"></label>
     <div class="wide row">${GAMES.map((x) => `<label class="row" style="flex-direction:row"><input type="checkbox" name="games" value="${x}"${r.games.includes(x) ? " checked" : ""}>${x}</label>`).join("")}</div>
@@ -302,6 +369,12 @@ $("#list").addEventListener("click", (e) => {
   else if (act === "hide") hideClub(b.dataset.domain, b.dataset.name);
 });
 $("#list").addEventListener("submit", (e) => { e.preventDefault(); saveEdit(e.target.dataset.key, e.target); });
+$("#list").addEventListener("change", (e) => {
+  if (e.target.matches('select[name="statusMode"]')) {
+    const plan = e.target.closest("form")?.querySelector("[data-status-plan]");
+    if (plan) plan.hidden = e.target.value !== "soon";
+  }
+});
 $("#tabs").addEventListener("click", (e) => { const t = e.target.closest("[data-tab]"); if (t) { S.tab = t.dataset.tab; render(); } });
 $("#q").oninput = (e) => { S.q = e.target.value; render(); };
 $("#dated").onchange = (e) => { S.dated = e.target.checked; render(); };
