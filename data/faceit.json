@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-12T21:06:05.170Z",
+  "updatedAt": "2026-11-12T22:03:26.361Z",
   "source": "FACEIT Data API v4",
-  "count": 90,
+  "count": 91,
   "tournaments": [
     {
       "id": "fc-3148d040-22c1-4293-8d66-5032a800e993",
@@ -1522,6 +1522,30 @@
       "social": []
     },
     {
+      "id": "fc-16e80a4d-0650-482f-a65b-028a5ddcf887",
+      "name": "Turniej grudzien '26",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-16",
+      "end": "2026-11-16",
+      "startsAt": "2026-11-16T19:30:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-16T19:00:00+03:00",
+      "op": "SSPG",
+      "teams": 8,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 19:30 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/16e80a4d-0650-482f-a65b-028a5ddcf887/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
       "id": "fc-3002de3d-cdde-4084-ab31-475b49063635",
       "name": "OMK Qualification 1",
       "kind": "qualifier",
@@ -1779,7 +1803,7 @@
         "c": "USD"
       },
       "fee": null,
-      "regEnd": "2026-11-19T23:35:00+03:00",
+      "regEnd": "2026-11-25T22:00:00+03:00",
       "op": "Force Championship Series",
       "teams": 16,
       "platform": "FACEIT",
