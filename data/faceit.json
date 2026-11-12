@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-12T18:08:21.320Z",
+  "updatedAt": "2026-11-12T20:31:11.258Z",
   "source": "FACEIT Data API v4",
-  "count": 88,
+  "count": 90,
   "tournaments": [
     {
       "id": "fc-3148d040-22c1-4293-8d66-5032a800e993",
@@ -1618,6 +1618,30 @@
       "social": []
     },
     {
+      "id": "fc-7c156ec9-15da-4172-bdad-668ea47969c2",
+      "name": "Moscow Good Game",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-20",
+      "end": "2026-11-20",
+      "startsAt": "2026-11-20T00:19:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-19T23:19:00+03:00",
+      "op": "julien pretti",
+      "teams": 32,
+      "platform": "FACEIT",
+      "ru": true,
+      "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 00:19 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/7c156ec9-15da-4172-bdad-668ea47969c2/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
       "id": "fc-1d35847e-7f2c-4cf1-a892-c1e5a227eddd",
       "name": "LIGA STAVOK NARODNAYA LIGA CONTEST III | Prize: 175 000 RUB",
       "kind": "main",
@@ -1737,6 +1761,33 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/fed140b1-d78e-4368-a8bc-c2dfa3820084/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-6b51ae70-14b1-4779-baa8-b3d95c2465cc",
+      "name": "Force Championship Series",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-26",
+      "end": "2026-11-26",
+      "startsAt": "2026-11-26T16:00:00+03:00",
+      "prize": {
+        "v": 650,
+        "c": "USD"
+      },
+      "fee": null,
+      "regEnd": "2026-11-19T23:35:00+03:00",
+      "op": "Force Championship Series",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 16:00 по МСК.  CS2 tournament 🏆 **CS2 INTERNATIONAL TOURNAMENT** - **Entry Fee:** $40 - **Prize Pool:** $650 - **Live Broadcast:** All matches will be streamed live on YouTube. Compete against international teams, prove your skills, and fight for the prize pool! *Register your team and join the competition!* https://fcsesports.com For more information, join our Discord server! https://discord.gg/p7rEhgvpr ",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/6b51ae70-14b1-4779-baa8-b3d95c2465cc/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
