@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T01:32:53.250Z",
+  "updatedAt": "2026-11-12T11:24:23.008Z",
   "source": "FACEIT Data API v4",
   "count": 86,
   "tournaments": [
@@ -1233,12 +1233,12 @@
       "startsAt": "2026-11-14T17:00:00+03:00",
       "prize": null,
       "fee": null,
-      "regEnd": "2026-11-13T21:00:00+03:00",
+      "regEnd": "2026-11-12T14:20:00+03:00",
       "op": "DDeSports",
-      "teams": 16,
+      "teams": 10,
       "platform": "FACEIT",
       "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 17:00 по МСК.",
+      "desc": "Турнир на FACEIT (CS2). Мест: 10. Старт в 17:00 по МСК.",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/008034c2-a7a1-4a0e-ba38-87258b93adb1/",
