@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-13T22:03:18.011Z",
+  "updatedAt": "2026-11-13T23:56:48.494Z",
   "source": "FACEIT Data API v4",
-  "count": 76,
+  "count": 77,
   "tournaments": [
     {
       "id": "fc-e3a3dbf5-6621-457a-a82f-6a6fe7d48444",
@@ -1146,6 +1146,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/3002de3d-cdde-4084-ab31-475b49063635/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-c4013ff9-f1c8-42b2-821d-19f6a671bc7f",
+      "name": "UKIC Rising | Season 12 | Playoffs",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-16",
+      "end": "2026-11-16",
+      "startsAt": "2026-11-16T23:30:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-14T01:50:00+03:00",
+      "op": "UK & Ireland Circuit",
+      "teams": 12,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 12. Старт в 23:30 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/c4013ff9-f1c8-42b2-821d-19f6a671bc7f/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
