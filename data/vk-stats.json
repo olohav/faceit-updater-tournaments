@@ -1,12 +1,12 @@
 {
-  "runAt": "2026-11-12T20:20:20.670Z",
-  "minutes": 50,
+  "runAt": "2026-11-13T02:30:36.010Z",
+  "minutes": 48,
   "clubsTotal": 2324,
-  "posts": 80492,
+  "posts": 80491,
   "rejected": {
-    "нет слова «турнир»": 71939,
-    "нет нужной игры": 4146,
-    "турнир уже начался или прошёл": 1316,
+    "нет слова «турнир»": 71938,
+    "нет нужной игры": 4145,
+    "турнир уже начался или прошёл": 1317,
     "устарел": 760,
     "нет призыва к участию": 640,
     "итоги турнира": 906,
@@ -23,8 +23,8 @@
     "100": 4
   },
   "newCandidates": 1,
-  "candidatesTotal": 261,
-  "candidatesUndated": 182,
-  "candidatesNoPrize": 177,
-  "clubsWithCandidates": 161
+  "candidatesTotal": 262,
+  "candidatesUndated": 183,
+  "candidatesNoPrize": 178,
+  "clubsWithCandidates": 162
 }
