@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-13T21:10:08.075Z",
+  "updatedAt": "2026-11-13T22:03:18.011Z",
   "source": "FACEIT Data API v4",
-  "count": 77,
+  "count": 76,
   "tournaments": [
     {
       "id": "fc-e3a3dbf5-6621-457a-a82f-6a6fe7d48444",
@@ -700,31 +700,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/1af487af-9c1f-4366-9de0-0e60275ef9b9/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-eeb3a15c-6195-41ae-89ed-d2b4357e6c7f",
-      "name": "FALL QUALIFIERS DAY 1",
-      "kind": "qualifier",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-13",
-      "end": "2026-11-21",
-      "startsAt": "2026-11-13T19:10:00+03:00",
-      "endUnknown": true,
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-13T18:50:00+03:00",
-      "op": "GG ARENA",
-      "teams": 16,
-      "platform": "FACEIT",
-      "ru": true,
-      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 16. Старт в 19:10 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/eeb3a15c-6195-41ae-89ed-d2b4357e6c7f/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
