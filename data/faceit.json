@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-12T23:04:16.735Z",
+  "updatedAt": "2026-11-13T09:15:29.890Z",
   "source": "FACEIT Data API v4",
-  "count": 90,
+  "count": 91,
   "tournaments": [
     {
       "id": "fc-3148d040-22c1-4293-8d66-5032a800e993",
@@ -1050,6 +1050,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/2e3e87a6-7137-441e-9926-0cd0b676be40/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-1af487af-9c1f-4366-9de0-0e60275ef9b9",
+      "name": "OxinGame CS2 - isfahan-Grand",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "startsAt": "2026-11-13T15:30:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-13T11:45:00+03:00",
+      "op": "OxinGame Esports",
+      "teams": 128,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 128. Старт в 15:30 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/1af487af-9c1f-4366-9de0-0e60275ef9b9/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
