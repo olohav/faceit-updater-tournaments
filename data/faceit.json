@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T13:26:50.645Z",
+  "updatedAt": "2026-11-13T15:06:56.987Z",
   "source": "FACEIT Data API v4",
   "count": 93,
   "tournaments": [
@@ -1090,7 +1090,7 @@
       "startsAt": "2026-11-13T19:00:00+03:00",
       "prize": null,
       "fee": null,
-      "regEnd": "2026-11-13T18:00:00+03:00",
+      "regEnd": "2026-11-13T18:50:00+03:00",
       "op": "GG ARENA",
       "teams": 16,
       "platform": "FACEIT",
