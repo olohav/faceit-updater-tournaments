@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T12:11:14.485Z",
+  "updatedAt": "2026-11-13T13:26:50.645Z",
   "source": "FACEIT Data API v4",
   "count": 93,
   "tournaments": [
@@ -1261,10 +1261,10 @@
       "fee": null,
       "regEnd": "2026-11-14T17:00:00+03:00",
       "op": "EPICENTER",
-      "teams": 8,
+      "teams": 10,
       "platform": "FACEIT",
       "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 18:00 по МСК. https://epicenter.si/scslcup/",
+      "desc": "Турнир на FACEIT (CS2). Мест: 10. Старт в 18:00 по МСК. https://epicenter.si/scslcup/",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/a2c45b18-3794-44ac-9857-7d747bf46203/",
