@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-14T17:53:40.439Z",
+  "updatedAt": "2026-11-14T19:01:21.158Z",
   "source": "FACEIT Data API v4",
-  "count": 77,
+  "count": 76,
   "tournaments": [
     {
       "id": "fc-e3a3dbf5-6621-457a-a82f-6a6fe7d48444",
@@ -800,34 +800,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/a2c45b18-3794-44ac-9857-7d747bf46203/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-2ae6e303-d51c-49ba-9c6f-8a9a480403be",
-      "name": "Yoru Bounty 2026 - Open-Qualifier 2",
-      "kind": "qualifier",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-14",
-      "end": "2026-11-14",
-      "startsAt": "2026-11-14T18:00:00+03:00",
-      "endUnknown": true,
-      "prize": {
-        "v": 800,
-        "c": "USD"
-      },
-      "fee": null,
-      "regEnd": "2026-11-14T17:30:00+03:00",
-      "op": "Yoru Esports",
-      "teams": 64,
-      "platform": "FACEIT",
-      "ru": true,
-      "desc": "Открытая квалификация на FACEIT (CS2). Мест: 64. Старт в 18:00 по МСК. https://t.me/yoruesports (Команда, которая победила в квалификации - ОБЯЗАНА отписать менеджеру в TG, ВАЖНО!!! Для комфорта и удобства, отпишите заранее менеджеру в телеграмм, приложив название вашей команды и ссылку на вашу команду). Желаем удачи! MAIN TOURNAMENT PRIZEPOLL: ~800$",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/2ae6e303-d51c-49ba-9c6f-8a9a480403be/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
