@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T13:26:46.488Z",
+  "updatedAt": "2026-11-14T15:02:35.054Z",
   "source": "FACEIT Data API v4",
   "count": 78,
   "tournaments": [
@@ -837,6 +837,7 @@
       "start": "2026-11-14",
       "end": "2026-11-14",
       "startsAt": "2026-11-14T18:00:00+03:00",
+      "endUnknown": true,
       "prize": {
         "v": 800,
         "c": "USD"
