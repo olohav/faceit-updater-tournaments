@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-14T21:53:57.627Z",
+  "updatedAt": "2026-11-15T05:10:46.299Z",
   "source": "FACEIT Data API v4",
-  "count": 74,
+  "count": 73,
   "tournaments": [
     {
       "id": "fc-e3a3dbf5-6621-457a-a82f-6a6fe7d48444",
@@ -750,30 +750,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/40e72384-a34c-4d03-adb0-2911fd9fd8b3/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-e45ac576-02d3-4e7e-9a11-ecc7e4cbb5c6",
-      "name": "Jastar Jalyny",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-15",
-      "end": "2026-11-15",
-      "startsAt": "2026-11-15T07:00:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-14T21:00:00+03:00",
-      "op": "KNUS ESPORTS",
-      "teams": 16,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 07:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/e45ac576-02d3-4e7e-9a11-ecc7e4cbb5c6/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
