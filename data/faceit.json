@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-15T05:10:46.299Z",
+  "updatedAt": "2026-11-15T10:05:53.663Z",
   "source": "FACEIT Data API v4",
-  "count": 73,
+  "count": 74,
   "tournaments": [
     {
       "id": "fc-e3a3dbf5-6621-457a-a82f-6a6fe7d48444",
@@ -750,6 +750,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/40e72384-a34c-4d03-adb0-2911fd9fd8b3/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-7039a1c3-04f4-48b3-804c-47e4ae6d3c78",
+      "name": "Promin Partner Cup",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-15",
+      "end": "2026-11-15",
+      "startsAt": "2026-11-15T14:35:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-15T12:25:00+03:00",
+      "op": "Gran1k",
+      "teams": 16,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 14:35 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/7039a1c3-04f4-48b3-804c-47e4ae6d3c78/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
