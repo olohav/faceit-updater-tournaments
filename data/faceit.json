@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T13:09:42.349Z",
+  "updatedAt": "2026-11-15T14:32:04.573Z",
   "source": "FACEIT Data API v4",
   "count": 74,
   "tournaments": [
@@ -1174,7 +1174,7 @@
     },
     {
       "id": "fc-7c156ec9-15da-4172-bdad-668ea47969c2",
-      "name": "Moscow Good Game",
+      "name": "Fire Championship 5v5",
       "kind": "main",
       "disc": "CS2",
       "format": "Online",
@@ -1188,7 +1188,7 @@
       "op": "julien pretti",
       "teams": 32,
       "platform": "FACEIT",
-      "ru": true,
+      "ru": false,
       "desc": "Турнир на FACEIT (CS2). Мест: 32. Старт в 00:19 по МСК.",
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
