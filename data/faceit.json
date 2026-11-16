@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-16T15:23:35.911Z",
+  "updatedAt": "2026-11-16T16:57:56.614Z",
   "source": "FACEIT Data API v4",
-  "count": 79,
+  "count": 80,
   "tournaments": [
     {
       "id": "fc-3a957279-d560-4e1d-9315-a1984b4ecd69",
@@ -1850,6 +1850,30 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/8e96cfec-ed00-437c-935e-f1e46d359862/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-734bf5a5-6e9a-46a5-bb0b-98e0190573d7",
+      "name": "Hungarian League LAN CUP 1",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "startsAt": "2026-12-12T20:00:00+03:00",
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-12-12T19:55:00+03:00",
+      "op": "Hungarian League",
+      "teams": 64,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 64. Старт в 20:00 по МСК. # Alsóág kizárólag csak a 3-4 helyért megy pontszerzésért. # Pontgyűjtő kvalifikációs verseny, amiben a TOP 8 helyezés részesül pontozásban. # 1.: 100 # 2.: 75 # 3.: 50 # 4.: 40 # 5-8: 25 # ÁLTALÁNOS INFORMÁCIÓK A verseny 5v5 játékmódban kerül megrendezésre. # Minden csapat pontosan 5 főből áll + 1 csere. # A verseny online zajlik. A TOP 8, Döntő pedig Budapesten a Delta Esportbárban lesz megrende",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/734bf5a5-6e9a-46a5-bb0b-98e0190573d7/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
