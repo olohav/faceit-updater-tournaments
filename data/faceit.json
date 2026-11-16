@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-16T06:36:09.684Z",
+  "updatedAt": "2026-11-16T10:17:56.824Z",
   "source": "FACEIT Data API v4",
-  "count": 77,
+  "count": 76,
   "tournaments": [
     {
       "id": "fc-3a957279-d560-4e1d-9315-a1984b4ecd69",
@@ -1000,30 +1000,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/2f47cc52-1ab1-4b74-b483-8b24b76e4008/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-16e80a4d-0650-482f-a65b-028a5ddcf887",
-      "name": "Turniej grudzien '26",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-16",
-      "end": "2026-11-16",
-      "startsAt": "2026-11-16T19:30:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-16T19:00:00+03:00",
-      "op": "SSPG",
-      "teams": 8,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 19:30 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/16e80a4d-0650-482f-a65b-028a5ddcf887/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
