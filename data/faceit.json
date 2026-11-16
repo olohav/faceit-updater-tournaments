@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-16T18:17:42.348Z",
+  "updatedAt": "2026-11-16T19:12:42.587Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 80,
   "tournaments": [
     {
       "id": "fc-3a957279-d560-4e1d-9315-a1984b4ecd69",
@@ -1421,30 +1421,6 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/f1b34ea5-acff-4697-afff-b06c914da246/",
-      "siteName": "Страница на FACEIT",
-      "social": []
-    },
-    {
-      "id": "fc-87c9d40b-a70c-40c8-b833-678ad3039ef3",
-      "name": "Green Pepper Season 1 - Swiss Stage",
-      "kind": "main",
-      "disc": "CS2",
-      "format": "Online",
-      "city": "Онлайн (FACEIT)",
-      "start": "2026-11-28",
-      "end": "2026-11-28",
-      "startsAt": "2026-11-28T13:00:00+03:00",
-      "prize": null,
-      "fee": null,
-      "regEnd": "2026-11-28T02:00:00+03:00",
-      "op": "Green Pepper",
-      "teams": 16,
-      "platform": "FACEIT",
-      "ru": false,
-      "desc": "Турнир на FACEIT (CS2). Мест: 16. Старт в 13:00 по МСК.",
-      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
-      "contact": "Регистрация — на странице турнира на FACEIT.",
-      "site": "https://www.faceit.com/ru/championship/87c9d40b-a70c-40c8-b833-678ad3039ef3/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
