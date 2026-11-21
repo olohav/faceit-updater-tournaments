@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-21T17:41:11.314Z",
+  "updatedAt": "2026-11-21T19:39:59.648Z",
   "source": "FACEIT Data API v4",
-  "count": 81,
+  "count": 82,
   "tournaments": [
     {
       "id": "fc-3a957279-d560-4e1d-9315-a1984b4ecd69",
@@ -602,6 +602,31 @@
       "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
       "contact": "Регистрация — на странице турнира на FACEIT.",
       "site": "https://www.faceit.com/ru/championship/11a9ce30-ab38-415f-ac01-3e89c0196b59/",
+      "siteName": "Страница на FACEIT",
+      "social": []
+    },
+    {
+      "id": "fc-68e01529-b8d7-4013-ab6e-f71302a93e04",
+      "name": "MEF CS2 Tournament Playoffs",
+      "kind": "main",
+      "disc": "CS2",
+      "format": "Online",
+      "city": "Онлайн (FACEIT)",
+      "start": "2026-11-22",
+      "end": "2026-11-22",
+      "startsAt": "2026-11-22T22:58:00+03:00",
+      "endUnknown": true,
+      "prize": null,
+      "fee": null,
+      "regEnd": "2026-11-21T22:11:40+03:00",
+      "op": "eSports Middle East",
+      "teams": 8,
+      "platform": "FACEIT",
+      "ru": false,
+      "desc": "Турнир на FACEIT (CS2). Мест: 8. Старт в 22:58 по МСК.",
+      "fee_note": "Условия участия и взнос — на странице турнира на FACEIT.",
+      "contact": "Регистрация — на странице турнира на FACEIT.",
+      "site": "https://www.faceit.com/ru/championship/68e01529-b8d7-4013-ab6e-f71302a93e04/",
       "siteName": "Страница на FACEIT",
       "social": []
     },
